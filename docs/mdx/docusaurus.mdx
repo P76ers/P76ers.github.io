@@ -1,0 +1,712 @@
+---
+hide_title: true
+sidebar_position: 2
+sidebar_label: Docusaurus
+tags: [Markdown, MDX, Documentation, versionControl, Docusaurus]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<CardHeading>
+
+  # Docusaurus
+</CardHeading>
+
+
+<CardChapter>
+
+  ## Links
+
+  <Card
+    title='Docusaurus'
+    description='Documentation'
+    to='https://docusaurus.io/docs/markdown-features'
+  />
+  <Card
+    title='MDX'
+    description='Documentation'
+    to='https://mdxjs.com/docs/'
+  />
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## Admonitions
+
+:::note Note:
+Note
+:::
+
+```
+:::note Note:
+Note
+:::
+```
+<br/>
+
+:::tip Tip:
+Tip
+:::
+```
+:::tip Tip:
+Tip
+:::
+```
+<br/>
+
+:::info Info:
+Info
+:::
+
+```
+:::info Info:
+Info
+:::
+```
+<br/>
+
+:::caution Caution:
+Caution
+:::
+```
+:::caution Caution:
+Caution
+:::
+```
+<br/>
+
+:::danger Warning!
+Danger
+:::
+```
+:::danger Warning!
+Danger
+:::
+```
+<br/>
+
+  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## Codeblock
+
+- with title
+  ```jsx title="index.js"
+  function foo() {
+    console.log("Hello World!");
+  }
+  ```
+  ~~~
+  ```jsx title="index.js"
+  function foo() {
+    console.log("Hello World!");
+  }
+  ```
+  ~~~
+
+- Line Highlighting 
+  - with comment
+    ```javascript
+    // highlight-next-line
+    function foo() {
+      if (hour < 18) {
+        console.log("Good day");
+      // highlight-start
+      } else {
+        console.log("Good evening");
+      // highlight-end
+      }
+    }
+    ```
+    ~~~
+    ```javascript
+    // highlight-next-line
+    function foo() {
+      if (hour < 18) {
+        console.log("Good day");
+      // highlight-start
+      } else {
+        console.log("Good evening");
+      // highlight-end
+      }
+    }
+    ```
+    ~~~
+
+
+  - Custom error comments
+      - Declaration
+  
+      <Tabs>
+      <TabItem value="js" label="docusaurus.config.js">
+
+      ```javascript
+      module.exports = {
+        themeConfig: {
+          prism: {
+            magicComments: [
+              // Remember to extend the default highlight class name as well!
+              {
+                className: 'theme-code-block-highlighted-line',
+                line: 'highlight-next-line',
+                block: {start: 'highlight-start', end: 'highlight-end'},
+              },
+              // highlight-start
+              {
+                className: 'code-block-error-line',
+                line: 'highlight-next-line-error',
+              },
+              // highlight-end
+            ],
+          },
+        },
+      };
+      ```
+      </TabItem>
+
+      <TabItem value="css" label="src/css/custom.css">
+
+      ```css
+      .code-block-error-line {
+        background-color: #ff000020;
+        display: block;
+        margin: 0 calc(-1 * var(--ifm-pre-padding));
+        padding: 0 var(--ifm-pre-padding);
+        border-left: 3px solid #ff000080;
+      }
+      ```
+      </TabItem>
+      </Tabs>
+
+    - Usage
+      ```javascript
+      const name = null;
+      // highlight-next-line-error
+      console.log(name.toUpperCase());
+      // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
+      ```
+      ~~~
+      ```javascript
+      const name = null;
+      // highlight-next-line-error
+      console.log(name.toUpperCase());
+      // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
+      ```
+      ~~~
+
+  - with line range
+    ```javascript {1,4-6}
+    function foo() {
+      if (hour < 18) {
+        console.log("Good day");
+      } else {
+        console.log("Good evening");
+      }
+    }
+    ```
+    ~~~
+    ```javascript {1,4-6}
+    function foo() {
+      if (hour < 18) {
+        console.log("Good day");
+      } else {
+        console.log("Good evening");
+      }
+    }
+    ```
+    ~~~
+
+- Line numbering
+  ```javascript showLineNumbers
+  function foo() {
+    console.log("Hello World!");
+  }
+  ```
+  ~~~
+  ```javascript showLineNumbers
+  function foo() {
+    console.log("Hello World!");
+  }
+  ```
+  ~~~
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Diagrams by [mermaid](https://mermaid.js.org/#/)
+
+  
+- Installation
+
+  <Tabs>
+  <TabItem value='npm' label='npm'>
+
+  ```bash
+  npm install --save @docusaurus/theme-mermaid
+  ```
+  </TabItem>
+  <TabItem value='yarn' label='yarn'>
+
+  ```bash
+  yarn add @docusaurus/theme-mermaid
+  ```
+  </TabItem>
+  <TabItem value='pnpm' label='pnpm'>
+
+  ```bash
+  pnpm add @docusaurus/theme-mermaid
+  ```
+  </TabItem>
+  </Tabs>
+
+- Config
+
+  ```javascript title='docusaurus.config.js'
+  module.exports = {
+    markdown: {
+      mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
+  };
+  ```
+
+- Usage
+  #### Class Diagram:
+
+  ```mermaid
+  classDiagram
+  direction RL
+  class Student {
+    -idCard : IdCard
+  }
+  class IdCard{
+    -id : int
+    -name : string
+  }
+  class Bike{
+    -id : int
+    -name : string
+  }
+  Student "1" --o "1" IdCard : carries
+  Student "1" --o "1" Bike : rides
+  ```
+
+  ~~~
+  ```mermaid
+  classDiagram
+  direction RL
+  class Student {
+    -idCard : IdCard
+  }
+  class IdCard{
+    -id : int
+    -name : string
+  }
+  class Bike{
+    -id : int
+    -name : string
+  }
+  Student "1" --o "1" IdCard : carries
+  Student "1" --o "1" Bike : rides
+  ```
+  ~~~
+
+- [more Examples](https://mermaid.js.org/intro/#diagram-types)
+
+</CardChapter>
+
+
+
+<CardChapter>
+
+  ### Interactive Code Editor
+
+  - add Plugin package
+    <Tabs>
+    <TabItem value="npm" label="npm">
+
+    ```bash
+    npm install --save @docusaurus/theme-live-codeblock
+    ```
+    </TabItem>
+
+    <TabItem value="yarn" label="yarn">
+
+    ```bash
+    yarn add @docusaurus/theme-live-codeblock
+    ```
+    </TabItem>
+
+    <TabItem value="pnpm" label="pnpm">
+    
+    ```bash
+    pnpm add @docusaurus/theme-live-codeblock
+    ```
+    </TabItem>
+    </Tabs>
+  
+  - add plugin to config
+    ```javascript title='docusaurus.config.js'
+    module.exports = {
+      // ...
+      themes: ['@docusaurus/theme-live-codeblock'],
+      // ...
+    };
+    ```
+
+  - Usage
+    ```jsx live
+    function toCelsius(f) {
+      f = 77;
+      celsius = (5/9) * (f-32)
+      return celsius;
+    }
+    ```
+
+    ~~~
+    ```jsx live
+    function toCelsius(f) {
+      f = 77;
+      celsius = (5/9) * (f-32)
+      return celsius;
+    }
+    ```
+    ~~~
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### React Live Imports
+
+  
+- ButtonExample
+
+  Import:
+
+  <Tabs>
+  <TabItem value="npm" label="npm">
+
+  ```bash
+  npm run swizzle @docusaurus/theme-live-codeblock ReactLiveScope -- --eject
+  ```
+  </TabItem>
+
+  <TabItem value="yarn" label="yarn">
+
+  ```bash
+  yarn swizzle @docusaurus/theme-live-codeblock ReactLiveScope --eject
+  ```
+  </TabItem>
+
+  <TabItem value="pnpm" label="pnpm">
+
+  ```bash
+  pnpm run swizzle @docusaurus/theme-live-codeblock ReactLiveScope -- --eject
+  ```
+  </TabItem>
+  </Tabs>
+<br/>
+
+  ```bash title='src/theme/ReactLiveScope/index.js'
+  import React from 'react';
+
+  const ButtonExample = (props) => (
+    <button
+      {...props}
+      style={{
+        backgroundColor: 'white',
+        color: 'black',
+        border: 'solid red',
+        borderRadius: 20,
+        padding: 10,
+        cursor: 'pointer',
+        ...props.style,
+      }}
+    />
+  );
+
+  // Add react-live imports you need here
+  const ReactLiveScope = {
+    React,
+    ...React,
+    ButtonExample,
+  };
+
+  export default ReactLiveScope;
+  ```
+
+  <CardWarn
+    title='Caution:'
+    icon={<MyWarnIcon />}
+    description='Restart Dev-Server!'
+  />
+
+- usage
+  ```jsx live
+  function MyPlayground(props) {
+    return (
+      <div>
+        <ButtonExample onClick={() => alert('hey!')}>Click me</ButtonExample>
+      </div>
+    );
+  }
+  ```
+
+  ~~~
+  ```jsx live
+  function MyPlayground(props) {
+  return (
+    <div>
+      <ButtonExample onClick={() => alert('hey!')}>Click me</ButtonExample>
+    </div>
+  );
+  }
+  ```
+  ~~~
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Tabs
+
+  - Example
+
+    <Tabs>
+      <TabItem value="html" label="html" default>
+        html
+      </TabItem>
+      <TabItem value="css" label="css">
+        css
+      </TabItem>
+      <TabItem value="js" label="js">
+        js
+      </TabItem>
+    </Tabs>
+
+  - Usage
+    ```javascript
+    import Tabs from '@theme/Tabs';
+    import TabItem from '@theme/TabItem';
+
+    <Tabs>
+      <TabItem value="html" label="html" default>
+        html
+      </TabItem>
+      <TabItem value="css" label="css">
+        css
+      </TabItem>
+      <TabItem value="js" label="js">
+        js
+      </TabItem>
+    </Tabs>
+    ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## Heading
+
+  - set heading range in toc for single document
+
+    ```markdown
+    ---
+    toc_min_heading_level: 2
+    toc_max_heading_level: 6
+    ---
+    ```
+
+  - set heading range in toc as default for all documents
+
+    ```javascript title='docusaurus.config.js'
+    module.exports = {
+      themeConfig: {
+        tableOfContents: {
+          minHeadingLevel: 2,
+          maxHeadingLevel: 6,
+        },
+      },
+    };
+    ```
+
+<ul style={{ listStyleType: 'none' }}>
+  <li>
+
+  ### TestHeading #3
+
+  #### TestHeading #4
+
+  ##### TestHeading #5
+
+  ###### TestHeading #6
+  
+  </li>
+</ul>
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### MDX Plugins
+
+  <Card
+    title='Docusaurus'
+    description='Documentation'
+    to='https://docusaurus.io/docs/markdown-features/plugins'
+  />
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  #### Math Equations
+
+  <Card
+    title='Katex'
+    description='Documentation'
+    to='https://katex.org/'
+  />
+
+  
+- Install
+
+  <Tabs>
+  <TabItem value='npm' label='npm'>
+
+  ```bash
+  npm install --save remark-math@3 rehype-katex@4 
+  ```
+  </TabItem>
+  <TabItem value='yarn' label='yarn'>
+
+  ```bash
+  yarn add remark-math@3 rehype-katex@4
+  ```
+  </TabItem>
+  <TabItem value='pnpm' label='pnpm'>
+
+  ```bash
+  pnpm add remark-math@3 rehype-katex@4
+  ```
+  </TabItem>
+  </Tabs>
+
+- config
+
+  ```javascript title='docusaurus.config.js'
+  const math = require('remark-math');
+  const katex = require('rehype-katex');
+
+  module.exports = {
+    title: 'Docusaurus',
+    tagline: 'Build optimized websites quickly, focus on your content',
+    presets: [
+      [
+        '@docusaurus/preset-classic',
+        {
+          docs: {
+            path: 'docs',
+            remarkPlugins: [math],
+            rehypePlugins: [katex],
+          },
+        },
+      ],
+    ],
+    stylesheets: [
+      {
+        href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+        type: 'text/css',
+        integrity:
+          'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+        crossorigin: 'anonymous',
+      },
+    ],
+  };
+  ```
+  
+  >
+    <CardWarn
+      title='Caution:'
+      icon={<MyWarnIcon />}
+      description='Version must be...'
+    />
+  >
+  >
+    ```json title='package.json'
+      "rehype-katex": "^4.0.0",
+      "remark-math": "^3.0.1",
+    ```
+
+<br/>
+
+  - Config with Docusaurus `plugin-content-docs`:
+
+  ```javascript title='docusaurus.config.js'
+  /** @type {import('@docusaurus/plugin-content-docs').Options} */
+  const defaultSettings = {
+    remarkPlugins: [math],
+    rehypePlugins: [katex],
+  };
+  ```
+
+
+<br/>
+
+- Usage Inline
+
+  **Fundamental Theorem of Calculus**  
+  Let $f:[a,b] \to \R$ be Riemann integrable. Let $F:[a,b]\to\R$ be $F(x)=
+  \int_{a}^{x}f(t)dt$.
+  Then $$F$$ is continuous, and at all $x$ such that $f$ is continuous at $x$,
+  $F$ is differentiable at $x$ with $F'(x)=f(x)$.
+
+  ```
+    **Fundamental Theorem of Calculus**  
+  Let $f:[a,b] \to \R$ be Riemann integrable. Let $F:[a,b]\to\R$ be $F(x)=
+  \int_{a}^{x}f(t)dt$.
+  Then $$F$$ is continuous, and at all $x$ such that $f$ is continuous at $x$,
+  $F$ is differentiable at $x$ with $F'(x)=f(x)$.
+  ```
+<br/>
+
+
+- Usage as Block
+
+  $$
+  I = \int_0^{2\pi} \sin(x)\,dx
+  $$
+
+  ```
+  
+  $$
+  I = \int_0^{2\pi} \sin(x)\,dx
+  $$
+
+  ```
+
+
+</CardChapter>
+<br/>
+
+

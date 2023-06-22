@@ -1,0 +1,16 @@
+[
+  {
+    "description": "Build Project",
+    "windowsLinux": "Ctrl+F9",
+    "macos": "⌘ F9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/compiling-applications.html"
+  },
+  {
+    "description": "Rebuild",
+    "windowsLinux": "Ctrl+Shift+F9",
+    "macos": "⌘ ⇧ F9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/compiling-applications.html"
+  }
+]

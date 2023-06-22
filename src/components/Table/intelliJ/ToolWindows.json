@@ -1,0 +1,128 @@
+[
+  {
+    "description": "Hide Active Tool Window",
+    "windowsLinux": "Shift+Escape",
+    "macos": "⇧ ⎋",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/tool-windows.html"
+  },
+  {
+    "description": "Hide All Tool Windows",
+    "windowsLinux": "Ctrl+Shift+F12",
+    "macos": "⌘ ⇧ F12",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/tool-windows.html"
+  },
+  {
+    "description": "Jump to Last Tool Window",
+    "windowsLinux": "F12",
+    "macos": "F12",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/tool-windows.html"
+  },
+  {
+    "description": "Stretch to Left",
+    "windowsLinux": "Ctrl+Alt+Shift+Left",
+    "macos": "^ ⌥ ←",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/manipulating-the-tool-windows.html"
+  },
+  {
+    "description": "Stretch to Right",
+    "windowsLinux": "Ctrl+Alt+Shift+Right",
+    "macos": "^ ⌥ →",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/manipulating-the-tool-windows.html"
+  },
+  {
+    "description": "Stretch to Top",
+    "windowsLinux": "Ctrl+Alt+Shift+Up",
+    "macos": "^ ⌥ Up",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/manipulating-the-tool-windows.html"
+  },
+  {
+    "description": "Stretch to Bottom",
+    "windowsLinux": "Ctrl+Alt+Shift+Down",
+    "macos": "^ ⌥ ↓",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/manipulating-the-tool-windows.html"
+  },
+  {
+    "description": "Show Project window",
+    "windowsLinux": "Alt+1",
+    "macos": "⌘ 1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/project-tool-window.html"
+  },
+  {
+    "description": "Show Bookmarks window",
+    "windowsLinux": "Alt+2",
+    "macos": "⌘ 2",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Show Find window",
+    "windowsLinux": "Alt+3",
+    "macos": "⌘ 3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/find-tool-window.html"
+  },
+  {
+    "description": "Show Run window",
+    "windowsLinux": "Alt+4",
+    "macos": "⌘ 4",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/run-tool-window.html"
+  },
+  {
+    "description": "Show Debug window",
+    "windowsLinux": "Alt+5",
+    "macos": "⌘ 5",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/debug-tool-window.html"
+  },
+  {
+    "description": "Show Problems window",
+    "windowsLinux": "Alt+6",
+    "macos": "⌘ 6",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/problems-tool-window.html"
+  },
+  {
+    "description": "Show Structure window",
+    "windowsLinux": "Alt+7",
+    "macos": "⌘ 7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-structure-of-a-source-file.html"
+  },
+  {
+    "description": "Show Services window",
+    "windowsLinux": "Alt+8",
+    "macos": "⌘ 8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/services-tool-window.html"
+  },
+  {
+    "description": "Show Version Control window",
+    "windowsLinux": "Alt+9",
+    "macos": "⌘ 9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/version-control-integration.html"
+  },
+  {
+    "description": "Show Commit window",
+    "windowsLinux": "Alt+0",
+    "macos": "⌘ 0",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/commit-and-push-changes.html"
+  },
+  {
+    "description": "Show Terminal window",
+    "windowsLinux": "Alt+F12",
+    "macos": "⌥ F12",
+    "myshortcut": "",
+    "url": ""
+  }
+]

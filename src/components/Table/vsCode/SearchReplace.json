@@ -1,0 +1,51 @@
+[
+  {
+    "description": "Find",
+    "windows": "Ctrl+F",
+    "macos": "⌘F",
+    "linux": "Ctrl+F",
+    "myselection": ""
+  },
+  {
+    "description": "Replace",
+    "windows": "Ctrl+H",
+    "macos": "⌥⌘F ",
+    "linux": "Ctrl+H ",
+    "myselection": ""
+  },
+  {
+    "description": "Find next/previous",
+    "windows": "F3 / Shift+F3",
+    "macos": "⌘G / ⇧⌘G ",
+    "linux": "F3 / Shift+F3 ",
+    "myselection": ""
+  },
+  {
+    "description": "Select all occurences of Find match",
+    "windows": "Alt+Enter",
+    "macos": "⌥Enter",
+    "linux": "Alt+Enter ",
+    "myselection": ""
+  },
+  {
+    "description": "Add selection to next Find match",
+    "windows": "Ctrl+D",
+    "macos": "⌘D",
+    "linux": "Ctrl+D",
+    "myselection": ""
+  },
+  {
+    "description": "Move last selection to next Find match",
+    "windows": "Ctrl+K Ctrl+D",
+    "macos": "⌘K ⌘D ",
+    "linux": "Ctrl+K Ctrl+D ",
+    "myselection": ""
+  },
+  {
+    "description": "Toggle case-sensitive / regex / whole word",
+    "windows": "Alt+C / R / W",
+    "macos": "",
+    "linux": "",
+    "myselection": ""
+  }
+]

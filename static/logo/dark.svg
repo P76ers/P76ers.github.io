@@ -1,0 +1,64 @@
+<!-- PATH Logo & Icon -->
+<svg id="Objects" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2000">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: url(#linear-gradient);
+            }
+
+            .cls-2 {
+                fill: #01e786;
+            }
+
+            .cls-3 {
+                fill: url(#linear-gradient-2);
+            }
+
+            .cls-4 {
+                fill: url(#linear-gradient-3);
+            }
+
+            .cls-5 {
+                fill: url(#linear-gradient-4);
+            }
+
+            .cls-6 {
+                fill: url(#linear-gradient-5);
+            }
+
+            .cls-7 {
+                fill: url(#linear-gradient-6);
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="624.03" y1="312.52" x2="1" y2="312.52" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff9452" />
+            <stop offset="1" stop-color="#ffd912" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="312.52" y1="1311.52" x2="312.52" y2="688.48"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fe842d" />
+            <stop offset="1" stop-color="#f70100" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-3" x1="312.52" y1="1375.97" x2="312.52" y2="1999"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#7004da" />
+            <stop offset="1" stop-color="#f71aa9" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-4" x1="1311.52" y1="1000" x2="688.48" y2="1000"
+            xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-5" x1="1702.68" y1="1.91" x2="1678.95" y2="486.99"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#0084fd" />
+            <stop offset="1" stop-color="#01ecdf" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-6" x1="1687.48" y1="1311.52" x2="1687.48" y2="688.48"
+            xlink:href="#linear-gradient-2" />
+    </defs>
+    <path class="cls-1" d="M1,624H624V1H1ZM62.78,62.78H562.26V562.26H62.78Z" />
+    <path class="cls-2" d="M688.48,624h623V1h-623ZM750.26,62.78h499.48V562.26H750.26Z" />
+    <path class="cls-3" d="M1,1311.52H624v-623H1ZM62.78,750.26H562.26v499.48H62.78Z" />
+    <path class="cls-4" d="M1,1999H624V1376H1Zm61.78-561.26H562.26v499.48H62.78Z" />
+    <path class="cls-5" d="M688.48,1311.52h623v-623h-623Zm61.78-561.26h499.48v499.48H750.26Z" />
+    <path class="cls-6" d="M1376,1V624h623q0-257.8-182.65-440.38T1376,1Z" />
+    <path class="cls-7" d="M1376,1311.52q257.8,0,440.38-182.58T1999,688.48H1376Z" />
+</svg>

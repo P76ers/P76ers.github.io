@@ -1,0 +1,51 @@
+[
+  {
+    "description": "Expand",
+    "windowsLinux": "Ctrl+NumPad +",
+    "macos": "⌘ NumPad",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Collapse",
+    "windowsLinux": "Ctrl+NumPad -",
+    "macos": "⌘ NumPad -",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Expand Recursively",
+    "windowsLinux": "Ctrl+Alt+NumPad +",
+    "macos": "⌘ ⌥ NumPad",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Collapse Recursively",
+    "windowsLinux": "Ctrl+Alt+NumPad -",
+    "macos": "⌘ ⌥ NumPad -",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Expand All",
+    "windowsLinux": "Ctrl+Shift+NumPad +",
+    "macos": "⌘ ⇧ NumPad",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Collapse All",
+    "windowsLinux": "Ctrl+Shift+NumPad -",
+    "macos": "⌘ ⇧ NumPad -",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Fold Selection",
+    "windowsLinux": "Ctrl+.",
+    "macos": "⌘ .",
+    "myshortcut": "",
+    "url": ""
+  }
+]

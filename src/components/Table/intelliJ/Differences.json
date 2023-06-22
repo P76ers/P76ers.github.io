@@ -1,0 +1,58 @@
+[
+  {
+    "description": "Show Diff",
+    "windowsLinux": "Ctrl+D",
+    "macos": "⌘ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Compare Files",
+    "windowsLinux": "Ctrl+D",
+    "macos": "⌘ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Next Difference",
+    "windowsLinux": "F7",
+    "macos": "F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Previous Difference",
+    "windowsLinux": "Shift+F7",
+    "macos": "⇧ F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Accept Left Side",
+    "windowsLinux": "Ctrl+Alt+R",
+    "macos": "⌘ ^ →",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Accept Right Side",
+    "windowsLinux": "Ctrl+Alt+A",
+    "macos": "⌘ ^ ←",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Select Opposite Diff Pane",
+    "windowsLinux": "Ctrl+Shift+Tab",
+    "macos": "^ ⇧ ⇥",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  },
+  {
+    "description": "Show Diff Settings Popup...",
+    "windowsLinux": "Ctrl+Shift+D",
+    "macos": "⌘ ⇧ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-changes-information.html"
+  }
+]

@@ -1,0 +1,724 @@
+{
+  "index_name": "codingDocs",
+  "sitemap_urls": ["https://p76ers.github.io/sitemap.xml"],
+  "start_urls": [
+    {
+      "url": "https://p76ers.github.io/ide",
+      "tags": "ide",
+      "selectors_key": "ide"
+    },
+    {
+      "url": "https://p76ers.github.io/vsCode",
+      "tags": "vsCode",
+      "selectors_key": "vsCode"
+    },
+    {
+      "url": "https://p76ers.github.io/intelliJ",
+      "tags": "intelliJ",
+      "selectors_key": "intelliJ"
+    },
+    {
+      "url": "https://p76ers.github.io/eclipse",
+      "tags": "eclipse",
+      "selectors_key": "eclipse"
+    },
+    {
+      "url": "https://p76ers.github.io/framework",
+      "tags": "frameworks",
+      "selectors_key": "frameworks"
+    },
+    {
+      "url": "https://p76ers.github.io/nodeJs",
+      "tags": "nodeJs",
+      "selectors_key": "nodeJs"
+    },
+    {
+      "url": "https://p76ers.github.io/react",
+      "tags": "react",
+      "selectors_key": "react"
+    },
+    {
+      "url": "https://p76ers.github.io/astro",
+      "tags": "astro",
+      "selectors_key": "astro"
+    },
+    {
+      "url": "https://p76ers.github.io/svelte",
+      "tags": "svelte",
+      "selectors_key": "svelte"
+    },
+    {
+      "url": "https://p76ers.github.io/tailwind",
+      "tags": "tailwind",
+      "selectors_key": "tailwind"
+    },
+    {
+      "url": "https://p76ers.github.io/versionControl",
+      "tags": "versionControl",
+      "selectors_key": "versionControl"
+    },
+    {
+      "url": "https://p76ers.github.io/git",
+      "tags": "git",
+      "selectors_key": "git"
+    },
+    {
+      "url": "https://p76ers.github.io/github",
+      "tags": "github",
+      "selectors_key": "github"
+    },
+    {
+      "url": "https://p76ers.github.io/docusaurus",
+      "tags": "docusaurus",
+      "selectors_key": "docusaurus"
+    },
+    {
+      "url": "https://p76ers.github.io/database",
+      "tags": "database",
+      "selectors_key": "database"
+    },
+    {
+      "url": "https://p76ers.github.io/postgreSql",
+      "tags": "postgreSql",
+      "selectors_key": "postgreSql"
+    },
+    {
+      "url": "https://p76ers.github.io/mySql",
+      "tags": "mySql",
+      "selectors_key": "mySql"
+    },
+    {
+      "url": "https://p76ers.github.io/insomnia",
+      "tags": "insomnia",
+      "selectors_key": "insomnia"
+    },
+    {
+      "url": "https://p76ers.github.io/linguae",
+      "tags": "linguae",
+      "selectors_key": "linguae"
+    },
+    {
+      "url": "https://p76ers.github.io/markdown",
+      "tags": "markdown",
+      "selectors_key": "markdown"
+    },
+    {
+      "url": "https://p76ers.github.io/mdx",
+      "tags": "mdx",
+      "selectors_key": "mdx"
+    },
+    {
+      "url": "https://p76ers.github.io/html",
+      "tags": "html",
+      "selectors_key": "html"
+    },
+    {
+      "url": "https://p76ers.github.io/css",
+      "tags": "css",
+      "selectors_key": "css"
+    },
+    {
+      "url": "https://p76ers.github.io/javascript",
+      "tags": "javascript",
+      "selectors_key": "javascript"
+    },
+    {
+      "url": "https://p76ers.github.io/php",
+      "tags": "php",
+      "selectors_key": "php"
+    },
+    {
+      "url": "https://p76ers.github.io/python",
+      "tags": "python",
+      "selectors_key": "python"
+    },
+    {
+      "url": "https://p76ers.github.io/autohotkey",
+      "tags": "autohotkey",
+      "selectors_key": "autohotkey"
+    },
+    {
+      "url": "https://p76ers.github.io/c",
+      "tags": "c",
+      "selectors_key": "c"
+    },
+    {
+      "url": "https://p76ers.github.io/cSharp",
+      "tags": "cSharp",
+      "selectors_key": "cSharp"
+    },
+    {
+      "url": "https://p76ers.github.io/java",
+      "tags": "java",
+      "selectors_key": "java"
+    },
+    {
+      "url": "https://p76ers.github.io/sql",
+      "tags": "sql",
+      "selectors_key": "sql"
+    },
+    {
+      "url": "https://p76ers.github.io/operatingSystem",
+      "tags": "operatingSystem",
+      "selectors_key": "operatingSystem"
+    },
+    {
+      "url": "https://p76ers.github.io/windows",
+      "tags": "windows",
+      "selectors_key": "windows"
+    },
+    {
+      "url": "https://p76ers.github.io/macOs",
+      "tags": "macOs",
+      "selectors_key": "macOs"
+    },
+    {
+      "url": "https://p76ers.github.io/linux",
+      "tags": "linux",
+      "selectors_key": "linux"
+    },
+    {
+      "url": "https://p76ers.github.io/unix",
+      "tags": "unix",
+      "selectors_key": "unix"
+    },
+    "https://p76ers.github.io/"
+  ],
+  "stop_urls": [],
+
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "ide": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "ide"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "vsCode": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "vsCode"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "intelliJ": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "intelliJ"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "eclipse": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "eclipse"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "frameworks": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "frameworks"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "nodeJs": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "nodeJs"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "react": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "react"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "astro": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "astro"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "svelte": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "svelte"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "tailwind": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "tailwind"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "versionControl": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "versionControl"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "git": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "git"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "github": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "github"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "docusaurus": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "docusaurus"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "database": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "database"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "postgreSql": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "postgreSql"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "mySql": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "mySql"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "insomnia": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "insomnia"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "linguae": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "linguae"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "markdown": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "markdown"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "mdx": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "mdx"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "html": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "html"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "css": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "css"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "javascript": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "javascript"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "php": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "php"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "python": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "python"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "autohotkey": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "autohotkey"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "c": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "c"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "cSharp": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "cSharp"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "java": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "java"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "sql": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "sql"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "operatingSystem": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "operatingSystem"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "windows": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "windows"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "macOs": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "macOs"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "linux": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "linux"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "unix": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "unix"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    }
+  },
+
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
+  },
+  "nb_hits": 2227
+}

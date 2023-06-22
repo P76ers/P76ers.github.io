@@ -1,0 +1,86 @@
+[
+  {
+    "description": "Search Everywhere",
+    "windowsLinux": "Double Shift",
+    "macos": "Double ⇧",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/searching-everywhere.html"
+  },
+  {
+    "description": "Find...",
+    "windowsLinux": "Ctrl+F",
+    "macos": "⌘ F",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#find_in_file"
+  },
+  {
+    "description": "Find Next / Move to Next Occurrence",
+    "windowsLinux": "F3",
+    "macos": "⌘ G",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#find_in_file"
+  },
+  {
+    "description": "Find Previous / Move to Previous Occurrence",
+    "windowsLinux": "Shift+F3",
+    "macos": "⌘ ⇧ G",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#find_in_file"
+  },
+  {
+    "description": "Replace...",
+    "windowsLinux": "Ctrl+R",
+    "macos": "⌘ R",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#replace_search_string"
+  },
+  {
+    "description": "Find in Files...",
+    "windowsLinux": "Ctrl+Shift+F",
+    "macos": "⌘ ⇧ F",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-project.html#find_in_project"
+  },
+  {
+    "description": "Replace in Files...",
+    "windowsLinux": "Ctrl+Shift+R",
+    "macos": "⌘ ⇧ R",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-project.html#replace_search_string_in_project"
+  },
+  {
+    "description": "Next Occurrence of the Word at Caret",
+    "windowsLinux": "Ctrl+F3",
+    "macos": "",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Go to File...",
+    "windowsLinux": "Ctrl+Shift+N",
+    "macos": "⌘ ⇧ O",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "File Structure",
+    "windowsLinux": "Ctrl+F12",
+    "macos": "⌘ F12",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Go to Symbol...",
+    "windowsLinux": "Ctrl+Alt+Shift+N",
+    "macos": "⌘ ⌥ O",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Find Action...",
+    "windowsLinux": "Ctrl+Shift+A",
+    "macos": "⌘ ⇧ A",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/searching-everywhere.html#search_actions"
+  }
+]

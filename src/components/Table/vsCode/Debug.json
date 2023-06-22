@@ -1,0 +1,44 @@
+[
+  {
+    "description": "Toggle breakpoint",
+    "windows": "F9",
+    "macos": "F9 ",
+    "linux": "F9 ",
+    "myselection": ""
+  },
+  {
+    "description": "Start/Continue",
+    "windows": "F5",
+    "macos": "F5",
+    "linux": "F5 ",
+    "myselection": ""
+  },
+  {
+    "description": "Stop",
+    "windows": "Shift+F5",
+    "macos": "⇧F5",
+    "linux": "Shift+F5",
+    "myselection": ""
+  },
+  {
+    "description": "Step into/out",
+    "windows": "F11 / Shift+F11",
+    "macos": "F11 / ⇧F11 ",
+    "linux": "F11 / Shift+F11 ",
+    "myselection": ""
+  },
+  {
+    "description": "Step over",
+    "windows": "F10",
+    "macos": "F10 ",
+    "linux": "F10 ",
+    "myselection": ""
+  },
+  {
+    "description": "Show hover",
+    "windows": "Ctrl+K Ctrl+I",
+    "macos": "⌘K ⌘I ",
+    "linux": "Ctrl+K Ctrl+I ",
+    "myselection": ""
+  }
+]

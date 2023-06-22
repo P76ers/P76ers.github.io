@@ -1,0 +1,74 @@
+[
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Docker",
+    "pathval": "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Git",
+    "pathval": "C:\\Program Files\\Git\\bin"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Git",
+    "pathval": "C:\\Program Files\\Git\\bin\\git.exe; C:\\Program Files\\Git\\cmd"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Github Desktop",
+    "pathval": "C:\\Users\\prwzm\\AppData\\Local\\GitHubDesktop\\bin"
+  },
+  {
+    "sysvariable": "JAVA_HOME",
+    "sysvalue": "C:\\Program Files\\Java\\jdk-17",
+    "program": "Java",
+    "pathval": "%JAVA_HOME%\\bin"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Jetbrains Toolbox",
+    "pathval": "C:\\Users\\prwzm\\AppData\\Local\\JetBrains\\Toolbox\\scripts"
+  },
+  {
+    "sysvariable": "MAVEN_HOME",
+    "sysvalue": "C:\\Storage\\Dev\\apache-maven-3.8.8",
+    "program": "Maven",
+    "pathval": "%MAVEN_HOME%\\bin"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "MySQL",
+    "pathval": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "NodeJs",
+    "pathval": "C:\\Program Files\\nodejs\\"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Npm",
+    "pathval": "C:\\Users\\prwzm\\AppData\\Roaming\\npm"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "oh-my-posh",
+    "pathval": "C:\\Users\\prwzm\\AppData\\Local\\Programs\\oh-my-posh\\bin"
+  },
+  {
+    "sysvariable": "",
+    "sysvalue": "",
+    "program": "Pnpm",
+    "pathval": "%PNPM_HOME%"
+  }
+]

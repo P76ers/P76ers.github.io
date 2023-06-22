@@ -1,0 +1,121 @@
+[
+  {
+    "description": "Search Everywhere",
+    "windowsLinux": "Double Shift",
+    "macos": "Double ⇧",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/searching-everywhere.html"
+  },
+  {
+    "description": "Find Action...",
+    "windowsLinux": "Ctrl+Shift+A",
+    "macos": "⌘ ⇧ A",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/searching-everywhere.html#search_actions"
+  },
+  {
+    "description": "Show Project window",
+    "windowsLinux": "Alt+1",
+    "macos": "⌘ 1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/project-tool-window.html"
+  },
+  {
+    "description": "Rebuild",
+    "windowsLinux": "Ctrl+Shift+F9",
+    "macos": "⌘ ⇧ F9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/compiling-applications.html"
+  },
+  {
+    "description": "Show Intention Actions",
+    "windowsLinux": "Alt+Enter",
+    "macos": "⌥ ⏎",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions"
+  },
+  {
+    "description": "Recent Files",
+    "windowsLinux": "Ctrl+E",
+    "macos": "⌘ E",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#recent_files"
+  },
+  {
+    "description": "Find Usages",
+    "windowsLinux": "Alt+F7",
+    "macos": "⌥ F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/find-highlight-usages.html#find-usages"
+  },
+  {
+    "description": "Select In...",
+    "windowsLinux": "Alt+F1",
+    "macos": "⌥ F1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#navigate_in_project_view"
+  },
+  {
+    "description": "Settings...",
+    "windowsLinux": "Ctrl+Alt+S",
+    "macos": "⌘ Comma",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/configure-project-settings.html"
+  },
+  {
+    "description": "Generate...",
+    "windowsLinux": "Alt+Insert",
+    "macos": "⌘ N",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/generating-code.html"
+  },
+  {
+    "description": "Run Anything",
+    "windowsLinux": "Double Ctrl",
+    "macos": "Double ^",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/running-applications.html"
+  },
+  {
+    "description": "Debug...",
+    "windowsLinux": "Alt+Shift+F9",
+    "macos": "^ ⌥ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/starting-the-debugger-session.html"
+  },
+  {
+    "description": "View Breakpoints...",
+    "windowsLinux": "Ctrl+Shift+F8",
+    "macos": "⌘ ⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-breakpoints.html"
+  },
+  {
+    "description": "Attach to Process...",
+    "windowsLinux": "Ctrl+Alt+F5",
+    "macos": "⌥ ⇧ F5",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/attaching-to-local-process.html"
+  },
+  {
+    "description": "VCS Operations Popup...",
+    "windowsLinux": "Alt+`",
+    "macos": "^ V",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/version-control-integration.html"
+  },
+  {
+    "description": "Refactor This...",
+    "windowsLinux": "Ctrl+Alt+Shift+T",
+    "macos": "^ T",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/refactoring-source-code.html"
+  },
+  {
+    "description": "Reformat Code",
+    "windowsLinux": "Ctrl+Alt+L",
+    "macos": "⌘ ⌥ L",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/reformat-and-rearrange-code.html"
+  }
+]

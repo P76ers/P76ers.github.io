@@ -1,0 +1,44 @@
+[
+  {
+    "description": "Show Intention Actions",
+    "windowsLinux": "Alt+Enter",
+    "macos": "⌥ ⏎",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions"
+  },
+  {
+    "description": "Error Description",
+    "windowsLinux": "Ctrl+F1",
+    "macos": "⌘ F1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-code-editor.html"
+  },
+  {
+    "description": "Next Highlighted Error",
+    "windowsLinux": "F2",
+    "macos": "F2",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#navigate-errors-warnings"
+  },
+  {
+    "description": "Previous Highlighted Error",
+    "windowsLinux": "Shift+F2",
+    "macos": "⇧ F2",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#navigate-errors-warnings"
+  },
+  {
+    "description": "Run Inspection by Name...",
+    "windowsLinux": "Ctrl+Alt+Shift+I",
+    "macos": "⌘ ⌥ ⇧ I",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/running-inspections.html#run-inspections-manually"
+  },
+  {
+    "description": "Show Problems window",
+    "windowsLinux": "Alt+6",
+    "macos": "⌘ 6",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/problems-tool-window.html"
+  }
+]

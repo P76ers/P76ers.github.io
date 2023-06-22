@@ -1,0 +1,100 @@
+[
+  {
+    "description": "New File",
+    "windows": "Ctrl+N",
+    "macos": "⌘N",
+    "linux": "Ctrl+N ",
+    "myselection": ""
+  },
+  {
+    "description": "Open File...",
+    "windows": "Ctrl+O",
+    "macos": "⌘O ",
+    "linux": "Ctrl+O ",
+    "myselection": ""
+  },
+  {
+    "description": "Save",
+    "windows": "Ctrl+S",
+    "macos": "⌘S ",
+    "linux": "Ctrl+S",
+    "myselection": ""
+  },
+  {
+    "description": "Save As...",
+    "windows": "Ctrl+Shift+S",
+    "macos": "⇧⌘S ",
+    "linux": "Ctrl+Shift+S",
+    "myselection": ""
+  },
+  {
+    "description": "Save All",
+    "windows": "Ctrl+K S",
+    "macos": "⌥⌘S",
+    "linux": "",
+    "myselection": ""
+  },
+  {
+    "description": "Close",
+    "windows": "Ctrl+F4",
+    "macos": "⌘W ",
+    "linux": "Ctrl+W",
+    "myselection": ""
+  },
+  {
+    "description": "Close All",
+    "windows": "Ctrl+K Ctrl+W",
+    "macos": "⌘K ⌘W ",
+    "linux": "Ctrl+K Ctrl+W",
+    "myselection": ""
+  },
+  {
+    "description": "Reopen closed editor",
+    "windows": "Ctrl+Shift+T",
+    "macos": "⇧⌘T ",
+    "linux": "Ctrl+Shift+T ",
+    "myselection": ""
+  },
+  {
+    "description": "Keep preview mode editor open",
+    "windows": "Ctrl+K Enter",
+    "macos": "⌘K Enter",
+    "linux": "Ctrl+K Enter ",
+    "myselection": ""
+  },
+  {
+    "description": "Open next",
+    "windows": "Ctrl+Tab",
+    "macos": "⌃Tab",
+    "linux": "Ctrl+Tab",
+    "myselection": ""
+  },
+  {
+    "description": "Open previous",
+    "windows": "Ctrl+Shift+Tab",
+    "macos": "⌃⇧Tab",
+    "linux": "Ctrl+Shift+Tab",
+    "myselection": ""
+  },
+  {
+    "description": "Copy path of active file",
+    "windows": "Ctrl+K P",
+    "macos": "⌘K P",
+    "linux": "Ctrl+K P ",
+    "myselection": ""
+  },
+  {
+    "description": "Reveal active file in Explorer",
+    "windows": "Ctrl+K R",
+    "macos": "⌘K R ",
+    "linux": "Ctrl+K R ",
+    "myselection": ""
+  },
+  {
+    "description": "Show active file in new window/instance",
+    "windows": "Ctrl+K O",
+    "macos": "⌘K O",
+    "linux": "Ctrl+K O",
+    "myselection": ""
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "description": "Show all Symbols",
+    "windows": "Ctrl+T",
+    "macos": "⌘T",
+    "linux": "Ctrl+T ",
+    "myselection": ""
+  },
+  {
+    "description": "Go to Line...",
+    "windows": "Ctrl+G",
+    "macos": "⌃G ",
+    "linux": "Ctrl+G",
+    "myselection": ""
+  },
+  {
+    "description": "Go to File...",
+    "windows": "Ctrl+P",
+    "macos": "⌘P ",
+    "linux": "Ctrl+P",
+    "myselection": ""
+  },
+  {
+    "description": "Go to Symbol...",
+    "windows": "Ctrl+Shift+O",
+    "macos": "⇧⌘O",
+    "linux": "Ctrl+Shift+O",
+    "myselection": ""
+  },
+  {
+    "description": "Show Problems panel",
+    "windows": "Ctrl+Shift+M",
+    "macos": "⇧⌘M",
+    "linux": "Ctrl+Shift+M",
+    "myselection": ""
+  },
+  {
+    "description": "Go to next error or warning",
+    "windows": "F8",
+    "macos": "F8",
+    "linux": "F8 ",
+    "myselection": ""
+  },
+  {
+    "description": "Go to previous error or warning",
+    "windows": "Shift+F8",
+    "macos": "⇧F8",
+    "linux": "Shift+F8 ",
+    "myselection": ""
+  },
+  {
+    "description": "Navigate editor group history",
+    "windows": "Ctrl+Shift+Tab",
+    "macos": "⌃⇧Tab",
+    "linux": "Ctrl+Shift+Tab",
+    "myselection": ""
+  },
+  {
+    "description": "Go backward",
+    "windows": "Alt+ ← ",
+    "macos": "⌃- ",
+    "linux": "Ctrl+Alt+",
+    "myselection": ""
+  },
+  {
+    "description": "Toggle Tab moves focus",
+    "windows": "Ctrl+M",
+    "macos": "⌃⇧M ",
+    "linux": "Ctrl+M",
+    "myselection": ""
+  },
+  {
+    "description": "Go forward",
+    "windows": "Alt+ →",
+    "macos": "⌃⇧",
+    "linux": "Ctrl+Shift+- ",
+    "myselection": ""
+  }
+]

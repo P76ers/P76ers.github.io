@@ -1,0 +1,128 @@
+[
+  {
+    "description": "Show Intention Actions",
+    "windowsLinux": "Alt+Enter",
+    "macos": "⌥ ⏎",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions"
+  },
+  {
+    "description": "Basic Completion",
+    "windowsLinux": "Ctrl+Space",
+    "macos": "^ Space",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion"
+  },
+  {
+    "description": "Type-Matching Completion",
+    "windowsLinux": "Ctrl+Shift+Space",
+    "macos": "^ ⇧ Space",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/auto-completing-code.html"
+  },
+  {
+    "description": "Second Basic Completion",
+    "windowsLinux": "Ctrl+Alt+Space",
+    "macos": "^ ⌥ Space",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/auto-completing-code.html"
+  },
+  {
+    "description": "Complete Current Statement",
+    "windowsLinux": "Ctrl+Shift+Enter",
+    "macos": "⌘ ⇧ ⏎",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/auto-completing-code.html"
+  },
+  {
+    "description": "Reformat Code",
+    "windowsLinux": "Ctrl+Alt+L",
+    "macos": "⌘ ⌥ L",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/reformat-and-rearrange-code.html"
+  },
+  {
+    "description": "Parameter Info",
+    "windowsLinux": "Ctrl+P",
+    "macos": "⌘ P",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-reference-information.html#view-parameter-info"
+  },
+  {
+    "description": "Quick Documentation",
+    "windowsLinux": "Ctrl+Q",
+    "macos": "F1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-reference-information.html#inline-quick-documentation"
+  },
+  {
+    "description": "Move Statement Up",
+    "windowsLinux": "Ctrl+Shift+Up",
+    "macos": "⌘ ⇧ Up",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Statement Down",
+    "windowsLinux": "Ctrl+Shift+Down",
+    "macos": "⌘ ⇧ ↓",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Element Left",
+    "windowsLinux": "Ctrl+Alt+Shift+Left",
+    "macos": "⌘ ⌥ ⇧ ←",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Statement Right",
+    "windowsLinux": "Ctrl+Alt+Shift+Right",
+    "macos": "⌘ ⌥ ⇧ →",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Line Up",
+    "windowsLinux": "Alt+Shift+Up",
+    "macos": "⌥ ⇧ Up",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Line Down",
+    "windowsLinux": "Alt+Shift+Down",
+    "macos": "⌥ ⇧ ↓",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Comment with Line Comment",
+    "windowsLinux": "Ctrl+/",
+    "macos": "⌘ /",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Comment with Block Comment",
+    "windowsLinux": "Ctrl+Shift+/",
+    "macos": "⌘ ⌥ /",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Surround With...",
+    "windowsLinux": "Ctrl+Alt+T",
+    "macos": "⌘ ⌥ T",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/surrounding-blocks-of-code-with-language-constructs.html"
+  },
+  {
+    "description": "Generate...",
+    "windowsLinux": "Alt+Insert",
+    "macos": "⌘ N",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/generating-code.html"
+  }
+]

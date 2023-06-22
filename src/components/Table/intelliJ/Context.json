@@ -1,0 +1,170 @@
+[
+  {
+    "description": "Next Method",
+    "windowsLinux": "Alt+Down",
+    "macos": "^ ⇧ ↓",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Previous Method",
+    "windowsLinux": "Alt+Up",
+    "macos": "^ ⇧ Up",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Go to Line/Column...",
+    "windowsLinux": "Ctrl+G",
+    "macos": "⌘ L",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#find_line"
+  },
+  {
+    "description": "Switcher",
+    "windowsLinux": "Ctrl+Tab",
+    "macos": "^ ⇥",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-code-editor.html#ws_editor_switch_between_tabs"
+  },
+  {
+    "description": "Select In...",
+    "windowsLinux": "Alt+F1",
+    "macos": "⌥ F1",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#navigate_in_project_view"
+  },
+  {
+    "description": "Recent Files",
+    "windowsLinux": "Ctrl+E",
+    "macos": "⌘ E",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#recent_files"
+  },
+  {
+    "description": "Last Edit Location",
+    "windowsLinux": "Ctrl+Shift+Backspace",
+    "macos": "⌘ ⇧ ⌫",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Back",
+    "windowsLinux": "Ctrl+Alt+Left",
+    "macos": "⌘ [",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Forward",
+    "windowsLinux": "Ctrl+Alt+Right",
+    "macos": "⌘ ]",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Select Next Tab",
+    "windowsLinux": "Alt+Right",
+    "macos": "⌘ ⇧ ]",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-code-editor.html"
+  },
+  {
+    "description": "Select Previous Tab",
+    "windowsLinux": "Alt+Left",
+    "macos": "⌘ ⇧ [",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-code-editor.html"
+  },
+  {
+    "description": "Toggle Anonymous Bookmark",
+    "windowsLinux": "F11",
+    "macos": "F3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Toggle Bookmark with Digit",
+    "windowsLinux": "Ctrl+Shift+[digit]",
+    "macos": "^⇧+[digit]",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Toggle Bookmark with Mnemonic",
+    "windowsLinux": "Ctrl+F11",
+    "macos": "⌥ F3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Show All Bookmarks",
+    "windowsLinux": "Shift+F11",
+    "macos": "⌘ F3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Go to Bookmark with Digit",
+    "windowsLinux": "Ctrl+[digit]",
+    "macos": "^+[digit]",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Show Mnemonic Bookmarks",
+    "windowsLinux": "Ctrl+Shift+F11",
+    "macos": "⌘ ⌥ F3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Go to Next Bookmark",
+    "windowsLinux": "N/A",
+    "macos": "",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Go to Previous Bookmark",
+    "windowsLinux": "N/A",
+    "macos": "",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Show Bookmarks window",
+    "windowsLinux": "Alt+2",
+    "macos": "⌘ 2",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
+  },
+  {
+    "description": "Show Structure window",
+    "windowsLinux": "Alt+7",
+    "macos": "⌘ 7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/viewing-structure-of-a-source-file.html"
+  },
+  {
+    "description": "Show Find window",
+    "windowsLinux": "Alt+3",
+    "macos": "⌘ 3",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/find-tool-window.html"
+  },
+  {
+    "description": "Next Occurrence",
+    "windowsLinux": "Ctrl+Alt+Down",
+    "macos": "⌘ ⌥ ↓",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Previous Occurrence",
+    "windowsLinux": "Ctrl+Alt+Up",
+    "macos": "⌘ ⌥ Up",
+    "myshortcut": "",
+    "url": ""
+  }
+]

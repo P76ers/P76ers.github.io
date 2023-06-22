@@ -1,0 +1,488 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: Markdown Cheat Sheet
+tags: [linguae, markdown]
+---
+
+[git]: https://github.com/P76ers 'P76ers'
+
+
+<CardHeading>
+
+  # Markdown Cheat Sheet
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## Links
+
+  <Card
+  title='Markdown Guide'
+  description='Documentation'
+  to='https://www.markdownguide.org/'
+/>
+</CardChapter>
+<br/>
+
+
+
+<CardHeading>
+
+  ## Basic Syntax
+</CardHeading>
+
+
+<CardChapter>
+
+  ### Headings
+  ```markdown
+  # Heading 1
+  ## Heading 2
+  ### Heading 3
+  #### Heading 4
+  ##### Heading 5
+  ###### Heading 6
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Text formatting
+
+  - Wordwrapping
+    
+    <CardInfo
+      title='Info:'
+      icon={<MyInfoIcon />}
+      description='Add an empty line between elements.'
+    />
+
+
+  - _italic text_ and _more italic text_
+
+    ```markdown
+    *italic text* and _more italic text_
+    ```
+
+  - **bold text** and **more bold text**
+
+    ```markdown
+    **bold text** and __more bold text__
+    ```
+
+  - **_bold and italic text_**
+
+    ```markdown
+    ***bold and italic text***
+    ```
+
+  - **Bold _Italic_ Bold**
+
+    ```markdown
+    **Bold *Italic* Bold**
+    ```
+
+  - ~~strikethrough text~~
+    ```markdown
+    ~~strikethrough text~~
+    ```
+
+  - horizontal line: Add 3 dashes
+
+    ---
+
+    ```markdown 
+    ---
+    ```
+
+  - Indentation: 
+    
+    <CardInfo
+      title='Info:'
+      icon={<MyInfoIcon />}
+      description='Add 4 spaces'
+    />  
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ### Lists
+
+  - 1. ordered
+    1. list
+
+    ```markdown
+    1. ordered
+    2. list
+    ```
+
+
+
+  - unordered
+    - second
+    - third
+  
+    ```markdown
+    - second
+    - third
+    ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Blockquote & Callouts
+
+  - > normal blockquote
+
+  ```markdown
+  > normal blockquote
+  ```
+
+- > nested Blockquote
+  >
+  > > nested is better than flat!
+
+    ```markdown
+    > nested Blockquote
+    > > nested is better than flat!
+    ```
+
+- > ## nesting with other elements
+  >
+  > - Simple is better than complex!
+  > - Complex is better than complicated!
+  >
+  >   _Beautiful_ is better than **ugly**!
+
+  ```markdown
+    > ## nesting with other elements
+    > - Simple is better than complex!
+    > - Complex is better than complicated!
+    >
+    >  *Beautiful* is better than **ugly**!
+  ```
+
+- with Emoji
+
+    > ℹ **Info**: Now is better than never.
+
+    ```markdown
+      > ℹ **Info**: Now is better than never.
+    ```
+  > :warning: **Warning**: Be very careful here!
+
+  ```markdown
+  > :warning: **Warning**: Be very careful here!
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Links
+
+  - [anchor link to `headings`](#headings)
+
+    ```markdown
+    [anchor link to heading](#headings)
+    ```
+
+  - [external Link](https://github.com/P76ers)
+
+      ```markdown
+      [external Link](https://github.com/P76ers)
+      ```
+  - [Link with PopUpInfo on mouseOver](https://github.com/P76ers 'P76ers')
+
+    ```markdown
+    [Link with PopUpInfo on mouseOver](https://github.com/P76ers "P76ers")
+    ```
+
+
+  - reference styled links: [Github][git]
+
+    > ℹ **Deklaration somewhere in Document**: `[identifier] [url]`
+
+    ```markdown
+      [git]: https://github.com/P76ers "P76ers"
+    ```
+
+  > ℹ **Usage**: `[Name][identifier]`
+
+    ```markdown
+    [Github][git]
+    ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Images
+
+  - Image 
+
+    ![Text](https://www.google.de/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png)
+
+    ```
+    ![Text](https://www.google.de/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png)
+    ```
+    
+
+  - Image with link
+
+    [![Text](https://avatars.githubusercontent.com/P76ers)](https://github.com/P76ers)
+
+    ```
+    [![Text](https://avatars.githubusercontent.com/P76ers)](https://github.com/P76ers)
+    ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Table of Content
+
+  ```markdown
+<!-- highlight-next-line -->
+  # This Heading will not be visible in toc <!-- omit in toc -->
+
+  - [Basic Syntax](#basic-syntax)
+    - [Headings](#headings)
+  - [Extended Syntax](#extended-syntax)
+    - [Emoji](#emoji)
+  ```
+
+</CardChapter>
+
+---
+<br/>
+
+<CardHeading>
+
+  ## Extended Syntax
+</CardHeading>
+
+  <CardDanger
+    title='Danger:'
+    icon={<MyDangerIcon />}
+    description='Not all extended syntax features work in all markdown applications.'
+  />
+
+<br/>
+
+
+<CardChapter>
+
+  ### Comment
+
+  [This is a hidden comment.]: comment
+
+  ```markdown
+  [This is a hidden comment.]: comment
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Codeblock
+
+  
+  - inline
+    `const sum = (a, b) => a + bsum(2,2)`
+
+    ```markdown
+    `const sum = (a, b) => a + bsum(2,2)`
+    ```
+  - `` escaping `backticks`  ``
+
+    ```markdown
+    ``escaping `backticks` ``
+    ```
+
+  - Codeblock
+
+    ```js
+    const sum = (a, b) => a + b;
+    sum(2, 2);
+    ```
+    ~~~
+    ```js
+    const sum = (a, b) => a + b;
+    sum(2, 2);
+    ```
+    ~~~
+  - Escaping fenced Codeblock
+    ````
+      ~~~
+        ```js
+        const sum = (a, b) => a + b
+        sum(2,2)
+        ```
+      ~~~
+    ````
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Emoji
+
+  - with text
+  
+    :joy:
+
+    ```markdown
+    :joy:
+    ```
+
+  - Windows Emoji
+  
+    🚀
+
+    `Strg` `.`
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Footnote
+
+  Here's a sentence with a footnote. [^1]
+
+  ```
+  Here's a sentence with a footnote. [^1]
+  ```
+
+  <CardInfo
+    title='Info:'
+    icon={<MyInfoIcon />}
+    description='Footnote is at bottom of Page!'
+  />
+
+  ```
+  [^1]: This is the footnote.
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Heading ID
+
+  ```markdown
+  ### My Great Heading {#custom-id}
+  ```
+  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Table
+
+  | Packages   | Description  |     Version |
+  | :--------- | :----------: | ----------: |
+  | left align | middle align | right align |
+  | 1.0        |     1.0      |         1.0 |
+
+  ```markdown
+  | Packages   | Description  |     Version |
+
+  | :--------- | :----------: | ----------: |
+
+  | left align | middle align | right align |
+
+  | 1.0        |     1.0      |         1.0 |
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Task List
+
+  - [x] Task 1
+  - [ ] Task 2
+  - [ ] Task 3
+
+    ```
+    [x] Task 1
+    [ ] Task 2
+    [ ] Task 3
+    ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Toggle
+
+  <details>
+  <summary> This is a toggle!</summary>
+  Contents of toggle.
+  </details>
+
+  ```
+  <details>
+    <summary> This is a toggle!</summary>
+
+    Contents of toggle.
+  </details>
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Youtube 
+
+  - embed Video
+  
+    [![Thumbnail](https://i.ytimg.com/an_webp/fzI9FNjXQ0o/mqdefault_6s.webp?du=3000&sqp=CMyblqQG&rs=AOn4CLACPdIqbUwWoAWJbmuGyNNuytgV1A)](https://youtu.be/fzI9FNjXQ0o)
+
+    `[![Text](ImageUrl)](VideoUrl)`
+
+    ```markdown
+    [![Thumbnail](https://i.ytimg.com/an_webp/fzI9FNjXQ0o/mqdefault_6s.webp?du=3000&sqp=CMyblqQG&rs=AOn4CLACPdIqbUwWoAWJbmuGyNNuytgV1A)](https://youtu.be/fzI9FNjXQ0o)
+    ```
+
+</CardChapter>
+<br/>
+
+
+[^1]: This is the footnote.
+
+

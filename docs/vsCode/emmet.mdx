@@ -1,0 +1,563 @@
+---
+hide_title: true
+sidebar_position: 4
+sidebar_label: Emmet Abbreviations
+tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
+---
+
+<CardHeading>
+
+  # Emmet Abbreviations
+</CardHeading>
+
+---
+
+<CardHeading>
+
+  ## Configuration
+</CardHeading>
+
+
+<CardChapter>
+
+  ###  set language
+
+  ```json title='settings.json'
+  "emmet.variables": {
+      "lang": "de"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### enable tab completion
+
+  ```json title='settings.json'
+  "emmet.triggerExpansionOnTab": true,
+  ```  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### include / exclude languages
+
+  ```json title='settings.json'
+  "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "astro": "html",
+  },
+  ```  
+</CardChapter>
+<br/>
+
+---
+
+<CardChapter>
+
+  ## Custom Snippets
+
+  - edit 
+  
+    `Strg` `Shift` `P` :"Snippets: Configure User Snippets"
+  
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ### Global 
+</CardHeading>
+<br/>
+
+
+<CardChapter>
+
+  #### Comment Anchor
+
+  - PATH
+    ```json title='p.code'
+    "commentAnchorPath": {
+      "prefix": "cap",
+      "body": [
+        "$BLOCK_COMMENT_START PATH ${1:Text:} $BLOCK_COMMENT_END",
+        "$2",
+      ],
+      "description": "Anchor PATH"
+    },
+    ```
+
+- Note
+    ```json title='p.code'
+    "commentAnchorNote": {
+      "prefix": "can",
+      "body": [
+        "$BLOCK_COMMENT_START NOTE ${1:Text:} $BLOCK_COMMENT_END",
+        "$2",
+      ],
+      "description": "Anchor PATH"
+    },
+    ```
+
+- Section
+    ```json title='p.code'
+    "commentAnchorSection": {
+      "prefix": "cas",
+      "body": [
+        "$BLOCK_COMMENT_START SECTION ${1:Text:} $BLOCK_COMMENT_END",
+        "$2",
+        "$BLOCK_COMMENT_START !SECTION END ${1:Text:} $BLOCK_COMMENT_END"
+      ],
+      "description": "Comment Anchor Section"
+    },
+    ```
+
+</CardChapter>
+
+---
+<br/>
+
+<CardHeading>
+
+  ### Markdown | MDX
+
+  #### Codeblock
+</CardHeading>
+
+
+<CardChapter>
+
+  ##### Highlight
+
+- Higlight Line
+    ```json title='p.code'
+	"HighlightCommentCodeblock": {
+		"prefix": "//n",
+		"body": [
+			"// highlight-next-line"
+		],
+		"description": "Highlight next CodeLine"
+	},
+  ```
+
+- Highlight Error
+  ```json title='p.code'
+  "HighlightErrorCodeblock": {
+    "prefix": "//err",
+    "body": [
+      "// highlight-next-line-error"
+    ],
+    "description": "Highlight Error next CodeLine"
+  },
+  ```
+
+  ```json title='p.code'
+  // highlight-next-line-error  
+  ```
+
+
+- Higlight Block
+  ```json title='p.code'
+  "HighlightBlockCodeblock": {
+    "prefix": "//block",
+    "body": [
+      "// highlight-start",
+      "// highlight-end"
+    ],
+    "description": "Highlight Codeblock"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Bash
+
+  ```json title='p.code'
+  "CodeblockBash": {
+    "prefix": "mcb",
+    "body": [
+      "```bash ${1:title='$2'}",
+      "$3",
+      "```",
+      "$4"
+    ],
+    "description": "Insert bash fencedCodeblock"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Css
+
+  ```json title='p.code'
+  "CodeblockCss": {
+    "prefix": "mcc",
+    "body": [
+      "```css ${1:title='$2'}",
+      "$3",
+      "```",
+      "$4"
+    ],
+    "description": "Insert css fencedCodeblock"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Empty
+
+  ```json title='p.code'
+  "CodeblockEmpty": {
+    "prefix": "mc",
+    "body": [
+      "```",
+      "$2",
+      "```",
+      "$3"
+    ],
+    "description": "Insert Empty fencedCodeblock"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Html
+
+  ```json title='p.code'
+  "CodeblockHtml": {
+    "prefix": "mch",
+    "body": [
+      "```html ${1:title='$2'}",
+      "$3",
+      "```",
+      "$4"
+    ],
+    "description": "Insert html fencedCodeblock"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Javascript
+
+  ```json title='p.code'
+  "CodeblockJS": {
+    "prefix": "mcj",
+    "body": [
+      "```javascript ${1:title='$2'}",
+      "$3",
+      "```",
+      "$4"
+    ],
+    "description": "Insert Javascript fencedCodeblock"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### JSX | Live Editor
+
+  ```json title='p.code'
+  "CodeBlockJsx": {
+    "prefix": "mcjsx",
+    "body": [
+      "```jsx live",
+      "$1",
+      "```",
+      "$2"
+    ],
+    "description": "Insert bash fencedCodeblock"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Terminal manually
+
+  ```json title='p.code'
+  "CodeblockNPM": {
+    "prefix": "mnpm2",
+    "body": [
+      "<Tabs>",
+      "<TabItem value='npm' label='npm'>",
+      "",
+      "```bash",
+      "$1",
+      "```",
+      "</TabItem>",
+      "<TabItem value='yarn' label='yarn'>",
+      "",
+      "```bash",
+      "$2",
+      "```",
+      "</TabItem>",
+      "<TabItem value='pnpm' label='pnpm'>",
+      "",
+      "```bash",
+      "$3",
+      "```",
+      "</TabItem>",
+      "</Tabs>",
+      "$4"
+    ],
+    "description": "Insert npm Tab manually "
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Terminal npm2yarn
+
+  ```json title='p.code'
+  "CodeblockNPM2YARN": {
+    "prefix": "mnpm",
+    "body": [
+      "```bash npm2yarn",
+      "$1",
+      "```",
+      "$2"
+    ],
+    "description": "Insert Tab npm2yarn"
+  },
+  ```
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  #### Html
+</CardHeading>
+
+
+
+<CardChapter>
+
+  ##### Heading centered
+
+  ```json title='markdown.json'
+  "HeadingCenter": {
+    "prefix": "mh",
+    "body": [
+      "<CardHeading>",
+      "",
+      "  $1",
+      "</CardHeading>",
+      "$2"
+    ],
+    "description": "Insert centered heading"
+  },
+  ```
+
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Warp Line
+
+  ```json title='markdown.json'
+  "HtmlWrap": {
+    "prefix": "mb",
+    "body": [
+      "<br/>",
+      "$2",
+    ],
+    "description": "Wrap Line"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  #### Cards
+</CardHeading>
+
+
+<CardChapter>
+
+  ##### Chapter
+
+  ```json title='markdown.json'
+  "CardChapter": {
+    "prefix": "ms",
+    "body": [
+      "<CardChapter>",
+      "",
+      "  $1",
+      "",
+      "  $2",
+      "</CardChapter>",
+      "<br/>",
+      "",
+      "",
+      "$3",
+    ],
+    "description": "Insert CardChapter"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Section
+
+  ```json title='markdown.json'
+  "CardSection": {
+    "prefix": "mcs",
+    "body": [
+      "<Section>",
+      "  <Card",
+      "    title=''",
+      "    description=''",
+      "    to='https://'",
+      "  />",
+      "</Section>",
+    ],
+    "description": "Insert CardSection"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ##### Notification
+</CardHeading>
+
+
+<CardChapter>
+
+  ##### Danger
+
+  ```json title='markdown.json'
+  "DangerCard": {
+    "prefix": "mcd",
+    "body": [
+      "    <CardDanger",
+      "      title='Warning:'",
+      "      icon={<MyWarnIcon />}",
+      "      description='${1:Description}'",
+      "    />"
+    ],
+    "description": "Insert DangerCard"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Info
+
+  ```json title='markdown.json'
+  "InfoCard": {
+    "prefix": "mci",
+    "body": [
+      "    <CardInfo",
+      "      title='Info:'",
+      "      icon={<MyInfoIcon />}",
+      "      description='${1:Description}'",
+      "    />"
+    ],
+    "description": "Insert InfoCard"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ##### Link
+
+  ```json title='markdown.json'
+  "LinkCard": {
+    "prefix": "mcl",
+    "body": [
+      "    <Card",
+      "      title='$1'",
+      "      description='$2'",
+      "      to='$3'",
+      "    />",
+    ],
+    "description": "Insert CardSection"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ##### Warning
+
+  ```json title='markdown.json'
+  "WarnCard": {
+    "prefix": "mcw",
+    "body": [
+      "    <CardWarn",
+      "      title='Warning:'",
+      "      icon={<MyWarnIcon />}",
+      "      description='${1:Description}'",
+      "    />"
+    ],
+    "description": "Insert WarnCard"
+  },
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+
+

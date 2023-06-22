@@ -1,0 +1,107 @@
+[
+  {
+    "description": "Move Caret to Previous Word",
+    "windowsLinux": "Ctrl+Left",
+    "macos": "⌥ ←",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Next Word",
+    "windowsLinux": "Ctrl+Right",
+    "macos": "⌥ →",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Line Start",
+    "windowsLinux": "Home",
+    "macos": "Home",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Line End",
+    "windowsLinux": "End",
+    "macos": "End",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Matching Brace",
+    "windowsLinux": "Ctrl+Shift+M",
+    "macos": "^ M",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Code Block Start",
+    "windowsLinux": "Ctrl+[",
+    "macos": "⌘ ⌥ [",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Code Block End",
+    "windowsLinux": "Ctrl+]",
+    "macos": "⌘ ⌥ ]",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Next Method",
+    "windowsLinux": "Alt+Down",
+    "macos": "^ ⇧ ↓",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Previous Method",
+    "windowsLinux": "Alt+Up",
+    "macos": "^ ⇧ Up",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
+  },
+  {
+    "description": "Move Caret to Page Top",
+    "windowsLinux": "Ctrl+Page Up",
+    "macos": "⌘ Page Up",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Page Bottom",
+    "windowsLinux": "Ctrl+Page Down",
+    "macos": "⌘ Page ↓",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Page Up",
+    "windowsLinux": "Page Up",
+    "macos": "Page Up",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Page Down",
+    "windowsLinux": "Page Down",
+    "macos": "Page ↓",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Text Start",
+    "windowsLinux": "Ctrl+Home",
+    "macos": "⌘ Home",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Move Caret to Text End",
+    "windowsLinux": "Ctrl+End",
+    "macos": "⌘ End",
+    "myshortcut": "",
+    "url": ""
+  }
+]

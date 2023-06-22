@@ -1,0 +1,51 @@
+[
+  {
+    "description": "Close editor",
+    "windows": "Ctrl+F4, Ctrl+W",
+    "macos": "⌘W ",
+    "linux": "Ctrl+W",
+    "myselection": ""
+  },
+  {
+    "description": "Close folder",
+    "windows": "Ctrl+K F",
+    "macos": "⌘K F ",
+    "linux": "Ctrl+K F",
+    "myselection": ""
+  },
+  {
+    "description": "Split editor",
+    "windows": "Ctrl+\\",
+    "macos": "⌘\\",
+    "linux": "Ctrl+\\ ",
+    "myselection": ""
+  },
+  {
+    "description": "Focus into 1st, 2nd or 3rd editor group",
+    "windows": "Ctrl+ 1 / 2 / 3",
+    "macos": "⌘1 / ⌘2 / ⌘3",
+    "linux": "Ctrl+ 1 /  2 / 3 ",
+    "myselection": ""
+  },
+  {
+    "description": "Focus into previous/next editor group",
+    "windows": "Ctrl+K Ctrl+ ←/→",
+    "macos": "⌘K ⌘← / ⌘K ⌘→",
+    "linux": "Ctrl+K Ctrl + ← →",
+    "myselection": ""
+  },
+  {
+    "description": "Move editor left/right",
+    "windows": "Ctrl+Shift+PgUp / PgDn",
+    "macos": "⌘K ⇧⌘← / ⌘K ⇧⌘→ ",
+    "linux": "Ctrl+Shift PgUp / PgDn ",
+    "myselection": ""
+  },
+  {
+    "description": "Move active editor group",
+    "windows": "Ctrl+K ← / →",
+    "macos": "⌘K ← / ⌘K → ",
+    "linux": "Ctrl+K ← / →",
+    "myselection": ""
+  }
+]

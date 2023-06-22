@@ -1,0 +1,191 @@
+[
+  {
+    "description": "Run Anything",
+    "windowsLinux": "Double Ctrl",
+    "macos": "Double ^",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/running-applications.html"
+  },
+  {
+    "description": "Run context configuration",
+    "windowsLinux": "Shift+F10",
+    "macos": "^ R",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/run-debug-configuration.html"
+  },
+  {
+    "description": "Run...",
+    "windowsLinux": "Alt+Shift+F10",
+    "macos": "^ ⌥ R",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/run-debug-configuration.html"
+  },
+  {
+    "description": "Debug context configuration",
+    "windowsLinux": "Shift+F9",
+    "macos": "^ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/starting-the-debugger-session.html"
+  },
+  {
+    "description": "Debug...",
+    "windowsLinux": "Alt+Shift+F9",
+    "macos": "^ ⌥ D",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/starting-the-debugger-session.html"
+  },
+  {
+    "description": "Attach to Process...",
+    "windowsLinux": "Ctrl+Alt+F5",
+    "macos": "⌥ ⇧ F5",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/attaching-to-local-process.html"
+  },
+  {
+    "description": "Stop",
+    "windowsLinux": "Ctrl+F2",
+    "macos": "⌘ F2",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/starting-the-debugger-session.html"
+  },
+  {
+    "description": "Resume Program",
+    "windowsLinux": "F9",
+    "macos": "⌘ ⌥ R",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/starting-the-debugger-session.html"
+  },
+  {
+    "description": "Stop Background Processes...",
+    "windowsLinux": "Ctrl+Shift+F2",
+    "macos": "⌘ ⇧ F2",
+    "myshortcut": "",
+    "url": ""
+  },
+  {
+    "description": "Step Over",
+    "windowsLinux": "F8",
+    "macos": "F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Force Step Over",
+    "windowsLinux": "Alt+Shift+F8",
+    "macos": "⌥ ⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Step Into",
+    "windowsLinux": "F7",
+    "macos": "F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Smart Step Into",
+    "windowsLinux": "Shift+F7",
+    "macos": "⇧ F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Force Step Into",
+    "windowsLinux": "Alt+Shift+F7",
+    "macos": "⌥ ⇧ F7",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Step Out",
+    "windowsLinux": "Shift+F8",
+    "macos": "⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Run To Cursor",
+    "windowsLinux": "Alt+F9",
+    "macos": "⌥ F9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Force Run To Cursor",
+    "windowsLinux": "Ctrl+Alt+F9",
+    "macos": "⌘ ⌥ F9",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Show Execution Point",
+    "windowsLinux": "Alt+F10",
+    "macos": "⌥ F10",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/stepping-through-the-program.html"
+  },
+  {
+    "description": "Evaluate Expression...",
+    "windowsLinux": "Alt+F8",
+    "macos": "⌥ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/examining-suspended-program.html"
+  },
+  {
+    "description": "Quick Evaluate Expression",
+    "windowsLinux": "Ctrl+Alt+F8",
+    "macos": "⌘ ⌥ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/examining-suspended-program.html"
+  },
+  {
+    "description": "Toggle Line Breakpoint",
+    "windowsLinux": "Ctrl+F8",
+    "macos": "⌘ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-breakpoints.html"
+  },
+  {
+    "description": "Toggle Temporary Line Breakpoint",
+    "windowsLinux": "Ctrl+Alt+Shift+F8",
+    "macos": "⌘ ⌥ ⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-breakpoints.html"
+  },
+  {
+    "description": "View Breakpoints...",
+    "windowsLinux": "Ctrl+Shift+F8",
+    "macos": "⌘ ⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-breakpoints.html"
+  },
+  {
+    "description": "Edit Breakpoint",
+    "windowsLinux": "Ctrl+Shift+F8",
+    "macos": "⌘ ⇧ F8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/using-breakpoints.html"
+  },
+  {
+    "description": "Show Run window",
+    "windowsLinux": "Alt+4",
+    "macos": "⌘ 4",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/run-tool-window.html"
+  },
+  {
+    "description": "Show Debug window",
+    "windowsLinux": "Alt+5",
+    "macos": "⌘ 5",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/debug-tool-window.html"
+  },
+  {
+    "description": "Show Services window",
+    "windowsLinux": "Alt+8",
+    "macos": "⌘ 8",
+    "myshortcut": "",
+    "url": "https://www.jetbrains.com/help/idea/services-tool-window.html"
+  }
+]
