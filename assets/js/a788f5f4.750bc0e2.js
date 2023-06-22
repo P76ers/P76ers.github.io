@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[9728],{95437:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"svelte"}')}}]);

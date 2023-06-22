@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7804],{58201:s=>{s.exports=JSON.parse('{"label":"Operating System","permalink":"/macOs/tags/operating-system","allTagsPath":"/macOs/tags","count":1,"items":[{"id":"index","title":"index","description":"# MacOs","permalink":"/macOs/"}]}')}}]);

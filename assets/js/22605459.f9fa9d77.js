@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7182],{34850:s=>{s.exports=JSON.parse('{"label":"Operating System","permalink":"/windows/tags/operating-system","allTagsPath":"/windows/tags","count":1,"items":[{"id":"index","title":"index","description":"# Windows","permalink":"/windows/"}]}')}}]);

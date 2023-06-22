@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1877],{81614:a=>{a.exports=JSON.parse('{"label":"linguae","permalink":"/cSharp/tags/linguae","allTagsPath":"/cSharp/tags","count":1,"items":[{"id":"index","title":"C#","description":"---","permalink":"/cSharp/"}]}')}}]);

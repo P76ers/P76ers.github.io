@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[5845],{12757:e=>{e.exports=JSON.parse('{"label":"framework","permalink":"/nodeJs/tags/framework","allTagsPath":"/nodeJs/tags","count":1,"items":[{"id":"index","title":"Node.js","description":"---","permalink":"/nodeJs/"}]}')}}]);

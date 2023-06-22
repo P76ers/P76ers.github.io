@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[8183],{9728:e=>{e.exports=JSON.parse('{"label":"Extensions","permalink":"/eclipse/tags/extensions","allTagsPath":"/eclipse/tags","count":1,"items":[{"id":"extensions","title":"extensions","description":"# Extensions","permalink":"/eclipse/extensions"}]}')}}]);

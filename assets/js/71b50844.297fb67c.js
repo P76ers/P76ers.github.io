@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1043],{96373:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"autohotkey"}')}}]);

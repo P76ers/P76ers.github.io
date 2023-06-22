@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[8071],{25358:e=>{e.exports=JSON.parse('{"label":"Emmet Abbreviations","permalink":"/vsCode/tags/emmet-abbreviations","allTagsPath":"/vsCode/tags","count":1,"items":[{"id":"emmet","title":"emmet","description":"# Emmet Abbreviations","permalink":"/vsCode/emmet"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[487],{77340:e=>{e.exports=JSON.parse('{"label":"Operating System","permalink":"/unix/tags/operating-system","allTagsPath":"/unix/tags","count":1,"items":[{"id":"index","title":"index","description":"# Unix","permalink":"/unix/"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7279],{17279:(s,t,e)=>{e.r(t),e.d(t,{dyte_stage:()=>n});var l=e(94196);const n=class{constructor(s){(0,l.r)(this,s)}render(){return(0,l.h)(l.H,null,(0,l.h)("slot",null))}};n.style=":host{display:block;position:relative;font-family:var(--dyte-font-family, sans-serif)}"}}]);

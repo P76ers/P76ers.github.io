@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[9360],{34315:s=>{s.exports=JSON.parse('{"label":"Shortcuts","permalink":"/vsCode/tags/shortcuts","allTagsPath":"/vsCode/tags","count":1,"items":[{"id":"shortcuts","title":"shortcuts","description":"# Shortcuts","permalink":"/vsCode/shortcuts"}]}')}}]);

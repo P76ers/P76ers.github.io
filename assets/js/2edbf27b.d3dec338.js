@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[3504],{27079:s=>{s.exports=JSON.parse('{"label":"Shortcuts","permalink":"/eclipse/tags/shortcuts","allTagsPath":"/eclipse/tags","count":1,"items":[{"id":"shortcuts","title":"shortcuts","description":"# Shortcuts","permalink":"/eclipse/shortcuts"}]}')}}]);

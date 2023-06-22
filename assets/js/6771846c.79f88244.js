@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[2614],{4441:s=>{s.exports=JSON.parse('[{"label":"database","permalink":"/postgreSql/tags/database","count":1}]')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[4146],{4207:i=>{i.exports=JSON.parse('{"label":"framworks","permalink":"/tailwind/tags/framworks","allTagsPath":"/tailwind/tags","count":1,"items":[{"id":"index","title":"index","description":"","permalink":"/tailwind/"}]}')}}]);

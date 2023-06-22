@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6402],{95464:e=>{e.exports=JSON.parse('[{"label":"frameworks","permalink":"/svelte/tags/frameworks","count":1}]')}}]);

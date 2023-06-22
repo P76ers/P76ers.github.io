@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[5719],{3078:e=>{e.exports=JSON.parse('[{"label":"framework","permalink":"/astro/tags/framework","count":1}]')}}]);

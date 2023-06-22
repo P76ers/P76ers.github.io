@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[9867],{58521:a=>{a.exports=JSON.parse('{"label":"database","permalink":"/mySql/tags/database","allTagsPath":"/mySql/tags","count":1,"items":[{"id":"index","title":"MySQL","description":"---","permalink":"/mySql/"}]}')}}]);

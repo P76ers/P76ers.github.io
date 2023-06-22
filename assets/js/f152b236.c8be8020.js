@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[4560],{27673:e=>{e.exports=JSON.parse('{"label":"frameworks","permalink":"/react/tags/frameworks","allTagsPath":"/react/tags","count":1,"items":[{"id":"index","title":"React","description":"---","permalink":"/react/"}]}')}}]);

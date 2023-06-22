@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[8844],{68637:s=>{s.exports=JSON.parse('{"label":"CodingDocs","permalink":"/mdx/tags/coding-docs","allTagsPath":"/mdx/tags","count":1,"items":[{"id":"index","title":"index","description":"# CodingDocs","permalink":"/mdx/"}]}')}}]);

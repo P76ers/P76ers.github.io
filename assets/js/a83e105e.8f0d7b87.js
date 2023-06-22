@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[5664],{93681:s=>{s.exports=JSON.parse('{"label":"Documentation","permalink":"/mdx/tags/documentation","allTagsPath":"/mdx/tags","count":1,"items":[{"id":"docusaurus","title":"docusaurus","description":"# Docusaurus","permalink":"/mdx/docusaurus"}]}')}}]);

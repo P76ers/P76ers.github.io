@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[4807],{71037:e=>{e.exports=JSON.parse('{"label":"linguae","permalink":"/markdown/tags/linguae","allTagsPath":"/markdown/tags","count":1,"items":[{"id":"index","title":"index","description":"[git]//github.com/P76ers \'P76ers\'","permalink":"/markdown/"}]}')}}]);

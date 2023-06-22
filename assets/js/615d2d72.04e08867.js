@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7138],{93796:e=>{e.exports=JSON.parse('[{"label":"ide","permalink":"/github/tags/ide","count":1}]')}}]);
