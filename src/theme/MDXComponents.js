@@ -56,6 +56,7 @@ import TableWindowsEnvVariable from '../components/Table/windows/TableWindowsEnv
 import TableWindowsPrograms from '../components/Table/windows/TableWindowsPrograms';
 
 import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
+import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
 
 export default {
   // Re-use the default mapping
@@ -119,4 +120,5 @@ export default {
   TableWindowsPrograms,
 
   TableNodeJsCommands,
+  TableNodeJsPackages,
 };

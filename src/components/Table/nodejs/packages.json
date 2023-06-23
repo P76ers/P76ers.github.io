@@ -1,0 +1,14 @@
+[
+  {
+    "name": "react-table",
+    "command": "npm i react-table",
+    "category": "react",
+    "url": "https://www.npmjs.com/package/react-table"
+  },
+  {
+    "name": "docusaurus",
+    "command": "npm i docusaurus",
+    "category": "docusaurus",
+    "url": "https://www.npmjs.com/package/docusaurus"
+  }
+]
