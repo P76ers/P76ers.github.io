@@ -1,0 +1,122 @@
+[
+  {
+    "designation": "console function",
+    "command": "add = function (a, b) {return a+b;}\r\nadd(4,5)\r\n",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "file execute",
+    "command": "node .\\server.js",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "initialize project",
+    "command": "npm init",
+    "parameter": "-y ",
+    "description": "skip author info"
+  },
+  {
+    "designation": "install dependencies",
+    "command": "npm i [packageName]",
+    "parameter": "-g",
+    "description": "install global"
+  },
+  {
+    "designation": "list installed packages",
+    "command": "npm list ",
+    "parameter": "-g  --depth 0",
+    "description": ""
+  },
+  {
+    "designation": "list outdated packages",
+    "command": "npm outdated -g --depth=0",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "remove node_modules directory",
+    "command": "npm rm -rf node_modules",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "restart package",
+    "command": "npm restart",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "run script",
+    "command": "npm run [scriptName]",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "start on port",
+    "command": "npm start -- --port 8000",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "start package",
+    "command": "npm start",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "uninstall package",
+    "command": "npm uninstall [packageName]",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "update package",
+    "command": "npm update",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "update, install npm",
+    "command": "npm i npm@latest - g",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "version check node",
+    "command": "node -v",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "version check npm",
+    "command": "npm -v",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "vulnerabilities check",
+    "command": "npm audit",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "vulnerabilities fix ",
+    "command": "npm audit -fix",
+    "parameter": "",
+    "description": ""
+  },
+  {
+    "designation": "vulnerabilities override",
+    "command": "  \"overrides\": {\r\n    \"glob-parent\": \"6.0.2\",\r\n    \"got\": \"12.6.0\",\r\n    \"trim\": \"1.0.1\"\r\n  }",
+    "parameter": "",
+    "description": "package.json"
+  },
+  {
+    "designation": "vulnerabilities update",
+    "command": "npm update",
+    "parameter": "",
+    "description": ""
+  }
+]

@@ -18,6 +18,10 @@ import { CardChapter } from '../components/CardChapter';
 import { CardHeading } from '../components/CardHeading';
 import * as icons from '../icons';
 
+/* Table */
+import GlobalFilter from '../components/Table/GlobalFilter';
+import ColumnFilter from '../components/Table/ColumnFilter';
+
 import TableVsCodeGeneral from '../components/Table/vsCode/TableVsCodeGeneral';
 import TableVsCodeBasicEditing from '../components/Table/vsCode/TableVsCodeBasicEditing';
 import TableVsCodeNavigation from '../components/Table/vsCode/TableVsCodeNavigation';
@@ -50,8 +54,8 @@ import TableIntellijToolWindows from '../components/Table/intelliJ/TableIntellij
 
 import TableWindowsEnvVariable from '../components/Table/windows/TableWindowsEnvVariable';
 import TableWindowsPrograms from '../components/Table/windows/TableWindowsPrograms';
-import GlobalFilter from '../components/Table/GlobalFilter';
-import ColumnFilter from '../components/Table/ColumnFilter';
+
+import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
 
 export default {
   // Re-use the default mapping
@@ -77,6 +81,9 @@ export default {
   CardDanger,
   CardChapter,
   CardHeading,
+  /* Table */
+  GlobalFilter,
+  ColumnFilter,
 
   TableVsCodeGeneral,
   TableVsCodeBasicEditing,
@@ -109,7 +116,7 @@ export default {
   TableIntellijToolWindows,
 
   TableWindowsEnvVariable,
-  GlobalFilter,
-  ColumnFilter,
   TableWindowsPrograms,
+
+  TableNodeJsCommands,
 };
