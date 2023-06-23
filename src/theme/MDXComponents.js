@@ -49,6 +49,7 @@ import TableIntellijDifferences from '../components/Table/intelliJ/TableIntellij
 import TableIntellijToolWindows from '../components/Table/intelliJ/TableIntellijToolWindows';
 
 import TableWindowsEnvVariable from '../components/Table/windows/TableWindowsEnvVariable';
+import TableWindowsPrograms from '../components/Table/windows/TableWindowsPrograms';
 import GlobalFilter from '../components/Table/GlobalFilter';
 import ColumnFilter from '../components/Table/ColumnFilter';
 
@@ -110,4 +111,5 @@ export default {
   TableWindowsEnvVariable,
   GlobalFilter,
   ColumnFilter,
+  TableWindowsPrograms,
 };

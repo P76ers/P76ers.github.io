@@ -1,33 +1,40 @@
 import React, { useMemo } from 'react';
-import { useTable, useSortBy } from 'react-table';
-import Data from './EnvVariable.json';
+import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
+import Data from './programs.json';
+import { GlobalFilter } from '../GlobalFilter';
+import { ColumnFilter } from '../ColumnFilter';
 
-export const TableWindowsEnvVariable = () => {
+export const TableWindowsPrograms = () => {
   const COLUMNS = [
     {
-      Header: 'SysVar',
-      accessor: 'sysvariable',
+      Header: 'Name',
+      accessor: 'name',
+      Cell: ({ cell: { value }, row: { original } }) => {
+        return original.url === '' ? (
+          original.name
+        ) : (
+          <a href={`${original.url}`} target="blank" rel="noreferrer noopener">
+            {value}
+          </a>
+        );
+      },
+      Filter: ColumnFilter,
       sortType: (prev, curr, columnId) => {
         return sortItems(prev, curr, columnId);
       },
     },
     {
-      Header: 'SysVal',
-      accessor: 'sysvalue',
+      Header: 'Category',
+      accessor: 'category',
+      Filter: ColumnFilter,
       sortType: (prev, curr, columnId) => {
         return sortItems(prev, curr, columnId);
       },
     },
     {
-      Header: 'Program',
-      accessor: 'program',
-      sortType: (prev, curr, columnId) => {
-        return sortItems(prev, curr, columnId);
-      },
-    },
-    {
-      Header: 'Path',
-      accessor: 'pathval',
+      Header: 'Description',
+      accessor: 'description',
+      Filter: ColumnFilter,
       sortType: (prev, curr, columnId) => {
         return sortItems(prev, curr, columnId);
       },
@@ -56,28 +63,39 @@ export const TableWindowsEnvVariable = () => {
   const sortees = React.useMemo(
     () => [
       {
-        id: 'program',
+        id: 'name',
         asc: true,
       },
     ],
     []
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-        initialState: {
-          sortBy: sortees,
-        },
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+    state,
+    setGlobalFilter,
+  } = useTable(
+    {
+      columns,
+      data,
+      initialState: {
+        sortBy: sortees,
       },
+    },
+    useFilters,
+    useGlobalFilter,
+    useSortBy
+  );
 
-      useSortBy
-    );
+  const { globalFilter } = state;
 
   return (
     <>
+      <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -85,6 +103,7 @@ export const TableWindowsEnvVariable = () => {
               {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render('Header')}
+
                   <span>
                     {column.isSorted
                       ? column.isSortedDesc
@@ -92,6 +111,7 @@ export const TableWindowsEnvVariable = () => {
                         : ' 🔼'
                       : ''}
                   </span>
+                  <div>{column.canFilter ? column.render('Filter') : null}</div>
                 </th>
               ))}
             </tr>
@@ -116,4 +136,4 @@ export const TableWindowsEnvVariable = () => {
   );
 };
 
-export default TableWindowsEnvVariable;
+export default TableWindowsPrograms;

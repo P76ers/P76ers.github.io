@@ -670,9 +670,33 @@ ul.emoji-list span {
 
 /* NOTE Table */
 
+@media screen and (max-width: 1160px) {
+  /* Hide icons when header UI breaks */
+  table {
+    display: table;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+  tr,
+  th,
+  td {
+    display: block;
+  }
+}
+
+td {
+  word-break: break-word;
+}
+
 table {
   display: table;
   width: 100%;
+  max-width: 967px;
   border-collapse: collapse;
   border: none;
   background-color: transparent;

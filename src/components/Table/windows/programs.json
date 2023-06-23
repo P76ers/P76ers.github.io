@@ -1,0 +1,368 @@
+[
+  {
+    "name": "AdobeAcrobatDC",
+    "category": "Office, PDF",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Afterburner",
+    "category": "Gaming, GPU Overclocking",
+    "description": "",
+    "url": "https://www.msi.com/Landing/afterburner/graphics-cards"
+  },
+  {
+    "name": "AnyDesk",
+    "category": "Remote Maintaining",
+    "description": "",
+    "url": "https://anydesk.com/de/downloads/windows"
+  },
+  {
+    "name": "Autohotkey",
+    "category": "Development, Script Language",
+    "description": "",
+    "url": "https://www.autohotkey.com/"
+  },
+  {
+    "name": "Avid Media Composer",
+    "category": "Media, Video Recording, Editing",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Avira",
+    "category": "Antivirus",
+    "description": "",
+    "url": "https://www.avira.com/de"
+  },
+  {
+    "name": "Carnac Keystroke",
+    "category": "Presentation, Keystroke",
+    "description": "",
+    "url": "http://code52.org/carnac/"
+  },
+  {
+    "name": "Ccleaner",
+    "category": "Maintaining",
+    "description": "",
+    "url": "https://www.ccleaner.com/de-de/ccleaner/download"
+  },
+  {
+    "name": "CoreTemp",
+    "category": "Gaming, Maintainance, CPU Monitoring",
+    "description": "",
+    "url": "https://www.alcpu.com/CoreTemp/"
+  },
+  {
+    "name": "Docker",
+    "category": "Devlopment, Container",
+    "description": "",
+    "url": "https://www.docker.com/"
+  },
+  {
+    "name": "Ear Trumpet",
+    "category": "Media, Audio Settings Manager",
+    "description": "",
+    "url": "https://eartrumpet.app/"
+  },
+  {
+    "name": "Eclipse",
+    "category": "Development, IDE",
+    "description": "",
+    "url": "https://www.eclipse.org/downloads/"
+  },
+  {
+    "name": "Firefox",
+    "category": "Browser",
+    "description": "",
+    "url": "https://www.mozilla.org/de/firefox/new/"
+  },
+  {
+    "name": "Fraps",
+    "category": "Media, Screenshot, Video Recording",
+    "description": "",
+    "url": "https://fraps.com/"
+  },
+  {
+    "name": "Git",
+    "category": "Development, Version Control",
+    "description": "",
+    "url": "https://git-scm.com/"
+  },
+  {
+    "name": "Github Desktop",
+    "category": "Development, Version Control",
+    "description": "",
+    "url": "https://desktop.github.com/"
+  },
+  {
+    "name": "Google Chrome",
+    "category": "Browser",
+    "description": "",
+    "url": "https://www.google.com/intl/de_de/chrome/"
+  },
+  {
+    "name": "HwInfo",
+    "category": "Maintainance, System Monitoring",
+    "description": "",
+    "url": "https://www.hwinfo.com/"
+  },
+  {
+    "name": "Illustrator",
+    "category": "Image Editing",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "ImgBurn",
+    "category": "Burning Software, Image",
+    "description": "",
+    "url": "https://www.imgburn.com/"
+  },
+  {
+    "name": "Insomnia REST",
+    "category": "Development, REST API",
+    "description": "",
+    "url": "https://insomnia.rest/"
+  },
+  {
+    "name": "IntelliJ Community Edition",
+    "category": "Development, IDE",
+    "description": "",
+    "url": "https://www.jetbrains.com/de-de/idea/download/?section=windows"
+  },
+  {
+    "name": "Java Devopment Kit",
+    "category": "Development, Java, JDK",
+    "description": "",
+    "url": "https://www.oracle.com/de/java/technologies/downloads/"
+  },
+  {
+    "name": "JDownloader",
+    "category": "Download Manager",
+    "description": "",
+    "url": "https://jdownloader.org/"
+  },
+  {
+    "name": "Jetbrains Toolbox",
+    "category": "Jetbrains IDE Manager, IntelliJ",
+    "description": "",
+    "url": "https://www.jetbrains.com/toolbox-app/"
+  },
+  {
+    "name": "Maven",
+    "category": "Development, Java, Framework",
+    "description": "",
+    "url": "https://maven.apache.org/"
+  },
+  {
+    "name": "MS Access",
+    "category": "Office, Database",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Excel",
+    "category": "Office, Calculation",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS One Note",
+    "category": "Office, Notes",
+    "description": "",
+    "url": "https://www.onenote.com/download?omkt=de-DE"
+  },
+  {
+    "name": "MS Outlook",
+    "category": "Office, E-Mail",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Powerpoint",
+    "category": "Office, Presentation",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Project",
+    "category": "Office, Projektmanagement, Development, Dokumentation",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Publisher",
+    "category": "Office, Presentation, Layout",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Teams",
+    "category": "Remote Maintaining, Team",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Visio",
+    "category": "Development, Projektmanagement, Dokumentation",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MS Word",
+    "category": "Office, Text Editing",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "MSI Kombuster",
+    "category": "Gaming, Benchmark, GPU",
+    "description": "",
+    "url": "https://geeks3d.com/furmark/kombustor/"
+  },
+  {
+    "name": "MySQL",
+    "category": "Development, Database",
+    "description": "",
+    "url": "https://dev.mysql.com/downloads/windows/installer/8.0.html"
+  },
+  {
+    "name": "Nero",
+    "category": "Burning Software, Image",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Nexus Ultimate",
+    "category": "Dock, User Interface, Layout",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "NodeJs",
+    "category": "Development, Javascript Runtime Environment, Framework",
+    "description": "",
+    "url": "https://nodejs.org/en"
+  },
+  {
+    "name": "Oh My Posh",
+    "category": "Shell, Command Line Interface, Theme",
+    "description": "",
+    "url": "https://ohmyposh.dev/"
+  },
+  {
+    "name": "Photoshop",
+    "category": "Image Editing",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "PicPick",
+    "category": "Office, Screenshot",
+    "description": "",
+    "url": "https://picpick.app/en/download/"
+  },
+  {
+    "name": "Pieces for Developers",
+    "category": "Development, Snippet Manager",
+    "description": "",
+    "url": "https://pieces.app/"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "Development, Database",
+    "description": "",
+    "url": "https://www.postgresql.org/download/"
+  },
+  {
+    "name": "Powershell",
+    "category": "Command Line Interface",
+    "description": "",
+    "url": "https://learn.microsoft.com/de-de/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3"
+  },
+  {
+    "name": "Powershell",
+    "category": "Shell, Command Line Interface",
+    "description": "Dependency: Windows Terminal, oh-my-posh",
+    "url": "https://learn.microsoft.com/de-de/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3"
+  },
+  {
+    "name": "Powertoys",
+    "category": "Utility Set",
+    "description": "",
+    "url": "https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD"
+  },
+  {
+    "name": "Raindrop.io",
+    "category": "Browser, Bookmark Manager",
+    "description": "",
+    "url": "https://raindrop.io/"
+  },
+  {
+    "name": "Rufus",
+    "category": "Burning Software, Image",
+    "description": "",
+    "url": "https://rufus.ie/de/"
+  },
+  {
+    "name": "SceneBuilder",
+    "category": "Development, JavaFx, Drag & Drop",
+    "description": "",
+    "url": "https://gluonhq.com/products/scene-builder/"
+  },
+  {
+    "name": "SciTE4AHK",
+    "category": "Autohotkey, Script Editor",
+    "description": "",
+    "url": "https://www.autohotkey.com/scite4ahk/"
+  },
+  {
+    "name": "Teamviewer",
+    "category": "Remote Maintaining",
+    "description": "",
+    "url": "https://www.teamviewer.com/de/"
+  },
+  {
+    "name": "Visual Studio Code",
+    "category": "Development, IDE",
+    "description": "",
+    "url": "https://code.visualstudio.com/"
+  },
+  {
+    "name": "Visual Studio Community",
+    "category": "Development, IDE",
+    "description": "",
+    "url": "https://visualstudio.microsoft.com/de/"
+  },
+  {
+    "name": "VLC Media Player",
+    "category": "Media",
+    "description": "",
+    "url": "https://www.videolan.org/vlc/index.de.html"
+  },
+  {
+    "name": "Windows Terminal",
+    "category": "Shell, Command Line Interface",
+    "description": "",
+    "url": "https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=de-de&gl=de"
+  },
+  {
+    "name": "WinDV",
+    "category": "Media, MiniDV, Digitalisation",
+    "description": "",
+    "url": "https://www.chip.de/downloads/WinDV_13012776.html"
+  },
+  {
+    "name": "WinRar",
+    "category": "Archiver",
+    "description": "",
+    "url": "https://www.winrar.de/downld.php"
+  },
+  {
+    "name": "Xmind",
+    "category": "Development, Projektmanagement, Dokumentation, Mindmapping",
+    "description": "",
+    "url": ""
+  }
+]
