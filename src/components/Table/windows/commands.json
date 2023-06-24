@@ -1,0 +1,62 @@
+[
+  {
+    "designation": "windows version check",
+    "command": "winver",
+    "description": ""
+  },
+  {
+    "designation": "windows environment variables",
+    "command": "env",
+    "description": ""
+  },
+  {
+    "designation": "Shell",
+    "command": "cmd",
+    "description": ""
+  },
+  {
+    "designation": "Character Map",
+    "command": "charmap",
+    "description": ""
+  },
+  {
+    "designation": "Magnifier Tool",
+    "command": "magnify",
+    "description": ""
+  },
+  {
+    "designation": "Startup Process Troubleshoot ",
+    "command": "msconfig",
+    "description": ""
+  },
+  {
+    "designation": "Systeminfo",
+    "command": "systeminfo",
+    "description": ""
+  },
+  {
+    "designation": "onscreen Keyboard",
+    "command": "osk",
+    "description": ""
+  },
+  {
+    "designation": "performance monitor",
+    "command": "perfmon",
+    "description": ""
+  },
+  {
+    "designation": "ressource monitor",
+    "command": "resmon",
+    "description": ""
+  },
+  {
+    "designation": "system restore",
+    "command": "rstrui",
+    "description": ""
+  },
+  {
+    "designation": "firewall settings",
+    "command": "wf",
+    "description": ""
+  }
+]

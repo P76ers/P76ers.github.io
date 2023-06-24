@@ -1,0 +1,72 @@
+[
+  {
+    "action": "Virtual Desktop switch",
+    "shortcut": "Strg+Win+←/→",
+    "category": "General"
+  },
+  {
+    "action": "Virtual Desktop create",
+    "shortcut": "Win+Tab",
+    "category": "General"
+  },
+  {
+    "action": "Copy/Paste History",
+    "shortcut": "Win+V",
+    "category": "General"
+  },
+  {
+    "action": "Console",
+    "shortcut": "Ctrl+Shift+I",
+    "category": "DevTools"
+  },
+  {
+    "action": "Dock Position change",
+    "shortcut": "Ctrl+Shift+D",
+    "category": "DevTools"
+  },
+  {
+    "action": "Search",
+    "shortcut": "Alt+Backspace",
+    "category": "PowerToys"
+  },
+  {
+    "action": "inspect Element",
+    "shortcut": "Ctrl+Shift+C",
+    "category": "DevTools"
+  },
+  {
+    "action": "Emoji",
+    "shortcut": "Windows + .",
+    "category": "General"
+  },
+  {
+    "action": "Magnifier use",
+    "shortcut": "Windows +/ -",
+    "category": "General"
+  },
+  {
+    "action": "dock focused Window",
+    "shortcut": "Windows+←/→/⇧/↓",
+    "category": "General"
+  },
+  {
+    "action": "lock pc",
+    "shortcut": "Windows + L",
+    "category": "General"
+  },
+  {
+    "action": "toggle Display Desktop",
+    "shortcut": "Windows+D",
+    "category": "General"
+  },
+  {
+    "action": "delete immediately",
+    "shortcut": "Shift+Delete",
+    "category": "General"
+  },
+  {
+    "action": "run as admin",
+    "shortcut": "Ctrl+Shift+LeftClick",
+    "category": "General"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "designation": "adress resolution protocol",
+    "command": "arp -a",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "cancel command ",
+    "command": "",
+    "shortcut": "Ctrl+C",
+    "description": ""
+  },
+  {
+    "designation": "change directory",
+    "command": "cd..",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "clear shell",
+    "command": "cls",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "connection client / server",
+    "command": "telnet",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "delete",
+    "command": "del [name]",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "display text",
+    "command": "echo [text]",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "help",
+    "command": "help",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "options list",
+    "command": "[commandName] ?",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "ping",
+    "command": "ping www.google.de -n 10 –help ",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "show associated filename extension",
+    "command": "assoc",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "show TCP/IP Config",
+    "command": "ipconfig",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "shutdown",
+    "command": "shutdown -s -t 600",
+    "shortcut": "",
+    "description": "-a abort shutdown\n-s shutdown & poweroff\n-t time [seconds]"
+  },
+  {
+    "designation": "Starwars",
+    "command": "pkgmgr /iu:\"TelnetClient\"\ntelnet\no\ntowel.blinkenlights.nl",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "Systeminfo",
+    "command": "Systeminfo",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "task list",
+    "command": "tasklist",
+    "shortcut": "",
+    "description": ""
+  },
+  {
+    "designation": "TCP / SCTP / UDP connections display",
+    "command": "netstat -a -n -s",
+    "shortcut": "",
+    "description": "-a show all Ports\n-n show numeric adress/ports\n-s show statistic"
+  },
+  {
+    "designation": "trace ip path",
+    "command": "tracert www.google.de",
+    "shortcut": "",
+    "description": ""
+  }
+]

@@ -54,6 +54,9 @@ import TableIntellijToolWindows from '../components/Table/intelliJ/TableIntellij
 
 import TableWindowsEnvVariable from '../components/Table/windows/TableWindowsEnvVariable';
 import TableWindowsPrograms from '../components/Table/windows/TableWindowsPrograms';
+import TableWindowsShortcuts from '../components/Table/windows/TableWindowsShortcuts';
+import TableWindowsCommands from '../components/Table/windows/TableWindowsCommands';
+import TableWindowsShellCommands from '../components/Table/windows/TableWindowsShellCommands';
 
 import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
 import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
@@ -82,6 +85,7 @@ export default {
   CardDanger,
   CardChapter,
   CardHeading,
+
   /* Table */
   GlobalFilter,
   ColumnFilter,
@@ -118,6 +122,9 @@ export default {
 
   TableWindowsEnvVariable,
   TableWindowsPrograms,
+  TableWindowsShortcuts,
+  TableWindowsCommands,
+  TableWindowsShellCommands,
 
   TableNodeJsCommands,
   TableNodeJsPackages,
