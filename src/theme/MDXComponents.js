@@ -22,20 +22,6 @@ import * as icons from '../icons';
 import GlobalFilter from '../components/Table/GlobalFilter';
 import ColumnFilter from '../components/Table/ColumnFilter';
 
-import TableVsCodeCustomShortcuts from '../components/Table/vsCode/TableVsCodeCustomShortcuts';
-import TableVsCodeGeneral from '../components/Table/vsCode/TableVsCodeGeneral';
-import TableVsCodeBasicEditing from '../components/Table/vsCode/TableVsCodeBasicEditing';
-import TableVsCodeNavigation from '../components/Table/vsCode/TableVsCodeNavigation';
-import TableVsCodeSearchReplace from '../components/Table/vsCode/TableVsCodeSearchReplace';
-import TableVsCodeMultiCursorSelection from '../components/Table/vsCode/TableVsCodeMultiCursorSelection';
-import TableVsCodeRichLanguageEditing from '../components/Table/vsCode/TableVsCodeRichLanguageEditing';
-import TableVsCodeEditorManagement from '../components/Table/vsCode/TableVsCodeEditorManagement';
-import TableVsCodeFileManagement from '../components/Table/vsCode/TableVsCodeFileManagement';
-import TableVsCodeDisplay from '../components/Table/vsCode/TableVsCodeDisplay';
-import TableVsCodeDebug from '../components/Table/vsCode/TableVsCodeDebug';
-import TableVsCodeIntegratedTerminal from '../components/Table/vsCode/TableVsCodeIntegratedTerminal';
-import TableVsCodeEmmetHtml from '../components/Table/vsCode/TableVsCodeEmmetHtml';
-
 import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
 import TableIntellijGeneral from '../components/Table/intelliJ/TableIntellijGeneral';
 import TableIntellijBuild from '../components/Table/intelliJ/TableIntellijBuild';
@@ -55,14 +41,30 @@ import TableIntellijGlobalVcs from '../components/Table/intelliJ/TableIntellijGl
 import TableIntellijDifferences from '../components/Table/intelliJ/TableIntellijDifferences';
 import TableIntellijToolWindows from '../components/Table/intelliJ/TableIntellijToolWindows';
 
+import TableGitCommands from '../components/Table/git/TableGitCommands';
+
+import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
+import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
+
+import TableVsCodeCustomShortcuts from '../components/Table/vsCode/TableVsCodeCustomShortcuts';
+import TableVsCodeGeneral from '../components/Table/vsCode/TableVsCodeGeneral';
+import TableVsCodeBasicEditing from '../components/Table/vsCode/TableVsCodeBasicEditing';
+import TableVsCodeNavigation from '../components/Table/vsCode/TableVsCodeNavigation';
+import TableVsCodeSearchReplace from '../components/Table/vsCode/TableVsCodeSearchReplace';
+import TableVsCodeMultiCursorSelection from '../components/Table/vsCode/TableVsCodeMultiCursorSelection';
+import TableVsCodeRichLanguageEditing from '../components/Table/vsCode/TableVsCodeRichLanguageEditing';
+import TableVsCodeEditorManagement from '../components/Table/vsCode/TableVsCodeEditorManagement';
+import TableVsCodeFileManagement from '../components/Table/vsCode/TableVsCodeFileManagement';
+import TableVsCodeDisplay from '../components/Table/vsCode/TableVsCodeDisplay';
+import TableVsCodeDebug from '../components/Table/vsCode/TableVsCodeDebug';
+import TableVsCodeIntegratedTerminal from '../components/Table/vsCode/TableVsCodeIntegratedTerminal';
+import TableVsCodeEmmetHtml from '../components/Table/vsCode/TableVsCodeEmmetHtml';
+
 import TableWindowsEnvVariable from '../components/Table/windows/TableWindowsEnvVariable';
 import TableWindowsPrograms from '../components/Table/windows/TableWindowsPrograms';
 import TableWindowsShortcuts from '../components/Table/windows/TableWindowsShortcuts';
 import TableWindowsCommands from '../components/Table/windows/TableWindowsCommands';
 import TableWindowsShellCommands from '../components/Table/windows/TableWindowsShellCommands';
-
-import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
-import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
 
 export default {
   // Re-use the default mapping
@@ -93,20 +95,6 @@ export default {
   GlobalFilter,
   ColumnFilter,
 
-  TableVsCodeCustomShortcuts,
-  TableVsCodeGeneral,
-  TableVsCodeBasicEditing,
-  TableVsCodeNavigation,
-  TableVsCodeSearchReplace,
-  TableVsCodeMultiCursorSelection,
-  TableVsCodeRichLanguageEditing,
-  TableVsCodeEditorManagement,
-  TableVsCodeFileManagement,
-  TableVsCodeDisplay,
-  TableVsCodeDebug,
-  TableVsCodeIntegratedTerminal,
-  TableVsCodeEmmetHtml,
-
   TableIntellijGeneral,
   TableIntellijBuild,
   TableIntellijBasic,
@@ -124,14 +112,30 @@ export default {
   TableIntellijGlobalVcs,
   TableIntellijDifferences,
   TableIntellijToolWindows,
+  TableIntellijQuickLists,
+
+  TableGitCommands,
+
+  TableNodeJsCommands,
+  TableNodeJsPackages,
+
+  TableVsCodeCustomShortcuts,
+  TableVsCodeGeneral,
+  TableVsCodeBasicEditing,
+  TableVsCodeNavigation,
+  TableVsCodeSearchReplace,
+  TableVsCodeMultiCursorSelection,
+  TableVsCodeRichLanguageEditing,
+  TableVsCodeEditorManagement,
+  TableVsCodeFileManagement,
+  TableVsCodeDisplay,
+  TableVsCodeDebug,
+  TableVsCodeIntegratedTerminal,
+  TableVsCodeEmmetHtml,
 
   TableWindowsEnvVariable,
   TableWindowsPrograms,
   TableWindowsShortcuts,
   TableWindowsCommands,
   TableWindowsShellCommands,
-
-  TableNodeJsCommands,
-  TableNodeJsPackages,
-  TableIntellijQuickLists,
 };

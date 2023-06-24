@@ -1,0 +1,237 @@
+[
+  {
+    "designation": "branch changeTo",
+    "command": "git checkout [name]",
+    "description": ""
+  },
+  {
+    "designation": "branch checkout",
+    "command": "git checkout [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "branch checkout, create if not existing",
+    "command": "git checkout -b [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "branch checkout, create new based on main",
+    "command": "git checkout -b [branchName] main",
+    "description": ""
+  },
+  {
+    "designation": "branch create",
+    "command": "git branch [name]",
+    "description": ""
+  },
+  {
+    "designation": "branch delete",
+    "command": "git branch -d [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "branch merge in main",
+    "command": "git checkout main\ngit merge [otherBranch]",
+    "description": ""
+  },
+  {
+    "designation": "branch show",
+    "command": "git branch",
+    "description": ""
+  },
+  {
+    "designation": "commit ",
+    "command": "git commit -m \"commitMessage”",
+    "description": ""
+  },
+  {
+    "designation": "commit Editor close",
+    "command": ":wq ⏎",
+    "description": ""
+  },
+  {
+    "designation": "commit revert",
+    "command": "git revert [Hashtag]",
+    "description": ""
+  },
+  {
+    "designation": "directory change  ",
+    "command": "cd ..",
+    "description": "note: whitespace"
+  },
+  {
+    "designation": "directory change to last ",
+    "command": "cd -",
+    "description": ""
+  },
+  {
+    "designation": "directory changeTo",
+    "command": "cd /c/p/dev/java/git test",
+    "description": ""
+  },
+  {
+    "designation": "directory createNew",
+    "command": "mkdir [name]",
+    "description": ""
+  },
+  {
+    "designation": "email check",
+    "command": "git config –global user.email",
+    "description": ""
+  },
+  {
+    "designation": "email set",
+    "command": "git config –global user.email “p@m.de”",
+    "description": ""
+  },
+  {
+    "designation": "file create",
+    "command": "touch [fileName]",
+    "description": ""
+  },
+  {
+    "designation": "file list",
+    "command": "Ls",
+    "description": ""
+  },
+  {
+    "designation": "file moveTo",
+    "command": "mv [filenName] [direcoryName]",
+    "description": ""
+  },
+  {
+    "designation": "file rename",
+    "command": "mv [name] [newName]",
+    "description": ""
+  },
+  {
+    "designation": "file stage all",
+    "command": "git add .",
+    "description": ""
+  },
+  {
+    "designation": "file stage single file",
+    "command": "\ngit add [fileName]",
+    "description": ""
+  },
+  {
+    "designation": "file unstage",
+    "command": "git rm --cached [fileName]",
+    "description": ""
+  },
+  {
+    "designation": "fork Origin",
+    "command": "",
+    "description": "cloned remote repository"
+  },
+  {
+    "designation": "fork push origin",
+    "command": "git push origin [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "fork Upstream",
+    "command": "git pull upstream main",
+    "description": "official remote repository"
+  },
+  {
+    "designation": "graph show",
+    "command": "git log --graph",
+    "description": ""
+  },
+  {
+    "designation": "list commit short Hashtag",
+    "command": "git log --oneline",
+    "description": ""
+  },
+  {
+    "designation": "print working directory",
+    "command": "pwd",
+    "description": ""
+  },
+  {
+    "designation": "remote check differences",
+    "command": "git fetch",
+    "description": ""
+  },
+  {
+    "designation": "remote pull",
+    "command": "git pull --all",
+    "description": ""
+  },
+  {
+    "designation": "remote push",
+    "command": "git push origin [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "remote push in branch",
+    "command": "git push -u origin [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "remote push locally created branch",
+    "command": "git push --set-upstream origin [branchName]",
+    "description": ""
+  },
+  {
+    "designation": "remote repository list",
+    "command": "git remote -v",
+    "description": ""
+  },
+  {
+    "designation": "repository check differences",
+    "command": "git status",
+    "description": ""
+  },
+  {
+    "designation": "repository clone",
+    "command": "git clone [repositoryUrl]",
+    "description": ""
+  },
+  {
+    "designation": "repository create",
+    "command": "git init",
+    "description": ""
+  },
+  {
+    "designation": "repository show history",
+    "command": "git log",
+    "description": ""
+  },
+  {
+    "designation": "shell clear",
+    "command": "cls",
+    "description": ""
+  },
+  {
+    "designation": "tags push to origin",
+    "command": "git push --tags origin",
+    "description": ""
+  },
+  {
+    "designation": "tags set",
+    "command": "git tag 1.0.0",
+    "description": ""
+  },
+  {
+    "designation": "username check",
+    "command": "git config –global user.name",
+    "description": ""
+  },
+  {
+    "designation": "username set",
+    "command": "git config –global user.name [x]",
+    "description": ""
+  },
+  {
+    "designation": "version check",
+    "command": "git -v",
+    "description": ""
+  },
+  {
+    "designation": "VsCode open current directory",
+    "command": "code .",
+    "description": ""
+  }
+]
