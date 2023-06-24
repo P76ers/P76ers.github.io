@@ -1,9 +1,9 @@
 [
   {
-    "description": "Show Intention Actions",
+    "description": "Show Intention Actions \nShow Context Action",
     "windowsLinux": "Alt+Enter",
     "macos": "⌥ ⏎",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions"
   },
   {
@@ -40,5 +40,10 @@
     "macos": "⌘ 6",
     "myshortcut": "",
     "url": "https://www.jetbrains.com/help/idea/problems-tool-window.html"
+  },
+  {
+    "description": "Source Code Hierarchy",
+    "windowsLinux": "Ctrl+Alt+H",
+    "myshortcut": "🏅"
   }
 ]

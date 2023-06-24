@@ -38,7 +38,7 @@
     "description": "Find in Files...",
     "windowsLinux": "Ctrl+Shift+F",
     "macos": "⌘ ⇧ F",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-project.html#find_in_project"
   },
   {
@@ -66,14 +66,14 @@
     "description": "File Structure",
     "windowsLinux": "Ctrl+F12",
     "macos": "⌘ F12",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
   },
   {
     "description": "Go to Symbol...",
     "windowsLinux": "Ctrl+Alt+Shift+N",
     "macos": "⌘ ⌥ O",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html"
   },
   {

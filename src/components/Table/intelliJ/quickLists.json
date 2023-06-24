@@ -1,0 +1,14 @@
+[
+  {
+    "name": "myList",
+    "windowsLinux": "Ctrl+<",
+    "macos": "",
+    "url": "https://www.jetbrains.com/help/idea/settings-quick-lists.html"
+  },
+  {
+    "name": "myList2",
+    "windowsLinux": "Alt+<",
+    "macos": "",
+    "url": "https://www.jetbrains.com/help/idea/settings-quick-lists.html"
+  }
+]

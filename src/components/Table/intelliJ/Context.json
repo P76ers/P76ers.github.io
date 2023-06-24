@@ -24,7 +24,7 @@
     "description": "Switcher",
     "windowsLinux": "Ctrl+Tab",
     "macos": "^ ⇥",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/using-code-editor.html#ws_editor_switch_between_tabs"
   },
   {
@@ -66,21 +66,21 @@
     "description": "Select Next Tab",
     "windowsLinux": "Alt+Right",
     "macos": "⌘ ⇧ ]",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/using-code-editor.html"
   },
   {
     "description": "Select Previous Tab",
     "windowsLinux": "Alt+Left",
     "macos": "⌘ ⇧ [",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/using-code-editor.html"
   },
   {
     "description": "Toggle Anonymous Bookmark",
     "windowsLinux": "F11",
     "macos": "F3",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
   },
   {
@@ -101,7 +101,7 @@
     "description": "Show All Bookmarks",
     "windowsLinux": "Shift+F11",
     "macos": "⌘ F3",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/bookmarks.html"
   },
   {

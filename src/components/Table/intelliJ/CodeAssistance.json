@@ -31,14 +31,14 @@
     "description": "Complete Current Statement",
     "windowsLinux": "Ctrl+Shift+Enter",
     "macos": "⌘ ⇧ ⏎",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/auto-completing-code.html"
   },
   {
     "description": "Reformat Code",
     "windowsLinux": "Ctrl+Alt+L",
     "macos": "⌘ ⌥ L",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/reformat-and-rearrange-code.html"
   },
   {
@@ -87,14 +87,14 @@
     "description": "Move Line Up",
     "windowsLinux": "Alt+Shift+Up",
     "macos": "⌥ ⇧ Up",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
     "description": "Move Line Down",
     "windowsLinux": "Alt+Shift+Down",
     "macos": "⌥ ⇧ ↓",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {

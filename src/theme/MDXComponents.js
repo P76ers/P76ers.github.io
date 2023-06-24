@@ -34,6 +34,7 @@ import TableVsCodeDisplay from '../components/Table/vsCode/TableVsCodeDisplay';
 import TableVsCodeDebug from '../components/Table/vsCode/TableVsCodeDebug';
 import TableVsCodeIntegratedTerminal from '../components/Table/vsCode/TableVsCodeIntegratedTerminal';
 
+import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
 import TableIntellijGeneral from '../components/Table/intelliJ/TableIntellijGeneral';
 import TableIntellijBuild from '../components/Table/intelliJ/TableIntellijBuild';
 import TableIntellijBasic from '../components/Table/intelliJ/TableIntellijBasic';
@@ -128,4 +129,5 @@ export default {
 
   TableNodeJsCommands,
   TableNodeJsPackages,
+  TableIntellijQuickLists,
 };

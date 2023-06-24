@@ -24,7 +24,7 @@
     "description": "Inline...",
     "windowsLinux": "Ctrl+Alt+N",
     "macos": "⌘ ⌥ N",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/inline.html"
   },
   {
@@ -38,7 +38,7 @@
     "description": "Extract Method...",
     "windowsLinux": "Ctrl+Alt+M",
     "macos": "⌘ ⌥ M",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/extract-method.html"
   },
   {
@@ -52,14 +52,14 @@
     "description": "Introduce Parameter...",
     "windowsLinux": "Ctrl+Alt+P",
     "macos": "⌘ ⌥ P",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
     "description": "Introduce Variable...",
     "windowsLinux": "Ctrl+Alt+V",
     "macos": "⌘ ⌥ V",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/extract-variable.html"
   },
   {

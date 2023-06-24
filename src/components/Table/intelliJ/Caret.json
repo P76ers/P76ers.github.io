@@ -3,14 +3,14 @@
     "description": "Move Caret to Previous Word",
     "windowsLinux": "Ctrl+Left",
     "macos": "⌥ ←",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
     "description": "Move Caret to Next Word",
     "windowsLinux": "Ctrl+Right",
     "macos": "⌥ →",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {

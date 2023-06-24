@@ -3,7 +3,7 @@
     "description": "Search Everywhere",
     "windowsLinux": "Double Shift",
     "macos": "Double ⇧",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/searching-everywhere.html"
   },
   {
@@ -17,7 +17,7 @@
     "description": "Show Project window",
     "windowsLinux": "Alt+1",
     "macos": "⌘ 1",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/project-tool-window.html"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Settings...",
     "windowsLinux": "Ctrl+Alt+S",
     "macos": "⌘ Comma",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": "https://www.jetbrains.com/help/idea/configure-project-settings.html"
   },
   {

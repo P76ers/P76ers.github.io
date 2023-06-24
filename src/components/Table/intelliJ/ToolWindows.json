@@ -124,5 +124,10 @@
     "macos": "⌥ F12",
     "myshortcut": "",
     "url": ""
+  },
+  {
+    "description": "Focus on Editor",
+    "windowsLinux": "Esc",
+    "myshortcut": "🏅"
   }
 ]

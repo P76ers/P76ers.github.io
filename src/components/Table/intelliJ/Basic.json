@@ -94,21 +94,21 @@
     "description": "Start New Line",
     "windowsLinux": "Shift+Enter",
     "macos": "⇧ ⏎",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
     "description": "Start New Line Before Current",
     "windowsLinux": "Ctrl+Alt+Enter",
     "macos": "⌘ ⌥ ⏎",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
     "description": "Delete Line",
     "windowsLinux": "Ctrl+Y",
     "macos": "⌘ ⌫",
-    "myshortcut": "",
+    "myshortcut": "🏅 Alt+Backspace",
     "url": ""
   },
   {
@@ -122,7 +122,7 @@
     "description": "Duplicate Line or Selection",
     "windowsLinux": "Ctrl+D",
     "macos": "⌘ D",
-    "myshortcut": "",
+    "myshortcut": "🏅",
     "url": ""
   },
   {
