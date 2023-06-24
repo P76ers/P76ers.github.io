@@ -4,48 +4,48 @@
     "windows": "Ctrl+F",
     "macos": "⌘F",
     "linux": "Ctrl+F",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Replace",
     "windows": "Ctrl+H",
     "macos": "⌥⌘F ",
     "linux": "Ctrl+H ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Find next/previous",
     "windows": "F3 / Shift+F3",
     "macos": "⌘G / ⇧⌘G ",
     "linux": "F3 / Shift+F3 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Select all occurences of Find match",
     "windows": "Alt+Enter",
     "macos": "⌥Enter",
     "linux": "Alt+Enter ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Add selection to next Find match",
     "windows": "Ctrl+D",
     "macos": "⌘D",
     "linux": "Ctrl+D",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Move last selection to next Find match",
     "windows": "Ctrl+K Ctrl+D",
     "macos": "⌘K ⌘D ",
     "linux": "Ctrl+K Ctrl+D ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Toggle case-sensitive / regex / whole word",
     "windows": "Alt+C / R / W",
     "macos": "",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   }
 ]

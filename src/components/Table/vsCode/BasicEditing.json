@@ -4,174 +4,174 @@
     "windows": "Ctrl+X",
     "macos": "⌘X",
     "linux": "Ctrl+X ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Copy line (empty selection)",
     "windows": "Ctrl+C",
     "macos": "⌘C",
     "linux": "Ctrl+C ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Move line up/down",
     "windows": "Alt+ ↑ / ↓",
     "macos": "⌥↓ / ⌥↑",
     "linux": "Alt+ ↓ / ↑ ",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Copy line up/down",
     "windows": "Shift+Alt + ↓ / ↑",
     "macos": "⇧⌥↓ / ⇧⌥↑",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Delete line",
     "windows": "Ctrl+Shift+K",
     "macos": "⇧⌘K",
     "linux": "Ctrl+Shift+K ",
-    "myselection": ""
+    "myshortcut": "🏅Ctrl+X"
   },
   {
     "description": "Insert line below",
     "windows": "Ctrl+Enter",
     "macos": "⌘Enter",
     "linux": "Ctrl+Enter /",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Insert line above",
     "windows": "Ctrl+Shift+Enter",
     "macos": "⇧⌘Enter ",
     "linux": "Ctrl+Shift+Enter ",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Jump to matching bracket",
     "windows": "Ctrl+Shift+\\",
     "macos": "⇧⌘\\ ",
     "linux": "Ctrl+Shift+\\ ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Indent/outdent line",
     "windows": "Ctrl+] / [",
     "macos": "⌘] / ⌘[ ",
     "linux": "Ctrl+] / Ctrl+[ ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to beginning/end of line",
     "windows": "Home / End",
     "macos": "Home / End ",
     "linux": "Home / End ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to beginning of file",
     "windows": "Ctrl+Home",
     "macos": "⌘↑",
     "linux": "Ctrl+ Home",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to end of file",
     "windows": "Ctrl+End",
     "macos": "⌘↓",
     "linux": "Ctrl+ End ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Scroll line up/down",
     "windows": "Ctrl+↑ / ↓",
     "macos": "⌃PgUp / ⌃PgDn ",
     "linux": "Ctrl+ ↑ / ↓",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Scroll page up/down",
     "windows": "Alt+PgUp / PgDn",
     "macos": "⌘PgUp /⌘PgDn",
     "linux": "Alt+ PgUp / PgDn ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Fold (collapse) region",
     "windows": "Ctrl+Shift+[",
     "macos": "⌥⌘[  / ⌥⌘] ",
     "linux": "Ctrl+Shift+ [  /  ]",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Unfold (uncollapse) region",
     "windows": "Ctrl+Shift+]",
     "macos": "⌥⌘[  / ⌥⌘] ",
     "linux": "Ctrl+Shift+ [  /  ]",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Fold (collapse) all subregions",
     "windows": "Ctrl+K Ctrl+[",
     "macos": "⌘K ⌘[  /  ⌘K ⌘] ",
     "linux": "Ctrl+K Ctrl+ [  /  ] ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Unfold (uncollapse) all subregions",
     "windows": "Ctrl+K Ctrl+]",
     "macos": "⌘K ⌘[  /  ⌘K ⌘] ",
     "linux": "Ctrl+K Ctrl+ [  /  ] ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Fold (collapse) all regions",
     "windows": "Ctrl+K Ctrl+0",
     "macos": "⌘K ⌘0  /  ⌘K ⌘J ",
     "linux": "Ctrl+K Ctrl+0 / ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Unfold (uncollapse) all regions",
     "windows": "Ctrl+K Ctrl+J",
     "macos": "⌘K ⌘0  /  ⌘K ⌘J ",
     "linux": "Ctrl+K Ctrl+J",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Add line comment",
     "windows": "Ctrl+K Ctrl+C",
     "macos": "⌘K ⌘C ",
     "linux": "Ctrl+K Ctrl+C ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Remove line comment",
     "windows": "Ctrl+K Ctrl+U",
     "macos": "⌘K ⌘U ",
     "linux": "Ctrl+K Ctrl+U ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Toggle line comment",
     "windows": "Ctrl+/",
     "macos": "⌘/ ",
     "linux": "Ctrl+/",
-    "myselection": ""
+    "myshortcut": "🏅 Ctrl+#"
   },
   {
     "description": "Toggle block comment",
     "windows": "Shift+Alt+A",
     "macos": "⇧⌥A",
     "linux": "Ctrl+Shift+A",
-    "myselection": ""
+    "myshortcut": "🏅 Ctrl+Alt+#"
   },
   {
     "description": "Toggle word wrap",
     "windows": "Alt+Z",
     "macos": "⌥Z ",
     "linux": "Alt+Z",
-    "myselection": ""
+    "myshortcut": ""
   }
 ]

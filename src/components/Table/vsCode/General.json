@@ -11,7 +11,7 @@
     "windows": "Ctrl+P",
     "macos": "⌘P",
     "linux": "Ctrl+P",
-    "myshortcut": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "New window/instance",
@@ -39,6 +39,6 @@
     "windows": "Ctrl+K Ctrl+S",
     "macos": "⌘K ⌘S ",
     "linux": "Ctrl+K Ctrl+S",
-    "myshortcut": ""
+    "myshortcut": "🏅"
   }
 ]

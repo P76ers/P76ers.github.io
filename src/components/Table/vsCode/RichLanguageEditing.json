@@ -4,83 +4,83 @@
     "windows": " Ctrl+Space, Ctrl+I",
     "macos": "⌃Space, ⌘I",
     "linux": "Ctrl+Space, Ctrl+I ",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Trigger parameter hints",
     "windows": "Ctrl+Shift+Space",
     "macos": "⇧⌘Space",
     "linux": "Ctrl+Shift+Space ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Format document",
     "windows": "Shift+Alt+F",
     "macos": "⇧⌥F ",
     "linux": "Ctrl+Shift+I ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Format selection",
     "windows": "Ctrl+K Ctrl+F",
     "macos": "⌘K ⌘F",
     "linux": "Ctrl+K Ctrl+F ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to Definition",
     "windows": "F12",
     "macos": "F12",
     "linux": "F12",
-    "myselection": ""
+    "myshortcut": "🏅 Ctrl+Lclick"
   },
   {
     "description": "Peek Definition",
     "windows": "Alt+F12",
     "macos": "⌥F12",
     "linux": "Ctrl+Shift+F10 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Open Definition to the side",
     "windows": "Ctrl+K F12",
     "macos": "⌘K F12",
     "linux": "Ctrl+K F12 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Quick Fix",
     "windows": "Ctrl+.",
     "macos": "⌘. ",
     "linux": "Ctrl+.",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Show References",
     "windows": "Shift+F12",
     "macos": "⇧F12 ",
     "linux": "Shift+F12 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Rename Symbol",
     "windows": "F2",
     "macos": "F2 ",
     "linux": "F2 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Trim trailing whitespace",
     "windows": "Ctrl+K Ctrl+X",
     "macos": "⌘K ⌘X ",
     "linux": "Ctrl+K Ctrl+X ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Change file language",
     "windows": "Ctrl+K M",
     "macos": "⌘K M ",
     "linux": "Ctrl+K M",
-    "myselection": ""
+    "myshortcut": ""
   }
 ]

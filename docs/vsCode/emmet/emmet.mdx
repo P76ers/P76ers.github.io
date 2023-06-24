@@ -1,0 +1,88 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: Emmet Abbreviations
+tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
+---
+
+<CardHeading>
+
+  # Emmet Abbreviations
+</CardHeading>
+
+---
+
+<CardChapter>
+
+### Links
+
+  <Card 
+    title="Visual Studio Code" 
+    description="Emmet Abbreviations" 
+    to="https://code.visualstudio.com/docs/editor/emmet" />
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ## Configuration
+</CardHeading>
+
+
+
+<CardChapter>
+
+  ### Edit Snippets
+
+  - edit 
+  
+    `Strg` `Shift` `P` :"Snippets: Configure User Snippets"
+  
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ### enable tab completion
+
+  ```json title='settings.json'
+  "emmet.triggerExpansionOnTab": true,
+  ```  
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ### include / exclude languages
+
+  ```json title='settings.json'
+  "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "astro": "html",
+  },
+  ```  
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ###  set language
+
+  ```json title='settings.json'
+  "emmet.variables": {
+      "lang": "de"
+  },
+  ```
+</CardChapter>
+<br/>

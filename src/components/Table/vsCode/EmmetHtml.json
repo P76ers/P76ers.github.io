@@ -1,0 +1,52 @@
+[
+  {
+    "description": "Generate HtmL",
+    "emmet": "!↲",
+    "code": ""
+  },
+  {
+    "description": "Header",
+    "emmet": "header",
+    "code": "<header></header>"
+  },
+  {
+    "description": "Main",
+    "emmet": "main",
+    "code": "<main></main>"
+  },
+  {
+    "description": "Listitem",
+    "emmet": "li",
+    "code": "<li></li>"
+  },
+  {
+    "description": "Navigation",
+    "emmet": "nav",
+    "code": "<nav></nav>"
+  },
+  {
+    "description": "Paragraph",
+    "emmet": "p",
+    "code": "<p></p>"
+  },
+  {
+    "description": "Unsorted List",
+    "emmet": "ul",
+    "code": "<ul></ul>"
+  },
+  {
+    "description": "Footer",
+    "emmet": "footer",
+    "code": "<footer></footer>"
+  },
+  {
+    "description": "Classname",
+    "emmet": "p.name",
+    "code": "<p class=\"name\"></p>"
+  },
+  {
+    "description": "Text random",
+    "emmet": "lorem5",
+    "code": "Lorem ipsum dolor sit amet."
+  }
+]

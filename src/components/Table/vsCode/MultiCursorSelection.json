@@ -4,104 +4,104 @@
     "windows": "Alt+Click",
     "macos": "⌥ + click",
     "linux": "Alt+Click",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Insert cursor above / below",
     "windows": "Ctrl+Alt+ ↑ / ↓",
     "macos": "⌥⌘↑ ↓ ",
     "linux": "Shift+Alt+ ↑ / ↓ ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Undo last cursor operation",
     "windows": "Ctrl+U",
     "macos": "⌘U",
     "linux": "Ctrl+U",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Insert cursor at end of each line selected",
     "windows": "Shift+Alt+I",
     "macos": "⇧⌥I",
     "linux": "Shift+Alt+I",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Select current line",
     "windows": "Ctrl+L",
     "macos": "⌘L ",
     "linux": "Ctrl+L ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Select all occurrences of current selection",
     "windows": "Ctrl+Shift+L",
     "macos": "⇧⌘L",
     "linux": "Ctrl+Shift+L",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Select all occurrences of current word",
     "windows": "Ctrl+F2",
     "macos": "⌘F2",
     "linux": "Ctrl+F2 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Expand selection",
     "windows": "Shift+Alt+→",
     "macos": "⌃⇧⌘→",
     "linux": "Shift+Alt + →",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Shrink selection",
     "windows": "Shift+Alt+←",
     "macos": "⌃⇧⌘←",
     "linux": "Shift+Alt + ←",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection",
     "windows": "Shift+Alt + (drag mouse)",
     "macos": "⇧⌥ + drag mouse",
     "linux": "Shift+Alt + drag mouse",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection",
     "windows": "Ctrl+Shift+Alt + (arrow key)",
     "macos": "",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection page up/down",
     "windows": "Ctrl+Shift+Alt+PgUp/PgDn",
     "macos": "⇧⌥⌘↑ / ↓",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection left/right ",
     "windows": "",
     "macos": "⇧⌥⌘← / → ",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection page up ",
     "windows": "",
     "macos": "⇧⌥⌘PgUp ",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Column (box) selection page down ",
     "windows": "",
     "macos": "⇧⌥⌘PgDn ",
     "linux": "",
-    "myselection": ""
+    "myshortcut": ""
   }
 ]

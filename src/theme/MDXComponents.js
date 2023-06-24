@@ -22,6 +22,7 @@ import * as icons from '../icons';
 import GlobalFilter from '../components/Table/GlobalFilter';
 import ColumnFilter from '../components/Table/ColumnFilter';
 
+import TableVsCodeCustomShortcuts from '../components/Table/vsCode/TableVsCodeCustomShortcuts';
 import TableVsCodeGeneral from '../components/Table/vsCode/TableVsCodeGeneral';
 import TableVsCodeBasicEditing from '../components/Table/vsCode/TableVsCodeBasicEditing';
 import TableVsCodeNavigation from '../components/Table/vsCode/TableVsCodeNavigation';
@@ -33,6 +34,7 @@ import TableVsCodeFileManagement from '../components/Table/vsCode/TableVsCodeFil
 import TableVsCodeDisplay from '../components/Table/vsCode/TableVsCodeDisplay';
 import TableVsCodeDebug from '../components/Table/vsCode/TableVsCodeDebug';
 import TableVsCodeIntegratedTerminal from '../components/Table/vsCode/TableVsCodeIntegratedTerminal';
+import TableVsCodeEmmetHtml from '../components/Table/vsCode/TableVsCodeEmmetHtml';
 
 import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
 import TableIntellijGeneral from '../components/Table/intelliJ/TableIntellijGeneral';
@@ -91,6 +93,7 @@ export default {
   GlobalFilter,
   ColumnFilter,
 
+  TableVsCodeCustomShortcuts,
   TableVsCodeGeneral,
   TableVsCodeBasicEditing,
   TableVsCodeNavigation,
@@ -102,6 +105,7 @@ export default {
   TableVsCodeDisplay,
   TableVsCodeDebug,
   TableVsCodeIntegratedTerminal,
+  TableVsCodeEmmetHtml,
 
   TableIntellijGeneral,
   TableIntellijBuild,

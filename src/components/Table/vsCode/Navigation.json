@@ -4,76 +4,83 @@
     "windows": "Ctrl+T",
     "macos": "⌘T",
     "linux": "Ctrl+T ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to Line...",
     "windows": "Ctrl+G",
     "macos": "⌃G ",
     "linux": "Ctrl+G",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to File...",
     "windows": "Ctrl+P",
     "macos": "⌘P ",
     "linux": "Ctrl+P",
-    "myselection": ""
+    "myshortcut": "🏅"
   },
   {
     "description": "Go to Symbol...",
     "windows": "Ctrl+Shift+O",
     "macos": "⇧⌘O",
     "linux": "Ctrl+Shift+O",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Show Problems panel",
     "windows": "Ctrl+Shift+M",
     "macos": "⇧⌘M",
     "linux": "Ctrl+Shift+M",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to next error or warning",
     "windows": "F8",
     "macos": "F8",
     "linux": "F8 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go to previous error or warning",
     "windows": "Shift+F8",
     "macos": "⇧F8",
     "linux": "Shift+F8 ",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Navigate editor group history",
     "windows": "Ctrl+Shift+Tab",
     "macos": "⌃⇧Tab",
     "linux": "Ctrl+Shift+Tab",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go backward",
     "windows": "Alt+ ← ",
     "macos": "⌃- ",
     "linux": "Ctrl+Alt+",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Toggle Tab moves focus",
     "windows": "Ctrl+M",
     "macos": "⌃⇧M ",
     "linux": "Ctrl+M",
-    "myselection": ""
+    "myshortcut": ""
   },
   {
     "description": "Go forward",
     "windows": "Alt+ →",
     "macos": "⌃⇧",
     "linux": "Ctrl+Shift+- ",
-    "myselection": ""
+    "myshortcut": ""
+  },
+  {
+    "description": "Go to next Word",
+    "windows": "Ctrl+↔",
+    "macos": "",
+    "linux": "",
+    "myshortcut": "🏅"
   }
 ]

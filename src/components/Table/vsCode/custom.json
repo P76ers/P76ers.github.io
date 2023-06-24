@@ -1,0 +1,18 @@
+[
+  {
+    "description": "svg fold",
+    "windows": "Ctrl+K Ctrl+9",
+    "macos": "",
+    "linux": "",
+    "source": "extension",
+    "url": "https://marketplace.visualstudio.com/items?itemName=misbahansori.svg-fold"
+  },
+  {
+    "description": "Code Wrap",
+    "windows": "Ctrl+<",
+    "macos": "",
+    "linux": "",
+    "source": "emmet",
+    "url": ""
+  }
+]
