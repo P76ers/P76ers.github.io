@@ -46,6 +46,8 @@ import TableGitCommands from '../components/Table/git/TableGitCommands';
 import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
 import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
 
+import TableSqlCommands from '../components/Table/sql/TableSqlCommands';
+
 import TableVsCodeCustomShortcuts from '../components/Table/vsCode/TableVsCodeCustomShortcuts';
 import TableVsCodeGeneral from '../components/Table/vsCode/TableVsCodeGeneral';
 import TableVsCodeBasicEditing from '../components/Table/vsCode/TableVsCodeBasicEditing';
@@ -118,6 +120,8 @@ export default {
 
   TableNodeJsCommands,
   TableNodeJsPackages,
+
+  TableSqlCommands,
 
   TableVsCodeCustomShortcuts,
   TableVsCodeGeneral,

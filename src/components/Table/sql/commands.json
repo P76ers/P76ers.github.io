@@ -1,0 +1,287 @@
+[
+  {
+    "designation": "comment block",
+    "command": "/*\r\n        blockComment\r\n*/",
+    "description": ""
+  },
+  {
+    "designation": "comment line",
+    "command": "-- comment",
+    "description": "backspace after --"
+  },
+  {
+    "designation": "comment line",
+    "command": "# comment",
+    "description": ""
+  },
+  {
+    "designation": "database create",
+    "command": "CREATE DATABASE tutorial;",
+    "description": ""
+  },
+  {
+    "designation": "database select",
+    "command": "use [name];",
+    "description": ""
+  },
+  {
+    "designation": "datatype date dayOfWeek",
+    "command": "SELECT NOW() - INTERVAL '10 YEAR';SELECT EXTRACT(DOW FROM NOW());",
+    "description": ""
+  },
+  {
+    "designation": "datatype date year",
+    "command": "SELECT NOW() - INTERVAL '10 YEAR';SELECT EXTRACT(YEAR FROM NOW());",
+    "description": ""
+  },
+  {
+    "designation": "datatype decimal limitation, precision",
+    "command": "produkt_preis decimal(15,2)",
+    "description": ""
+  },
+  {
+    "designation": "datatype primary key",
+    "command": "id BIGSERIAL NOT NULL PRIMARY KEY ",
+    "description": ""
+  },
+  {
+    "designation": "datatype primary key",
+    "command": "id int PRIMARY KEY AUTO_INCREMENT,   ",
+    "description": ""
+  },
+  {
+    "designation": "datatype primary key check last",
+    "command": "SELECT * FROM person_id_seq;",
+    "description": ""
+  },
+  {
+    "designation": "datatype primary key check next available",
+    "command": "SELECT nextval('person_id_seq'::regclass);",
+    "description": ""
+  },
+  {
+    "designation": "datatype primary key reset",
+    "command": "ALTER SEQUENCE person_id_seq RESTART WITH 1;",
+    "description": "Conflict, existing will not be overwritten"
+  },
+  {
+    "designation": "datatype String lengthLimitation",
+    "command": "produkt_name varchar(30)",
+    "description": ""
+  },
+  {
+    "designation": "operation if null show ",
+    "command": "SELECT COALESCE(email, '***NoData***') FROM person;",
+    "description": ""
+  },
+  {
+    "designation": "operation math",
+    "command": "SELECT 10 + 9;\nSELECT 10 - 9;\nSELECT 10 * 9;\nSELECT 10 / 9;",
+    "description": ""
+  },
+  {
+    "designation": "operation math",
+    "command": "SELECT 10 div 9;   ",
+    "description": "integer calculation "
+  },
+  {
+    "designation": "operation math",
+    "command": "SELECT 10 % 9;",
+    "description": "residual value calculation"
+  },
+  {
+    "designation": "operation math avg",
+    "command": "SELECT AVG(price) FROM Car;",
+    "description": ""
+  },
+  {
+    "designation": "operation math max",
+    "command": "SELECT MAX(price) FROM Car;",
+    "description": ""
+  },
+  {
+    "designation": "operation math min",
+    "command": "SELECT MIN(price) FROM Car;",
+    "description": ""
+  },
+  {
+    "designation": "operation math range",
+    "command": "SELECT * FROM person WHERE last_name BETWEEN 'A%' AND 'B%';",
+    "description": ""
+  },
+  {
+    "designation": "operation math round",
+    "command": "SELECT ROUND(price) FROM Car;",
+    "description": ""
+  },
+  {
+    "designation": "operations column create",
+    "command": "SELECT *, verkaufspreis - einkaufspreis as Gewinn FROM produkte;",
+    "description": "temporary column"
+  },
+  {
+    "designation": "query add",
+    "command": "INSERT INTO user (id, firstname, lastname)\nVALUES (1, \"John\" , \"Doe\")",
+    "description": "if id is not AUTO_INCREMENT"
+  },
+  {
+    "designation": "query add multiple ",
+    "command": "INSERT INTO user (firstname, lastname)\nVALUES     (\"John\" , \"Doe\"),(\"Jane\", \"Doe\")",
+    "description": ""
+  },
+  {
+    "designation": "query conflicts",
+    "command": "...ON CONFLICT (id) Do NOTHING;",
+    "description": "result = 0\n(DEFAULT: SELECT 10 / 0; -> ERROR"
+  },
+  {
+    "designation": "query conflicts if/else",
+    "command": "SELECT COALESCE(10 / NULLIF(0, 0), 0);",
+    "description": ""
+  },
+  {
+    "designation": "query constraints",
+    "command": "ALTER TABLE person ADD CONSTRAINT gender_constraint \nCHECK (gender = 'Female' OR gender = 'Male' OR gender = 'Agender');",
+    "description": ""
+  },
+  {
+    "designation": "query delete by id",
+    "command": "DELETE FROM user WHERE id=9;",
+    "description": ""
+  },
+  {
+    "designation": "query select",
+    "command": "SELECT * FROM Customers \nWHERE (Country=\"USA\" AND PostalCode Like \"9%\") \nOR (Country=\"Mexico\" AND PostalCode LIKE \"0%\");",
+    "description": ""
+  },
+  {
+    "designation": "query select",
+    "command": "SELECT * FROM user WHERE id=2;",
+    "description": ""
+  },
+  {
+    "designation": "query select all",
+    "command": "SELECT * FROM user;",
+    "description": ""
+  },
+  {
+    "designation": "query select all condition",
+    "command": "SELECT * FROM customer WHERE firstname=\"John\";",
+    "description": ""
+  },
+  {
+    "designation": "query select all condition",
+    "command": "SELECT * FROM kunden WHERE land in (\"DE\", \"ES\");",
+    "description": ""
+  },
+  {
+    "designation": "query select case insensitive",
+    "command": "SELECT * FROM person WHERE email iLIKE 'H%';",
+    "description": ""
+  },
+  {
+    "designation": "query select case sensitive",
+    "command": "SELECT * FROM person WHERE email iLIKE 'h%';",
+    "description": ""
+  },
+  {
+    "designation": "query select certain range",
+    "command": "SELECT * FROM person FETCH FIRST 10 ROW ONLY;",
+    "description": ""
+  },
+  {
+    "designation": "query select group",
+    "command": "SELECT land FROM kunden group by land;",
+    "description": ""
+  },
+  {
+    "designation": "query select group agregate",
+    "command": "SELECT land, min(lebensalter) FROM kunden\ngroup by land;",
+    "description": "min, max, avg, sum..."
+  },
+  {
+    "designation": "query select group by",
+    "command": "SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth;",
+    "description": ""
+  },
+  {
+    "designation": "query select group by condition",
+    "command": "SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 5;",
+    "description": ""
+  },
+  {
+    "designation": "query select group distinct",
+    "command": "SELECT DISTINCT country_of_birth FROM person;",
+    "description": ""
+  },
+  {
+    "designation": "query select multiple condition",
+    "command": "SELECT * FROM kunden WHERE nachname like \"m%\" AND land=\"ES\";",
+    "description": ""
+  },
+  {
+    "designation": "query select offset",
+    "command": "SELECT * FROM person OFFSET 5;",
+    "description": "show > 5"
+  },
+  {
+    "designation": "query select order desc",
+    "command": "SELECT * FROM kunden\norder by nachname DESC;",
+    "description": "asc=default"
+  },
+  {
+    "designation": "query select String length",
+    "command": "SELECT * FROM person WHERE email LIKE '___h%';",
+    "description": ""
+  },
+  {
+    "designation": "query select String like",
+    "command": "SELECT * FROM kunden WHERE nachname like \"H%\";",
+    "description": "any char after H"
+  },
+  {
+    "designation": "query select String like",
+    "command": "SELECT * FROM kunden WHERE nachname like \"%H\";",
+    "description": "any char before H"
+  },
+  {
+    "designation": "query select String like",
+    "command": "SELECT * FROM kunden WHERE nachname like \"%H%\";",
+    "description": "any char before H and after"
+  },
+  {
+    "designation": "query update",
+    "command": "UPDATE user set lastname=\"Doe\" \nWHERE id=1;",
+    "description": ""
+  },
+  {
+    "designation": "table connect",
+    "command": "SELECT * FROM Orders\nLEFT JOIN Customers\nOn Orders.CustomerID = Customers.CustomerID",
+    "description": ""
+  },
+  {
+    "designation": "table connect 3 tables + calculation",
+    "command": "CREATE TABLE ProductOrders AS\nSELECT Orderdate, ProductName, Quantity, Price,\nQuantity * Price AS Gesamtkostenmenge\nFROM Orders\nLEFT JOIN OrderDetails\nOn Orders.OrderID = OrderDetails.OrderID\nLEFT JOIN Products \nON OrderDetails.ProductID = Products.ProductID",
+    "description": ""
+  },
+  {
+    "designation": "table connect calculation & filter",
+    "command": "SELECT Count(Quantity * Price) AS Orders, sum(Quantity * Price) \nGesamtkostenmenge, AVG(Quantity * Price) AS Durchschnitt \nFROM Orders\nLEFT JOIN OrderDetails\nOn Orders.OrderID = OrderDetails.OrderID\nLEFT JOIN Products \nON OrderDetails.ProductID = Products.ProductID\nWHERE OrderDate LIKE \"1996%\"",
+    "description": ""
+  },
+  {
+    "designation": "table connect intersection",
+    "command": "SELECT person.first_name, car.make, car.model, car.price \nFROM person\nJOIN car ON person.car_id = car.id; ",
+    "description": ""
+  },
+  {
+    "designation": "table delete",
+    "command": "DROP TABLE benutzer;",
+    "description": ""
+  },
+  {
+    "designation": "table show",
+    "command": "DESCRIBE benutzer;",
+    "description": ""
+  }
+]
