@@ -1,0 +1,80 @@
+[
+  {
+    "designation": "space inside element",
+    "command": "padding"
+  },
+  {
+    "designation": "space outside to other elements",
+    "command": "margin"
+  },
+  {
+    "designation": "space outside to other elements",
+    "command": "margin: 20px;",
+    "description": "to all directions"
+  },
+  {
+    "designation": "space outside to other elements",
+    "command": "margin: 20px 30px 40px 50px;",
+    "description": "up, right, down, left"
+  },
+  {
+    "designation": "space boxsizing disable",
+    "command": "box-sizing: border-box;",
+    "description": ""
+  },
+  {
+    "designation": "space inside element",
+    "command": "padding: 20px;",
+    "description": "to all directions"
+  },
+  {
+    "designation": "space inside element",
+    "command": "padding: 20px 30px 40px 50px;",
+    "description": "up, right, down, left"
+  },
+  {
+    "designation": "selector",
+    "command": "body > table {...}",
+    "description": ""
+  },
+  {
+    "designation": "Layout Grid align left-right",
+    "command": "display: flex; justify-content: space-between;",
+    "description": ""
+  },
+  {
+    "designation": "Layout Grid align center",
+    "command": "display: flex; justify-content: center;",
+    "description": ""
+  },
+  {
+    "designation": "Layout Grid align left / default",
+    "command": "display: flex; justify-content: flex-start;",
+    "description": ""
+  },
+  {
+    "designation": "Layout Grid align right",
+    "command": "display: flex; justify-content: flex-end;",
+    "description": ""
+  },
+  {
+    "designation": "Layout align vertical",
+    "command": "align-items: center;",
+    "description": ""
+  },
+  {
+    "designation": "Layout responsive maxWidth",
+    "command": "max-width: 1260px;",
+    "description": ""
+  },
+  {
+    "designation": "unsorted list, display no dots",
+    "command": "list-style-type: none;",
+    "description": ""
+  },
+  {
+    "designation": "unsorted list, arrange horizontal",
+    "command": "display: inline-block;",
+    "description": ""
+  }
+]

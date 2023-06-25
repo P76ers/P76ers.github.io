@@ -25,6 +25,8 @@ import ColumnFilter from '../components/Table/ColumnFilter';
 import TableAutohotkeyCommands from '../components/Table/autohotkey/TableAutohotkeyCommands';
 import TableAutohotkeyScripts from '../components/Table/autohotkey/TableAutohotkeyScripts';
 
+import TableCssCommands from '../components/Table/css/TableCssCommands';
+
 import TableHtmlCommands from '../components/Table/html/TableHtmlCommands';
 
 import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
@@ -104,6 +106,8 @@ export default {
 
   TableAutohotkeyCommands,
   TableAutohotkeyScripts,
+
+  TableCssCommands,
 
   TableHtmlCommands,
 
