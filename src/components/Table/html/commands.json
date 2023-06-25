@@ -1,0 +1,22 @@
+[
+  {
+    "designation": "link bookmark",
+    "command": "<a href=\"#C4\">Jump to Chapter 4</a>",
+    "description": "<h2 id=\"C4\">Chapter 4</h2>"
+  },
+  {
+    "designation": "container image responsive ",
+    "command": "<picture>\n  <source srcset=\"image1.jpg\" media=\"(min-width: 1100px)\" />\n  <img src=\"image2.jpg\" alt=\"\" />\n</picture>",
+    "description": "Display > 1100px: show image1\nDisplay < 1100px: show image2"
+  },
+  {
+    "designation": "container text",
+    "command": "<span> </span>",
+    "description": ""
+  },
+  {
+    "designation": "Symbol Copyright ©",
+    "command": "&copy;",
+    "description": ""
+  }
+]
