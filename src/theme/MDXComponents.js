@@ -27,6 +27,8 @@ import TableAutohotkeyScripts from '../components/Table/autohotkey/TableAutohotk
 
 import TableCssCommands from '../components/Table/css/TableCssCommands';
 
+import TableGitCommands from '../components/Table/git/TableGitCommands';
+
 import TableHtmlCommands from '../components/Table/html/TableHtmlCommands';
 
 import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
@@ -48,7 +50,7 @@ import TableIntellijGlobalVcs from '../components/Table/intelliJ/TableIntellijGl
 import TableIntellijDifferences from '../components/Table/intelliJ/TableIntellijDifferences';
 import TableIntellijToolWindows from '../components/Table/intelliJ/TableIntellijToolWindows';
 
-import TableGitCommands from '../components/Table/git/TableGitCommands';
+import TableJavascriptCommands from '../components/Table/javascript/TableJavascriptCommands';
 
 import TableNodeJsCommands from '../components/Table/nodejs/TableNodeJsCommands';
 import TableNodeJsPackages from '../components/Table/nodejs/TableNodeJsPackages';
@@ -109,6 +111,8 @@ export default {
 
   TableCssCommands,
 
+  TableGitCommands,
+
   TableHtmlCommands,
 
   TableIntellijGeneral,
@@ -130,7 +134,7 @@ export default {
   TableIntellijToolWindows,
   TableIntellijQuickLists,
 
-  TableGitCommands,
+  TableJavascriptCommands,
 
   TableNodeJsCommands,
   TableNodeJsPackages,

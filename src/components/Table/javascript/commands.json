@@ -1,0 +1,83 @@
+[
+  {
+    "designation": "array const",
+    "command": "const cars = [\"Saab\", \"Volvo\", \"BMW\"];\n// highlight-next-line-error\ncars = [\"Toyota\", \"Volvo\", \"Audi\"];",
+    "description": "⛔ Reassignment",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element"
+  },
+  {
+    "designation": "array change Element",
+    "command": "const cars = [\"Saab\", \"Volvo\", \"BMW\"];\r\ncars[0] = \"Opel\";",
+    "description": ""
+  },
+  {
+    "designation": "array add Element",
+    "command": "cars.push(\"Audi\");",
+    "description": "-> last element",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element_change"
+  },
+  {
+    "designation": "array access Element",
+    "command": "const cars = [\"Saab\", \"Volvo\", \"BMW\"];\r\nlet car = cars[0];",
+    "description": ""
+  },
+  {
+    "designation": "array toString()",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\r\ndocument.getElementById(\"demo\").innerHTML = fruits.toString();",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_tostring"
+  },
+  {
+    "designation": "array iterate",
+    "command": "const cars = [\"Saab\", \"Volvo\", \"BMW\"];\r\ndocument.getElementById(\"demo\").innerHTML = cars;",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_full"
+  },
+  {
+    "designation": "array length",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\r\nlet length = fruits.length;",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_length"
+  },
+  {
+    "designation": "array access last Element",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\r\nlet fruit = fruits[fruits.length - 1];",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_last"
+  },
+  {
+    "designation": "array interate for()",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\r\nlet fLen = fruits.length;\r\n\r\nlet text = \"<ul>\";\r\nfor (let i = 0; i < fLen; i++) {\r\n  text += \"<li>\" + fruits[i] + \"</li>\";\r\n}\r\ntext += \"</ul>\";",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop"
+  },
+  {
+    "designation": "array interate forEach()",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\", \"Mango\"];\r\n\r\nlet text = \"<ul>\";\r\nfruits.forEach(myFunction);\r\ntext += \"</ul>\";\r\n\r\nfunction myFunction(value) {\r\n  text += \"<li>\" + value + \"</li>\";\r\n}",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop_foreach"
+  },
+  {
+    "designation": "array add Element",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\"];\r\nfruits[fruits.length] = \"Lemon\";",
+    "description": "",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add"
+  },
+  {
+    "designation": "array isArray()",
+    "command": "Array.isArray(fruits);",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray_method"
+  },
+  {
+    "designation": "array typeof",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\"];\r\nlet type = typeof fruits;",
+    "description": "⛔ returns: is object",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_typeof"
+  },
+  {
+    "designation": "array instanceof",
+    "command": "const fruits = [\"Banana\", \"Orange\", \"Apple\"];\r\n\r\nfruits instanceof Array;",
+    "description": "returns true if created by given constructor",
+    "url": "https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_instanceof"
+  }
+]
