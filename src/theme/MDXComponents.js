@@ -22,6 +22,9 @@ import * as icons from '../icons';
 import GlobalFilter from '../components/Table/GlobalFilter';
 import ColumnFilter from '../components/Table/ColumnFilter';
 
+import TableAutohotkeyCommands from '../components/Table/autohotkey/TableAutohotkeyCommands';
+import TableAutohotkeyScripts from '../components/Table/autohotkey/TableAutohotkeyScripts';
+
 import TableIntellijQuickLists from '../components/Table/intelliJ/TableIntellijQuickLists';
 import TableIntellijGeneral from '../components/Table/intelliJ/TableIntellijGeneral';
 import TableIntellijBuild from '../components/Table/intelliJ/TableIntellijBuild';
@@ -96,6 +99,9 @@ export default {
   /* Table */
   GlobalFilter,
   ColumnFilter,
+
+  TableAutohotkeyCommands,
+  TableAutohotkeyScripts,
 
   TableIntellijGeneral,
   TableIntellijBuild,

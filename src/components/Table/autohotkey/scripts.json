@@ -1,0 +1,12 @@
+[
+  {
+    "script": " WindowSpy default",
+    "description": "check System Info & className of applications",
+    "url": "https://amourspirit.github.io/AutoHotkey-Snippit/WindowSpy.html"
+  },
+  {
+    "script": "WindowSnipping",
+    "description": "SnippingTool OCR, Translation, attach email",
+    "url": "https://www.the-automator.com/window-snipping/"
+  }
+]

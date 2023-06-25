@@ -1,0 +1,112 @@
+[
+  {
+    "designation": "HotString",
+    "command": "::@p::p@hotmail.com",
+    "description": "@p backspace"
+  },
+  {
+    "designation": "run single script instance",
+    "command": "#SingleInstance,FORCE",
+    "description": ""
+  },
+  {
+    "designation": "run only within certain program ",
+    "command": "#IfWinActive ahk_class CabinetWClass",
+    "description": "e.g. Windows Explorer"
+  },
+  {
+    "designation": "HotString",
+    "command": "::mfg:: Mit freundlichen Grüßen",
+    "description": "mfg backspace"
+  },
+  {
+    "designation": "edit script",
+    "command": "^e::Edit",
+    "description": ""
+  },
+  {
+    "designation": "reload script",
+    "command": "^r::Reload",
+    "description": ""
+  },
+  {
+    "designation": "MouseClickLocation check",
+    "command": "^p::\nMouseGetPos,LocX,LocY\nMsgBox X is at %LocX% and Y is at %LocY%",
+    "description": ""
+  },
+  {
+    "designation": "MouseClick send to coordinate",
+    "command": "\"\"\"^p::\nMouseGetPos,LocX,LocY\nClick, x,y \nreturn\"",
+    "description": ""
+  },
+  {
+    "designation": "deactivate tabKey",
+    "command": "!tab::",
+    "description": ""
+  },
+  {
+    "designation": "deactivate windowsKey",
+    "command": "LWin::Return",
+    "description": ""
+  },
+  {
+    "designation": "spam key",
+    "command": "F5::\nloop, 100\n{\nsend, A\n(sleep, 1000)\n}\nreturn",
+    "description": ""
+  },
+  {
+    "designation": "Run program",
+    "command": "F2:: Run, me.exe",
+    "description": ""
+  },
+  {
+    "designation": "Key Ctrl",
+    "command": "^e",
+    "description": ""
+  },
+  {
+    "designation": "Key ALT",
+    "command": "!",
+    "description": ""
+  },
+  {
+    "designation": "Key Shift",
+    "command": "\"+\"",
+    "description": ""
+  },
+  {
+    "designation": "Key MouseLeft",
+    "command": "LButton",
+    "description": ""
+  },
+  {
+    "designation": "msgBox",
+    "command": "#j:: \nMsgBox, Great! \nreturn",
+    "description": ""
+  },
+  {
+    "designation": "new Line / wordWrap",
+    "command": "{Enter}",
+    "description": ""
+  },
+  {
+    "designation": "HotString without initial Key ",
+    "command": ":*:mads::MY AMAZING DONUT STORE",
+    "description": ""
+  },
+  {
+    "designation": "HotString case sensitiv",
+    "command": ":*c:MADS::MY AMAZING DONUT STORE",
+    "description": ""
+  },
+  {
+    "designation": "query check: program is open?",
+    "command": "#IfWinActive Untitled - Notepad\nF7::\nMsgBox, Yes - Notepad Untitled is open!\nreturn",
+    "description": ""
+  },
+  {
+    "designation": "comment",
+    "command": "Ctrl+Q",
+    "description": ""
+  }
+]
