@@ -498,6 +498,41 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 </CardChapter>
 <br/>
 
+<CardChapter>
+
+  ### Admonition
+
+  ```json title='markdown.json'
+  "Admonition": {
+    "prefix": "mad",
+    "body": [
+      "<Admonition type='${1|note,tip,info,caution,danger|}'>",
+      "  <p>${2:Text}</p>",
+      "</Admonition>",
+      "$3"
+    ],
+    "description": "Insert Admonition"
+  },
+  ```
+<br/>
+
+  ```json title='markdown.json'
+  "Admonition2": {
+    "prefix": "mad2",
+    "body": [
+      "<ul>",
+      "<Admonition type='${1|note,tip,info,caution,danger|}'>",
+      "  <p>${2:Text}</p>",
+      "</Admonition>",
+      "</ul>",
+      "$3"
+    ],
+    "description": "Insert Admonition Indentation"
+  },
+  ```
+
+</CardChapter>
+<br/>
 
 
 
