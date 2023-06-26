@@ -77,6 +77,8 @@ import TableWindowsShortcuts from '../components/Table/windows/TableWindowsShort
 import TableWindowsCommands from '../components/Table/windows/TableWindowsCommands';
 import TableWindowsShellCommands from '../components/Table/windows/TableWindowsShellCommands';
 
+import Admonition from '../theme/Admonition/index';
+
 export default {
   // Re-use the default mapping
   ...MDXComponents,
@@ -101,6 +103,8 @@ export default {
   CardDanger,
   CardChapter,
   CardHeading,
+
+  Admonition,
 
   /* Table */
   GlobalFilter,
