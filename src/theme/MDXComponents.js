@@ -16,6 +16,7 @@ import CardWarning from '../components/CardWarning';
 import CardDanger from '../components/CardDanger';
 import { CardChapter } from '../components/CardChapter';
 import { CardHeading } from '../components/CardHeading';
+import Admonition from '../theme/Admonition/index';
 import * as icons from '../icons';
 
 /* Table */
@@ -96,6 +97,7 @@ export default {
   CardInfo,
   CardWarning,
   CardDanger,
+  Admonition,
   CardChapter,
   CardHeading,
 

@@ -415,16 +415,18 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
   #### Danger
 
   ```json title='markdown.json'
-  "DangerCard": {
+  "CardDanger": {
     "prefix": "mcd",
     "body": [
-      "    <CardDanger",
-      "      title='Warning:'",
-      "      icon={<MyWarnIcon />}",
-      "      description='${1:Description}'",
-      "    />"
+      "<CardDanger>",
+      "",
+      "${1:Danger:}",
+      "",
+      "$2",
+      "</CardDanger>",
+      "$3"
     ],
-    "description": "Insert DangerCard"
+    "description": "Insert CardDanger"
   },
   ```
 
@@ -437,16 +439,18 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
   #### Info
 
   ```json title='markdown.json'
-  "InfoCard": {
+  "CardInfo": {
     "prefix": "mci",
     "body": [
-      "    <CardInfo",
-      "      title='Info:'",
-      "      icon={<MyInfoIcon />}",
-      "      description='${1:Description}'",
-      "    />"
+      "<CardInfo>",
+      "",
+      "${1:Info:}",
+      "",
+      "$2",
+      "</CardInfo>",
+      "$3"
     ],
-    "description": "Insert InfoCard"
+    "description": "Insert CardInfo"
   },
   ```
 
@@ -463,11 +467,11 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
   "LinkCard": {
     "prefix": "mcl",
     "body": [
-      "    <Card",
-      "      title='$1'",
-      "      description='$2'",
-      "      to='$3'",
-      "    />",
+      "<Card",
+      "  title='$1'",
+      "  description='$2'",
+      "  to='$3'",
+      "/>",
     ],
     "description": "Insert CardSection"
   },
@@ -482,16 +486,18 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
   #### Warning
 
   ```json title='markdown.json'
-  "WarnCard": {
+  "CardWarning": {
     "prefix": "mcw",
     "body": [
-      "    <CardWarn",
-      "      title='Warning:'",
-      "      icon={<MyWarnIcon />}",
-      "      description='${1:Description}'",
-      "    />"
+      "<CardWarning>",
+      "",
+      "${1:Caution:}",
+      "",
+      "$2",
+      "</CardWarning>",
+      "$3"
     ],
-    "description": "Insert WarnCard"
+    "description": "Insert CardWarning"
   },
   ```
 
@@ -533,7 +539,4 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
 </CardChapter>
 <br/>
-
-
-
 
