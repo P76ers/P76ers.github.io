@@ -6,11 +6,13 @@ export const GlobalFilter = ({ filter, setFilter }) => {
       style={{
         display: 'flex',
         justifyContent: 'center',
+        marginBottom: '10px',
       }}
     >
       <span>
         Search:{''}
         <input
+          className="TableInputGlobal"
           value={filter || ''}
           onChange={(e) => setFilter(e.target.value)}
         />

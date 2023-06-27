@@ -5,7 +5,7 @@ export const ColumnFilter = ({ column }) => {
   return (
     <span>
       <input
-        style={{ width: '100%' }}
+        className="TableInputColumn"
         value={filterValue || ''}
         onChange={(e) => setFilter(e.target.value)}
       />

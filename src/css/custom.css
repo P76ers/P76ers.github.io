@@ -698,7 +698,7 @@ table {
   width: 100%;
   max-width: 1140px;
   border-collapse: collapse;
-  border: none;
+  border: 1px solid transparent;
   background-color: transparent;
   text-align: left;
 }
@@ -706,29 +706,50 @@ table {
 table :is(tr, td, th, thead) {
   --ifm-table-stripe-background: transparent;
   --table-cell-color: transparent;
-  /* border: none; */
   background-color: transparent;
-  border-bottom: 1px solid var(--docs-color-border);
+  border: transparent;
 }
 
 table thead tr {
-  border-bottom: 1px solid var(--docs-color-border);
+  border-bottom: 1px solid var(--docs-color-border-100);
 }
 
 table th {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--docs-color-text);
   background-color: var(--docs-color-background);
   text-align: center;
 }
 
 Table tr:nth-child(even) {
-  background-color: var(--docs-color-background-400);
+  background-color: var(--docs-color-background-200);
 }
 
 Table tr:hover {
-  background-color: #04aa6d;
+  border: 1px solid#aaff00;
+}
+
+.TableInputGlobal {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid var(--docs-color-background-200);
+  background-color: var(--docs-color-background-100);
+  border-radius: 8px;
+  /* box-sizing: border-box; */
+}
+
+.TableInputColumn {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid var(--docs-color-background-200);
+  background-color: var(--docs-color-background-100);
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .tabs {
