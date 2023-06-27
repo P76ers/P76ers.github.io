@@ -1209,6 +1209,16 @@ article ol {
   list-style-type: decimal !important;
 }
 
+article h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 24px;
+  color: #6cf;
+}
+
 article ul {
   list-style-type: disc;
 }
