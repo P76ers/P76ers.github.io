@@ -1002,7 +1002,7 @@ img[src$='#terminal'] {
   align-items: flex-start;
   gap: 10px;
   padding: 0.75rem;
-  margin: 0.5rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   border: 1px solid var(--docs-color-primary);
   color: var(--docs-color-primary);
@@ -1209,6 +1209,9 @@ article ol {
   list-style-type: decimal !important;
 }
 
+.CardContainerWarn > article {
+}
+
 article h1,
 h2,
 h3,
@@ -1246,6 +1249,7 @@ article ul {
 
 .CardContainerWarn {
   padding: 0.75rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #ffae00;
   background-color: var(--docs-color-background-100);
@@ -1255,6 +1259,7 @@ article ul {
 
 .CardContainerInfo {
   padding: 0.75rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #aaff00;
   background-color: var(--docs-color-background-100);
@@ -1264,6 +1269,7 @@ article ul {
 
 .CardContainerDanger {
   padding: 0.75rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #ff2a00;
   background-color: var(--docs-color-background-100);
@@ -1291,4 +1297,10 @@ article ul {
   font-size: 14px;
   color: var(--docs-color-text);
   line-height: 1.5;
+}
+
+.CardContent > p {
+  color: var(--docs-color-text);
+  padding: 0;
+  margin: 0;
 }
