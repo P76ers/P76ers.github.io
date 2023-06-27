@@ -449,11 +449,15 @@ Danger
   export default ReactLiveScope;
   ```
 
-  <CardWarn
-    title='Caution:'
-    icon={<MyWarnIcon />}
-    description='Restart Dev-Server!'
-  />
+<ul>
+  <CardWarning>
+
+Caution:
+
+Restart Dev-Server!
+
+  </CardWarning>
+</ul>
 
 - usage
   ```jsx live
@@ -644,19 +648,18 @@ Danger
     ],
   };
   ```
-  
-  >
-    <CardWarn
-      title='Caution:'
-      icon={<MyWarnIcon />}
-      description='Version must be...'
-    />
-  >
-  >
-    ```json title='package.json'
-      "rehype-katex": "^4.0.0",
-      "remark-math": "^3.0.1",
-    ```
+
+<ul>
+  <CardWarning>
+
+Version must be:
+
+```json title='package.json'
+"rehype-katex": "^4.0.0",
+"remark-math": "^3.0.1",
+```
+  </CardWarning>
+</ul>
 
 <br/>
 

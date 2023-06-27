@@ -11,9 +11,9 @@ import InfoTooltip from '../components/InfoTooltip';
 import PropsTable from '../components/PropsTable';
 import ComponentsGrid from '../components/ComponentsGrid';
 import { CardSection, Card } from '../components/CardComponents';
-import { CardSectionInfo, CardInfo } from '../components/CardInfo';
-import { CardSectionWarn, CardWarn } from '../components/CardWarn';
-import { CardSectionDanger, CardDanger } from '../components/CardDanger';
+import CardInfo from '../components/CardInfo';
+import CardWarning from '../components/CardWarning';
+import CardDanger from '../components/CardDanger';
 import { CardChapter } from '../components/CardChapter';
 import { CardHeading } from '../components/CardHeading';
 import * as icons from '../icons';
@@ -77,8 +77,6 @@ import TableWindowsShortcuts from '../components/Table/windows/TableWindowsShort
 import TableWindowsCommands from '../components/Table/windows/TableWindowsCommands';
 import TableWindowsShellCommands from '../components/Table/windows/TableWindowsShellCommands';
 
-import Admonition from '../theme/Admonition/index';
-
 export default {
   // Re-use the default mapping
   ...MDXComponents,
@@ -95,16 +93,11 @@ export default {
   ComponentsGrid,
   CardSection,
   Card,
-  CardSectionInfo,
   CardInfo,
-  CardSectionWarn,
-  CardWarn,
-  CardSectionDanger,
+  CardWarning,
   CardDanger,
   CardChapter,
   CardHeading,
-
-  Admonition,
 
   /* Table */
   GlobalFilter,

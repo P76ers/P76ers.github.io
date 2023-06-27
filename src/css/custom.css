@@ -1222,125 +1222,53 @@ article ul {
   @apply rounded-t-3xl bg-secondary-700 p-4 lg:flex-row;
 }
 
-/* NOTE md InfoCard */
+/* NOTE NewCard */
 
-.InfoCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 0.75rem;
-  text-decoration: none;
-  color: #aaff00;
-  background-color: var(--docs-color-background-100);
-  border: 1px solid var(--docs-color-border);
-  border-radius: 8px;
-}
-
-.InfoCard-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.InfoCard-content .title {
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 600;
-}
-
-.InfoCard-content .description {
-  font-size: 14px;
-  color: var(--docs-color-text);
-  line-height: 1.5;
-}
-
-.InfoCard .icon {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-  /* background-color: #262626;
-  border-radius: 8px; */
-}
-
-/* NOTE md WarnCard */
-
-.WarnCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+.CardContainerWarn {
   padding: 0.75rem;
   text-decoration: none;
   color: #ffae00;
   background-color: var(--docs-color-background-100);
-  border: 1px solid var(--docs-color-border);
+  border: 1px solid #ffae00;
   border-radius: 8px;
 }
 
-.WarnCard-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.CardContainerInfo {
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #aaff00;
+  background-color: var(--docs-color-background-100);
+  border: 1px solid #aaff00;
+  border-radius: 8px;
 }
 
-.WarnCard-content .title {
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 600;
-}
-
-.WarnCard-content .description {
-  font-size: 14px;
-  color: var(--docs-color-text);
-  line-height: 1.5;
-}
-
-.WarnCard .icon {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-  /* background-color: #262626;
-  border-radius: 8px; */
-}
-
-/* NOTE md DangerCard */
-
-.DangerCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+.CardContainerDanger {
   padding: 0.75rem;
   text-decoration: none;
   color: #ff2a00;
   background-color: var(--docs-color-background-100);
-  border: 1px solid var(--docs-color-border);
+  border: 1px solid #ff2a00;
   border-radius: 8px;
 }
 
-.DangerCard-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.CardHeader {
+  @apply flex justify-start;
 }
 
-.DangerCard-content .title {
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  font-weight: 600;
+.CardIcon {
+  width: 60px;
 }
 
-.DangerCard-content .description {
+.CardTitle {
+  @apply relative w-full;
+}
+
+.CardTitle > p {
+  @apply absolute bottom-0 w-full;
+}
+
+.CardContent {
   font-size: 14px;
   color: var(--docs-color-text);
   line-height: 1.5;
-}
-
-.DangerCard .icon {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-  /* background-color: #262626;
-  border-radius: 8px; */
 }

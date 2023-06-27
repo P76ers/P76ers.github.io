@@ -1,15 +1,15 @@
 import React from 'react';
-import { MyInfoIcon } from '../icons/index';
+import { MyWarnIcon } from '../icons/index';
 
-export function CardInfo({ children }) {
+export function CardWarning({ children }) {
   let content = [];
   for (let i = 1; i < children.length; i++) {
     content.push(children[i]);
   }
   return (
-    <div className="CardContainerInfo">
+    <div className="CardContainerWarn">
       <div className="CardHeader">
-        <div className="CardIcon">{<MyInfoIcon />}</div>
+        <div className="CardIcon">{<MyWarnIcon />}</div>
         <div className="CardTitle">{children[0]}</div>
       </div>
       <div className="CardContent">{content}</div>
@@ -17,4 +17,4 @@ export function CardInfo({ children }) {
   );
 }
 
-export default CardInfo;
+export default CardWarning;
