@@ -190,7 +190,7 @@ body {
   --docs-color-background-100: #f8f8f8;
   --docs-color-background-200: #efefef;
   --docs-color-background-300: #dcdcdc;
-  --docs-color-background-400: #c6c6c6;
+  --docs-color-background-400: #0000000f;
 
   /* Color from prism themes */
   --docs-color-code-background: #f6f8fa;
@@ -209,7 +209,7 @@ body {
   --docs-color-background-100: #1c1c1c;
   --docs-color-background-200: #2a2a2a;
   --docs-color-background-300: #2e2e2e;
-  --docs-color-background-400: #3c3c3c;
+  --docs-color-background-400: #ffffff2c;
 
   --docs-color-code-background: #1e1e1e;
 }
@@ -1215,11 +1215,21 @@ article ul {
 /* NOTE md Layer */
 
 .mdLayerBottom {
-  @apply rounded-b-3xl bg-secondary-800 p-4 lg:flex-row;
+  /* @apply rounded-b-3xl bg-secondary-800 p-4 lg:flex-row; */
+  padding: 0.75rem;
+  text-decoration: none;
+  /* background-color: var(--docs-color-background-100); */
+  border: 1px solid var(--docs-color-background-400);
+  border-radius: 8px;
 }
 
 .mdLayerTop {
-  @apply rounded-t-3xl bg-secondary-700 p-4 lg:flex-row;
+  /* @apply rounded-t-3xl bg-secondary-700 p-4 lg:flex-row; */
+  padding: 0.75rem;
+  text-decoration: none;
+  /* background-color: var(--docs-color-background-100); */
+  border: 1px solid var(--docs-color-background-400);
+  border-radius: 8px;
 }
 
 /* NOTE NewCard */
