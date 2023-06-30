@@ -9,12 +9,7 @@ export function CardChapter({ children }) {
     <div className="mx-auto max-w-7xl">
       {' '}
       <div className="mdLayerTop">
-        {' '}
-        <div className="text-center">{children[0]}</div>{' '}
-      </div>{' '}
-      <div className="mdLayerBottom">
-        {' '}
-        <div>{content}</div>{' '}
+        <div className="text-center">{children[0]}</div> <div>{content}</div>{' '}
       </div>{' '}
     </div>
   );

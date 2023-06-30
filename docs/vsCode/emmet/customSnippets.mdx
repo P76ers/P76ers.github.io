@@ -61,15 +61,13 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
     ```
 
 </CardChapter>
-
----
 <br/>
+
 
 <CardHeading>
 
-  ## Markdown | MDX
-
   ### Codeblock
+  
 </CardHeading>
 
 
@@ -77,23 +75,32 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Highlight
 
+<CardDanger>
+
+Danger:
+
+- following Highlight-Snippets works only if Codeblock has no Intendation!
+
+</CardDanger>
+
+
 - Higlight Line
-    ```json title='p.code'
-	"HighlightCommentCodeblock": {
-		"prefix": "//n",
-		"body": [
-			"// highlight-next-line"
-		],
-		"description": "Highlight next CodeLine"
-	},
+  ```json title='p.code'
+  "HighlightNextLine": {
+    "prefix": "#next",
+    "body": [
+      "$LINE_COMMENT highlight-next-line",
+    ],
+    "description": "Highlight next CodeLine"
+  },
   ```
 
 - Highlight Error
   ```json title='p.code'
-  "HighlightErrorCodeblock": {
-    "prefix": "//err",
+  "HighlightErrorLine": {
+    "prefix": "#error",
     "body": [
-      "// highlight-next-line-error"
+      "$LINE_COMMENT highlight-next-line-error"
     ],
     "description": "Highlight Error next CodeLine"
   },
@@ -107,10 +114,10 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 - Higlight Block
   ```json title='p.code'
   "HighlightBlockCodeblock": {
-    "prefix": "//block",
+    "prefix": "#block",
     "body": [
-      "// highlight-start",
-      "// highlight-end"
+      "$LINE_COMMENT highlight-start",
+      "$LINE_COMMENT highlight-end"
     ],
     "description": "Highlight Codeblock"
   },
@@ -120,11 +127,23 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 <br/>
 
 
+---
+<br/>
+
+<CardHeading>
+
+  ## Markdown | MDX
+
+  ### Codeblock
+</CardHeading>
+
+
+
 <CardChapter>
 
   #### Bash
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockBash": {
     "prefix": "mcb",
     "body": [
@@ -144,7 +163,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Css
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockCss": {
     "prefix": "mcc",
     "body": [
@@ -165,7 +184,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Empty
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockEmpty": {
     "prefix": "mc",
     "body": [
@@ -185,7 +204,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Html
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockHtml": {
     "prefix": "mch",
     "body": [
@@ -205,7 +224,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Javascript
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockJS": {
     "prefix": "mcj",
     "body": [
@@ -225,7 +244,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### JSX | Live Editor
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeBlockJsx": {
     "prefix": "mcjsx",
     "body": [
@@ -245,7 +264,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Terminal manually
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockNPM": {
     "prefix": "mnpm2",
     "body": [
@@ -282,7 +301,7 @@ tags: [ide, vsCode, Visual Studio Code, Emmet Abbreviations]
 
   #### Terminal npm2yarn
 
-  ```json title='p.code'
+  ```json title='markdown.json'
   "CodeblockNPM2YARN": {
     "prefix": "mnpm",
     "body": [

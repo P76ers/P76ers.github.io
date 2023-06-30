@@ -1,0 +1,127 @@
+---
+hide_title: true
+sidebar_position: 2
+sidebar_label: String
+tags: [linguae, javascript, js, Datatypes, String]
+---
+
+<CardHeading>
+
+# String
+</CardHeading>
+
+
+<CardChapter>
+
+  ## General
+
+<CardInfo>
+
+Info:
+
+- Strings are written with quotes. You can use single or double quotes:
+
+  ```javascript
+  let carName1 = "Volvo XC60";
+  let carName2 = 'Volvo XC60';
+  ```
+
+- escaping chars in a String
+  - quotes: `""` or `''`
+
+    ```javascript 
+    // Single quote inside double quotes:
+    let answer1 = "It's alright";
+
+    // Single quotes inside double quotes:
+    let answer2 = "He is called 'Johnny'";
+
+    // Double quotes inside single quotes:
+    let answer3 = 'He is called "Johnny"';
+
+    let text = "We are the so-called \"Vikings\" from the north.";
+    
+    let text= 'It\'s alright.';
+    ```
+
+  - backslash `\`
+
+    ```javascript 
+    let text = "The character \\ is called backslash.";
+    ```
+
+  - other chars designed to control typewriters, teletypes, and fax machines
+
+    `\b`	Backspace
+
+    `\f`	Form Feed
+
+    `\n`	New Line
+
+    `\r`	Carriage Return
+
+    `\t`	Horizontal Tabulator
+
+    `\v`	Vertical Tabulator
+
+- wrap up a code line within a text string with a `+`:
+
+  ```javascript 
+  document.getElementById("demo").innerHTML = "Hello " +
+  "Dolly!";
+  ```
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- Do not create Strings objects.
+
+  The new keyword complicates the code and slows down execution speed.
+
+  String objects can produce unexpected results:
+
+  `Note the difference between (x==y) and (x===y).`
+
+  ```javascript title='When using the == operator, x and y are equal:'
+  let x = "John";
+  let y = new String("John"); // true
+  ```
+
+  ```javascript title='When using the === operator, x and y are not equal:'
+  let x = "John";
+  let y = new String("John"); // false
+  ```
+
+- Comparing two JavaScript objects **always** returns `false`.
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ## Methods
+</CardHeading>
+
+
+<CardChapter>
+
+  ### `length`
+
+- To find the length of a string, use the built-in length property:
+
+  ```javascript 
+  let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let length = text.length;
+  ```
+
+</CardChapter>
+<br/>
+
+
+

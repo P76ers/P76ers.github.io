@@ -1,0 +1,188 @@
+---
+hide_title: true
+sidebar_position: 3
+sidebar_label: Operators
+tags: [linguae, javascript, js, Basics, Operators]
+---
+
+<CardHeading>
+
+  # Operators
+</CardHeading>
+
+---
+<br/>
+
+
+
+<CardChapter>
+
+  ## General
+
+<CardInfo>
+
+Info:
+
+- put spaces around operators
+
+</CardInfo>
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Arithmetic
+
+- Operator Precedence
+  - `*` and `/` have higher precedence than `+` and `-`.
+  - parentheses are computed first `()`
+  - same precedence is computed from left to right
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## Assignment
+
+  bla
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Concatenation
+
+<CardInfo>
+
+Info:
+
+- `+` and `+=` can be used for adding Strings
+  
+  ```javascript 
+  let text1 = "What a very ";
+  text1 += "nice day";
+  ```
+  
+
+</CardInfo>
+
+
+<CardDanger>
+
+Danger:
+
+- `Numbers`  `+` `String` will result a `String`
+
+  ```javascript
+  // highlight-next-line-error
+  let y = "5" + 5; // String!
+  let z = "Hello" + 5; // Hello5
+  ```
+
+  ```javascript 
+  let x = 16 + 4 + "Volvo"; //20Volvo
+  ```
+
+  ```javascript 
+  let x = "Volvo" + 16 + 4; // Volvo164
+  ```
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Comparison
+
+  bla
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## String
+
+  bla
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Logical
+
+  bla
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Comparison
+
+  Bitwise
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Ternary
+
+  bla
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## Type
+
+- typeof
+  - returns the type of a variable or an expression
+  
+    ```javascript 
+    typeof ""             // Returns "string"
+    typeof "John"         // Returns "string"
+    typeof "John Doe"     // Returns "string"
+    ```
+
+    ```javascript 
+    typeof 0              // Returns "number"
+    typeof 314            // Returns "number"
+    typeof 3.14           // Returns "number"
+    typeof (3)            // Returns "number"
+    typeof (3 + 4)        // Returns "number"
+    ```
+
+    ```javascript 
+    let car;    // Value is undefined, type is undefined
+    ```
+
+
+
+</CardChapter>
+<br/>

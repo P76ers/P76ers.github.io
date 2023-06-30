@@ -1,0 +1,157 @@
+---
+hide_title: true
+sidebar_position: 2
+sidebar_label: Variables
+tags: [linguae, javascript, js, Basics, Variables]
+---
+
+<CardHeading>
+
+  # Variables
+</CardHeading>
+
+
+<CardChapter>
+
+  ## General
+
+<CardInfo>
+
+Info:
+
+- Variables are containers for storing values.
+- A JavaScript variable can hold any type of data.
+- usage
+  1. Always declare variables at the beginning of a script
+
+  2. Always use `const` if the value should not be changed
+
+  3. Always use `const` if the type should not be changed (Arrays and Objects)
+
+  4. Only use `let` if you can't use const
+
+  5. Only use `var` if you MUST support old browsers.
+- Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+
+  ```javascript 
+  car = undefined;    // Value is undefined, type is undefined
+  ```
+
+
+</CardInfo>
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## Identifiers
+
+<CardInfo>
+
+Info:
+
+- use camel case for identifiers
+- use descriptive names like `totalSum`
+- Names can begin with a letter, `$` or `_`
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- Identifiers are used to name variables and keywords, and functions.
+- JavaScript is Case Sensitive
+  - lastName and lastname are two different identifiers
+- Names must begin with a letter.
+  - `_` commonly used for private / hidden variables
+- Reserved words cannot be used as names.
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## `let`
+
+<CardInfo>
+
+Info:
+
+- `let` has Block Scope
+- Redeclaring in another block IS allowed
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- must be Declared before use
+- cannot be redeclared in same block
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## `var`
+
+<CardInfo>
+
+Info:
+
+- `var` has global Scope, it is hoisted and can be used everywhere
+- can be redeclared
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- (re)declaration inside a { } block
+- can be accessed from outside the block
+- changes value globally
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  ## `const`
+
+<CardInfo>
+
+Info:
+
+- `const` has Block Scope
+- Redeclaring in another block IS allowed
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- must be Declared before use
+- cannot be redeclared in same block
+
+</CardDanger>
+
+</CardChapter>
+<br/>

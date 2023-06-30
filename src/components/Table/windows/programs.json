@@ -1,6 +1,6 @@
 [
   {
-    "name": "AdobeAcrobatDC",
+    "name": "Adobe Acrobat DC",
     "category": "Office, PDF",
     "description": "",
     "url": ""
@@ -364,5 +364,11 @@
     "category": "Development, Projektmanagement, Dokumentation, Mindmapping",
     "description": "",
     "url": ""
+  },
+  {
+    "name": "Keyboard Layout Creator",
+    "category": "Keyboard, Customisation",
+    "description": "disable Keyboard deadKeys",
+    "url": "https://www.microsoft.com/en-us/download/details.aspx?id=102134"
   }
 ]

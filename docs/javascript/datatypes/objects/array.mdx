@@ -1,0 +1,258 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: Array
+tags: [linguae, javascript, js, Datatypes, Array]
+---
+
+<CardHeading>
+
+  # Array
+</CardHeading>
+
+---
+<br/>
+
+<CardChapter>
+
+  ## General
+
+<CardInfo>
+
+Info:
+
+- arrays are written with square brackets.
+- Array items are separated by commas.
+- Arrays are special type of objects
+  - Elements can be arrays, functions and objects  
+- Arrays use numbers to access its "elements".
+  - Array indexes start with 0
+  - The length property is always one more than the highest array index.
+
+
+</CardInfo>
+
+<CardWarning>
+
+Caution:
+
+- Comparing string properties are more complex 
+- The reduce() method does not reduce the original array
+- The typeof operator in JavaScript returns "object" for arrays.
+
+</CardWarning>
+
+
+<CardDanger>
+
+Danger:
+
+- Adding elements with high indexes can create undefined "holes" in an array.
+- Using delete leaves undefined holes in the array.
+- Arrays use numbered indexes.
+  - If you use named indexes, JavaScript will redefine the array to an object.
+    After that, some array methods and properties will produce incorrect results.
+
+
+<ul>
+  <ul>
+
+  ```javascript
+  const person = [];
+  person["firstName"] = "John";
+  person["lastName"] = "Doe";
+  person["age"] = 46;
+  // highlight-next-line-error
+  person.length;     // Will return 0
+  // highlight-next-line-error
+  person[0];         // Will return undefined
+  ```
+
+  </ul>
+</ul>
+
+- JavaScript has a built-in array constructor new Array().
+  - **Avoid using Array constructor**
+  - The new keyword can produce some unexpected results:
+  
+    ```javascript
+    // Create an array with one element ???
+    const points = new Array(40);  
+    // highlight-next-line-error
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    ```
+- sort() method will produce incorrect result when sorting numbers:
+
+  "25" is bigger than "100"
+
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## Declaration
+---
+</CardHeading>
+
+
+
+<CardChapter>
+
+  ### const
+
+<CardInfo>
+
+Caution:
+
+- Arrays are Not Constants.  It defines a constant reference to an array.
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- JavaScript const variables must be assigned a value when they are declared:
+  ```javascript 
+  // highlight-next-line-error
+  const cars;
+  cars = ["Saab", "Volvo", "BMW"];
+  ```
+- An array declared with const cannot be reassigned
+  ```javascript 
+  const cars = ["Saab", "Volvo", "BMW"];
+  // highlight-next-line-error
+  cars = ["Toyota", "Volvo", "Audi"];
+  ```
+
+</CardDanger>
+
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### var
+
+- Redeclaring an array declared with var is allowed anywhere
+
+  ```javascript 
+  var cars = ["Volvo", "BMW"];   // Allowed
+  var cars = ["Toyota", "BMW"];  // Allowed
+  cars = ["Volvo", "Saab"];      // Allowed
+  ```
+
+- Arrays declared with var can be initialized at any time.
+  - You can even use the array before it is declared:
+
+    ```javascript 
+    cars = ["Saab", "Volvo", "BMW"];
+    var cars;
+    ```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## Scope
+---
+
+</CardHeading>
+
+
+<CardChapter>
+
+  ### const
+<CardInfo>
+
+Info:
+
+- const has Block Scope.
+
+
+</CardInfo>
+
+<CardDanger>
+
+Danger:
+
+- An array declared in a block is not the same as an array declared outside the block:
+
+  ```javascript 
+  const cars = ["Saab", "Volvo", "BMW"];
+  // Here cars[0] is "Saab"
+  {
+    const cars = ["Toyota", "Volvo", "BMW"];
+    // Here cars[0] is "Toyota"
+  }
+  // Here cars[0] is "Saab"
+  ```
+- Redeclaring or reassigning an array to const, in the same scope, or in the same block, is not allowed:
+
+  ```javascript 
+  const cars = ["Volvo", "BMW"];
+  // highlight-next-line-error
+  const cars = ["Volvo", "BMW"];
+  // highlight-next-line-error
+  var cars = ["Volvo", "BMW"];
+  // highlight-next-line-error
+  cars = ["Volvo", "BMW"]; 
+
+  {
+    const cars = ["Volvo", "BMW"];
+    // highlight-next-line-error
+    const cars = ["Volvo", "BMW"];
+    // highlight-next-line-error
+    var cars = ["Volvo", "BMW"];
+    // highlight-next-line-error
+    cars = ["Volvo", "BMW"]; 
+  }
+  ```
+
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### var
+
+<CardInfo>
+
+Info:
+
+- var has global Scope
+
+  ```javascript 
+  var cars = ["Saab", "Volvo", "BMW"];
+  // Here cars[0] is "Saab"
+  {
+    var cars = ["Toyota", "Volvo", "BMW"];
+    // Here cars[0] is "Toyota"
+  }
+  // Here cars[0] is "Toyota"
+  ```
+
+</CardInfo>
+
+</CardChapter>
+<br/>
+
+
+
+
+
+
+
+
+
+
