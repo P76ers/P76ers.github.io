@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[2575],{38736:e=>{e.exports=JSON.parse('{"label":"Undefined","permalink":"/javascript/tags/undefined","allTagsPath":"/javascript/tags","count":1,"items":[{"id":"datatypes/undefined","title":"undefined","description":"# Undefined","permalink":"/javascript/datatypes/undefined"}]}')}}]);

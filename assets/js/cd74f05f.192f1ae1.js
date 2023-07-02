@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[2705],{13433:s=>{s.exports=JSON.parse('{"label":"Windows","permalink":"/windows/tags/windows","allTagsPath":"/windows/tags","count":1,"items":[{"id":"index","title":"index","description":"# Windows","permalink":"/windows/"}]}')}}]);

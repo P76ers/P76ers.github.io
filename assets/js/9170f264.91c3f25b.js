@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1825],{13669:i=>{i.exports=JSON.parse('{"label":"git","permalink":"/git/tags/git","allTagsPath":"/git/tags","count":1,"items":[{"id":"index","title":"Git","description":"---","permalink":"/git/"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[5327],{48310:t=>{t.exports=JSON.parse('{"label":"BigInt","permalink":"/javascript/tags/big-int","allTagsPath":"/javascript/tags","count":1,"items":[{"id":"datatypes/bigInt","title":"bigInt","description":"# BigInt","permalink":"/javascript/datatypes/bigInt"}]}')}}]);

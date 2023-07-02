@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7014],{86193:a=>{a.exports=JSON.parse('{"label":"Boolean","permalink":"/javascript/tags/boolean","allTagsPath":"/javascript/tags","count":1,"items":[{"id":"datatypes/boolean","title":"boolean","description":"# boolean","permalink":"/javascript/datatypes/boolean"}]}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[4280],{47194:l=>{l.exports=JSON.parse('[{"label":"ide","permalink":"/intelliJ/tags/ide","count":2},{"label":"IntelliJ","permalink":"/intelliJ/tags/intelli-j","count":2},{"label":"Shortcuts","permalink":"/intelliJ/tags/shortcuts","count":1}]')}}]);

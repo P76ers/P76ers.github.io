@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6780],{51527:t=>{t.exports=JSON.parse('{"label":"Shortcuts","permalink":"/intelliJ/tags/shortcuts","allTagsPath":"/intelliJ/tags","count":1,"items":[{"id":"shortcuts","title":"shortcuts","description":"# Shortcuts","permalink":"/intelliJ/shortcuts"}]}')}}]);

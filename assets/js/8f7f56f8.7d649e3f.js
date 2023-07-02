@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[9690],{63859:n=>{n.exports=JSON.parse('{"label":"Function","permalink":"/javascript/tags/function","allTagsPath":"/javascript/tags","count":1,"items":[{"id":"function","title":"function","description":"# Function","permalink":"/javascript/function"}]}')}}]);

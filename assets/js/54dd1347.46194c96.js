@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1846],{19207:e=>{e.exports=JSON.parse('{"label":"linguae","permalink":"/autohotkey/tags/linguae","allTagsPath":"/autohotkey/tags","count":1,"items":[{"id":"index","title":"index","description":"# Autohotkey","permalink":"/autohotkey/"}]}')}}]);

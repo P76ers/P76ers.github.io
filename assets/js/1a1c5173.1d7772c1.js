@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6673],{61942:s=>{s.exports=JSON.parse('{"label":"linguae","permalink":"/sql/tags/linguae","allTagsPath":"/sql/tags","count":1,"items":[{"id":"index","title":"SQL","description":"---","permalink":"/sql/"}]}')}}]);

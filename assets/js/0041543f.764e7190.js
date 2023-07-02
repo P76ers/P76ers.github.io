@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6552],{66043:s=>{s.exports=JSON.parse('{"label":"Shortcuts","permalink":"/windows/tags/shortcuts","allTagsPath":"/windows/tags","count":1,"items":[{"id":"shortcuts","title":"shortcuts","description":"# Shortcuts","permalink":"/windows/shortcuts"}]}')}}]);

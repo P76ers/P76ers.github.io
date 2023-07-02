@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[3392],{88404:s=>{s.exports=JSON.parse('{"label":"Commands","permalink":"/windows/tags/commands","allTagsPath":"/windows/tags","count":1,"items":[{"id":"commands","title":"commands","description":"# Commands","permalink":"/windows/commands"}]}')}}]);

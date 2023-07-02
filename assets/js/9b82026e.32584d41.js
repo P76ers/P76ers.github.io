@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1807],{56848:i=>{i.exports=JSON.parse('{"label":"Quick Lists","permalink":"/intelliJ/tags/quick-lists","allTagsPath":"/intelliJ/tags","count":1,"items":[{"id":"shortcuts/quickList","title":"quickList","description":"# Quick Lists","permalink":"/intelliJ/shortcuts/quickList"}]}')}}]);

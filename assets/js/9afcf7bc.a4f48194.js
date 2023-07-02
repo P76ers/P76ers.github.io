@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7596],{82601:s=>{s.exports=JSON.parse('{"label":"Symbol","permalink":"/javascript/tags/symbol","allTagsPath":"/javascript/tags","count":1,"items":[{"id":"datatypes/symbol","title":"Symbol","description":"","permalink":"/javascript/datatypes/symbol"}]}')}}]);
