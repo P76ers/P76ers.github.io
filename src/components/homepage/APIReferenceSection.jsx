@@ -21,10 +21,8 @@ export default function APIReferenceSection() {
           <ArrowUpRight className="h-6 w-6 text-zinc-400 dark:text-black" />
         </Link>
         <div className="flex-1">
-          <h2 className="text-4xl">Release Notes Example</h2>
-          <p className="text-zinc-400">
-            Need more Info?
-          </p>
+          <h2 className="text-4xl">Coming soon</h2>
+          <p className="text-zinc-400">Need more Info?</p>
           <Link
             href="/releaseNotes/example"
             className="font-medium text-primary-100 dark:text-primary"
@@ -37,14 +35,12 @@ export default function APIReferenceSection() {
                 href="https://stoplight.io/open-source/elements"
                 className="group font-jakarta font-semibold text-current"
               >
-                Stoplight    
+                Stoplight
                 <span className="ml-2 opacity-0 transition group-hover:translate-x-2 group-hover:opacity-100">
                   &rarr;
                 </span>
               </Link>
-              <div className="text-zinc-400">
-                Open Source API Documentation
-              </div>
+              <div className="text-zinc-400">Open Source API Documentation</div>
             </li>
             <li className="flex flex-col gap-1">
               <Link
@@ -56,9 +52,7 @@ export default function APIReferenceSection() {
                   &rarr;
                 </span>
               </Link>
-              <div className="text-zinc-400">
-              about to come
-              </div>
+              <div className="text-zinc-400">about to come</div>
             </li>
             <li className="flex flex-col gap-1">
               <Link
@@ -70,9 +64,7 @@ export default function APIReferenceSection() {
                   &rarr;
                 </span>
               </Link>
-              <div className="text-zinc-400">
-              about to come
-              </div>
+              <div className="text-zinc-400">about to come</div>
             </li>
           </ul>
         </div>

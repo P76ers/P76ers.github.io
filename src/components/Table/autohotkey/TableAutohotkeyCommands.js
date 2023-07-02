@@ -3,6 +3,7 @@ import { useTable, useSortBy, useGlobalFilter, useFilters } from 'react-table';
 import Data from './commands.json';
 import { GlobalFilter } from '../GlobalFilter';
 import { ColumnFilter } from '../ColumnFilter';
+import CodeBlock from '@theme/CodeBlock';
 
 export const TableAutohotkeyCommands = () => {
   const COLUMNS = [
@@ -17,6 +18,9 @@ export const TableAutohotkeyCommands = () => {
     {
       Header: 'command',
       accessor: 'command',
+      Cell: ({ row: { original } }) => {
+        return <CodeBlock language="autohotkey">{original.command}</CodeBlock>;
+      },
       Filter: ColumnFilter,
       sortType: (prev, curr, columnId) => {
         return sortItems(prev, curr, columnId);

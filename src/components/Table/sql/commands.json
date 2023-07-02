@@ -26,12 +26,12 @@
   },
   {
     "designation": "datatype date dayOfWeek",
-    "command": "SELECT NOW() - INTERVAL '10 YEAR';SELECT EXTRACT(DOW FROM NOW());",
+    "command": "SELECT NOW() - INTERVAL '10 YEAR';\nSELECT EXTRACT(DOW FROM NOW());",
     "description": ""
   },
   {
     "designation": "datatype date year",
-    "command": "SELECT NOW() - INTERVAL '10 YEAR';SELECT EXTRACT(YEAR FROM NOW());",
+    "command": "SELECT NOW() - INTERVAL '10 YEAR';\nSELECT EXTRACT(YEAR FROM NOW());",
     "description": ""
   },
   {
@@ -106,7 +106,7 @@
   },
   {
     "designation": "operation math range",
-    "command": "SELECT * FROM person WHERE last_name BETWEEN 'A%' AND 'B%';",
+    "command": "SELECT * FROM person \nWHERE last_name BETWEEN 'A%' AND 'B%';",
     "description": ""
   },
   {
@@ -116,7 +116,7 @@
   },
   {
     "designation": "operations column create",
-    "command": "SELECT *, verkaufspreis - einkaufspreis as Gewinn FROM produkte;",
+    "command": "SELECT *, verkaufspreis - einkaufspreis \nas Gewinn FROM produkte;",
     "description": "temporary column"
   },
   {
@@ -201,12 +201,12 @@
   },
   {
     "designation": "query select group by",
-    "command": "SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth;",
+    "command": "SELECT country_of_birth, COUNT(*) \nFROM person GROUP BY country_of_birth;",
     "description": ""
   },
   {
     "designation": "query select group by condition",
-    "command": "SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 5;",
+    "command": "SELECT country_of_birth, COUNT(*) \nFROM person \nGROUP BY country_of_birth HAVING COUNT(*) > 5;",
     "description": ""
   },
   {
@@ -216,7 +216,7 @@
   },
   {
     "designation": "query select multiple condition",
-    "command": "SELECT * FROM kunden WHERE nachname like \"m%\" AND land=\"ES\";",
+    "command": "SELECT * FROM kunden \nWHERE nachname like \"m%\" AND land=\"ES\";",
     "description": ""
   },
   {
@@ -231,22 +231,22 @@
   },
   {
     "designation": "query select String length",
-    "command": "SELECT * FROM person WHERE email LIKE '___h%';",
+    "command": "SELECT * FROM person \nWHERE email LIKE '___h%';",
     "description": ""
   },
   {
     "designation": "query select String like",
-    "command": "SELECT * FROM kunden WHERE nachname like \"H%\";",
+    "command": "SELECT * FROM kunden \nWHERE nachname like \"H%\";",
     "description": "any char after H"
   },
   {
     "designation": "query select String like",
-    "command": "SELECT * FROM kunden WHERE nachname like \"%H\";",
+    "command": "SELECT * FROM kunden \nWHERE nachname like \"%H\";",
     "description": "any char before H"
   },
   {
     "designation": "query select String like",
-    "command": "SELECT * FROM kunden WHERE nachname like \"%H%\";",
+    "command": "SELECT * FROM kunden \nWHERE nachname like \"%H%\";",
     "description": "any char before H and after"
   },
   {

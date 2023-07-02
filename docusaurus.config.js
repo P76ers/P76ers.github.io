@@ -485,6 +485,12 @@ const config = {
           'java',
           'swift',
           'objectivec',
+          'autohotkey',
+          'csharp',
+          'sql',
+          'php',
+          'python',
+          'c',
         ],
         magicComments: [
           {

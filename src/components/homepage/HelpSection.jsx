@@ -24,10 +24,7 @@ export default function HelpSection({ className = '' }) {
               Contact us for a demo. We are looking forward to connecting with
               you.
             </p>
-            <Link
-              href="https://dyte.io/schedule-demo"
-              className="text-primary dark:text-primary-100"
-            >
+            <Link href="/" className="text-primary dark:text-primary-100">
               Schedule a Call &rarr;
             </Link>
           </div>
@@ -36,13 +33,10 @@ export default function HelpSection({ className = '' }) {
             {/* <img src="/static/landing-page/customer.svg" alt="Support" width="48" height="48" /> */}
             <h3 className="my-3">Support</h3>
             <p className="text-zinc-600 dark:text-zinc-400">
-              Dyte&apos;s expert support team is excited to help. Connect for
-              dedicated 1:1 support!
+              Our support team is excited to help. Connect for dedicated 1:1
+              support!
             </p>
-            <Link
-              href="https://dyte.io/contact"
-              className="text-primary dark:text-primary-100"
-            >
+            <Link href="/" className="text-primary dark:text-primary-100">
               Contact Us &rarr;
             </Link>
           </div>
@@ -54,7 +48,7 @@ export default function HelpSection({ className = '' }) {
               Browse through our FAQs to find answers to commonly asked
               questions.
             </p>
-            <Link href="/faq" className="text-primary dark:text-primary-100">
+            <Link href="/" className="text-primary dark:text-primary-100">
               View FAQs &rarr;
             </Link>
           </div>
