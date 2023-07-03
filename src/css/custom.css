@@ -722,7 +722,8 @@ Table tr:nth-child(even) {
 }
 
 Table tbody > tr:hover {
-  border: 1px solid#aaff00;
+  border: 1px solid;
+  border-color: #aaff00;
 }
 
 Table thead:hover {
