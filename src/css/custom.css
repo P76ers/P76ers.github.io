@@ -730,6 +730,10 @@ Table tr:nth-child(even) {
   border: 1px solid#aaff00;
 }
 
+.TableTh:hover {
+  border: 1px solid var(--ifm-color-primary);
+}
+
 .TableInputGlobal {
   width: 100%;
   padding: 12px 20px;
