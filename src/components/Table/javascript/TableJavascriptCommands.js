@@ -100,7 +100,7 @@ export const TableJavascriptCommands = () => {
   return (
     <>
       <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <table style={{ display: 'block' }} {...getTableProps()}>
+      <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

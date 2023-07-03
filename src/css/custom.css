@@ -671,7 +671,6 @@ ul.emoji-list span {
 /* NOTE Table */
 
 @media screen and (max-width: 1160px) {
-  /* Hide icons when header UI breaks */
   table {
     display: table;
     width: 100%;
@@ -689,26 +688,20 @@ ul.emoji-list span {
   }
 }
 
-td {
-  word-break: break-word;
-}
-
 table {
   display: table;
   width: 100%;
   max-width: 1140px;
-  border-collapse: collapse;
-  border: 1px solid transparent;
-  background-color: transparent;
   text-align: left;
+  border: none;
 }
 
-table :is(tr, td, th, thead) {
+table :is(td, th, thead) {
   border: none;
 }
 
 table thead tr {
-  border-bottom: 1px solid var(--docs-color-border-100);
+  border-bottom: none;
 }
 
 table th {
@@ -723,12 +716,12 @@ Table tr:nth-child(even) {
   background-color: var(--docs-color-background-200);
 }
 
-.TableTr:hover {
+Table tr:hover {
   border: 1px solid#aaff00;
 }
 
-.TableTh:hover {
-  border: 1px solid var(--ifm-color-primary);
+td {
+  word-break: break-word;
 }
 
 .TableInputGlobal {
