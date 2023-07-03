@@ -692,16 +692,21 @@ table {
   display: table;
   width: 100%;
   max-width: 1140px;
+  border-collapse: collapse;
   text-align: left;
   border: none;
 }
 
-table :is(td, th, thead) {
-  border: none;
+table :is(tr, td, th, thead) {
+  border: transparent;
 }
 
 table thead tr {
-  border-bottom: none;
+  border-bottom: transparent;
+}
+
+td {
+  word-break: break-word;
 }
 
 table th {
@@ -718,10 +723,6 @@ Table tr:nth-child(even) {
 
 Table tr:hover {
   border: 1px solid#aaff00;
-}
-
-td {
-  word-break: break-word;
 }
 
 .TableInputGlobal {
