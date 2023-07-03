@@ -7,13 +7,10 @@ import ThemedImage from '@theme/ThemedImage';
 export default function APIReferenceSection() {
   return (
     <section className="relative mb-20 px-6">
-      <Head>
-        {/* <link rel="prefetch" href="/static/landing-page/api-ref-light.png" /> */}
-        {/* <link rel="prefetch" href="/static/landing-page/api-ref-dark.png" /> */}
-      </Head>
+      <Head></Head>
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-20 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
         <Link
-          href="/api"
+          href="/"
           aria-label="API Reference"
           target="_blank"
           className="absolute top-8 right-8 flex h-16 w-16 items-center justify-center rounded-full bg-zinc-600/40 dark:bg-transparent"
@@ -24,7 +21,7 @@ export default function APIReferenceSection() {
           <h2 className="text-4xl">Coming soon</h2>
           <p className="text-zinc-400">Need more Info?</p>
           <Link
-            href="/releaseNotes/example"
+            href="/"
             className="font-medium text-primary-100 dark:text-primary"
           >
             Get started with CodingDocs &rarr;

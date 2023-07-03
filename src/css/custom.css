@@ -726,7 +726,7 @@ Table tr:nth-child(even) {
   background-color: var(--docs-color-background-200);
 }
 
-Table tr:hover {
+.TableTr:hover {
   border: 1px solid#aaff00;
 }
 
