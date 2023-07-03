@@ -711,7 +711,7 @@ td {
 
 table th {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   color: var(--docs-color-text);
   background-color: var(--docs-color-background);
   text-align: center;
@@ -721,8 +721,12 @@ Table tr:nth-child(even) {
   background-color: var(--docs-color-background-200);
 }
 
-Table tr:hover {
+Table tbody > tr:hover {
   border: 1px solid#aaff00;
+}
+
+Table thead:hover {
+  border: 1px solid var(--ifm-color-primary);
 }
 
 .TableInputGlobal {
