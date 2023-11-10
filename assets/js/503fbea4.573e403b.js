@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[8408],{27706:a=>{a.exports=JSON.parse('{"label":"variable","permalink":"/cpp/tags/variable","allTagsPath":"/cpp/tags","count":1,"items":[{"id":"basics/variables","title":"variables","description":"# Variables","permalink":"/cpp/basics/variables"}]}')}}]);

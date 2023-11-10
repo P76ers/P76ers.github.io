@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6073],{13699:s=>{s.exports=JSON.parse('{"label":"operatoren","permalink":"/cpp/tags/operatoren","allTagsPath":"/cpp/tags","count":1,"items":[{"id":"basics/operators","title":"operators","description":"# Operators","permalink":"/cpp/basics/operators"}]}')}}]);

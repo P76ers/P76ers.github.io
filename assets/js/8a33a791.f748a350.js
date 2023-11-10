@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[1929],{69600:s=>{s.exports=JSON.parse('{"label":"konsole","permalink":"/cpp/tags/konsole","allTagsPath":"/cpp/tags","count":1,"items":[{"id":"basics/basics","title":"basics","description":"# Basics","permalink":"/cpp/basics/"}]}')}}]);
