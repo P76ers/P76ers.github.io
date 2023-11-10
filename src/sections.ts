@@ -23,6 +23,7 @@ import {
   PythonIcon,
   AutohotkeyIcon,
   CIcon,
+  CppIcon,
   CsharpIcon,
   JavaIcon,
   SqlIcon,
@@ -184,6 +185,12 @@ const SECTIONS: Section[] = [
     name: 'C',
     docId: 'c',
     icon: CIcon,
+    section: 'linguae',
+  },
+  {
+    name: 'C++',
+    docId: 'cpp',
+    icon: CppIcon,
     section: 'linguae',
   },
   {

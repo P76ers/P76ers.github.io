@@ -226,6 +226,11 @@ const docs = [
     routeBasePath: '/c',
   },
   {
+    id: 'cpp',
+    path: 'docs/cpp',
+    routeBasePath: '/cpp',
+  },
+  {
     id: 'cSharp',
     path: 'docs/cSharp',
     routeBasePath: '/cSharp',
@@ -491,6 +496,7 @@ const config = {
           'php',
           'python',
           'c',
+          'cpp',
         ],
         magicComments: [
           {

@@ -2,9 +2,8 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import {
-
   SwiftIcon,
-//
+  //
   IdeIcon,
   IntellijIcon,
   EclipseIcon,
@@ -34,6 +33,7 @@ import {
   PythonIcon,
   AutohotkeyIcon,
   CIcon,
+  cppIcon,
   CsharpIcon,
   JavaIcon,
   SqlIcon,
@@ -43,7 +43,6 @@ import {
   LinuxIcon,
   UnixIcon,
   HardwareIcon,
-  
 } from '../../icons';
 import Head from '@docusaurus/Head';
 import { useState } from 'react';
@@ -143,17 +142,21 @@ export default function SDKsSection() {
             <p className="text-sm leading-relaxed text-text-400 lg:max-w-sm">
               Web Hub
             </p>
-            <Link className="text-sm" href='/'>Learn More &rarr;</Link>
+            <Link className="text-sm" href="/">
+              Learn More &rarr;
+            </Link>
           </div>
-                    <div className="flex-1 bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
+          <div className="flex-1 bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
             <h4>Heading</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              left
-            </p>
+            <p className="text-sm leading-relaxed text-text-400">left</p>
             <div>
               <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
                 <li>
-                  <SDKLink href="https://github.com/settings/profile" Icon={GithubIcon} label="Github" />
+                  <SDKLink
+                    href="https://github.com/settings/profile"
+                    Icon={GithubIcon}
+                    label="Github"
+                  />
                 </li>
                 <li>
                   <SDKLink
@@ -163,63 +166,38 @@ export default function SDKsSection() {
                   />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={IdeIcon}
-                    label="Ide"
-                  />
+                  <SDKLink href="/" Icon={IdeIcon} label="Ide" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={IntellijIcon}
-                    label="IntelliJ"
-                  />
+                  <SDKLink href="/" Icon={IntellijIcon} label="IntelliJ" />
                 </li>
               </ul>
             </div>
           </div>
           <div className="flex-1 bg-secondary-900 p-6 px-8 lg:rounded-bl-none">
             <h4>Heading</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              Mid
-            </p>
+            <p className="text-sm leading-relaxed text-text-400">Mid</p>
             <div>
               <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={EclipseIcon}
-                    label="Eclipse"
-                  />
+                  <SDKLink href="/" Icon={EclipseIcon} label="Eclipse" />
                 </li>
                 <li>
                   <SDKLink href="/" Icon={VsCodeIcon} label="VsCode" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={FrameworksIcon}
-                    label="Frameworks"
-                  />
+                  <SDKLink href="/" Icon={FrameworksIcon} label="Frameworks" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={NodejsIcon}
-                    label="Nodejs"
-                  />
+                  <SDKLink href="/" Icon={NodejsIcon} label="Nodejs" />
                 </li>
               </ul>
             </div>
           </div>
           <div className="flex-1 rounded-b-3xl bg-secondary-800 p-6 px-8 lg:rounded-r-3xl lg:rounded-bl-none">
             <h4>Heading</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-            right
-            </p>
+            <p className="text-sm leading-relaxed text-text-400">right</p>
             <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
-
               <li>
                 <SDKLink href="/" Icon={ReactIcon} label="React" />
               </li>
@@ -244,7 +222,13 @@ export default function SDKsSection() {
           <div className="flex flex-[2] flex-col justify-center p-6 text-center lg:pl-16 lg:text-left">
             <h3 className="text-4xl font-semibold">Mobile</h3>
             <p className="text-sm leading-relaxed text-text-400 lg:max-w-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius doloribus consectetur rem, at ipsum velit, veritatis inventore quam quidem cumque dicta temporibus placeat architecto non pariatur iure. Libero atque aspernatur rem, cupiditate assumenda a perferendis consectetur blanditiis ducimus maxime labore mollitia officiis rerum error quos magnam aperiam incidunt quibusdam!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              eius doloribus consectetur rem, at ipsum velit, veritatis
+              inventore quam quidem cumque dicta temporibus placeat architecto
+              non pariatur iure. Libero atque aspernatur rem, cupiditate
+              assumenda a perferendis consectetur blanditiis ducimus maxime
+              labore mollitia officiis rerum error quos magnam aperiam incidunt
+              quibusdam!
             </p>
             <Link className="text-sm" href="/">
               Learn More &rarr;
@@ -253,10 +237,11 @@ export default function SDKsSection() {
           <div className="flex flex-1 flex-col bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
             <h4>Heading</h4>
             <p className="text-sm leading-relaxed text-text-400">
-              Left Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, enim?
+              Left Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, enim?
             </p>
             <ul className="flex list-none flex-col gap-2 pl-0">
-            <li>
+              <li>
                 <SDKLink
                   href="/"
                   Icon={VersionControlIcon}
@@ -267,11 +252,7 @@ export default function SDKsSection() {
                 <SDKLink href="/" Icon={GitIcon} label="Git" />
               </li>
               <li>
-                <SDKLink
-                  href="/"
-                  Icon={DocusaurusIcon}
-                  label="Docusaurus"
-                />
+                <SDKLink href="/" Icon={DocusaurusIcon} label="Docusaurus" />
               </li>
               <li>
                 <SDKLink href="/" Icon={DatabaseIcon} label="Database" />
@@ -289,22 +270,15 @@ export default function SDKsSection() {
           <div className="flex-1 rounded-b-3xl bg-secondary-800 p-6 px-8 lg:rounded-r-3xl lg:rounded-bl-none">
             <h4>Heading</h4>
             <p className="text-sm leading-relaxed text-text-400">
-              Right Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, maxime?
+              Right Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Reprehenderit, maxime?
             </p>
             <ul className="flex list-none flex-col gap-2 pl-0">
               <li>
-                <SDKLink
-                  href="/"
-                  Icon={PostgresIcon}
-                  label="Postgres"
-                />
+                <SDKLink href="/" Icon={PostgresIcon} label="Postgres" />
               </li>
               <li>
-                <SDKLink
-                  Icon={MysqlIcon}
-                  label="MySQL"
-                  href="/"
-                />
+                <SDKLink Icon={MysqlIcon} label="MySQL" href="/" />
               </li>
               <li>
                 <SDKLink href="/" Icon={InsomniaIcon} label="Insomnia" />
@@ -325,80 +299,50 @@ export default function SDKsSection() {
             </p>
             <Link className="text-sm">Learn More &rarr;</Link>
           </div> */}
-                    <div className="flex-1 bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
+          <div className="flex-1 bg-secondary-800 p-6 px-8 lg:rounded-l-3xl">
             <h4>HeadingMobile</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              left
-            </p>
+            <p className="text-sm leading-relaxed text-text-400">left</p>
             <div>
               <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
                 <li>
                   <SDKLink href="/" Icon={LinguaeIcon} label="Linguae" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={MarkdownIcon}
-                    label="Markdown"
-                  />
+                  <SDKLink href="/" Icon={MarkdownIcon} label="Markdown" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={MarkdownmdxIcon}
-                    label="MDX"
-                  />
+                  <SDKLink href="/" Icon={MarkdownmdxIcon} label="MDX" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={HtmlIcon}
-                    label="html"
-                  />
+                  <SDKLink href="/" Icon={HtmlIcon} label="html" />
                 </li>
               </ul>
             </div>
           </div>
           <div className="flex-1 bg-secondary-900 p-6 px-8 lg:rounded-bl-none">
             <h4>HeadingMobile</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              mid
-            </p>
+            <p className="text-sm leading-relaxed text-text-400">mid</p>
             <div>
               <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={CssIcon}
-                    label="Css"
-                  />
+                  <SDKLink href="/" Icon={CssIcon} label="Css" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={JavascriptIcon}
-                    label="Javascript"
-                  />
+                  <SDKLink href="/" Icon={JavascriptIcon} label="Javascript" />
                 </li>
                 <li>
                   <SDKLink href="/" Icon={PhpIcon} label="Php" />
                 </li>
                 <li>
-                  <SDKLink
-                    href="/"
-                    Icon={PythonIcon}
-                    label="Python"
-                  />
+                  <SDKLink href="/" Icon={PythonIcon} label="Python" />
                 </li>
               </ul>
             </div>
           </div>
           <div className="flex-1 rounded-b-3xl bg-secondary-800 p-6 px-8 lg:rounded-r-3xl lg:rounded-bl-none">
             <h4>HeadingMobile</h4>
-            <p className="text-sm leading-relaxed text-text-400">
-              right
-            </p>
-            <ul className="mb-0 flex list-none flex-col gap-2 pl-0">             
+            <p className="text-sm leading-relaxed text-text-400">right</p>
+            <ul className="mb-0 flex list-none flex-col gap-2 pl-0">
               <li>
                 <SDKLink href="/" Icon={AutohotkeyIcon} label="Autohotkey" />
               </li>
@@ -415,7 +359,11 @@ export default function SDKsSection() {
                 <SDKLink href="/" Icon={SqlIcon} label="SQL" />
               </li>
               <li>
-                <SDKLink href="/" Icon={OperatingsystemIcon} label="Operatingsystem" />
+                <SDKLink
+                  href="/"
+                  Icon={OperatingsystemIcon}
+                  label="Operatingsystem"
+                />
               </li>
               <li>
                 <SDKLink href="/" Icon={WindowsIcon} label="Windows" />
@@ -431,17 +379,14 @@ export default function SDKsSection() {
               </li>
               <li>
                 <SDKLink href="/" Icon={HardwareIcon} label="Hardware" />
-              </li>                      
+              </li>
             </ul>
           </div>
         </div>
-
-        
       </div>
       <div className="text-center text-text-400">
         <p>
-          Need support?{' '}
-          <Link href="/">Contact Us</Link>
+          Need support? <Link href="/">Contact Us</Link>
         </p>
       </div>
     </section>
