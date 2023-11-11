@@ -12,9 +12,11 @@ tags: [linguae, cpp, c++, cplusplus, aufgaben]
   Füllen Sie ein Array mit 100 Zufallszahlen (zum Beispiel zwischen 1 und 10.000).
 
 a. Zählen Sie, wie viele Zahlen darin durch 6 teilbar sind.
-Hilfe: Restrechnung / Modulo: 9 modulo 4 ergibt (Rest) 1
-10 modulo 4 ergibt (Rest) 2
-12 modulo 4 ergibt (Rest) 0
+
+Hilfe: 
+- Restrechnung / Modulo: 9 modulo 4 ergibt (Rest) 1
+- 10 modulo 4 ergibt (Rest) 2
+- 12 modulo 4 ergibt (Rest) 0
 
 b. Ersetzen Sie im Array alle Werte, die durch 5 teilbar sind, durch den Wert 227.
 
@@ -22,7 +24,7 @@ c. Wie oft ist die Zahl 23 in diesem Array enthalten?
 
 d. Geben Sie das Array in zehn Zeilen zu je 10 Werten (Spalten) aus.
 
-```cpp
+```cpp title='1_.cpp'
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -82,12 +84,13 @@ int main()
 }
 ```
 
-alternativ:
+alternativ mit Konstante `ANZAHL`:
 
-```cpp
+```cpp title='1.cpp'
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+// highlight-next-line
 #define ANZAHL 100
 
 using namespace std;
@@ -139,7 +142,7 @@ int main(int argc, char const *argv[])
 
   ## 2
 
-  Füllen Sie ein Array "arrNoten[50]" mit beliebigen Klausurnoten (0 - 100 P)
+  Füllen Sie ein Array `arrNoten[50]` mit beliebigen Klausurnoten (0 - 100 P)
 und geben Sie Sie beste und die schlechteste Note (Standard-Rezept!!!)
 sowie den Durchschnitt der Werte aus, auf eine Kommastelle gerundet.
 
@@ -191,9 +194,12 @@ int main()
 
   ## 3
 
-  Geben Sie alle Noten aus und dazu jeweils den passenden Text "Bestanden" oder "Nicht bestanden",
-je nach Wert. ("Bestanden" bei mindestens 50%) Erweiterung:
+  Geben Sie alle Noten aus und dazu jeweils den passenden Text `Bestanden` oder `Nicht bestanden`,
+je nach Wert. ("Bestanden" bei mindestens 50%) 
+
+Erweiterung:
 Geben Sie zu den Punkten auch jeweils die Note aus, also 1, 2, 3 usw.
+
 Für diese Aufgaben gelten die CBM-/ Handelskammerrichtlinien.
 
 ```cpp title='3.cpp'
@@ -205,67 +211,62 @@ using namespace std;
 
 int main()
 {
-  int arrNoten[20], i, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0;
+  int arrNoten[50], i, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0;
 
   srand(time(NULL));
 
-  for (i = 0; i < 20; i++)
+  for (i = 0; i < 50; i++)
   {
-    int arrNoten[50], i, z1 = 0, z2 = 0, z3 = 0, z4 = 0, z5 = 0, z6 = 0;
+    arrNoten[i] = rand() % 100 + 1;
+    cout << arrNoten[i];
+    if (arrNoten[i] < 50)
+      cout << " Nicht";
+    cout << " bestanden mit ";
 
-    srand(time(NULL));
-
-    for (i = 0; i < 50; i++)
+    if (arrNoten[i] >= 92)
     {
-      arrNoten[i] = rand() % 100 + 1;
-      cout << arrNoten[i];
-      if (arrNoten[i] < 50)
-        cout << " Nicht";
-      cout << " bestanden mit ";
-
-      if (arrNoten[i] >= 92)
-      {
-        cout << "1 \n";
-        z1++;
-      }
-      else if (arrNoten[i] >= 81)
-      {
-        cout << "2 \n";
-        z2++;
-      }
-      else if (arrNoten[i] >= 67)
-      {
-        cout << "3 \n";
-        z3++;
-      }
-      else if (arrNoten[i] >= 50)
-      {
-        cout << "4 \n";
-        z4++;
-      }
-      else if (arrNoten[i] >= 31)
-      {
-        cout << "5 \n";
-        z5++;
-      }
-      else
-        cout << "6 \n";
+      cout << "1 \n";
+      z1++;
+    }
+    else if (arrNoten[i] >= 81)
+    {
+      cout << "2 \n";
+      z2++;
+    }
+    else if (arrNoten[i] >= 67)
+    {
+      cout << "3 \n";
+      z3++;
+    }
+    else if (arrNoten[i] >= 50)
+    {
+      cout << "4 \n";
+      z4++;
+    }
+    else if (arrNoten[i] >= 31)
+    {
+      cout << "5 \n";
+      z5++;
+    }
+    else
+    {
+      cout << "6 \n";
       z6++;
     }
-    cout << "\n"
-         << z1 + z2 + z3 + z4 + z5 + z6 << " Ergbenis.";
-    cout << "\n1: " << z1;
-    cout << "\n2: " << z2;
-    cout << "\n3: " << z3;
-    cout << "\n4: " << z4;
-    cout << "\n5: " << z5;
-    cout << "\n6: " << z6;
-    return 0;
   }
+  cout << "\n"
+       << z1 + z2 + z3 + z4 + z5 + z6 << " Ergebenis.";
+  cout << "\n1: " << z1;
+  cout << "\n2: " << z2;
+  cout << "\n3: " << z3;
+  cout << "\n4: " << z4;
+  cout << "\n5: " << z5;
+  cout << "\n6: " << z6;
+  return 0;
 }
 ```
 
-alternativ:
+alternativ mit Noten als Array :
 
 ```cpp title='3_2.cpp'
 #include <iostream>
@@ -276,7 +277,9 @@ using namespace std;
 
 int main()
 {
-  int arrNoten[20], i, z[6];
+  int arrNoten[20], i;
+  // highlight-next-line
+  z[6];
 
   srand(time(NULL));
 

@@ -9,7 +9,7 @@ tags: [linguae, cpp, c++, cplusplus, aufgaben]
 
   ## 1
 
-  Der Satz des Pythagoras lautet "a² + b² = c²". Erstellen Sie ein Programm zur Berechnung der Seite C nach Eingabe der Werte für a und b. Für die Wurzelberechnung können Sie die Funktion "sqrt()" benutzen.
+  Der Satz des Pythagoras lautet `a² + b² = c²`. Erstellen Sie ein Programm zur Berechnung der Seite C nach Eingabe der Werte für a und b. Für die Wurzelberechnung können Sie die Funktion `sqrt()` benutzen.
 
 
 ![alt](../../../static/cpp/8-6-1.png)
@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
 
   Früher wurde das Normalgewicht berechnet aus der Körpergröße in Zentimetern - 100, das dazugehörige Idealgewicht lag bei Männern 10% darunter, bei Frauen minus 15%.
 
-Erstellen Sie ein Programm, das Größe und Geschlecht (m/w) abfragt und dann Normal- und Ideal-gewicht ausgibt.
+Erstellen Sie ein Programm, das Größe und Geschlecht (`m`/`w`) abfragt und dann Normal- und Ideal-gewicht ausgibt.
 
 Erweiterung: Lassen Sie das tatsächliche Gewicht eingeben und geben Sie die Abweichung vom Normal- und Idealgewicht aus, ggf. mit entsprechenden Bewertung "Sie haben Über-/Untergewicht."
 
@@ -239,7 +239,7 @@ Für einen einfachen Taschenrechner soll es 3 (drei!) einzelne Eingaben geben:
 
 Das Programm soll dann anhand des Operators die richtige Berechnung durchführen und das Ergebnis auf dem Bildschirm ausgeben.
 
-Achtung: Eine Division durch 0 ist nicht erlaubt und ist mit einer Fehlermeldung zu quittieren, es darf dann kein Ergebnis ausgegeben werden.
+Achtung: Eine Division durch `0` ist nicht erlaubt und ist mit einer Fehlermeldung zu quittieren, es darf dann kein Ergebnis ausgegeben werden.
 
 ```cpp
 #include <iostream>
@@ -361,7 +361,7 @@ bei einer Betriebszugehörigkeit von mehr als 2 Jahren können sie 10 Aktien erw
 Mitarbeiter, die sich in einem gekündigten Arbeitsverhältnis befinden, sollen jedoch keine Aktien erhalten.
 
 Eingabe:
-Dauer der Betriebszugehörigkeit, gekündigtes Arbeitsverhältnis (ja oder nein)
+Dauer der Betriebszugehörigkeit, gekündigtes Arbeitsverhältnis (`ja` oder `nein`)
 
 Ausgabe: Anzahl der Aktien, die bezogen werden können.
 
@@ -484,7 +484,7 @@ int main(int argc, char const *argv[])
 - Der Monat dann zwischen 1 und 12 und
 - Jahreszahl sollen nur zwischen 1800 und 2200 erlaubt sein.
 
-Das Programm gibt am Ende aus: "Plausibles Datum!" oder "Falsches Datum!"
+Das Programm gibt am Ende aus: `Plausibles Datum!` oder `Falsches Datum!`
 
 ```cpp
 #include <iostream>
@@ -942,8 +942,7 @@ int main(int argc, char const *argv[])
   mwSt = nettoNachRabatt * 0.19;
   bruttoEndPreis = nettoNachRabatt + mwSt;
 
-  cout
-      << "Gesamtnetto: " << gesamtNetto << endl;
+  cout << "Gesamtnetto: " << gesamtNetto << endl;
   cout << "Rabattbetrag: " << rabattBetrag << endl;
   cout << "Nettobetrag abzgl. Rabatt: " << nettoNachRabatt << endl;
   cout << "zzgl. Umsatzsteuer: " << mwSt << endl;

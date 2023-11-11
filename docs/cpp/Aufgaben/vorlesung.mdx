@@ -217,7 +217,7 @@ int main()
 
   for (i = 1; i <= 50; i++)
   {
-    //	zufall=rand()%(Obergrenze-Untergrenze+1)+Untergrenze
+    // zufall = rand() % (Obergrenze - Untergrenze +1 ) + Untergrenze
     zufall = rand() % (OG - UG + 1) + UG;
     cout << zufall << " ";
     if (i % 10 == 0)
@@ -237,7 +237,7 @@ int main()
 
   ### MinMax.cpp
 
-  Bestimmen Sie Minimum und Maximum von Zahlen und geben Sie diese in der Konsole aus.
+  Bestimmen Sie Minimum und Maximum, sowie Durchschnitt von Zahlen und geben Sie diese in der Konsole aus.
 
 ![alt](../../../static/cpp/17.10-minMax.png)
 
@@ -295,16 +295,12 @@ int main(int argc, char const *argv[])
 
   ### minMax2.cpp
 
-  Bestimmen Sie Minimum und Maximum von Zahlen und geben Sie diese in der Konsole aus.
+  Bestimmen Sie Minimum und Maximum, sowie Durchschnitt von Zahlen und geben Sie diese in der Konsole aus.
 
 ![alt](../../../static/cpp/18.10-minMax2.png)
 
 ```cpp title='minMax2.cpp'
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
-#define OG 20
-#define UG 1
 
 using namespace std;
 
@@ -351,7 +347,11 @@ int main()
 
   ### minMaxZufallZahlen.cpp
 
-  
+best practice: 
+
+Zuweisung des ersten Wertes vor der Schleife ist effizienter, 
+da der Ausdruck nicht bei jedem Schleifendrchlauf überprüft wird
+
 ```cpp title='minMaxZufallZahlen.cpp'
 #include <iostream>
 #include <stdlib.h>
@@ -370,9 +370,11 @@ int main()
   srand(time(NULL)); // Start Random
   zahl = rand() % (OG - UG + 1) + UG;
 
+// highlight-start
   mini = zahl;
   maxi = zahl;
   summe = zahl;
+// highlight-end
 
   for (i = 1; i < 10; i++)
   {
@@ -411,11 +413,12 @@ int main()
 
   ### minMaxZufallZahlen2.cpp
 
+Prüfung, ob erster Durchlauf ist (zwecks Zuweisung des ersten Wertes), erfolgt bei jedem Schleifendurchlauf.
+
 ```cpp title='minMaxZufallZahlen2.cpp'
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-
 #define OG 500
 #define UG 1
 #define ANZAHL 100
@@ -439,11 +442,13 @@ int main()
       printf("\n");
     }
     summe = summe + zahl;
+      // highlight-start
     if (i == 1)
     {
       maxi = zahl;
       mini = zahl;
     }
+      // highlight-end
     else if (zahl > maxi)
     {
       maxi = zahl;
@@ -474,6 +479,9 @@ int main()
 <CardChapter>
 
   ### array01.cpp
+
+Eingabe von 5 Werten über Konsole und speichern dieser im Array.
+Random Ausgabe eines Array-Elements.
 
   ```cpp title='array01.cpp'
 #include <iostream>
@@ -516,6 +524,9 @@ int main()
 <CardChapter>
 
   ### array02.cpp
+
+Array mit Zufallszahlen.
+Eingabe einer Zahl und Anzeige dieses Array-Index.
 
   ```cpp title='array02.cpp'
 #include <iostream>
@@ -612,7 +623,7 @@ int main()
 
   ### array02MinMax.cpp
 
-  Ermitteln Sie Minumum und Maximum der Zahlen
+  Ermitteln Sie Minumum und Maximum aus einem Array.
 
 ```cpp title='array02MinMax.cpp'
 #include <iostream>
@@ -622,10 +633,6 @@ int main()
 #define ANZ 50
 
 using namespace std;
-
-/*
-Ermitteln Sie Minumum und Maximum der Zahlen
-*/
 
 int main()
 {
@@ -692,13 +699,7 @@ int main()
 
 ```cpp title='quadratzahlen.cpp'
 #include <iostream>
-/*
-1 x 1 = 1
-2 x 2 = 4
-3 x 3 = 9
-...
-20 x 20 =400
-*/
+
 using namespace std;
 
 int main()
@@ -723,12 +724,12 @@ int main()
   #### zerlegen.cpp
 
   Zerlegen Sie eine bis zu vierstellige Zahl (Eingabe)
-und geben Sie die Teile einzeln aus, z.B.
-1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
+und geben Sie die Teile einzeln aus, 
 
-689 = 6 Hunderter + 8 Zehner + 9 Einer
-
-7 = 7 Einer
+z.B.: 
+- 1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
+- 689 = 6 Hunderter + 8 Zehner + 9 Einer
+- 7 = 7 Einer
 
 ```cpp title='zerlegen.cpp'
 #include <iostream>
@@ -740,10 +741,10 @@ using namespace std;
 
 int main()
 {
-  int zahl = 5678, t = 0, h = 0, z = 0;
+  int zahl = 0, t = 0, h = 0, z = 0;
 
-  // cout << "Zahl bitte: (max. 9999)";
-  // cin >> zahl;
+  cout << "Zahl bitte: (max. 9999)";
+  cin >> zahl;
 
   t = zahl / 1000;
   zahl = zahl % 1000;
@@ -760,7 +761,43 @@ int main()
   cout << h << " Hunderter + ";
   cout << z << " Zehner + ";
   cout << zahl << " Einer";
-  // cout << endl << "Rest : " << zahl;
+  cout << endl
+       << "Rest : " << zahl;
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### zerlegenP.cpp
+
+  Zerlegen Sie eine bis zu vierstellige Zahl (Eingabe)
+und geben Sie die Teile einzeln aus, 
+
+z.B.: 
+- 1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
+- 689 = 6 Hunderter + 8 Zehner + 9 Einer
+- 7 = 7 Einer
+
+```cpp title='zerlegenP.cpp'
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+  int eingabe = 5432;
+
+  printf("%i x tausender \n", eingabe / 1000);
+  printf("%i x hunderter \n", eingabe % 1000 / 100);
+  printf("%i x zehner \n", eingabe % 100 / 10);
+  printf("%i x einer \n", eingabe % 10);
 
   return 0;
 }
@@ -771,17 +808,17 @@ int main()
 
 <CardChapter>
 
-  ### zerlegen2.cpp
+  ### zerlegenZufall.cpp
 
-  Zerlegen Sie eine bis zu vierstellige Zahl (Eingabe)
-und geben Sie die Teile einzeln aus, z.B.
-1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
+  Zerlegen Sie 10 zufällige bis zu vierstellige Zahlen
+und geben Sie die Teile einzeln aus, 
 
-689 = 6 Hunderter + 8 Zehner + 9 Einer
+z.B.: 
+- 1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
+- 689 = 6 Hunderter + 8 Zehner + 9 Einer
+- 7 = 7 Einer
 
-7 = 7 Einer
-
-```cpp title='zerlegen2.cpp'
+```cpp title='zerlegenZufall.cpp'
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -826,49 +863,13 @@ int main()
 
 <CardChapter>
 
-  ### zerlegenP.cpp
-
-  Zerlegen Sie eine bis zu vierstellige Zahl (Eingabe)
-und geben Sie die Teile einzeln aus, z.B.
-1234 = 1 Tausender + 2 Hunderter + 3 Zehner + 4 Einer
-
-689 = 6 Hunderter + 8 Zehner + 9 Einer
-
-7 = 7 Einer
-
-```cpp title='zerlegenP.cpp'
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-
-  int eingabe = 5432;
-
-  printf("%i x tausender \n", eingabe / 1000);
-  printf("%i x hunderter \n", eingabe % 1000 / 100);
-  printf("%i x zehner \n", eingabe % 100 / 10);
-  printf("%i x einer \n", eingabe % 10);
-
-  return 0;
-}
-```
-
-</CardChapter>
-<br/>
-
-<CardChapter>
-
   ### rechenTrainer1.cpp
 
   Rechentrainer mit Zufallszahlen
 
 Erweiterung1:
-Operatoren: `+`, `-`, `*`, `%`
+Operatoren: `+`
 
-Erweiterung2:
-10x Eingabe und Ausgabe
 
 ```cpp title='rechenTrainer1.cpp'
 #include <iostream>
@@ -910,9 +911,6 @@ int main()
 
 Erweiterung1:
 Operatoren: `+`, `-`, `*`, `%`
-
-Erweiterung2:
-10x Eingabe und Ausgabe
 
 ```cpp title='rechenTrainer2.cpp'
 #include <iostream>
@@ -981,7 +979,7 @@ Erweiterung1:
 Operatoren: `+`, `-`, `*`, `%`
 
 Erweiterung2:
-10x Eingabe und Ausgabe
+10x Eingabe und Ausgabe und Summe der richtigen Berechnungen
 
 ```cpp title='rechenTrainer3.cpp'
 #include <iostream>
@@ -1123,6 +1121,8 @@ int main()
 
   ### arr01.cpp
 
+Ermittlung und Ausgabe von Minimum und Maximum eines Arrays (Ganzzahlen).
+
 ```cpp title='arr01.cpp'
 #include <iostream>
 #include <cstdlib>
@@ -1168,6 +1168,8 @@ int main()
 <CardChapter>
 
   ### arr02strings.cpp
+
+  Eingabe, Speicherung und Ausgabe von 5 Strings in einem Array.
 
 ```cpp title='arr02strings.cpp'
 #include <iostream>
@@ -1314,6 +1316,15 @@ int main()
 
   ### volumen.cpp
 
+Berechnen. Sie das maximale Volumen eines quadratischen Behältnisses.
+
+![alt](../../../static/cpp/18.11-volumen2.png)
+
+Die dunklen Flächen werden in 1 mm Schritten vom Seitenrand ausgeschnitten. Im 1. Schritt werden
+die Seitenflächen jeweils um 1 mm verkürzt. Die so entstandene neue Grundfläche wird mit Imm
+Höhe berechnet, so erhält man ein Volumen. Wiederholen Sie die Schritte, bis Sie das maximale
+Volumen haben und geben dann die so entstandenen neuen Seitenlängen und das Volumen aus.
+
 ![alt](../../../static/cpp/18.11-volumen.png)
 
 ```cpp title='volumen.cpp'
@@ -1355,6 +1366,9 @@ int main()
 
   ### arrayGeradeUebertragen
 
+Füllen Sie ein Array mit 10 Zufallszahlen (zwischen 10 und 50)
+übertragen Sie alle geraden Zahlen in das zweite Array.
+
 ```cpp title='arrGeradeUebertragen.cpp'
 #include <iostream>
 #include <cstdlib>
@@ -1392,9 +1406,18 @@ int main()
 }
 ```
 
-alternativ:
+</CardChapter>
+<br/>
 
-```cpp title='arrGeradeUebertragenP.cpp'
+<CardChapter>
+
+  ## arrMultiplizierenUebertragen.cpp
+  
+Füllen Sie ein Array mit 10 Zufallszahlen (zwischen 10 und 50)
+multiplizieren Sie jede Zahl mit 2 und legen Sie das Ergebnis danach in einem
+zweiten Array ab
+
+```cpp title='arrMultiplizierenUebertragen.cpp'
 #include <iostream>
 #include <ctime>
 #define OG 50
@@ -1425,6 +1448,9 @@ int main(int argc, char const *argv[])
 </CardChapter>
 <br/>
 
+
+
+
 <CardHeading>
 
   ## 09.11
@@ -1433,6 +1459,8 @@ int main(int argc, char const *argv[])
 <CardChapter>
 
   ### minimumSort
+
+Aufsteigende Sortierung eines Arrays nach Minimumsort / Methode des kleinsten Elementes.
 
 ```cpp title='minimumSort.cpp'
 #include <iostream>
@@ -1473,6 +1501,7 @@ alternativ mit Konstante für Arraygröße:
 
 ```cpp title='minimumSort2.cpp'
 #include <iostream>
+// highlight-next-line
 #define ANZ 5
 
 using namespace std;
@@ -1514,6 +1543,10 @@ int main(int argc, char const *argv[])
 
   ### minimumSortZufall.cpp
 
+Aufsteigende Sortierung eines Arrays nach Minimumsort / Methode des kleinsten Elementes.
+
+Mit Zufallszahlen.
+
 ```cpp title='minimumSortZufall.cpp'
 #include <iostream>
 #include <ctime>
@@ -1525,7 +1558,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-  int arr[ANZ] = {}, i, hilf, k;
+  int arr[ANZ], i, hilf, k;
 
   srand(time(NULL));
 
@@ -1617,6 +1650,8 @@ int main()
 <CardChapter>
 
   ### bubbleSort.cpp
+
+  Aufsteigende Sortierung eines Arrays nach Methode Bubblesort.
 
 ```cpp title='bubbleSort.cpp'
 #include <iostream>
@@ -1716,7 +1751,7 @@ int main()
 }
 ```
 
-Text-Array:
+Sortierung eines Text-Array:
 
 ```cpp title='bubbleSortString.cpp'
 #include <iostream>
@@ -1778,12 +1813,10 @@ int main()
 
   ### arraySearch.cpp
 
+  Array nach Benutzereingabe durchsuchen.
+
   ```cpp title='arraySearch.cpp'
 #include <iostream>
-
-/*
-Array nach Benutzereingabe durchsuchen
-*/
 
 using namespace std;
 
@@ -1813,13 +1846,11 @@ int main(int argc, char const *argv[])
 
   ### arrayGewinner.cpp
 
+  Zufällig einen Gewinner aus dem Array ermitteln.
+
 ```cpp title='arrayGewinner.cpp'
 #include <iostream>
 #include <ctime>
-
-/*
-zufällig einen Gewinner aus dem Array ermitteln
-*/
 
 using namespace std;
 
@@ -1845,7 +1876,188 @@ int main(int argc, char const *argv[])
 
 <CardChapter>
 
+  ### Übungsklausur 3
+
+
+Gegeben ist das untenstehende Array; erstellen Sie den C-Code
+(nur Variablendeklaration und Anweisungsteil) für den Bubble-Sort zu diesem Array.
+
+`int a[5] = { 2, 8, 5, 4, 21};`
+
+
+```cpp title='uebKlausur3.cpp'
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // highlight-start
+  int a[5] = {2, 8, 5, 4, 21}, hilf = 0, i = 0, anz = 5;
+  bool tausch = true;
+  // highlight-end
+
+  cout << "vorher: ";
+  for (i = 0; i < 5; i++)
+  {
+    printf("%2i ", a[i]);
+  }
+
+// highlight-start
+  do
+  {
+    tausch = false;
+    anz--;
+    for (i = 0; i < anz; i++)
+    {
+      if (a[i] > a[i + 1])
+      {
+        hilf = a[i];
+        a[i] = a[i + 1];
+        a[i + 1] = hilf;
+        tausch = true;
+      }
+    }
+  } while (tausch);
+// highlight-end
+
+  cout << "\nnachher:";
+  for (i = 0; i < 5; i++)
+  {
+    printf("%2i ", a[i]);
+  }
+
+  return 0;
+}
+```
+
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardChapter>
+
+  ### Übungsklausur 4
+
+  Erstellen Sie bitte ein komplettes C++-Programm "kw.cpp", das eine PS-Leistung
+eingegeben bekommt und dann die entsprechenden Kilowattwert berechnet und aus
+gibt.
+
+Hilfe: 1 PS = 0,735499 kW
+
+```cpp title='uebKlausur4.cpp'
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  float ps = 0, kw = 0;
+
+  cout << "Bitte PS eingeben:" << endl;
+  cin >> ps;
+
+  kw = ps * 0.735499;
+
+  cout << ps << " PS entsprechen " << kw << " kW" << endl;
+
+  return 0;
+}
+
+```
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardChapter>
+
+  ### Übungsklausur 5
+
+  Schreiben zu der, im folgenden Struktogramm dargestellten,
+Programmlogik ein C++-Programm.
+NUR ab main() { ... }
+
+![alt](../../../static/cpp/uebKlausur5.png)
+
+```cpp title='uebKlausur5.cpp'
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int mini = 0, maxi = 0, z = 1, zahl = 0;
+
+  cout << "Zahl bitte eingeben:" << endl;
+  cin >> zahl >> maxi >> mini;
+
+// highlight-next-line
+  while (z <= 10)
+  {
+    cout << "Zahl bitte eingeben:" << endl;
+    cin >> zahl;
+
+    if (zahl > maxi)
+    {
+      maxi = zahl;
+    }
+    else if (zahl < mini)
+    {
+      mini = zahl;
+    }
+    z++;
+  }
+  cout << "Minimum ist :" << mini << endl;
+  cout << "Maximum ist :" << maxi << endl;
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
   ### Übungsklausur 6
+
+Gegeben ist folgendes JavaScript. "Übersetzen" Sie das Script in ein entsprechendes
+vollständiges C++-Programm.
+
+```html title='vorgabe.html'
+<html>
+  <head>
+    <title></title>
+    <meta name="author" content="kuhn" />
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF" link="#FF0000">
+    <script language="JavaScript">
+      <!--
+      var a = 10;
+      var s = 0;
+      var V = 0;
+      var Vmax = 0;
+      var Smax = 0;
+      var l = 0.1; // Schnittlänge
+      while (V >= Vmax) {
+        V = (a - 2 * s) * (a - 2 * s) * s;
+        // Zeile für Zwischenausgabe der Werte
+        document.write("Schnittlänge ", s, " akt. Vol. ", V, ".<br>");
+        if (Vmax < V) {
+          Vmax = V;
+          Smax = s;
+        }
+        s = s + l;
+      }
+      document.write("Maximales Volumen von ", Vmax, " bei ", Smax);
+      //-->
+    </script>
+  </body>
+</html>
+```
 
 ```cpp title='uebKlausur6.cpp'
 #include <iostream>
@@ -1878,6 +2090,21 @@ int main()
 
   ### Übungsklausur 7
 
+Gegeben ist ein Array bsp[100] von Ganzzahlen.
+(Die unten gezeigten Inhalte stellen nur ein Beispiel zur besseren Visualisierung dar!)
+
+Erstellen Sie den C++-Code (nur Variablendeklaration und Anweisungsteil) für die folgenden beiden Aufgabenstellungen:
+
+1. den Bubble-Sort zu dem Array bsp[100];
+
+2. alle ungeraden Zahlen aus bsp[100] sind in das Array ung[50]
+zu übertragen. Ist das zweite Array voll (also alle Plätze belegt),
+darf nicht mehr weiter übertragen werden!
+
+`int bsp [100] = {25, 3, 32, 8, 56, 4, 21, 12, 48, ... };`
+
+`int ung [50] = {0};`
+
 ```cpp title='uebKlausur7.cpp'
 #include <iostream>
 #include <cstdlib>
@@ -1887,7 +2114,38 @@ using namespace std;
 int main()
 {
   int bsp[10] = {25, 3, 31, 8, 55, 43, 21, 17, 49, 85};
-  int ung[5] = {0}, i = 0, k = 0, hilf;
+  int ung[5] = {0};
+  int i = 0, k = 0, hilf, anz = 10;
+  bool tausch = true;
+
+  printf("\nVorher:  ");
+  for (i = 0; i < 10; i++)
+  {
+    printf("%3i ", bsp[i]);
+  }
+
+  do
+  {
+    tausch = false;
+    anz = anz - 1;
+    for (i = 0; i < anz; i++)
+    {
+      if (bsp[i] > bsp[i + 1])
+      {
+        hilf = bsp[i];
+        bsp[i] = bsp[i + 1];
+        bsp[i + 1] = hilf;
+        tausch = true;
+      }
+    }
+
+  } while (tausch == true);
+
+  printf("\nNachher: ");
+  for (i = 0; i < 10; i++)
+  {
+    printf("%3i ", bsp[i]);
+  }
 
   // while(k<5 && i<10){
   for (i = 0; i < 10 && k < 5; i++)
@@ -1900,9 +2158,10 @@ int main()
     //	i++;
   }
 
+  printf("\nUngerade:");
   for (i = 0; i < 5; i++)
   {
-    cout << ung[i] << " ";
+    printf("%3i", ung[i]);
   }
   return 0;
 }

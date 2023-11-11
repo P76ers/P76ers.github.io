@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 
   ## 2
 
-  Geben Sie eine Liste der Umrechnungswerte für Temperaturen von Celsius in Fahrenheit (F = C° \* 1,8 + 32) aus. Benutzen Sie dabei den Bereich von -50° bis +70° Celsius in 5°-Schritten.
+  Geben Sie eine Liste der Umrechnungswerte für Temperaturen von Celsius in Fahrenheit `F = C° \* 1,8 + 32` aus. Benutzen Sie dabei den Bereich von -50° bis +70° Celsius in 5°-Schritten.
 
 ![alt](../../../static/cpp/13-2-2.png)
 
@@ -177,7 +177,7 @@ int main(int argc, char const *argv[])
   int eingabe = 0, zufall = 0;
   srand(time(NULL)); // Start Random
 
-  //	zufall=rand()%(Obergrenze-Untergrenze+1)+Untergrenze
+  // zufall = rand() % (Obergrenze - Untergrenze + 1) + Untergrenze
   zufall = rand() % (OG - UG + 1) + UG;
 
   do
@@ -218,10 +218,9 @@ using namespace std;
 int main()
 {
   int zahl, raten;
-  srand(time(NULL)); // Start Random
+  srand(time(NULL));
 
   zahl = rand() % (OG - UG + 1) + UG;
-  //   cout << zahl << "\n";
 
   cout << "Tipp: ";
   cin >> raten;
@@ -253,7 +252,13 @@ int main()
   ## 6
 
   Berechnen Sie die Fakultät einer Zahl.
-![alt](../../../static/cpp/13-2-6.png)
+
+| Eingabe     | Verarbeitung          | Ausgabe |
+| :------:    | :------:              | :------:|
+| `3`         | `1 * 2 * 3`           | `6`     |
+| `4`         | `1 * 2 * 3 * 4`       | `24`    |
+| `5`         | `1 * 2 * 3 * 4 * 5`   | `120`   |
+
 
 ```cpp
 #include <iostream>
@@ -314,7 +319,7 @@ Freiwillige Erweiterung: Geben Sie die prozentualen Anteile an.
 
   ## 9 2Do
 
-  In einem Unternehmen wird das Gehalt in einer Gehaltsgruppe in Abhängigkeit vom Alter der Be-schäftigten berechnet. Dazu soll eine entsprechende Tabelle ausgegeben werden. Im Alter bis 35 wird das monatliche Bruttogehalt alle 2 Jahre um 100€ erhöht, danach alle 4 Jahre um jeweils 150€. Gehen Sie von einem Endalter von mindestens 67 Jahren aus.
+  In einem Unternehmen wird das Gehalt in einer Gehaltsgruppe in Abhängigkeit vom Alter der Beschäftigten berechnet. Dazu soll eine entsprechende Tabelle ausgegeben werden. Im Alter bis 35 wird das monatliche Bruttogehalt alle 2 Jahre um 100€ erhöht, danach alle 4 Jahre um jeweils 150€. Gehen Sie von einem Endalter von mindestens 67 Jahren aus.
 
 Ausgangspunkt (und Eingabe): Das Gehalt eines 21-jährigen Mitarbeiters
 </CardChapter>
@@ -335,7 +340,7 @@ Ausgangspunkt (und Eingabe): Das Gehalt eines 21-jährigen Mitarbeiters
 
   ## 11 2Do
 
-  Eine Variation der Zinsaufgabe: Nach Eingabe eines Kapitals und eines Zinssatzes soll das Programm "sagen", nach wie viel Jahren sich das angelegte Kapital verdoppelt hat.
+  Eine Variation der Zinsaufgabe(10): Nach Eingabe eines Kapitals und eines Zinssatzes soll das Programm "sagen", nach wie viel Jahren sich das angelegte Kapital verdoppelt hat.
 
 </CardChapter>
 <br/>
@@ -344,7 +349,7 @@ Ausgangspunkt (und Eingabe): Das Gehalt eines 21-jährigen Mitarbeiters
 
   ## 12 2Do
 
-  Ebenfalls eine Erweiterung zu oben: Erstellen Sie ein Programm, welches errechnet, nach wie viel Jahren man Millionär geworden ist, wenn man einen beliebigen Betrag zu einem bestimmten Zinssatz verzinst. Programmieren Sie dazu eine Schleife, die beendet wird, wenn die Bedingung erfüllt wird.
+  Ebenfalls eine Erweiterung zu oben (Aufgabe 10): Erstellen Sie ein Programm, welches errechnet, nach wie viel Jahren man Millionär geworden ist, wenn man einen beliebigen Betrag zu einem bestimmten Zinssatz verzinst. Programmieren Sie dazu eine Schleife, die beendet wird, wenn die Bedingung erfüllt wird.
 
 </CardChapter>
 <br/>
@@ -353,7 +358,7 @@ Ausgangspunkt (und Eingabe): Das Gehalt eines 21-jährigen Mitarbeiters
 
   ## 13 2Do
 
-  Prüfen Sie die Eingaben im "Sparprogramm" (die vorherige Zinseszinsaufgabe) auf Korrektheit! Bei falscher Eingabe muss der User die entsprechenden Werte erneut eingeben, bis er eine gültige Eingabe macht.
+  Prüfen Sie die Eingaben im "Sparprogramm" (die vorherige Zinseszinsaufgabe 10) auf Korrektheit! Bei falscher Eingabe muss der User die entsprechenden Werte erneut eingeben, bis er eine gültige Eingabe macht.
 
 Prüfungen:
 
@@ -368,7 +373,9 @@ Prüfungen:
 
   ## 14 2Download
 
-  Die Fibonacci-Reihe: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, … Berechnen Sie die ersten 100 Fibonacci-Zahlen und geben Sie diese aus!
+  Die Fibonacci-Reihe: `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, … `
+  
+  Berechnen Sie die ersten 100 Fibonacci-Zahlen und geben Sie diese aus!
 
 </CardChapter>
 <br/>
@@ -395,20 +402,20 @@ Prüfungen:
 
   ## 16 2Do
 
-  Für einen Kredit soll in Tilgungsplan erstellt werden. Nach Eingabe von Kreditbetrag, Zinssatz und (jährlicher) Tilgungsrate wird der kreditverlauf in anschaulicher Forma ausgegeben.
+  Für einen Kredit soll in Tilgungsplan erstellt werden. Nach Eingabe von Kreditbetrag, Zinssatz und (jährlicher) Tilgungsrate wird der kreditverlauf in anschaulicher Form ausgegeben.
 
 ![alt](../../../static/cpp/13-2-16.png)
 
 Erläuterungen:<br/>
 Die zweite Spalte enthält die Kreditzinsen für das abgelaufene Jahr. Die dritte Spalte enthält jeweils den Tilgungsbetrag (=Tilgungsrate – aktuelle Zinsen) des abgelaufenen Jahres und die vierte Spalte die Restschuld als Differenz zum Betrag am Jahresanfang und dem Tilgungsbetrag.
 
-Die Ausgabeschleife läuft, bis die Restschuld + Zinsen für das nächste Jahr kleiner als die Tilgungsra-ten sind. Aus diesen Werten wird dann die aktuelle, letzte Tilgung berechnet und ausgegeben.
+Die Ausgabeschleife läuft, bis die Restschuld + Zinsen für das nächste Jahr kleiner als die Tilgungsraten sind. Aus diesen Werten wird dann die aktuelle, letzte Tilgung berechnet und ausgegeben.
 
 Tipp: <br/>
 Rechnen Sie die Tabellenwerte mit dem Taschenrechner (oder Excel) nach.
 
 Zusatzaufgabe/Erweiterung: <br/>
-Die Tilgungsrate muss größer sein als die Rate im Zinsen im ersten Jahr, sonst gibt es eine "ewige Tilgung"; fangen Sie daher diesen Eingabefehler ab. Ebenso geben wir nur Kredit für Beträge zwi-schen 1.000 € und 500.000 € und der Zinssatz liegt zwischen 0,5% und 10%.
+Die Tilgungsrate muss größer sein als die Rate im Zinsen im ersten Jahr, sonst gibt es eine "ewige Tilgung"; fangen Sie daher diesen Eingabefehler ab. Ebenso geben wir nur Kredit für Beträge zwischen 1.000 € und 500.000 € und der Zinssatz liegt zwischen 0,5% und 10%.
 
 </CardChapter>
 <br/>

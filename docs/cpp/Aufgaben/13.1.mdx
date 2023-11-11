@@ -9,7 +9,7 @@ tags: [linguae, cpp, c++, cplusplus, aufgaben]
 
   ## 1
 
-  Das Volumen eines Quaders berechnet sich aus a \* b \* c.
+  Das Volumen eines Quaders berechnet sich aus `a * b * c`.
 
 Erstellen Sie ein Programm, dass nach Eingabe der 3 Werte das Volumen berechnet und ausgibt.
 
@@ -49,10 +49,10 @@ int main(int argc, char const *argv[])
 
   ## 2
 
-  Der Satz des Pythagoras lautet "a² + b² = c²".
+  Der Satz des Pythagoras lautet `a² + b² = c²`.
 Erstellen Sie ein Programm zur Berechnung der Seite C nach Eingabe der Werte für a und b.
 
-Für die Wurzelberechnung können Sie die Funktion "sqrt()" benutzen.
+Für die Wurzelberechnung können Sie die Funktion `sqrt()` benutzen.
 
 ![alt](../../../static/cpp/13-1-02.png)
 
@@ -89,7 +89,9 @@ int main(int argc, char const *argv[])
 
   ## 3
 
-  Die Fläche eines Kreises lässt sich über die Formel `pi * r2` ausrechnen , der Umfang über die Formel `2 pi * r`; wobei `pi` einer Konstanten von 3,1416 entspricht und `r` der Radius des Kreises ist. Erstellen Sie ein Programm, welches nach Eingabe des Radius die Fläche und den Umfang des entsprechenden Kreises berechnet und auf dem Bildschirm ausgibt.
+  Die Fläche eines Kreises lässt sich über die Formel `pi * r²` ausrechnen , der Umfang über die Formel `2pi * r`; wobei `pi` einer Konstanten von 3,1416 entspricht und `r` der Radius des Kreises ist. 
+  
+  Erstellen Sie ein Programm, welches nach Eingabe des Radius die Fläche und den Umfang des entsprechenden Kreises berechnet und auf dem Bildschirm ausgibt.
 
 ```cpp
 #include <iostream>
@@ -124,18 +126,12 @@ int main(int argc, char const *argv[])
 
   ## 4
 
-  Erstellen sie ein einfaches Kassenprogramm. Es soll eine Kaufsumme eingegeben werden, dazu die Zahlung des Kunden. Das Programm soll den Rückgabebetrag (Wechselgeld), sowie die im Kaufpreis enthaltene Mehrwertsteuer (voller Satz) berechnen und anzeigen.
+  Erstellen sie ein einfaches Kassenprogramm. Es soll eine Kaufsumme eingegeben werden, dazu die Zahlung des Kunden. 
+  
+  Das Programm soll den Rückgabebetrag (Wechselgeld), sowie die im Kaufpreis enthaltene Mehrwertsteuer (voller Satz) berechnen und anzeigen.
 
 ```cpp
 #include <iostream>
-
-/*
-Erstellen sie ein einfaches Kassenprogramm.
-Es soll eine Kaufsumme eingegeben werden, dazu die Zahlung des Kunden.
-
-Das Programm soll den Rückgabebetrag (Wechselgeld),
-sowie die im Kaufpreis enthaltene Mehrwertsteuer (voller Satz) berechnen und anzeigen.
-*/
 
 using namespace std;
 
@@ -170,9 +166,11 @@ int main(int argc, char const *argv[])
 
   ## 5
 
-  Ein Programm soll den Benzinverbrauch eines Kfz auf 100 km berechnen. Dies lässt sich nach folgender Formel durchführen: Treibstoffmenge \* 100 / gefahrene Strecke = Verbrauch pro 100km
+  Ein Programm soll den Benzinverbrauch eines Kfz auf 100 km berechnen. Dies lässt sich nach folgender Formel durchführen: `Treibstoffmenge * 100 / gefahrene Strecke = Verbrauch pro 100km`
 
-Die gefahrene Strecke ergibt sich aus der Differenz vom KM-Stand beim letzten Tanken und neuen KM-Stand beim Auftanken. Erstellen Sie das dazugehörige Programm, das nach Eingabe von Anfangskilometerstand, Endkilometerstand und getankten Litern den Verbrauch berechnet und ausgibt.
+Die gefahrene Strecke ergibt sich aus der Differenz vom KM-Stand beim letzten Tanken und neuen KM-Stand beim Auftanken. 
+
+Erstellen Sie das dazugehörige Programm, das nach Eingabe von Anfangskilometerstand, Endkilometerstand und getankten Litern den Verbrauch berechnet und ausgibt.
 
 ![alt](../../../static/cpp/13-1-05.png)
 
@@ -213,7 +211,7 @@ int main(int argc, char const *argv[])
 
   ## 6
 
-  Zwei Variablen a und b sollen die Inhalte tauschen;
+  Zwei Variablen `a` und `b` sollen die Inhalte tauschen;
 
 Formulieren Sie dazu ein allgemeingültiges Verfahren! Es muss für Daten jedes Typs funktionieren, auch für Char-Variablen, sprich Texte, Strings.
 
@@ -258,11 +256,13 @@ int main(int argc, char const *argv[])
 
   ## 7
 
-  Die Programmiersprache "C" stellt eine Funktion zum kaufmännischen Runden zur Verfügung, die jedoch nur auf ganze Zahlen rundet;
+  Die Programmiersprache `C` stellt eine Funktion zum kaufmännischen Runden zur Verfügung, die jedoch nur auf ganze Zahlen rundet;
 
 aus 3.4 wird also 3, aus 6.5 eine 7 usw.
 
-Wie erreichen Sie eine Rundung auf zum Beispiel 2 Nachkommastellen? -> aus 3.1415 soll dann 3.14 werden, aus 2.728 dann 2.73 usw.
+Wie erreichen Sie eine Rundung auf zum Beispiel 2 Nachkommastellen? 
+
+-> aus 3.1415 soll dann 3.14 werden, aus 2.728 dann 2.73 usw.
 
 ```cpp
 #include <iostream>
@@ -294,11 +294,10 @@ int main(int argc, char const *argv[])
 
   Ein Zeitgenosse des Pythagoras war Heron von Alexandria. Basierend auf dem Satz des Pythagoras entwickelte er folgende Formel für die Berechnung der Fläche jedes Dreiecks:
 
-F = $\sqrt{(𝑠−𝑎)∗(𝑠−𝑏)∗(𝑠−𝑐)∗𝑠2}$
+$F = \sqrt[2]{(𝑠−𝑎)∗(𝑠−𝑏)∗(𝑠−𝑐)∗𝑠}$
 
 
-
-wobei gilt: $\frac{𝑎+𝑏+𝑐2}{2}$
+wobei gilt: $\frac{𝑎+𝑏+𝑐}{2}$
 
 
 ```cpp
@@ -389,7 +388,8 @@ int main(int argc, char const *argv[])
   ## 10
 
   Berechnen Sie nach Eingabe von Anfangskapital, Stehzeit (in Jahren) und eines Zinssatzes den Kapitalwert am Ende der Zeit mit Hilfe der (nebenstehenden) Zinseszinsformel.
-![alt](../../../static/cpp/13-1-10.png)
+
+$K_n = K_0(1+\frac{p}{100})^n$
 
 ```cpp
 #include <iostream>
