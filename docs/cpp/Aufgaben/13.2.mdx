@@ -291,13 +291,59 @@ int main()
 
 <CardChapter>
 
-  ## 7 2Do
+  ## 7
 
-  Ein Voting: 250 User können `j` für Ja, `n` für Nein und `e` für Enthaltung eingeben. Eben Sie bitte aus, wie viele User jeweils für Ja und Nein gestimmt haben und wie viele Enthaltungen es gab.
+  Ein Voting: 250 User können `j` für Ja, `n` für Nein und `e` für Enthaltung eingeben. Geben Sie bitte aus, wie viele User jeweils für Ja und Nein gestimmt haben und wie viele Enthaltungen es gab.
 
 Freiwillige Erweiterung: Geben Sie die prozentualen Anteile an.
 
 ![alt](../../../static/cpp/13-2-7.png)
+
+```cpp title='7.cpp'
+#include <iostream>
+#define ANZ 250
+
+using namespace std;
+
+int main()
+{
+  int ja = 0, nein = 0, enthaltung = 0, ungueltig = 0, i = 0;
+  double stimmen = 0.0;
+  char eingabe = ' ';
+
+  for (i = 0; i < ANZ; i++)
+  {
+    cout << "Bitte abstimmen (J)a / (N)ein (E)nthaltung" << endl;
+    cin >> eingabe;
+    stimmen++;
+
+    if (eingabe == 'j' || eingabe == 'J')
+    {
+      ja++;
+    }
+    else if (eingabe == 'n' || eingabe == 'N')
+    {
+      nein++;
+    }
+    else if (eingabe == 'e' || eingabe == 'E')
+    {
+      enthaltung++;
+    }
+    else
+    {
+      ungueltig++;
+    }
+  }
+
+  printf("Mit 'ja' abgestimmt: %4i %6.2lf%%", ja, (ja * 100 / stimmen));
+  printf("\nMit 'nein' abgestimmt: %2i %6.2lf%%", nein, (nein * 100 / stimmen));
+  printf("\nEnthaltungen: %11i %6.2lf%%", enthaltung, (enthaltung * 100 / stimmen));
+  printf("\nUngueltige Stimmen: %5i %6.2lf%%", ungueltig, (ungueltig * 100 / stimmen));
+
+  return 0;
+}
+```
+
 
 </CardChapter>
 <br/>
@@ -317,21 +363,104 @@ Freiwillige Erweiterung: Geben Sie die prozentualen Anteile an.
 
 <CardChapter>
 
-  ## 9 2Do
+  ## 9
 
   In einem Unternehmen wird das Gehalt in einer Gehaltsgruppe in Abhängigkeit vom Alter der Beschäftigten berechnet. Dazu soll eine entsprechende Tabelle ausgegeben werden. Im Alter bis 35 wird das monatliche Bruttogehalt alle 2 Jahre um 100€ erhöht, danach alle 4 Jahre um jeweils 150€. Gehen Sie von einem Endalter von mindestens 67 Jahren aus.
 
 Ausgangspunkt (und Eingabe): Das Gehalt eines 21-jährigen Mitarbeiters
+
+```cpp title='9.cpp'
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  double gehalt = 0;
+  int alter = 21, jahr = 1;
+
+  cout << "Bitte Gehalt eingeben: " << endl;
+  cin >> gehalt;
+
+  printf("Jahr    Gehalt   Alter:");
+
+  do
+  {
+    printf("\n%4i   %5.2lf   %5i", jahr, gehalt, alter);
+    alter++;
+    jahr++;
+    if (jahr % 2 == 0)
+    {
+      gehalt = gehalt + 100;
+    }
+  } while (alter <= 35);
+
+  do
+  {
+    printf("\n%4i   %5.2lf   %5i", jahr, gehalt, alter);
+    alter++;
+    jahr++;
+    if (jahr % 4 == 3 && alter >= 39)
+    {
+      gehalt = gehalt + 150;
+    }
+  } while (alter > 35 && alter <= 67);
+
+  return 0;
+}
+```
+
 </CardChapter>
 <br/>
 
 <CardChapter>
 
-  ## 10 2Do
+  ## 10
 
   Es sollen vom Benutzer ein Anlagebetrag, ein Zinssatz (in %) und eine Stehzeit eingegeben werden. Das Programm gibt dann in einer Tabelle die Entwicklung des Kapitalzuwachses anschaulich in einer Tabelle aus. (Auf die Zahlenformatierung brauchen Sie noch nicht Rücksicht zu nehmen.) Beispiel: Kapital 1000 Euro, Zinssatz 3 % auf 5 Jahre angelegt
 
 ![alt](../../../static/cpp/13-2-10.png)
+
+```cpp title='10.cpp'
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  double startKapital = 1000.0;
+  int zinsSatz = 3;
+  double zinsen = 0.0;
+  int jahre = 5;
+  double endKapital = 0.0;
+
+  // cout << "Bitte Startkapital eingeben: " << endl;
+  // cin >> startKapital;
+
+  // cout << "Bitte Zinssatz eingeben: " << endl;
+  // cin >> zinsSatz;
+
+  // cout << "Bitte Stehzeit eingeben: " << endl;
+  // cin >> jahre;
+
+  cout << "Jahre "
+       << "StartKapital "
+       << "Zinsen "
+       << "Endkapital:" << endl;
+
+  for (int i = 1; i <= jahre; i++)
+  {
+    endKapital = startKapital + (startKapital * zinsSatz / 100);
+    zinsen = endKapital - startKapital;
+
+    printf("\n%5i %12.2lf %6.2lf %10.2lf ", i, startKapital, zinsen, endKapital);
+    startKapital = endKapital;
+  }
+
+  return 0;
+}
+```
+
 
 </CardChapter>
 <br/>

@@ -143,6 +143,11 @@
       "selectors_key": "c"
     },
     {
+      "url": "https://p76ers.github.io/cpp",
+      "tags": "c++",
+      "selectors_key": "c++"
+    },
+    {
       "url": "https://p76ers.github.io/cSharp",
       "tags": "cSharp",
       "selectors_key": "cSharp"
@@ -580,6 +585,20 @@
       "text": "article p, article li, article td:last-child"
     },
     "c": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "c"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "cpp": {
       "lvl0": {
         "selector": "",
         "global": true,
