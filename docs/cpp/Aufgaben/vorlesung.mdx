@@ -2988,6 +2988,220 @@ int main()
 </CardChapter>
 <br/>
 
+<CardHeading>
+
+  ## 15.11
+</CardHeading>
+
+
+<CardChapter>
+
+  ### fktDefaults.cpp
+
+Funktion mit Aufruf eines zweiten optional Parameters (wird auf Defaultwert b=0 gesetzt)
+
+```cpp title='fktDefaults.cpp'
+#include <iostream>
+
+float multiplizieren(float a, float b = 0)
+{
+  if (b == 0)
+    return a * a;
+  else
+    return a * b;
+}
+
+using namespace std;
+
+int main()
+{
+  float erg;
+  erg = multiplizieren(1, 0);
+
+  //  erg=multiplizieren(6);
+
+  cout << "Ergebnis: " << erg;
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### fktUeberladung.cpp
+
+Überladene Funktion
+
+```cpp title='fktUeberladung.cpp'
+#include <iostream>
+
+float ui(float);        // Angabe mehrerer Prototypen
+float ui(float, float); // ="Funktionsüberladung"
+
+using namespace std;
+
+int main()
+{
+  float f;
+
+  f = ui(2.5, 3.2);
+
+  cout << "Ergebnis: " << f;
+  return 0;
+}
+
+float ui(float a)
+{
+  return a * a;
+}
+
+float ui(float a, float b)
+{
+  return a / b;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### fktZinseszins.cpp
+
+
+Es sollen vom Benutzer ein Anlagebetrag, ein Zinssatz (in %) und eine Stehzeit eingegeben werden.
+Das Programm gibt dann in einer Tabelle die Entwicklung des Kapitalzuwachses anschaulich in einer Tabelle aus.
+(Auf die Zahlenformatierung brauchen Sie noch nicht Rücksicht zu nehmen.)
+Beispiel: Kapital 1000 Euro, Zinssatz 3 % auf 5 Jahre angelegt
+
+`Umsetzung der Konsoleneingaben und Ausgaben über eine Funktion`
+
+
+```cpp title='fktZinseszins.cpp'
+#include <iostream>
+
+using namespace std;
+
+float eingabe(string text)
+{
+  float zahl;
+  cout << text << " eingeben: ";
+  cin >> zahl;
+  return zahl;
+}
+
+int main()
+{
+  float kapital = 0.0, nkapital = 0.0, zinssatz = 0, zinsen = 0.0;
+  int jahre = 0, i;
+
+  kapital = eingabe("Kapital");
+  zinssatz = eingabe("Zinssatz");
+  jahre = eingabe("Stehzeit");
+
+  for (i = 1; i <= jahre; i++)
+  {
+    zinsen = kapital * zinssatz / 100;
+    nkapital = kapital + zinsen;
+
+    printf("%3i %8.2f %6.2f %8.2f\n", i, kapital, zinsen, nkapital);
+    kapital = nkapital;
+  }
+
+  return 0;
+}
+```
+
+Erweiterung der Funktion mit Schleifen, falls Werte nicht innerhalb vorgegebener Grenzen:
+
+```cpp title='fktZinseszins2.cpp'
+#include <iostream>
+
+using namespace std;
+
+double eingabe(string text, float unten, float oben)
+{
+  double zahl;
+
+  // highlight-start
+  do
+  {
+    cout << text << " eingeben(" << unten << "-" << oben << "): ";
+    cin >> zahl;
+  } while (zahl < unten || zahl > oben);
+  // highlight-end
+
+  return zahl;
+}
+
+int main()
+{
+  float kapital = 0.0, nkapital = 0.0, zinssatz = 0, zinsen = 0.0;
+  int jahre = 0, i;
+
+  kapital = eingabe("Kapital", 500, 500000);
+  zinssatz = eingabe("Zinssatz", 0.5, 10);
+  jahre = eingabe("Stehzeit", 1, 50);
+
+  for (i = 1; i <= jahre; i++)
+  {
+    zinsen = kapital * zinssatz / 100;
+    nkapital = kapital + zinsen;
+
+    printf("%3i %8.2f %6.2f %8.2f\n", i, kapital, zinsen, nkapital);
+    kapital = nkapital;
+  }
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### rundenfktRunden.cpp
+
+Funktion `runden(Zahl, Stellen)`, `Stellen` gibt die Anzahl der Stellen an auf die gerundet 
+werden soll.
+
+```cpp title='runden.cpp'
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+double runden(double zahl, int stellen)
+{
+  zahl = zahl * pow(10, stellen);
+  zahl = round(zahl);
+  zahl = zahl / pow(10, stellen);
+  return zahl;
+}
+
+int main()
+{
+  float z = 5.88754;
+  cout << z << endl;
+  cout << runden(z, 4) << endl;
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+
+
+
+
+
+
 
 
 
