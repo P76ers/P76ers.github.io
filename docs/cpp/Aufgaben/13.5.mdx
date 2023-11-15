@@ -1,0 +1,310 @@
+---
+hide_title: true
+sidebar_position: 6
+sidebar_label: 13.5
+tags: [linguae, cpp, c++, cplusplus, aufgaben]
+---
+
+<CardChapter>
+
+  ## 1
+
+Ein Zeitgenosse des Pythagoras war Heron von Alexandria. Basierend auf dem Satz des Pythagoras entwickelte er folgende Formel für die Berechnung der Fläche jedes Dreiecks:
+
+$F = \sqrt[2]{(𝑠−𝑎)∗(𝑠−𝑏)∗(𝑠−𝑐)∗𝑠}$
+
+
+wobei gilt: $\frac{𝑎+𝑏+𝑐}{2}$
+
+```cpp title='1.cpp'  
+#include <iostream>
+#include <cmath>
+
+float heron(float, float, float);
+
+using namespace std;
+
+int main()
+{
+  float a, b, c, f;
+  cout << "Seite a: ";
+  cin >> a;
+  cout << "Seite b: ";
+  cin >> b;
+  cout << "Seite c: ";
+  cin >> c;
+
+  f = heron(a, b, c);
+
+  cout << "Fl\204che: " << f;
+  return 0;
+}
+
+float heron(float x, float y, float z)
+{
+  float f, s;
+  s = (x + y + z) / 2;
+  f = sqrt((s - x) * (s - y) * (s - z) * s);
+  return f;
+}
+```
+
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardChapter>
+
+  ## 2
+
+Stellen Sie sich vor, die Potenz-Funktion wäre "kaputt"/nicht vorhanden. Erstellen Sie eine Funktion `hoch(basis, exponent)`, die eine ganze Zahl n-mal potenzieren kann. 
+
+Hilfe: 
+- $2^2$ = 2 x 2 
+- $9^3$ = 9 x 9 x 9 
+- $10^4$ = 10 x 10 x 10 x 10
+
+```cpp title='2.cpp'
+#include <iostream>
+
+int hoch(int, int);
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int a = 0;
+  int b = 0;
+  int c = 0;
+
+  cout << "Bitte Seite A eingeben" << endl;
+  cin >> a;
+
+  cout << "Bitte Seite B eingeben" << endl;
+  cin >> b;
+
+  c = hoch(a, b);
+
+  cout << "Seite C betraegt : " << c << endl;
+  return 0;
+}
+
+int hoch(int a, int b)
+{
+  int c = 1;
+
+  for (b; b >= 1; b--)
+  {
+    c *= a;
+  }
+
+  return c;
+}
+```
+
+alternativ: mit Zufallszahlen zum Testen
+
+
+```cpp title='2_2.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int hoch(int a, int b)
+{
+  int hoch = 1, i;
+  for (i = 1; i <= b; i++)
+  {
+    hoch = hoch * a;
+  }
+  return hoch;
+}
+int main()
+{
+  int a, b;
+  srand(time(NULL));
+  a = rand() % 10 + 1;
+  b = rand() % 6;
+
+  cout << a << " hoch " << b << " = " << hoch(a, b);
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 3
+
+  Der Satz des Pytagoras lautet `a² + b² = c²`. Erstellen Sie eine Funktion zur Berechnung der Seite C nach Eingabe der Werte für a und b. Für die Wurzelberechnung benutzen Sie bitte die Funktion `sqrt()`.
+
+  ```cpp title='3.cpp'
+  #include <iostream>
+#include <cmath>
+
+float pytagoras(float, float);
+
+using namespace std;
+
+int main()
+{
+  float a = 0;
+  float b = 0;
+  float c = 0;
+
+  cout << "Bitte Seite A eingeben" << endl;
+  cin >> a;
+
+  cout << "Bitte Seite B eingeben" << endl;
+  cin >> b;
+
+  c = pytagoras(a, b);
+
+  cout << "Seite C betraegt : " << c << endl;
+
+  return 0;
+}
+
+float pytagoras(float a, float b)
+{
+  float c;
+  c = sqrt(a * a + b * b);
+  return c;
+}
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## 4
+
+
+Immer wieder gern (zu)genommen, aber aus der Mode: Die Kilokalorie (kcal).
+Erstellen Sie daher eine Funktion "Joule(k)", die aus Kalorien Joule errechnet. (1 Kcal = 4,31 Joule)
+
+
+```cpp title='4.cpp'
+#include <iostream>
+
+double joule(double);
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  double a, erg = 0;
+
+  cout << "Bitte Kilokalorie eingeben:" << endl;
+  cin >> a;
+
+  erg = joule(a);
+
+  printf("%.2lf kcal = %.2lf Joule", a, erg);
+
+  return 0;
+}
+
+double joule(double x)
+{
+  double result = 4.32;
+
+  return result *= x;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 5
+
+
+Erstellen Sie eine Funktion `Zufall (UG, OG)`,
+die Ihnen passende Zufallszahlen zwischen der Untergrenze UG und der Obergrenze OG liefert.
+
+```cpp title='5.cpp'
+#include <iostream>
+#include <ctime>
+
+int zufall(int, int);
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int rnd = 0;
+
+  srand(time(NULL));
+
+  for (int i = 0; i < 10; i++)
+  {
+    rnd = zufall(450, 50);
+    printf("%i ", rnd);
+  }
+
+  return 0;
+}
+
+int zufall(int UG, int OG)
+{
+  int erg;
+
+  erg = rand() % (OG - UG + 1) + UG;
+
+  return erg;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 6
+
+Definieren Sie eine Funktion "Barrel (Liter)", die eine Liter-Angabe in Barrel umrechnet,
+wobei ein Petrol Barrel (PB) laut Definition einem Volumen von nahezu 159 Litern entspricht.
+
+```cpp title='6.cpp'
+#include <iostream>
+
+int barrel(int);
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int eingabe = 159, ausgabe;
+
+  ausgabe = barrel(eingabe);
+
+  printf("%i Liter = %i Barrel", eingabe, ausgabe);
+
+  return 0;
+}
+
+int barrel(int liter)
+{
+
+  return liter / 159;
+}
+```
+
+</CardChapter>
+<br/>
+
+
+
+

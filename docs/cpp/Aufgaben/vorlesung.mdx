@@ -1,6 +1,6 @@
 ---
 hide_title: true
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: Vorlesung
 tags: [linguae, cpp, c++, cplusplus, aufgaben]
 ---
@@ -2251,7 +2251,7 @@ int main()
 
   ### array2DZufallZahlen.cpp
 
-  Mehrdimensionales Array mit Zufallszahlen zwischen 0 und 500.
+  Mehrdimensionales Array mit Zufallszahlen zwischen 50 und 500.
 
 ```cpp title='array2DZufallZahlen.cpp'
 #include <iostream>
@@ -2734,9 +2734,108 @@ int main()
 }
 ```
 
+<CardHeading>
+
+  ## 14.10
+</CardHeading>
+
 c. Es wird eine Monatsnummer (1-12) eingegeben, das Programm gibt dann die Belegung (insgesamt) in diesem Monat aus; Für Fortgeschrittene: Es dürfen nur gültige Werte (1-12) eingegeben werden, auch wiederholte Falscheingaben sind abzufangen!
 
+```cpp title='arrkrhs_c.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+  int krhs[12][6], z = 0, s, su = 0;
+  char antwort;
+
+  srand(time(NULL));
+
+  printf("    I    II    III\n");
+  printf("  m  w  m  w  m  w\n");
+  for (z = 0; z < 12; z++)
+  {
+    for (s = 0; s < 6; s++)
+    {
+      krhs[z][s] = rand() % 3 + 1;
+      printf("%3i", krhs[z][s]);
+    }
+    printf("\n");
+  }
+
+  do
+  {
+    do
+    {
+      cout << "Gesuchter Monat? (1-12)";
+      cin >> z;
+    } while (z < 1 || z > 12);
+    su = 0;
+    for (s = 0; s < 6; s++)
+    {
+      su += krhs[z - 1][s];
+    }
+    printf("\nMonat %2i, Belegung: %i", z, su);
+    printf("\nNochmal? (j/n)");
+    cin >> antwort;
+  } while (antwort == 'j' || antwort == 'J');
+
+  return 0;
+}
+```
+
 d. Belegung in Pflegeklasse II im ersten Halbjahr;
+
+```cpp title='arrkrhs_d.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+  int krhs[12][6], z, s, su = 0;
+  srand(time(NULL));
+
+  printf("    I    II    III\n");
+  printf("  m  w  m  w  m  w\n");
+  for (z = 0; z < 12; z++)
+  {
+    for (s = 0; s < 6; s++)
+    {
+      krhs[z][s] = rand() % 3 + 1;
+      printf("%3i", krhs[z][s]);
+    }
+    printf("\n");
+  }
+
+  for (z = 0; z < 6; z++)
+  {
+    for (s = 2; s < 4; s++)
+    {
+      su += krhs[z][s];
+    }
+  }
+  //    s=2;
+  //    for(z=0;z<6;z++){
+  //    	su=su+krhs[z][s]+krhs[z][s+1];
+  //		}
+
+  //    for(z=0;z<6;z++){
+  //    	su=su+krhs[z][2]+krhs[z][3];
+  //		}
+
+  printf("\nInsgesamt %i Menschen in Pflegeklasse II.", su);
+
+  return 0;
+}
+```
+
 
 e. Anzahl männlicher Patienten im 2. Quartal;
 
@@ -2752,6 +2851,145 @@ j. Geben Sie die Anzahl der Patientinnen und Patienten (zusammen) pro Monat aus,
 
 </CardChapter>
 <br/>
+
+<CardChapter>
+
+  ### Funktionen
+
+Funktionen quadrat() und kubik():
+
+- Import der Funktionen vor main und Deklaration nach main()
+
+```cpp title='quadratUndKubik.cpp'
+#include <iostream>
+
+// highlight-start
+int kubik(int);
+int quadrat(int);
+// highlight-end
+
+
+using namespace std;
+
+int main()
+{
+
+  int a = 5, b;
+  b = quadrat(a);
+  cout << "Quadrat :" << b << endl;
+  b = kubik(a);
+  cout << "Kubik :" << b;
+
+  return 0;
+}
+
+// highlight-start
+int quadrat(int x)
+{
+  int erg;
+  erg = x * x;
+  return erg;
+}
+
+int kubik(int z)
+{
+  return quadrat(z) * z;
+}
+// highlight-end
+```
+
+alternativ:
+
+- Deklaration vor main()
+
+```cpp title='quadratUndKubik2.cpp'
+#include <iostream>
+
+// highlight-start
+int kubik(int z)
+{
+  return quadrat(z) * z;
+}
+
+int quadrat(int x)
+{
+  int erg;
+  erg = x * x;
+  return erg;
+}
+// highlight-end
+
+using namespace std;
+
+int main()
+{
+
+  int a = 5, b;
+  b = quadrat(a);
+  cout << "Quadrat :" << b << endl;
+  b = kubik(a);
+  cout << "Kubik :" << b;
+
+  return 0;
+}
+```
+
+alternativ:
+
+<CardDanger>
+
+Caution: Deklaration 
+
+Error: kubik() ruft quadrat() auf, quadrat wurde jedoch nach kubik deklariert!
+
+```cpp title='quadratUndKubikError.cpp'
+#include <iostream>
+
+// highlight-next-line-error
+int kubik(int z)
+// highlight-next-line-error
+{
+// highlight-next-line-error
+  return quadrat(z) * z;
+// highlight-next-line-error
+}
+
+// highlight-next-line-error
+int quadrat(int x)
+// highlight-next-line-error
+{
+// highlight-next-line-error
+  int erg;
+// highlight-next-line-error
+  erg = x * x;
+// highlight-next-line-error
+  return erg;
+// highlight-next-line-error
+}
+
+using namespace std;
+
+int main()
+{
+
+  int a = 5, b;
+  b = quadrat(a);
+  cout << "Quadrat :" << b << endl;
+  b = kubik(a);
+  cout << "Kubik :" << b;
+
+  return 0;
+}
+
+```
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+
 
 
 
