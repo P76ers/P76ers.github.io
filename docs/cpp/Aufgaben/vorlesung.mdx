@@ -1556,11 +1556,14 @@ int main(int argc, char const *argv[])
 
   for (i = 0; i < 4; i++)
   {
-    for (k = 0; k < 5; k++)
+    for (k = i + 1; k < 5; k++)
     {
-      hilf = arr[i];
-      arr[i] = arr[k];
-      arr[k] = hilf;
+      if (arr[k] < arr[i])
+      {
+        hilf = arr[i];
+        arr[i] = arr[k];
+        arr[k] = hilf;
+      }
     }
   }
 
@@ -1577,6 +1580,7 @@ int main(int argc, char const *argv[])
 alternativ mit Konstante für Arraygröße:
 
 ```cpp title='minimumSort2.cpp'
+
 #include <iostream>
 // highlight-next-line
 #define ANZ 5
@@ -1595,11 +1599,14 @@ int main(int argc, char const *argv[])
 
   for (i = 0; i < ANZ - 1; i++)
   {
-    for (k = 0; k < 5; k++)
+    for (k = i + 1; k < 5; k++)
     {
-      hilf = arr[i];
-      arr[i] = arr[k];
-      arr[k] = hilf;
+      if (arr[k] < arr[i])
+      {
+        hilf = arr[i];
+        arr[i] = arr[k];
+        arr[k] = hilf;
+      }
     }
   }
 
@@ -3909,6 +3916,40 @@ void kugel(double r, double *s, double *v)
 
   *s = 4 * M_PI * pow(r, 2);
   *v = 4 / 3.0 * M_PI * pow(r, 3);
+}
+```
+
+alternativ:
+```cpp title='1_kugel2.cpp'
+#include <stdio.h>
+#define PI 3.14159 
+void super(double, double *, double *);
+
+void main()
+{ 
+  double s, v, r;
+  char antw;
+  do
+  {
+
+    printf("\nRadius eingeben: ");
+    scanf("%lf", &r); // in C++: cin >> r
+
+    super(r, &s, &v);
+
+    printf("\n Oberflaeche = %10.2lf", s);
+    printf("\n Volumen     = %10.2lf\n\n", v);
+    printf("\n nochmal? (j/n)");
+    fflush(stdin);
+    scanf("%c", &antw);
+
+  } while (antw == 'j' || antw == 'J');
+}
+
+void super(double r1, double *x, double *v1) /* Definition der Funktion */
+{
+  *x = 4 * PI * r1 * r1;
+  *v1 = 4.0 / 3.0 * PI * r1 * r1 * r1;
 }
 ```
 
