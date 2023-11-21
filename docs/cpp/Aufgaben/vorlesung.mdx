@@ -1659,11 +1659,14 @@ int main(int argc, char const *argv[])
 
   for (i = 0; i < ANZ - 1; i++)
   {
-    for (k = 0; k < 5; k++)
+    for (k = i + 1; k < 5; k++)
     {
-      hilf = arr[i];
-      arr[i] = arr[k];
-      arr[k] = hilf;
+      if (arr[k] < arr[i])
+      {
+        hilf = arr[i];
+        arr[i] = arr[k];
+        arr[k] = hilf;
+      }
     }
   }
 
