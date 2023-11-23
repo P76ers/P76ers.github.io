@@ -19,7 +19,7 @@ export const TableSqlCommands = () => {
       Header: 'command',
       accessor: 'command',
       Cell: ({ row: { original } }) => {
-        return <CodeBlock language="js">{original.command}</CodeBlock>;
+        return <CodeBlock language="sql">{original.command}</CodeBlock>;
       },
       Filter: ColumnFilter,
       sortType: (prev, curr, columnId) => {

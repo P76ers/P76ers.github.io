@@ -1,0 +1,243 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: SELECT a)
+tags: [linguae, sql, SQL, aufgaben, nordwind]
+---
+
+<CardHeading>
+
+  # SELECT a)
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## 1
+
+Geben Sie alle Kundenadressen, sortiert nach Firma, aus.
+
+```sql
+SELECT Firma, Straße, PLZ, Ort, Land
+FROM Kunden
+ORDER BY Firma;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 2
+
+Suchen Sie nun alle Kunden aus Brasilien, geben Sie die Liste sortiert nach Orten aus.
+
+```sql
+SELECT Firma, Straße, PLZ, Ort, Land
+FROM Kunden
+WHERE Land="Brasilien"
+ORDER BY Ort;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 3
+
+Wieviele Kunden haben wir in den USA?
+
+```sql
+SELECT COUNT(*) 
+FROM Kunden
+WHERE Land="USA";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 4
+
+In welchen Orten wohnen die USA-Kunden? Schaffen Sie es, dass jeder Ort nur einmal ausgegegen wird?
+
+```sql
+SELECT DISTINCT Ort 
+FROM Kunden
+WHERE Land="USA";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 5
+
+  Wieviele Kunden haben wir insgesamt?
+
+```sql
+SELECT COUNT(*) 
+FROM Kunden;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 6
+
+Welche Kunden haben wir in den Weltstädten Rom, San Francisco und Münster?
+
+```sql
+SELECT * 
+FROM Kunden
+WHERE Ort IN ("Rom", "San Francisco", "Münster");
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 7
+
+  Geben Sie die Artikel nach Preis sortiert aus.
+
+```sql
+SELECT *
+FROM Artikel
+ORDER BY Einzelpreis;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 8
+
+  Geben Sie eine Liste aus, in der für jeden Artikel Nettopreis, Mwst-Aufschlag und Bruttoendpreis angeben ist.
+
+```sql
+SELECT 
+  Artikelname, 
+  Einzelpreis, 
+  Einzelpreis *0.19 AS MwstAufschlag, 
+  Einzelpreis *1.19 AS BruttoEndPreis
+FROM Artikel
+ORDER BY Einzelpreis;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 9
+
+  Was kostet der `GRAVAD LAX`?
+
+```sql
+SELECT Artikelname, Einzelpreis
+FROM Artikel
+WHERE Artikelname="GRAVAD LAX";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 10
+
+  Wieviel "Matjeshering" ist auf Lager?
+
+```sql
+SELECT *
+FROM Artikel
+WHERE Artikelname LIKE "%hering%";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 11
+
+  Welche Artikel kosten weniger als 10 €?
+
+```sql
+SELECT Artikelname, Einzelpreis
+FROM Artikel
+WHERE Einzelpreis < 10;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 12
+
+  Was kosten `Wimmers gute Semmelknödel` und wieviel ist davon auf Lager?
+
+```sql
+SELECT Artikelname, Einzelpreis, Mindestbestand
+FROM Artikel
+WHERE Artikelname="Wimmers gute Semmelknödel";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 13
+
+  Bei welchem (`Lieferanten`) arbeitet `Lars Peterson`?
+
+```sql
+SELECT Firma, Kontaktperson
+FROM Lieferanten
+WHERE Kontaktperson="Lars Peterson";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 14
+
+  Wieviele Bestellungen gab der Kunde mit der Kundennummer 4 auf?
+
+```sql
+SELECT COUNT(*) 
+FROM Bestellungen 
+WHERE KundenNr=4;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 15
+
+Wieviele Bestellungen gab es im Jahr 2004? (ggf. wählen Sie ein anderes passendes Jahr gemäß Ihrer Datenbank)
+
+```sql
+SELECT COUNT(*) 
+FROM Bestellungen 
+WHERE year(Bestelldatum)=2004;
+```
+
+</CardChapter>
+<br/>
+

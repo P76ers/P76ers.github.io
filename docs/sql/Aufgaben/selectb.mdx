@@ -1,0 +1,171 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: SELECT b)
+tags: [linguae, sql, SQL, aufgaben, nordwind]
+---
+
+<CardHeading>
+
+  # SELECT b)
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## 1
+
+Welche Orte (aus `Kunden`) fangen mit einem `B` an?
+
+```sql
+SELECT * 
+FROM Kunden
+WHERE Ort LIKE "B%";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 2
+
+Wieviele Kunden wohnen in Orten, die mit `A` anfangen?
+
+```sql
+SELECT * 
+FROM Kunden
+WHERE Ort LIKE "A%";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 3
+
+Welche Kunden wohnen im Postleitzahlenbereich 10
+
+Ausgabe sortiert nach `Plz`, `Ort`?
+
+```sql
+SELECT * 
+FROM Kunden
+WHERE PLZ LIKE "10%"
+ORDER BY PLZ, Ort;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 4
+
+Welche Artikel enthalten den Begriff `ost`?
+
+```sql
+SELECT * 
+FROM Artikel
+WHERE Artikelname LIKE "%ost%";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 5
+
+Geben Sie zu jedem Artikel den Lieferanten aus!
+
+```sql
+SELECT DISTINCT Artikelname, Firma 
+FROM Artikel INNER JOIN Lieferanten;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 6
+
+Geben Sie zu jedem Artikel den Kategorienamen aus!
+
+```sql
+SELECT  Artikelname, Kategoriename
+FROM Artikel, Artikelkategorien
+WHERE KategorieId = KategorieNr;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 7
+
+Geben Sie zu jedem Artikel den Kategorienamen und den Lieferanten aus!
+
+```sql
+SELECT  Artikelname, Kategoriename, Firma
+FROM Artikel, Artikelkategorien, Lieferanten
+WHERE KategorieId = KategorieNr
+  AND LieferantenId = LieferantenNr;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 8
+
+Geben Sie die Bestellnummern (der Bestellungen) aus für `Gravad Lax`!
+
+```sql
+SELECT BestellNr, Artikelname
+FROM Artikel, Bestellungendetails, Bestellungen
+WHERE ArtikelID = ArtikelNr
+  AND Artikelname="Gravad Lax";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 9
+
+In welche Länder lieferten wir Gewürze?
+
+```sql
+SELECT  Land, Kategoriename
+FROM Artikelkategorien, Artikel, Bestellungendetails, Bestellungen, Kunden
+WHERE KategorieId = KategorieNr
+  AND ArtikelId = ArtikelNr
+  AND BestellNr = BestellId
+  AND KundenNr = KundenId
+  AND KategorieName LIKE "%rze%";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 10
+
+Folgende Abfrage ist gegeben:
+
+```sql
+SELECT sum(Lagerbestand * Einzelpreis) FROM Artikel;
+```
+Was sagt Ihnen das Ergebnis?
+
+-> Summe aller `Artikel * Einzelpreis`
+</CardChapter>
+<br/>

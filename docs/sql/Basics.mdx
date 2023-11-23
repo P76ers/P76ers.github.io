@@ -1,0 +1,66 @@
+---
+hide_title: true
+sidebar_position: 2
+sidebar_label: Basics
+tags: [linguae, SQL, sql]
+---
+
+<CardHeading>
+
+  # Basics
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## Syntax
+
+
+```sql
+SELECT 
+#  highlight-start
+-- optional
+   [distinct] 
+# highlight-end
+
+#  highlight-start
+-- Auswahlmöglichkeit, nur einzeln wählbar:
+   *
+   Spalte(n)
+   min()
+   max()
+   sum()
+   count()
+   avg()
+# highlight-end
+
+FROM Tabelle(n) 
+[WHERE Bedingung(en)] 
+[GROUP BY Spalte(n)] 
+[HAVING Bedingung(en)] 
+
+[ORDER BY 
+# highlight-start
+-- Alternativen:
+    Spalte(n)
+    -- oder
+    Spaltennummer(n)
+# highlight-end
+]
+
+[ASC/DESC] 
+[LIMIT Zahl]
+```
+
+</CardChapter>
+<br/>
+
+
+
+
+
+
+
+
+
