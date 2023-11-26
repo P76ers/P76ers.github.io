@@ -1,0 +1,398 @@
+---
+hide_title: true
+sidebar_position: 3
+sidebar_label: 2a)
+tags: [linguae, sql, SQL, aufgaben, nordwind]
+---
+
+<CardHeading>
+
+  # SELECT 2 a)
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## 1
+
+Welcher Artikel wurde am meisten (mengenmäßig) geordert?
+
+```sql
+SELECT ArtikelId, Artikelname, 
+    sum(Anzahl) "Anzahl bestellt"
+FROM bestellungendetails
+    INNER JOIN artikel ON ArtikelNr = ArtikelId
+GROUP BY Artikelid, Artikelname
+ORDER BY 3 DESC;
+```
+
+alternativ:
+```sql
+SELECT ArtikelId, Artikelname, 
+    sum(Anzahl) "Anzahl bestellt"
+FROM bestellungendetails, artikel
+WHERE  ArtikelNr = ArtikelId
+GROUP BY ArtikelId, Artikelname
+ORDER BY 3 DESC;
+```
+
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 2
+
+Wieviel Umsatz wurde mit diesem Artikel (aus 1.) gemacht?
+
+```sql
+SELECT ArtikelId, Artikelname, 
+    sum(Anzahl) "Anzahl bestellt",
+    sum(Anzahl * Einzelpreis) "Umsatz"
+FROM bestellungendetails
+    INNER JOIN artikel ON ArtikelNr = ArtikelId
+GROUP BY  Artikelid, Artikelname
+ORDER BY 4 DESC;
+```
+
+alternativ
+```sql
+SELECT ArtikelId, Artikelname, 
+    sum(Anzahl) "Anzahl bestellt",
+    sum(Anzahl * Einzelpreis) "Umsatz"
+FROM bestellungendetails, artikel
+WHERE ArtikelNr = ArtikelId
+GROUP BY  Artikelid, Artikelname
+ORDER BY 4 DESC;
+```
+
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 3
+
+Erstellen Sie jeweils eine Abfrage und ermitteln Sie darin die Umsätze 
+
+Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
+
+- je Kunde (Ausgabe `Firma`, `Ort`) 
+  ```sql
+  SELECT Firma, Ort,
+      (Anzahl * Einzelpreis) "Umsatz je Kunde"
+  FROM kunden
+      INNER JOIN bestellungen ON KundenId = KundenNr
+      INNER JOIN bestellungendetails ON BestellId = BestellNr
+      INNER JOIN artikel ON ArtikelNr = ArtikelId
+  GROUP BY Firma, Ort
+  ORDER BY 3 DESC;
+  ```
+
+  alternativ:
+  ```sql
+  SELECT Firma, Ort,
+      (Anzahl * Einzelpreis) "Umsatz je Kunde"
+  FROM kunden, bestellungen, bestellungendetails, artikel
+  WHERE KundenId = KundenNr 
+      AND BestellId = BestellNr
+      AND ArtikelNr = ArtikelId
+  GROUP BY Firma, Ort
+  ORDER BY 3 DESC;
+  ```
+
+- pro Artikel (`Artikelname`) 
+  ```sql
+  SELECT Artikelname, 
+      (Anzahl * Einzelpreis) "Umsatz pro Artikel"
+  FROM artikel INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
+  GROUP BY Artikelname
+  ORDER BY 2 DESC;
+  ```
+  alternativ:
+  ```sql
+  SELECT Artikelname, 
+      (Anzahl * Einzelpreis) "Umsatz pro Artikel"
+  FROM artikel, bestellungendetails
+  WHERE ArtikelId = ArtikelNr
+  GROUP BY Artikelname
+  ORDER BY 2 DESC;
+  ```
+
+- je Bestimmungsland (`kunden`) 
+  ```sql
+  SELECT Land,
+      (Anzahl * Einzelpreis) "Umsatz pro Land"
+  FROM kunden 
+      INNER JOIN bestellungen ON KundenId = KundenNr
+      INNER JOIN bestellungendetails ON BestellId = BestellNr
+      INNER JOIN artikel ON ArtikelNr = ArtikelID
+  GROUP BY Land
+  ORDER BY 2 DESC;
+  ```
+  alternativ:
+
+  ```sql
+  SELECT Land,
+      (Anzahl * Einzelpreis) "Umsatz pro Land"
+  FROM kunden, bestellungen, bestellungendetails, artikel 
+  WHERE KundenId = KundenNr
+      AND BestellId = BestellNr
+      AND ArtikelNr = ArtikelID
+  GROUP BY Land
+  ORDER BY 2 DESC;
+  ```
+
+- je Artikelkategorie (`Kategoriename`) 
+  ```sql
+  SELECT Kategoriename,
+      (Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
+  FROM bestellungendetails
+      INNER JOIN artikel ON ArtikelNr = ArtikelID
+      INNER JOIN artikelkategorien ON KategorieNr = KategorieId
+  GROUP BY Kategoriename
+  ORDER BY 2 DESC;
+  ```
+
+  alternativ:
+  ```sql
+  SELECT Kategoriename,
+      (Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
+  FROM bestellungendetails, artikel, artikelkategorien 
+  WHERE ArtikelNr = ArtikelID
+      AND KategorieNr = KategorieId
+  GROUP BY Kategoriename
+  ORDER BY 2 DESC;
+  ```
+
+- je Verkäufer (Name aus Personal) 
+
+
+
+- nach Herkunftsland (aus `lieferanten`)
+  ```sql
+  SELECT Land,
+      (Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
+  FROM lieferanten
+      INNER JOIN artikel on LieferantenId = LieferantenNr
+      INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+  GROUP BY Land
+  ORDER BY 2 DESC;
+  ```
+
+  alternativ:
+  ```sql
+  SELECT Land,
+      (Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
+  FROM lieferanten, artikel, bestellungendetails
+  WHERE LieferantenId = LieferantenNr
+      AND ArtikelId = ArtikelNr
+  GROUP BY Land
+  ORDER BY 2 DESC;
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 4
+
+Geben Sie den Umsatz der verschiedenen Artikel der Kategorien `Süßwaren` aus, nach Umsatz aufsteigend sortiert.
+
+```sql
+SELECT Kategoriename, Artikelname, 
+    (Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
+FROM artikelkategorien 
+    INNER JOIN artikel on KategorieId = KategorieNr
+    INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
+WHERE Kategoriename LIKE "%waren"
+GROUP BY Artikelname, Kategoriename
+ORDER BY 3;
+```
+alternativ:
+```sql
+SELECT Kategoriename, Artikelname, 
+    (Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
+FROM artikelkategorien, artikel, bestellungendetails
+WHERE KategorieId = KategorieNr
+    AND ArtikelId = ArtikelNr
+    AND Kategoriename LIKE "%waren"
+GROUP BY Artikelname, Kategoriename
+ORDER BY 3;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 5
+
+Geben Sie die Kunden (`Firma`, `Ort`, `Land`) an und dazu die Gesamtbestellmenge für das leckere `Sasquatch Ale`.
+
+```sql
+SELECT Firma, Ort, Land, Artikelname,
+sum(Anzahl) "Gesamtbestellmenge"
+FROM kunden 
+    INNER JOIN bestellungen on KundenId = KundenNr
+    INNER JOIN bestellungendetails ON BestellId = BestellNr
+    INNER JOIN artikel on ArtikelNr = ArtikelId
+WHERE Artikelname LIKE "%sasq%"
+GROUP BY Firma, Ort, Land, Artikelname
+ORDER BY 5 DESC;
+```
+
+alternativ:
+```sql
+SELECT Firma, Ort, Land, Artikelname,
+    sum(Anzahl) "Gesamtbestellmenge"
+FROM kunden, bestellungen, bestellungendetails, artikel
+WHERE KundenId = KundenNr
+    AND BestellId = BestellNr
+    AND ArtikelNr = ArtikelId
+    AND Artikelname LIKE "%sasq%"
+GROUP BY Firma, Ort, Land, Artikelname
+ORDER BY 5 DESC;
+```
+
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 6
+
+Geben Sie den Getränke-Umsatz aus, den wir in den einzelnen Ländern erzielt haben. (Also je `Land`)
+
+```sql
+SELECT Land, Kategoriename,
+    (Anzahl * Einzelpreis) "GetränkeUmsatz" 
+FROM kunden
+    INNER JOIN bestellungen ON KundenId = KundenNr
+    INNER JOIN bestellungendetails ON BestellId = BestellNr
+    INNER JOIN artikel ON ArtikelNr = ArtikelId
+    INNER JOIN artikelkategorien ON KategorieNr = KategorieId
+WHERE Kategoriename LIKE "%Getränke%"
+GROUP BY Land, Kategoriename
+ORDER BY 3 DESC;
+```
+
+alternativ:
+```sql
+SELECT Land, Kategoriename,
+    (Anzahl * Einzelpreis) "GetränkeUmsatz" 
+FROM kunden, bestellungen, bestellungendetails, artikel, artikelkategorien
+WHERE KundenId = KundenNr
+    AND BestellId = BestellNr
+    AND ArtikelNr = ArtikelId
+    AND KategorieNr = KategorieId
+    AND Kategoriename LIKE "%Getränke%"
+GROUP BY Land, Kategoriename
+ORDER BY 3 DESC;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 7
+
+Geben Sie den Umsatz pro Jahr aus.
+
+```sql
+SELECT year(Bestelldatum), 
+    sum(Anzahl * Einzelpreis) "Umsatz pro Jahr"
+FROM bestellungen 
+    INNER JOIN bestellungendetails ON BestellId = BestellNr
+    INNER JOIN artikel ON ArtikelNr = ArtikelId
+GROUP BY year(Bestelldatum);
+```
+
+alternativ:
+```sql
+SELECT year(Bestelldatum), 
+    sum(Anzahl * Einzelpreis) "Umsatz pro Jahr"
+FROM bestellungen, bestellungendetails, artikel
+WHERE BestellId = BestellNr
+    AND ArtikelNr = ArtikelId
+GROUP BY year(Bestelldatum);
+```
+
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 8
+
+Welchen Umsatz machten wir mit `Auslaufartikeln`?
+
+```sql
+SELECT Artikelname,
+    (Anzahl * Einzelpreis) "Umsatz Auslaufartikel"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelID = ArtikelNr
+WHERE Auslaufartikel=1
+GROUP BY Artikelname
+ORDER BY 2;
+```
+
+alternativ:
+```sql
+SELECT Artikelname,
+    (Anzahl * Einzelpreis) "Umsatz Auslaufartikel"
+FROM artikel, bestellungendetails
+WHERE ArtikelID = ArtikelNr
+    AND Auslaufartikel=1
+GROUP BY Artikelname
+ORDER BY 2;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 9
+
+Geben Sie den Gummibärenverbrauch (bestellte Mengen) je `Land` pro Jahr aus!
+
+```sql
+SELECT Land,
+    (Anzahl * Einzelpreis) "Umsatz je Land", 
+    year(Bestelldatum) "Jahr"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+    INNER JOIN kunden on KundenNr = KundenId
+WHERE Artikelname LIKE "%Gummi%"
+GROUP BY Land;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 10
+
+Wieviel Umsatz machten wir im 2. Quartal 1995?
+
+```sql
+SELECT
+    sum(Anzahl * Einzelpreis) "Umsatz"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+WHERE Bestelldatum BETWEEN '2003-01-07' AND '2003-12-31';
+```
+
+</CardChapter>
+<br/>

@@ -1,26 +1,26 @@
 ---
 hide_title: true
 sidebar_position: 1
-sidebar_label: SELECT b)
+sidebar_label: 1 b)
 tags: [linguae, sql, SQL, aufgaben, nordwind]
 ---
 
 <CardHeading>
 
-  # SELECT b)
+  # 1 b)
 </CardHeading>
-
+d
 ---
 
 <CardChapter>
 
   ## 1
 
-Welche Orte (aus `Kunden`) fangen mit einem `B` an?
+Welche Orte (aus `kunden`) fangen mit einem `B` an?
 
 ```sql
 SELECT * 
-FROM Kunden
+FROM kunden
 WHERE Ort LIKE "B%";
 ```
 
@@ -35,7 +35,7 @@ Wieviele Kunden wohnen in Orten, die mit `A` anfangen?
 
 ```sql
 SELECT * 
-FROM Kunden
+FROM kunden
 WHERE Ort LIKE "A%";
 ```
 
@@ -52,7 +52,7 @@ Ausgabe sortiert nach `Plz`, `Ort`?
 
 ```sql
 SELECT * 
-FROM Kunden
+FROM kunden
 WHERE PLZ LIKE "10%"
 ORDER BY PLZ, Ort;
 ```
@@ -68,7 +68,7 @@ Welche Artikel enthalten den Begriff `ost`?
 
 ```sql
 SELECT * 
-FROM Artikel
+FROM artikel
 WHERE Artikelname LIKE "%ost%";
 ```
 
@@ -83,7 +83,7 @@ Geben Sie zu jedem Artikel den Lieferanten aus!
 
 ```sql
 SELECT DISTINCT Artikelname, Firma 
-FROM Artikel INNER JOIN Lieferanten;
+FROM artikel INNER JOIN lieferanten;
 ```
 
 </CardChapter>
@@ -97,7 +97,7 @@ Geben Sie zu jedem Artikel den Kategorienamen aus!
 
 ```sql
 SELECT  Artikelname, Kategoriename
-FROM Artikel, Artikelkategorien
+FROM artikel, artikelkategorien
 WHERE KategorieId = KategorieNr;
 ```
 
@@ -112,7 +112,7 @@ Geben Sie zu jedem Artikel den Kategorienamen und den Lieferanten aus!
 
 ```sql
 SELECT  Artikelname, Kategoriename, Firma
-FROM Artikel, Artikelkategorien, Lieferanten
+FROM artikel, artikelkategorien, lieferanten
 WHERE KategorieId = KategorieNr
   AND LieferantenId = LieferantenNr;
 ```
@@ -128,7 +128,7 @@ Geben Sie die Bestellnummern (der Bestellungen) aus für `Gravad Lax`!
 
 ```sql
 SELECT BestellNr, Artikelname
-FROM Artikel, Bestellungendetails, Bestellungen
+FROM artikel, bestellungendetails, bestellungen
 WHERE ArtikelID = ArtikelNr
   AND Artikelname="Gravad Lax";
 ```
@@ -144,7 +144,7 @@ In welche Länder lieferten wir Gewürze?
 
 ```sql
 SELECT  Land, Kategoriename
-FROM Artikelkategorien, Artikel, Bestellungendetails, Bestellungen, Kunden
+FROM artikelkategorien, artikel, bestellungendetails, bestellungen, kunden
 WHERE KategorieId = KategorieNr
   AND ArtikelId = ArtikelNr
   AND BestellNr = BestellId
@@ -166,6 +166,6 @@ SELECT sum(Lagerbestand * Einzelpreis) FROM Artikel;
 ```
 Was sagt Ihnen das Ergebnis?
 
--> Summe aller `Artikel * Einzelpreis`
+-> Summe aller `Artikel * Einzelpreis` (Inventur)
 </CardChapter>
 <br/>

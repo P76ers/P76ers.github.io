@@ -1,0 +1,308 @@
+---
+hide_title: true
+sidebar_position: 4
+sidebar_label: Vorlesung
+tags: [linguae, sql, SQL, aufgaben, nordwind]
+---
+
+<CardHeading>
+
+  # Vorlesung
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## 22.11
+
+- Anzahl aller Artikel per Aggregatfunktion bestimmen
+  ```sql
+  SELECT COUNT(*) 
+  FROM artikel;
+  ```
+- Anzahl aller Artikel per Aggregatfunktion bestimmen und Spaltennamen anpassen
+  ```sql
+  SELECT COUNT(*) as "Anzahl Artikel" 
+  FROM artikel;
+  ```
+- Anzahl aller Artikel und Email-Adressen bestimmen, Kombination von Aggregatfunktionen
+  ```sql
+  SELECT count(*) as Anzahl, 
+      count(email) as Email 
+  FROM kunden;
+  ```
+- Aggregatfunktionen für alphabetisch kleinsten und größten `Ort`
+  ```sql
+  SELECT max(Ort), 
+      min(Ort) 
+  FROM kunden;
+  ```
+- Anzeige nur von bestimmten Spalten und Bedingungen (Nur Kunden aus Frankreich)
+  ```sql
+  SELECT Firma, Ort, Land 
+  FROM kunden 
+  WHERE Land="frankreich";
+  ```
+- Verknüpfung von Bedingungen (Alle Kunden aus Deutschland <u>**und**</u> Frankreich)
+  ```sql
+  SELECT Firma, Ort, Land 
+  FROM kunden 
+  WHERE Land="frankreich" 
+      OR Land="deutschland";
+  ```
+- Verknüpfung von Bedingungen (Alle Kunden aus Münster <u>**und**</u> Berlin)
+  ```sql
+  SELECT Firma, Ort, Land 
+  FROM kunden 
+  WHERE Ort in("münster", "berlin");
+  ```
+- Sortieren nach 1. Land absteigend und 2. nach Firma
+  ```sql
+  SELECT Firma, Ort, Land
+  FROM kunden 
+  WHERE Land in("Frankreich", "deutschland", "usa") 
+  ORDER BY Land DESC, Firma;
+  ```
+  
+  alternativ mit Angabe der Spaltennummer statt Spaltennamen
+  ```sql
+  SELECT Firma, Ort, Land
+  FROM kunden 
+  WHERE Land in("Frankreich", "deutschland", "usa") 
+  ORDER BY 3 DESC, 1;
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 23.11
+
+- Alle Spalten anzeigen, sortieren nach `Einzelpreis`
+  ```sql
+  SELECT * 
+  FROM artikel 
+  ORDER BY Einzelpreis;
+  ```
+  absteigende Sortierung:
+  ```sql
+  SELECT * 
+  FROM artikel 
+  ORDER BY Einzelpreis DESC;
+  ```
+- Die 5 teuersten Artikel anzeigen
+  ```sql
+  SELECT * 
+  FROM artikel 
+  ORDER BY Einzelpreis DESC LIMIT 5;
+  ```
+- Alle Artikel, deren `Einzelpreis` über 20€ liegt, absteigend sortieren
+  ```sql
+  SELECT * FROM artikel 
+  WHERE Einzelpreis >= 20
+  ORDER BY Einzelpreis DESC;
+  ```
+- Alle Artikel, deren `Einzelpreis` zwischen 20€ <u>**und**</u> 50€ liegt, absteigend sortieren
+  ```sql
+  SELECT Artikelname, Einzelpreis
+  FROM artikel 
+  WHERE Einzelpreis >= 20
+      AND Einzelpreis <= 50
+  ORDER by Einzelpreis DESC;
+  ```
+  alternativ:
+  ```sql
+  SELECT Artikelname, Einzelpreis
+  FROM artikel 
+  WHERE Einzelpreis BETWEEN 20 AND 50
+  ORDER by Einzelpreis DESC;
+  ```
+- Summe aller Kunden aus `USA`, für die <u>**auch**</u> eine Email hinterlegt ist
+  ```sql
+  SELECT COUNT(*) "Kunden aus USA", 
+      COUNT(email) "mit Mail" 
+  FROM kunden 
+  WHERE Land ="USA";
+  ```
+- Alle Artikel (Tabelle `artikel`) mit den Lieferern (Tabelle `lieferanten`) mit `Equi-JOIN` anzeigen
+  
+  ```sql
+  SELECT Artikelname, Einzelpreis, Lagerbestand, Firma
+  FROM artikel, lieferanten
+  WHERE LieferantenID = lieferantenNr;
+  ```
+- Ausgabe aller Firmen (`kunden`), die “Milchprodukte” (`artikelkategorien`) verkaufen 
+  ```sql
+  SELECT firma, artikelname, kategoriename
+  FROM artikelkategorien, artikel, bestellungendetails, bestellungen, kunden
+  WHERE KategorieId = KategorieNr
+      AND ArtikelId = ArtikelNr
+      AND Bestellnr = BestellId
+      AND KundenNr = KundenId
+      AND Kategoriename LIKE "%milch%"
+  ORDER BY 1;
+  ```
+- Ausgabe aller verkauften Artikel für "Blauer See Delikatessen" (`kunden`) 
+  ```sql
+  SELECT Artikelname, Firma
+  FROM artikel, bestellungendetails, bestellungen, kunden
+  WHERE ArtikelId = ArtikelNr
+      AND BestellNr = BestellId
+      AND KundenNr = KundenId
+      AND Firma LIKE "%blau%";
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 24.11
+
+- Anzeige aller Bestellungen für Kunden in Berlin mit `EQUI_JOIN`
+  ```sql
+  SELECT KundenId, Firma, Ort, BestellId 
+  FROM kunden, bestellungen
+  WHERE KundenId = KundenNr
+      AND Ort="Berlin";
+  ```
+
+  alternativ mit `INNER JOIN`
+  ```sql
+  SELECT KundenId, Firma, Ort, BestellId 
+  FROM kunden INNER JOIN bestellungen ON KundenId = KundenNr
+      AND Ort="Berlin";
+  ```
+  Anzeige <u>**aller**</u> Datenfelder mit `LEFT JOIN `(Nicht nur die Schnittmenge)
+  ```sql
+  SELECT KundenId, Firma, Ort, BestellId 
+  FROM Kunden LEFT JOIN Bestellungen ON KundenId = KundenNr
+      AND Ort="Berlin";
+  ```
+  Anzeige von einigen Kunden, Bedingungen nach `KundenId`
+  ```sql
+  SELECT KundenId, Firma, Ort, BestellId 
+  FROM Kunden LEFT JOIN Bestellungen ON KundenId = KundenNr
+  WHERE KundenID IN(1,22,23,57,58);
+  ```
+- Anzeige aller Bestellnummern (`bestellungendetails`) zu allen Artikeln (`artikel`)
+  ```sql
+  SELECT ArtikelId, Artikelname, BestellNr
+  FROM artikel INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr;
+  ```
+  Anzeige <u>**aller**</u> Datenfelder mit `LEFT JOIN `(Nicht nur die Schnittmenge)
+  nach Anlegen eines neuen Artikels
+  ```sql
+  SELECT ArtikelId, Artikelname, BestellNr
+  FROM artikel LEFT JOIN bestellungendetails ON ArtikelId = ArtikelNr
+  ORDER BY 3;
+  ```
+- Verknüpfung von mehreren Tabellen in Kombination mit `LEFT JOIN` und `INNER JOIN`
+  ```sql
+  SELECT ArtikelID, Artikelname, Bestellnr 
+  FROM (((artikel 
+          LEFT JOIN bestellungendetails ON ArtikelId = ArtikelNr)
+          Inner JOIN bestellungen ON BestellId = BestellNr)
+          INNER JOIN kunden on KundenID = KundenNr)
+  WHERE Artikelname ="Gravad lax";
+  ```
+- In welche Orte (`kunden`) wurde "Gravad Lax" verkauft
+  ```sql
+  SELECT ArtikelID, Artikelname, Firma, Ort 
+  FROM artikel 
+      INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+      INNER JOIN bestellungen on BestellId = BestellNr
+      INNER JOIN kunden on KundenId = KundenNr
+  WHERE Artikelname ="Gravad lax";
+  ```
+- Auflistung aller Gewürze und Kunden
+  ```sql
+  SELECT ArtikelID, Artikelname, Firma, Ort, Kategoriename 
+  FROM artikel 
+      INNER JOIN artikelkategorien on KategorieNr = kategorieId
+      INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+      INNER JOIN bestellungen on BestellId = BestellNr
+      INNER JOIN kunden on KundenId = KundenNr
+  WHERE Kategoriename LIKE "%rze%";
+  ```
+  Liste verkürzen und sortiert nach Firma
+  ```sql
+    SELECT DISTINCT ArtikelID, Artikelname, Firma, Ort, Kategoriename 
+    FROM artikel 
+        INNER JOIN artikelkategorien on KategorieNr = kategorieId
+        INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+        INNER JOIN bestellungen on BestellId = BestellNr
+        INNER JOIN kunden on KundenId = KundenNr
+    WHERE Kategoriename LIKE "%rze%"
+    ORDER by 1;
+  ```
+- Gesamtsumme aller verkauften Artikel
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis) 
+  FROM bestellungendetails INNER JOIN artikel
+  WHERE ArtikelNr = ArtikelId;
+  ```
+- Gesamtsumme aller Umsätze pro Artikel mit Aggregatfunktion
+  ```sql
+  SELECT Artikelname, 
+    sum(Anzahl * Einzelpreis) 
+  FROM bestellungendetails INNER JOIN artikel
+  WHERE ArtikelNr = ArtikelId
+  GROUP BY Artikelname;
+  ```
+- Ausgabe der verkauften Mengen und des jeweiligen Umsatzes je Artikel
+  durch Kombination von Aggregatfunktionen
+  ```sql
+  SELECT Artikelname, Einzelpreis, 
+      sum(Anzahl) "Verkaufsmenge",
+      sum(Anzahl*einzelpreis) "Umsatz"
+  FROM bestellungendetails INNER JOIN artikel
+  WHERE ArtikelNr = ArtikelId
+  GROUP BY Artikelname, Einzelpreis
+  ORDER BY 3 DESC;
+  ```
+- Gesamtumsatz je Kategorie
+  ```sql
+  SELECT Kategoriename,
+      sum(Anzahl * Einzelpreis) "Umsatz je Kategorie"
+  FROM bestellungendetails
+      INNER JOIN Artikel ON ArtikelNr = ArtikelId
+      INNER JOIN artikelkategorien ON KategorieId = KategorieNr
+  GROUP BY  Kategoriename
+  ORDER BY 2;
+  ```
+- Gesamtumsatz je Bestellung
+  ```sql
+  SELECT Bestellnr,
+      sum(Anzahl * Einzelpreis) "Umsatz je Bestellung"
+  FROM bestellungendetails
+      INNER JOIN artikel on ArtikelNr = ArtikelId
+  GROUP BY  BestellNr
+  ORDER BY 1;
+  ```
+- einzelne umsätze für tofu
+  ```sql
+  SELECT BestellNr, Artikelname,
+      sum(Anzahl * Einzelpreis) "Umsatz für Tofu je Bestellung"
+  FROM bestellungendetails
+      INNER JOIN artikel ON ArtikelNr = ArtikelId
+  WHERE Artikelname LIKE "%tofu%"
+  GROUP BY  BestellNr, Artikelname
+  ORDER By 1;
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+
+
+
+
+
+
+
+

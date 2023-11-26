@@ -1,13 +1,13 @@
 ---
 hide_title: true
 sidebar_position: 1
-sidebar_label: SELECT a)
+sidebar_label: 1 a)
 tags: [linguae, sql, SQL, aufgaben, nordwind]
 ---
 
 <CardHeading>
 
-  # SELECT a)
+  # 1 a)
 </CardHeading>
 
 ---
@@ -20,7 +20,7 @@ Geben Sie alle Kundenadressen, sortiert nach Firma, aus.
 
 ```sql
 SELECT Firma, Straße, PLZ, Ort, Land
-FROM Kunden
+FROM kunden
 ORDER BY Firma;
 ```
 
@@ -35,7 +35,7 @@ Suchen Sie nun alle Kunden aus Brasilien, geben Sie die Liste sortiert nach Orte
 
 ```sql
 SELECT Firma, Straße, PLZ, Ort, Land
-FROM Kunden
+FROM kunden
 WHERE Land="Brasilien"
 ORDER BY Ort;
 ```
@@ -51,7 +51,7 @@ Wieviele Kunden haben wir in den USA?
 
 ```sql
 SELECT COUNT(*) 
-FROM Kunden
+FROM kunden
 WHERE Land="USA";
 ```
 
@@ -66,7 +66,7 @@ In welchen Orten wohnen die USA-Kunden? Schaffen Sie es, dass jeder Ort nur einm
 
 ```sql
 SELECT DISTINCT Ort 
-FROM Kunden
+FROM kunden
 WHERE Land="USA";
 ```
 
@@ -81,7 +81,7 @@ WHERE Land="USA";
 
 ```sql
 SELECT COUNT(*) 
-FROM Kunden;
+FROM kunden;
 ```
 
 </CardChapter>
@@ -95,7 +95,7 @@ Welche Kunden haben wir in den Weltstädten Rom, San Francisco und Münster?
 
 ```sql
 SELECT * 
-FROM Kunden
+FROM kunden
 WHERE Ort IN ("Rom", "San Francisco", "Münster");
 ```
 
@@ -110,7 +110,7 @@ WHERE Ort IN ("Rom", "San Francisco", "Münster");
 
 ```sql
 SELECT *
-FROM Artikel
+FROM artikel
 ORDER BY Einzelpreis;
 ```
 
@@ -129,7 +129,7 @@ SELECT
   Einzelpreis, 
   Einzelpreis *0.19 AS MwstAufschlag, 
   Einzelpreis *1.19 AS BruttoEndPreis
-FROM Artikel
+FROM artikel
 ORDER BY Einzelpreis;
 ```
 
@@ -144,7 +144,7 @@ ORDER BY Einzelpreis;
 
 ```sql
 SELECT Artikelname, Einzelpreis
-FROM Artikel
+FROM artikel
 WHERE Artikelname="GRAVAD LAX";
 ```
 
@@ -159,7 +159,7 @@ WHERE Artikelname="GRAVAD LAX";
 
 ```sql
 SELECT *
-FROM Artikel
+FROM artikel
 WHERE Artikelname LIKE "%hering%";
 ```
 
@@ -174,7 +174,7 @@ WHERE Artikelname LIKE "%hering%";
 
 ```sql
 SELECT Artikelname, Einzelpreis
-FROM Artikel
+FROM artikel
 WHERE Einzelpreis < 10;
 ```
 
@@ -189,7 +189,7 @@ WHERE Einzelpreis < 10;
 
 ```sql
 SELECT Artikelname, Einzelpreis, Mindestbestand
-FROM Artikel
+FROM artikel
 WHERE Artikelname="Wimmers gute Semmelknödel";
 ```
 
@@ -204,7 +204,7 @@ WHERE Artikelname="Wimmers gute Semmelknödel";
 
 ```sql
 SELECT Firma, Kontaktperson
-FROM Lieferanten
+FROM lieferanten
 WHERE Kontaktperson="Lars Peterson";
 ```
 
@@ -219,7 +219,7 @@ WHERE Kontaktperson="Lars Peterson";
 
 ```sql
 SELECT COUNT(*) 
-FROM Bestellungen 
+FROM bestellungen 
 WHERE KundenNr=4;
 ```
 
@@ -234,7 +234,7 @@ Wieviele Bestellungen gab es im Jahr 2004? (ggf. wählen Sie ein anderes passend
 
 ```sql
 SELECT COUNT(*) 
-FROM Bestellungen 
+FROM bestellungen 
 WHERE year(Bestelldatum)=2004;
 ```
 
