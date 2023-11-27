@@ -1,0 +1,206 @@
+---
+hide_title: true
+sidebar_position: 4
+sidebar_label: 3)
+tags: [linguae, sql, SQL, aufgaben, nordwind]
+---
+
+<CardHeading>
+
+  # 3)
+</CardHeading>
+
+---
+
+
+<CardChapter>
+
+  ## 1
+
+  Welche Kunden haben keine Aufträge?
+
+```sql
+SELECT Firma, KundenID, BestellId
+FROM kunden 
+    LEFT JOIN bestellungen ON KundenId = KundenNr 
+WHERE BestellId IS NULL;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 2
+
+  Zeigen Sie (nur!) die Ladenhüter auf, d.h. Artikel die nicht bestellt wurden.
+
+```sql
+SELECT ArtikelId, Artikelname, BestellNr
+FROM artikel
+    LEFT JOIN bestellungendetails ON ArtikelId = ArtikelNr  
+WHERE BestellNr IS NULL;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 3
+
+  Wer ist der letzte Kunde (im Alphabet)?
+
+```sql
+SELECT max(Firma)
+FROM kunden;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 4
+
+  Geben Sie alle Artikel und den dazugehörigen Umsatz für das Jahr 2005 aus
+
+```sql
+SELECT Artikelname, year(Bestelldatum) Jahr,
+    sum(Anzahl * Einzelpreis) Umsatz
+FROM artikel
+    INNER JOIN bestellungendetails ON ArtikelID = ArtikelNr
+    INNER JOIN bestellungen ON BestellNr = BestellId
+WHERE year(Bestelldatum)=2005
+GROUP BY Artikelname
+ORDER BY 3 DESC;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 5
+
+  Geben Sie eine Liste der nachzubestellenden Artikel aus, das heißt der Lagerbestand ist kleiner als der Mindestbestand.
+
+```sql
+SELECT Artikelname, Lagerbestand, Mindestbestand
+FROM artikel 
+WHERE Lagerbestand < Mindestbestand;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 6
+
+  Erweitern Sie die vorige Abfrage: Auslaufartikel werden nicht mehr nachbestellt und sind daher nicht mit in die Liste aufzunehmen.
+
+```sql
+SELECT Artikelname, Lagerbestand, Mindestbestand
+FROM artikel 
+WHERE Lagerbestand < Mindestbestand
+    AND Auslaufartikel = 0;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 7
+
+  Wurden Artikel aus Dänemark (Tabelle "Lieferanten") zu Kunden nach Brasilien geliefert?
+
+```sql
+SELECT Artikelname, lieferanten.Land LieferantenLand, kunden.Land KundenLand
+FROM lieferanten
+    INNER JOIN artikel ON LieferantenID = LieferantenNr
+    INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
+    INNER JOIN bestellungen ON BestellNr = BestellId
+    INNER JOIN kunden ON KundenNr = KundenId
+WHERE lieferanten.Land = "Dänemark"
+    AND kunden.Land = "Brasilien";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 8
+
+  In welchem Jahr machten wir den größten Umsatz mit Naturprodukten?
+
+```sql
+SELECT kategoriename, year(Bestelldatum) Jahr, max(anzahl * Einzelpreis) "Umsatz"
+FROM artikelkategorien
+    INNER JOIN artikel ON KategorieId = KategorieNr
+    INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
+    INNER JOIN bestellungen ON BestellNr = BestellId
+WHERE Kategoriename = "naturprodukte";
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 9
+
+  Wieviel Umsatz erzielten wir mit "Steeleye Stout" im Jahr 2004?
+
+```sql
+SELECT Artikelname, year (Bestelldatum) Jahr, (Anzahl * Einzelpreis) Umsatz
+FROM artikel
+    INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
+    INNER JOIN bestellungen ON BestellNr = BestellId
+WHERE year(Bestelldatum) = 2004
+    AND Artikelname LIKE "%eye%"
+GROUP BY year(Bestelldatum);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 10
+
+  Geben Sie alle Artikel mit einem Umsatz von weniger als 2000,00 aus.
+
+```sql
+SELECT Artikelname, sum(Anzahl * Einzelpreis) Umsatz
+FROM artikel 
+    INNER JOIN bestellungendetails ON ArtikelID = ArtikelNr
+GROUP BY Artikelname
+HAVING Umsatz < 2000;
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## 11
+
+  Was liefert folgende Abfrage:
+
+```sql
+SELECT DISTINCT artikel.ArtikelId, artikel.Artikelname 
+FROM artikel 
+WHERE artikel.ArtikelId Not IN 
+    (SELECT DISTINCT ArtikelId 
+     FROM artikel, bestellungendetails, bestellungen 
+     WHERE ArtikelId = ArtikelNr 
+        AND Bestellid = BestellNr 
+        AND year(Bestelldatum) = 2005);
+```
+-> Welches Produkt wurde 2005 nicht bestellt?
+
+</CardChapter>
+<br/>

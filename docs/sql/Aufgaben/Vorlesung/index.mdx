@@ -296,6 +296,147 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
 </CardChapter>
 <br/>
 
+<CardChapter>
+
+  ## 27.11
+
+- Umsätze pro Artikel anzeigen
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis), Artikelname
+  FROM artikel, bestellungendetails 
+  WHERE ArtikelID = ArtikelNR
+  GROUP BY Artikelname
+  ORDER BY 1 DESC;
+  ```
+- Bedingungen für Aggregatfunktion mit `HAVING`
+
+  Nur Umsätze für Artikel anzeigen, die über 10000 liegen 
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis), 
+      Artikelname
+  FROM artikel, bestellungendetails 
+  WHERE ArtikelID = ArtikelNR
+  GROUP BY Artikelname
+  HAVING sum(Anzahl * Einzelpreis) > 10000
+  ORDER BY 1 DESC;
+  ```
+  alternativ
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
+      Artikelname
+  FROM artikel, bestellungendetails 
+  WHERE ArtikelID = ArtikelNR
+  GROUP BY Artikelname
+  HAVING sum(Anzahl * Einzelpreis) > 10000
+  ORDER BY 1 DESC;
+  ```
+  alternativ
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
+      Artikelname
+  FROM artikel, bestellungendetails 
+  WHERE ArtikelID = ArtikelNR
+  GROUP BY Artikelname
+  HAVING sum(Anzahl * Einzelpreis) > 10000
+  ORDER BY Umsatz DESC;
+  ```
+- Umsätze für alle Kunden, die mindestens 10000€ haben (Bedingung mit Aggregatfunktion)
+  ```sql
+  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
+      Firma
+  FROM artikel, bestellungendetails, bestellungen, kunden 
+  WHERE ArtikelID = ArtikelNR
+      AND BestellNr = BestellId
+      AND KundenNr = KundenId
+  GROUP BY Firma
+  HAVING sum(Anzahl * Einzelpreis) > 10000
+  ORDER BY Umsatz;
+  ```
+- Anzeige  billigster Artikel
+  ```sql
+  SELECT Artikelname, Einzelpreis
+  FROM artikel
+  ORDER BY 2
+  LIMIT 1;
+  ```
+- Anzeige teuerster Artikel
+  ```sql
+  SELECT Artikelname, Einzelpreis
+  FROM artikel
+  ORDER BY 2 DESC
+  LIMIT 1;
+  ```
+- Anzeige teuerster und billigster Artikel (ohne Artikelname)
+  ```sql
+  SELECT min(Einzelpreis) Billigster,
+      max(Einzelpreis) Teuerster
+  FROM artikel
+  ```
+- teuerster und billigster Artikel mit SUB-SELECT 
+  ```sql
+  SELECT Artikelname, Einzelpreis
+  FROM artikel
+  WHERE Einzelpreis = 
+          (SELECT min(Einzelpreis) FROM artikel)
+      OR 
+        Einzelpreis =
+          (SELECT max(Einzelpreis) FROM artikel);
+  ```
+- Anzeige billigste und teuerste Gewürz
+  ```sql
+  SELECT Artikelname, KategorieNr, Einzelpreis
+  FROM artikel
+  WHERE KategorieNr = 
+      (SELECT KategorieId FROM artikelkategorien WHERE Kategoriename = "gewürze")
+  AND 
+      (
+        Einzelpreis = (
+        SELECT min(Einzelpreis) 
+        FROM artikel 
+        WHERE KategorieNr = (
+            SELECT KategorieId 
+            FROM artikelkategorien 
+            WHERE Kategoriename ="gewürze"))
+  OR 
+      Einzelpreis = (
+        SELECT max(Einzelpreis) 
+        FROM artikel 
+        WHERE KategorieNr = (
+            SELECT KategorieId 
+            FROM artikelkategorien 
+            WHERE Kategoriename ="gewürze"))
+      )
+  ORDER BY Einzelpreis;
+  ```
+  alternativ
+  ```sql
+  SELECT Artikelname, KategorieNr, Einzelpreis
+  FROM artikel
+    INNER JOIN artikelkategorien ON KategorieNr = KategorieID
+  WHERE Kategoriename = "Gewürze"
+    AND 
+      Einzelpreis IN 
+      (
+        (SELECT min(Einzelpreis) 
+          FROM artikel 
+          WHERE KategorieNr = 
+            (SELECT KategorieID 
+              FROM artikelkategorien 
+              WHERE Kategoriename ="gewürze")), 
+        (SELECT max(Einzelpreis) 
+          FROM artikel 
+          WHERE KategorieNr = 
+            (SELECT KategorieID 
+              FROM artikelkategorien 
+              WHERE Kategoriename ="gewürze"))
+      )
+  ORDER BY Einzelpreis;
+  ```
+
+</CardChapter>
+<br/>
+
+
 
 
 
