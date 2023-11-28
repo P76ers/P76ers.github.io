@@ -83,7 +83,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 - je Kunde (Ausgabe `Firma`, `Ort`) 
   ```sql
   SELECT Firma, Ort,
-      (Anzahl * Einzelpreis) "Umsatz je Kunde"
+      sum(Anzahl * Einzelpreis) "Umsatz je Kunde"
   FROM kunden
       INNER JOIN bestellungen ON KundenId = KundenNr
       INNER JOIN bestellungendetails ON BestellId = BestellNr
@@ -95,7 +95,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
   alternativ:
   ```sql
   SELECT Firma, Ort,
-      (Anzahl * Einzelpreis) "Umsatz je Kunde"
+      sum(Anzahl * Einzelpreis) "Umsatz je Kunde"
   FROM kunden, bestellungen, bestellungendetails, artikel
   WHERE KundenId = KundenNr 
       AND BestellId = BestellNr
@@ -107,7 +107,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 - pro Artikel (`Artikelname`) 
   ```sql
   SELECT Artikelname, 
-      (Anzahl * Einzelpreis) "Umsatz pro Artikel"
+      sum(Anzahl * Einzelpreis) "Umsatz pro Artikel"
   FROM artikel INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
   GROUP BY Artikelname
   ORDER BY 2 DESC;
@@ -115,7 +115,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
   alternativ:
   ```sql
   SELECT Artikelname, 
-      (Anzahl * Einzelpreis) "Umsatz pro Artikel"
+      sum(Anzahl * Einzelpreis) "Umsatz pro Artikel"
   FROM artikel, bestellungendetails
   WHERE ArtikelId = ArtikelNr
   GROUP BY Artikelname
@@ -125,7 +125,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 - je Bestimmungsland (`kunden`) 
   ```sql
   SELECT Land,
-      (Anzahl * Einzelpreis) "Umsatz pro Land"
+      sum(Anzahl * Einzelpreis) "Umsatz pro Land"
   FROM kunden 
       INNER JOIN bestellungen ON KundenId = KundenNr
       INNER JOIN bestellungendetails ON BestellId = BestellNr
@@ -137,7 +137,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 
   ```sql
   SELECT Land,
-      (Anzahl * Einzelpreis) "Umsatz pro Land"
+      sum(Anzahl * Einzelpreis) "Umsatz pro Land"
   FROM kunden, bestellungen, bestellungendetails, artikel 
   WHERE KundenId = KundenNr
       AND BestellId = BestellNr
@@ -149,7 +149,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 - je Artikelkategorie (`Kategoriename`) 
   ```sql
   SELECT Kategoriename,
-      (Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
+      sum(Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
   FROM bestellungendetails
       INNER JOIN artikel ON ArtikelNr = ArtikelID
       INNER JOIN artikelkategorien ON KategorieNr = KategorieId
@@ -160,7 +160,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
   alternativ:
   ```sql
   SELECT Kategoriename,
-      (Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
+      sum(Anzahl * Einzelpreis) "Umsatz je Artikelkategorie"
   FROM bestellungendetails, artikel, artikelkategorien 
   WHERE ArtikelNr = ArtikelID
       AND KategorieNr = KategorieId
@@ -175,7 +175,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
 - nach Herkunftsland (aus `lieferanten`)
   ```sql
   SELECT Land,
-      (Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
+      sum(Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
   FROM lieferanten
       INNER JOIN artikel on LieferantenId = LieferantenNr
       INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
@@ -186,7 +186,7 @@ Lösen Sie zur Übung je 3 Abfragen mit Equi-Join und 3 Abfragen mit Inner Join.
   alternativ:
   ```sql
   SELECT Land,
-      (Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
+      sum(Anzahl * Einzelpreis) "Umsatz je Land Zulieferer" 
   FROM lieferanten, artikel, bestellungendetails
   WHERE LieferantenId = LieferantenNr
       AND ArtikelId = ArtikelNr
@@ -205,7 +205,7 @@ Geben Sie den Umsatz der verschiedenen Artikel der Kategorien `Süßwaren` aus, 
 
 ```sql
 SELECT Kategoriename, Artikelname, 
-    (Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
+    sum(Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
 FROM artikelkategorien 
     INNER JOIN artikel on KategorieId = KategorieNr
     INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
@@ -216,7 +216,7 @@ ORDER BY 3;
 alternativ:
 ```sql
 SELECT Kategoriename, Artikelname, 
-    (Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
+    sum(Anzahl * Einzelpreis) "Umsatz je SüßwarenArtikel" 
 FROM artikelkategorien, artikel, bestellungendetails
 WHERE KategorieId = KategorieNr
     AND ArtikelId = ArtikelNr
@@ -271,7 +271,7 @@ Geben Sie den Getränke-Umsatz aus, den wir in den einzelnen Ländern erzielt ha
 
 ```sql
 SELECT Land, Kategoriename,
-    (Anzahl * Einzelpreis) "GetränkeUmsatz" 
+    sum(Anzahl * Einzelpreis) "GetränkeUmsatz" 
 FROM kunden
     INNER JOIN bestellungen ON KundenId = KundenNr
     INNER JOIN bestellungendetails ON BestellId = BestellNr
@@ -285,7 +285,7 @@ ORDER BY 3 DESC;
 alternativ:
 ```sql
 SELECT Land, Kategoriename,
-    (Anzahl * Einzelpreis) "GetränkeUmsatz" 
+    sum(Anzahl * Einzelpreis) "GetränkeUmsatz" 
 FROM kunden, bestellungen, bestellungendetails, artikel, artikelkategorien
 WHERE KundenId = KundenNr
     AND BestellId = BestellNr
@@ -396,3 +396,4 @@ WHERE Bestelldatum BETWEEN '2003-01-07' AND '2003-12-31';
 
 </CardChapter>
 <br/>
+

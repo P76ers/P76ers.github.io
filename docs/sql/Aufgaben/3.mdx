@@ -193,7 +193,7 @@ HAVING Umsatz < 2000;
 ```sql
 SELECT DISTINCT artikel.ArtikelId, artikel.Artikelname 
 FROM artikel 
-WHERE artikel.ArtikelId Not IN 
+WHERE artikel.ArtikelId NOT IN 
     (SELECT DISTINCT ArtikelId 
      FROM artikel, bestellungendetails, bestellungen 
      WHERE ArtikelId = ArtikelNr 
