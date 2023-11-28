@@ -81,7 +81,8 @@ Geben Sie zu jedem Artikel den Lieferanten aus!
 
 ```sql
 SELECT DISTINCT Artikelname, Firma 
-FROM artikel INNER JOIN lieferanten;
+FROM artikel 
+INNER JOIN lieferanten ON LieferantenNr = LieferantenId;
 ```
 
 </CardChapter>
