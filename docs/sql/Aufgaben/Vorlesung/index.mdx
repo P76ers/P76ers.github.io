@@ -21,12 +21,12 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   SELECT COUNT(*) 
   FROM artikel;
   ```
-- Anzahl aller Artikel per Aggregatfunktion bestimmen und Spaltennamen anpassen
+- Anzahl aller Artikel per Aggregatfunktion bestimmen und Aliasnamen vergeben
   ```sql
   SELECT COUNT(*) as "Anzahl Artikel" 
   FROM artikel;
   ```
-- Anzahl aller Artikel und Email-Adressen bestimmen, Kombination von Aggregatfunktionen
+- Anzahl aller Kunden und Email-Adressen bestimmen
   ```sql
   SELECT count(*) as Anzahl, 
       count(email) as Email 
@@ -42,26 +42,26 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   ```sql
   SELECT Firma, Ort, Land 
   FROM kunden 
-  WHERE Land="frankreich";
+  WHERE Land = "frankreich";
   ```
 - Verknüpfung von Bedingungen (Alle Kunden aus Deutschland <u>**und**</u> Frankreich)
   ```sql
   SELECT Firma, Ort, Land 
   FROM kunden 
-  WHERE Land="frankreich" 
-      OR Land="deutschland";
+  WHERE Land = "frankreich" 
+      OR Land = "deutschland";
   ```
 - Verknüpfung von Bedingungen (Alle Kunden aus Münster <u>**und**</u> Berlin)
   ```sql
   SELECT Firma, Ort, Land 
   FROM kunden 
-  WHERE Ort in("münster", "berlin");
+  WHERE Ort IN ("münster", "berlin");
   ```
-- Sortieren nach 1. Land absteigend und 2. nach Firma
+- Sortieren nach 1. Land absteigend und 2. nach Firma aufsteigend (default)
   ```sql
   SELECT Firma, Ort, Land
   FROM kunden 
-  WHERE Land in("Frankreich", "deutschland", "usa") 
+  WHERE Land IN ("Frankreich", "deutschland", "usa") 
   ORDER BY Land DESC, Firma;
   ```
   
@@ -69,7 +69,7 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   ```sql
   SELECT Firma, Ort, Land
   FROM kunden 
-  WHERE Land in("Frankreich", "deutschland", "usa") 
+  WHERE Land IN ("Frankreich", "deutschland", "usa") 
   ORDER BY 3 DESC, 1;
   ```
   
@@ -96,12 +96,13 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   ```sql
   SELECT * 
   FROM artikel 
-  ORDER BY Einzelpreis DESC LIMIT 5;
+  ORDER BY Einzelpreis DESC 
+  LIMIT 5;
   ```
 - Alle Artikel, deren `Einzelpreis` über 20€ liegt, absteigend sortieren
   ```sql
   SELECT * FROM artikel 
-  WHERE Einzelpreis >= 20
+  WHERE Einzelpreis > 20
   ORDER BY Einzelpreis DESC;
   ```
 - Alle Artikel, deren `Einzelpreis` zwischen 20€ <u>**und**</u> 50€ liegt, absteigend sortieren
@@ -124,7 +125,7 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   SELECT COUNT(*) "Kunden aus USA", 
       COUNT(email) "mit Mail" 
   FROM kunden 
-  WHERE Land ="USA";
+  WHERE Land = "USA";
   ```
 - Alle Artikel (Tabelle `artikel`) mit den Lieferern (Tabelle `lieferanten`) mit `Equi-JOIN` anzeigen
   
@@ -135,7 +136,7 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   ```
 - Ausgabe aller Firmen (`kunden`), die “Milchprodukte” (`artikelkategorien`) verkaufen 
   ```sql
-  SELECT firma, artikelname, kategoriename
+  SELECT Firma, Artikelname, Kategoriename
   FROM artikelkategorien, artikel, bestellungendetails, bestellungen, kunden
   WHERE KategorieId = KategorieNr
       AND ArtikelId = ArtikelNr
@@ -166,26 +167,26 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   SELECT KundenId, Firma, Ort, BestellId 
   FROM kunden, bestellungen
   WHERE KundenId = KundenNr
-      AND Ort="Berlin";
+      AND Ort = "Berlin";
   ```
 
   alternativ mit `INNER JOIN`
   ```sql
   SELECT KundenId, Firma, Ort, BestellId 
   FROM kunden INNER JOIN bestellungen ON KundenId = KundenNr
-      AND Ort="Berlin";
+      AND Ort = "Berlin";
   ```
   Anzeige <u>**aller**</u> Datenfelder mit `LEFT JOIN `(Nicht nur die Schnittmenge)
   ```sql
   SELECT KundenId, Firma, Ort, BestellId 
   FROM Kunden LEFT JOIN Bestellungen ON KundenId = KundenNr
-      AND Ort="Berlin";
+      AND Ort = "Berlin";
   ```
   Anzeige von einigen Kunden, Bedingungen nach `KundenId`
   ```sql
   SELECT KundenId, Firma, Ort, BestellId 
   FROM Kunden LEFT JOIN Bestellungen ON KundenId = KundenNr
-  WHERE KundenID IN(1,22,23,57,58);
+  WHERE KundenID IN (1,22,23,57,58);
   ```
 - Anzeige aller Bestellnummern (`bestellungendetails`) zu allen Artikeln (`artikel`)
   ```sql
@@ -206,7 +207,7 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
           LEFT JOIN bestellungendetails ON ArtikelId = ArtikelNr)
           Inner JOIN bestellungen ON BestellId = BestellNr)
           INNER JOIN kunden on KundenID = KundenNr)
-  WHERE Artikelname ="Gravad lax";
+  WHERE Artikelname = "Gravad lax";
   ```
 - In welche Orte (`kunden`) wurde "Gravad Lax" verkauft
   ```sql
@@ -215,7 +216,7 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
       INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
       INNER JOIN bestellungen on BestellId = BestellNr
       INNER JOIN kunden on KundenId = KundenNr
-  WHERE Artikelname ="Gravad lax";
+  WHERE Artikelname = "Gravad lax";
   ```
 - Auflistung aller Gewürze und Kunden
   ```sql
@@ -241,16 +242,17 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
 - Gesamtsumme aller verkauften Artikel
   ```sql
   SELECT sum(Anzahl * Einzelpreis) 
-  FROM bestellungendetails INNER JOIN artikel
+  FROM artikel, bestellungendetails
   WHERE ArtikelNr = ArtikelId;
   ```
 - Gesamtsumme aller Umsätze pro Artikel mit Aggregatfunktion
   ```sql
   SELECT Artikelname, 
-    sum(Anzahl * Einzelpreis) 
+      sum(Anzahl * Einzelpreis) 
   FROM bestellungendetails INNER JOIN artikel
-  WHERE ArtikelNr = ArtikelId
-  GROUP BY Artikelname;
+      ON ArtikelNr = ArtikelId
+  GROUP BY Artikelname
+  ORDER BY 2 DESC;
   ```
 - Ausgabe der verkauften Mengen und des jeweiligen Umsatzes je Artikel
   durch Kombination von Aggregatfunktionen
@@ -280,9 +282,9 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
   FROM bestellungendetails
       INNER JOIN artikel on ArtikelNr = ArtikelId
   GROUP BY  BestellNr
-  ORDER BY 1;
+  ORDER BY 2 DESC;
   ```
-- einzelne umsätze für tofu
+- Einzelne Umsätze für alle Artikel mit `tofu`
   ```sql
   SELECT BestellNr, Artikelname,
       sum(Anzahl * Einzelpreis) "Umsatz für Tofu je Bestellung"
@@ -302,48 +304,30 @@ tags: [linguae, sql, SQL, aufgaben, nordwind]
 
 - Umsätze pro Artikel anzeigen
   ```sql
-  SELECT sum(Anzahl * Einzelpreis), Artikelname
+  SELECT Artikelname, 
+      sum(Anzahl * Einzelpreis) "Umsatz je Artikel"
   FROM artikel, bestellungendetails 
   WHERE ArtikelID = ArtikelNR
   GROUP BY Artikelname
-  ORDER BY 1 DESC;
+  ORDER BY 2 DESC;
   ```
 - Bedingungen für Aggregatfunktion mit `HAVING`
 
   Nur Umsätze für Artikel anzeigen, die über 10000 liegen 
   ```sql
-  SELECT sum(Anzahl * Einzelpreis), 
-      Artikelname
+  SELECT Artikelname, 
+      sum(Anzahl * Einzelpreis) "Umsätze über 10000"
   FROM artikel, bestellungendetails 
   WHERE ArtikelID = ArtikelNR
   GROUP BY Artikelname
   HAVING sum(Anzahl * Einzelpreis) > 10000
-  ORDER BY 1 DESC;
+  ORDER BY 2 DESC;
   ```
-  alternativ
+
+- Umsätze für alle Kunden, die mindestens 10000€ Umsatz haben
   ```sql
-  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
-      Artikelname
-  FROM artikel, bestellungendetails 
-  WHERE ArtikelID = ArtikelNR
-  GROUP BY Artikelname
-  HAVING sum(Anzahl * Einzelpreis) > 10000
-  ORDER BY 1 DESC;
-  ```
-  alternativ
-  ```sql
-  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
-      Artikelname
-  FROM artikel, bestellungendetails 
-  WHERE ArtikelID = ArtikelNR
-  GROUP BY Artikelname
-  HAVING sum(Anzahl * Einzelpreis) > 10000
-  ORDER BY Umsatz DESC;
-  ```
-- Umsätze für alle Kunden, die mindestens 10000€ haben (Bedingung mit Aggregatfunktion)
-  ```sql
-  SELECT sum(Anzahl * Einzelpreis) Umsatz, 
-      Firma
+  SELECT  Firma,
+    sum(Anzahl * Einzelpreis) Umsatz  
   FROM artikel, bestellungendetails, bestellungen, kunden 
   WHERE ArtikelID = ArtikelNR
       AND BestellNr = BestellId

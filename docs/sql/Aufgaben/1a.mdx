@@ -36,7 +36,7 @@ Suchen Sie nun alle Kunden aus Brasilien, geben Sie die Liste sortiert nach Orte
 ```sql
 SELECT Firma, Straße, PLZ, Ort, Land
 FROM kunden
-WHERE Land="Brasilien"
+WHERE Land = "Brasilien"
 ORDER BY Ort;
 ```
 
@@ -52,7 +52,7 @@ Wieviele Kunden haben wir in den USA?
 ```sql
 SELECT COUNT(*) 
 FROM kunden
-WHERE Land="USA";
+WHERE Land = "USA";
 ```
 
 </CardChapter>
@@ -67,7 +67,7 @@ In welchen Orten wohnen die USA-Kunden? Schaffen Sie es, dass jeder Ort nur einm
 ```sql
 SELECT DISTINCT Ort 
 FROM kunden
-WHERE Land="USA";
+WHERE Land = "USA";
 ```
 
 </CardChapter>
@@ -145,7 +145,7 @@ ORDER BY Einzelpreis;
 ```sql
 SELECT Artikelname, Einzelpreis
 FROM artikel
-WHERE Artikelname="GRAVAD LAX";
+WHERE Artikelname = "GRAVAD LAX";
 ```
 
 </CardChapter>
@@ -190,7 +190,7 @@ WHERE Einzelpreis < 10;
 ```sql
 SELECT Artikelname, Einzelpreis, Mindestbestand
 FROM artikel
-WHERE Artikelname="Wimmers gute Semmelknödel";
+WHERE Artikelname = "Wimmers gute Semmelknödel";
 ```
 
 </CardChapter>
@@ -202,10 +202,22 @@ WHERE Artikelname="Wimmers gute Semmelknödel";
 
   Bei welchem (`Lieferanten`) arbeitet `Lars Peterson`?
 
+<CardDanger>
+
+Danger:
+
+Kontaktperson wird in [Aufgabe 4](./4.mdx/#3) überschrieben
+
+-> "Lara Svensson"
+
+</CardDanger>
+
+
+
 ```sql
 SELECT Firma, Kontaktperson
 FROM lieferanten
-WHERE Kontaktperson="Lars Peterson";
+WHERE Kontaktperson = "Lars Peterson";
 ```
 
 </CardChapter>
@@ -220,7 +232,7 @@ WHERE Kontaktperson="Lars Peterson";
 ```sql
 SELECT COUNT(*) 
 FROM bestellungen 
-WHERE KundenNr=4;
+WHERE KundenNr = 4;
 ```
 
 </CardChapter>
@@ -235,7 +247,7 @@ Wieviele Bestellungen gab es im Jahr 2004? (ggf. wählen Sie ein anderes passend
 ```sql
 SELECT COUNT(*) 
 FROM bestellungen 
-WHERE year(Bestelldatum)=2004;
+WHERE year(Bestelldatum) = 2004;
 ```
 
 </CardChapter>

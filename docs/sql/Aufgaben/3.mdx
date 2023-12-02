@@ -25,6 +25,18 @@ FROM kunden
     LEFT JOIN bestellungen ON KundenId = KundenNr 
 WHERE BestellId IS NULL;
 ```
+alternativ
+```sql
+SELECT Firma, KundenID, BestellId
+FROM kunden 
+    LEFT JOIN bestellungen ON KundenId = KundenNr 
+WHERE KundenId NOT IN 
+    (
+        SELECT KundenNr
+        FROM bestellungen
+    );
+```
+
 
 </CardChapter>
 <br/>
@@ -71,7 +83,7 @@ SELECT Artikelname, year(Bestelldatum) Jahr,
 FROM artikel
     INNER JOIN bestellungendetails ON ArtikelID = ArtikelNr
     INNER JOIN bestellungen ON BestellNr = BestellId
-WHERE year(Bestelldatum)=2005
+WHERE year(Bestelldatum) = 2005
 GROUP BY Artikelname
 ORDER BY 3 DESC;
 ```
@@ -137,12 +149,15 @@ WHERE lieferanten.Land = "Dänemark"
   In welchem Jahr machten wir den größten Umsatz mit Naturprodukten?
 
 ```sql
-SELECT kategoriename, year(Bestelldatum) Jahr, max(anzahl * Einzelpreis) "Umsatz"
+SELECT Kategoriename, year(Bestelldatum) Jahr, max(anzahl * Einzelpreis) "Umsatz"
 FROM artikelkategorien
     INNER JOIN artikel ON KategorieId = KategorieNr
     INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
     INNER JOIN bestellungen ON BestellNr = BestellId
-WHERE Kategoriename = "naturprodukte";
+WHERE Kategoriename = "naturprodukte"
+GROUP BY Kategoriename, Jahr
+ORDER BY 3 DESC
+LIMIT 1;
 ```
 
 </CardChapter>
@@ -155,13 +170,13 @@ WHERE Kategoriename = "naturprodukte";
   Wieviel Umsatz erzielten wir mit "Steeleye Stout" im Jahr 2004?
 
 ```sql
-SELECT Artikelname, year (Bestelldatum) Jahr, (Anzahl * Einzelpreis) Umsatz
+SELECT Artikelname, year(Bestelldatum) Jahr, (Anzahl * Einzelpreis) Umsatz
 FROM artikel
     INNER JOIN bestellungendetails ON ArtikelId = ArtikelNr
     INNER JOIN bestellungen ON BestellNr = BestellId
 WHERE year(Bestelldatum) = 2004
     AND Artikelname LIKE "%eye%"
-GROUP BY year(Bestelldatum);
+GROUP BY Artikelname, year(Bestelldatum);
 ```
 
 </CardChapter>
@@ -171,7 +186,7 @@ GROUP BY year(Bestelldatum);
 
   ## 10
 
-  Geben Sie alle Artikel mit einem Umsatz von weniger als 2000,00 aus.
+  Geben Sie alle Artikel mit einem Umsatz von weniger als 2000€ aus.
 
 ```sql
 SELECT Artikelname, sum(Anzahl * Einzelpreis) Umsatz

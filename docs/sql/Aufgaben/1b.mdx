@@ -82,7 +82,7 @@ Geben Sie zu jedem Artikel den Lieferanten aus!
 ```sql
 SELECT DISTINCT Artikelname, Firma 
 FROM artikel 
-INNER JOIN lieferanten ON LieferantenNr = LieferantenId;
+    INNER JOIN lieferanten ON LieferantenNr = LieferantenId;
 ```
 
 </CardChapter>
@@ -127,7 +127,7 @@ Geben Sie die Bestellnummern (der Bestellungen) aus für `Gravad Lax`!
 
 ```sql
 SELECT BestellNr, Artikelname
-FROM artikel, bestellungendetails, bestellungen
+FROM artikel, bestellungendetails
 WHERE ArtikelID = ArtikelNr
   AND Artikelname="Gravad Lax";
 ```

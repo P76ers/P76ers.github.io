@@ -24,7 +24,8 @@ SELECT ArtikelId, Artikelname,
 FROM bestellungendetails
     INNER JOIN artikel ON ArtikelNr = ArtikelId
 GROUP BY Artikelid, Artikelname
-ORDER BY 3 DESC;
+ORDER BY 3 DESC
+LIMIT 1;
 ```
 
 alternativ:
@@ -34,7 +35,8 @@ SELECT ArtikelId, Artikelname,
 FROM bestellungendetails, artikel
 WHERE  ArtikelNr = ArtikelId
 GROUP BY ArtikelId, Artikelname
-ORDER BY 3 DESC;
+ORDER BY 3 DESC
+LIMIT 1;
 ```
 
 
@@ -49,10 +51,11 @@ Wieviel Umsatz wurde mit diesem Artikel (aus 1.) gemacht?
 
 ```sql
 SELECT ArtikelId, Artikelname, 
-    sum(Anzahl) "Anzahl bestellt",
+    max(Anzahl) "Anzahl bestellt",
     sum(Anzahl * Einzelpreis) "Umsatz"
 FROM bestellungendetails
     INNER JOIN artikel ON ArtikelNr = ArtikelId
+WHERE Artikelname = "Camembert Pierrot"
 GROUP BY  Artikelid, Artikelname
 ORDER BY 4 DESC;
 ```
@@ -64,6 +67,7 @@ SELECT ArtikelId, Artikelname,
     sum(Anzahl * Einzelpreis) "Umsatz"
 FROM bestellungendetails, artikel
 WHERE ArtikelNr = ArtikelId
+  AND Artikelname = "Camembert Pierrot"
 GROUP BY  Artikelid, Artikelname
 ORDER BY 4 DESC;
 ```
@@ -365,7 +369,7 @@ ORDER BY 2;
 Geben Sie den Gummibärenverbrauch (bestellte Mengen) je `Land` pro Jahr aus!
 
 ```sql
-SELECT Land,
+SELECT Artikelname, Land,
     (Anzahl * Einzelpreis) "Umsatz je Land", 
     year(Bestelldatum) "Jahr"
 FROM artikel
@@ -373,7 +377,7 @@ FROM artikel
     INNER JOIN bestellungen on BestellNr = BestellID
     INNER JOIN kunden on KundenNr = KundenId
 WHERE Artikelname LIKE "%Gummi%"
-GROUP BY Land;
+GROUP BY Artikelname, Land;
 ```
 
 </CardChapter>
@@ -383,16 +387,73 @@ GROUP BY Land;
 
   ## 10
 
-Wieviel Umsatz machten wir im 2. Quartal 1995?
+Wieviel Umsatz machten wir im 2. Quartal 2003?
 
 ```sql
-SELECT
-    sum(Anzahl * Einzelpreis) "Umsatz"
+SELECT  
+    sum(Anzahl * Einzelpreis) "Umsatz 2. Quartal"
 FROM artikel
     INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
     INNER JOIN bestellungen on BestellNr = BestellID
-WHERE Bestelldatum BETWEEN '2003-01-07' AND '2003-12-31';
+    // highlight-next-line
+WHERE Bestelldatum BETWEEN "2003-30-06" AND "2004-01-01";
 ```
+
+<CardDanger>
+
+Danger:
+
+```sql
+SELECT  
+    sum(Anzahl * Einzelpreis) "Umsatz 2. Quartal"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+    // highlight-next-line-error
+WHERE Bestelldatum BETWEEN "2003-07-01" AND "2003-12-31";
+```
+
+</CardDanger>
+
+
+alternativ
+```sql
+SELECT 
+    sum(Anzahl * Einzelpreis) "Umsatz 2. Quartal"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+WHERE year(Bestelldatum) = 2003
+AND month(Bestelldatum) > 6;
+```
+alternativ
+```sql
+SELECT 
+    sum(Anzahl * Einzelpreis) "Umsatz 2. Quartal"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+WHERE Bestelldatum > "2002-12-31"
+AND Bestelldatum < "2004-01-01";
+```
+<CardDanger>
+
+Danger:
+
+```sql
+SELECT 
+    sum(Anzahl * Einzelpreis) "Umsatz 2. Quartal"
+FROM artikel
+    INNER JOIN bestellungendetails on ArtikelId = ArtikelNr
+    INNER JOIN bestellungen on BestellNr = BestellID
+// highlight-next-line-error
+WHERE Bestelldatum >= "2003-07-01"
+// highlight-next-line-error
+    AND Bestelldatum <= "2003-12-31";
+```
+
+</CardDanger>
+
 
 </CardChapter>
 <br/>

@@ -104,15 +104,11 @@ Die Bestellung mit der ID 111 ist zu löschen… (aufpassen!)
   ```
 
 check
-1. 
   ```sql
-  SELECT * FROM bestellungendetails
-  WHERE bestellNr Between 110 and 112;
-  ```
-2. 
-  ```sql
-  SELECT * FROM bestellungen 
-  WHERE bestellId Between 110 and 112;
+SELECT *
+FROM bestellungendetails
+    RIGHT JOIN bestellungen on BestellId = BestellNr
+WHERE BestellID Between 109 and 112;
   ```
 
 </CardChapter>
@@ -136,15 +132,10 @@ WHERE LieferantenNr IN
 ```
 check
 ```sql
-SELECT lieferantenid, Firma, land
-FROM `lieferanten`
-where land IN ("Brasilien","Australien","USA");
-```
-
-```sql
-SELECT * 
-FROM artikel 
-WHERE LieferantenNr IN (2, 3, 7, 10, 16, 19, 24);
+SELECT LieferantenId, Firma, Land, Artikelname, Einzelpreis
+FROM lieferanten
+	INNER JOIN artikel on LieferantenID = LieferantenNr
+WHERE Land IN ("Brasilien", "Australien", "USA");
 ```
 
 </CardChapter>
@@ -158,25 +149,21 @@ WHERE LieferantenNr IN (2, 3, 7, 10, 16, 19, 24);
 
 ```sql
 UPDATE artikel
-SET Einzelpreis = Einzelpreis * 2
+SET Einzelpreis = Einzelpreis * 0.95
 WHERE LieferantenNr = 
-	  (
-    	  SELECT lieferantenId
-    	  FROM lieferanten
+      (
+          SELECT LieferantenId
+          FROM lieferanten
         WHERE Firma = "Lyngbysild"
       );
 ```
 
 check
 ```sql
-SELECT LieferantenId, Firma 
-FROM lieferanten
-WHERE Firma = "Lyngbysild";
-```
-```sql
-SELECT * 
+SELECT Firma, Artikelname, Einzelpreis 
 FROM artikel
-WHERE LieferantenNr = 21;
+    INNER JOIN lieferanten on LieferantenID = LieferantenNr
+WHERE Firma = "Lyngbysild";
 ```
 
 </CardChapter>
@@ -186,7 +173,7 @@ WHERE LieferantenNr = 21;
 
   ## 7
 
-  "New Orleans Cajun Delights" liefert uns 360 Kartons "Chef Anton's Gumbo Mix", erhöhen Sie den Bestand entsprechend.
+  `New Orleans Cajun Delights` liefert uns 360 Kartons `Chef Anton's Gumbo Mix`, erhöhen Sie den Bestand entsprechend.
 
 ```sql
 UPDATE artikel
@@ -202,14 +189,11 @@ And LieferantenNr =
 
 check
 ```sql
-SELECT LieferantenId, Firma 
+SELECT LieferantenId, Firma, Artikelname, Lagerbestand 
 FROM lieferanten
-WHERE Firma = "New Orleans Cajun Delights";
-```
-```sql
-SELECT * 
-FROM artikel
-WHERE Artikelname = "Chef Anton's Gumbo Mix";
+	  INNER JOIN artikel ON LieferantenNr = LieferantenID
+WHERE Firma = "New Orleans Cajun Delights"
+	  AND Artikelname = "Chef Anton's Gumbo Mix";;
 ```
 
 </CardChapter>
@@ -217,18 +201,20 @@ WHERE Artikelname = "Chef Anton's Gumbo Mix";
 
 <CardChapter>
 
-  Als neuer Lieferant wurde die Firma „International Pommes Service (IPS)“ aus Berlin (Südafrika) gewonnen, die Telefon von Karl Toffel ist die 0800 – 888 888. Tragen Sie die Daten entsprechend bei den Lieferanten ein.
+  Als neuer Lieferant wurde die Firma `International Pommes Service (IPS)` aus Berlin (`Südafrika`) gewonnen, die Telefon von `Karl Toffel` ist die 0800 – 888 888. Tragen Sie die Daten entsprechend bei den Lieferanten ein.
 
 ```sql
-INSERT INTO lieferanten (Firma, Land, Telefon, Kontaktperson )
+INSERT INTO lieferanten (Firma, Land, Telefon, Kontaktperson)
 VALUES ("International Pommes Service (IPS)", 
-        "Südafrika", "0800 – 888 888", "Karl Toffel");
+        "Südafrika", 
+        "0800 – 888 888", 
+        "Karl Toffel");
 ```
 check
 ```sql
-SELECT * 
+SELECT Firma, Land, Telefon, Kontaktperson 
 FROM lieferanten  
-ORDER BY LieferantenID DESC
+WHERE Firma = "International Pommes Service (IPS)";
 ```
 
 </CardChapter>
@@ -245,20 +231,21 @@ INSERT INTO artikelkategorien (Kategoriename, Beschreibung)
 VALUES ("Home Decoration", "Alles für ein hygge Zuhause");
 
 INSERT INTO artikel (Artikelname, Einzelpreis, KategorieNr)
-VALUES ("My Hygge1", "11", "9");
+VALUES ("My Hygge1", "11.90", "9");
 
 INSERT INTO artikel (Artikelname, Einzelpreis, KategorieNr)
-VALUES ("My Hygge2", "22", "9");
+VALUES ("My Hygge2", "22.30", "9");
 
 INSERT INTO artikel (Artikelname, Einzelpreis, KategorieNr)
-VALUES ("My Hygge3", "33", "9");
+VALUES ("My Hygge3", "33.79", "9");
 ```
 check
 ```sql
-SELECT Artikelname, Einzelpreis, Kategoriename 
+SELECT Artikelname, Einzelpreis, Kategoriename, Beschreibung 
 FROM artikel
-	  INNER JOIN artikelkategorien ON KategorieNr = KategorieId
+      INNER JOIN artikelkategorien ON KategorieNr = KategorieId
 ORDER BY KategorieId DESC
+LIMIT 3;
 ```
 
 </CardChapter>
