@@ -3654,7 +3654,7 @@ Erstellen Sie aus den folgenden Struktogrammen den passenden C++-Code.
 
 ![alt](../../../static/cpp/17.11-1_2.png)
 
-```cpp title='zahlenRaten.cpp.cpp'
+```cpp title='10zahlenRaten.cpp'
 #include <iostream>
 
 using namespace std;
@@ -3754,138 +3754,7 @@ double vol(double r1) /* Definition der Funktion */
 
 ![alt](../../../static/cpp/17.11-1_structogramm.png)
 
-```json title='struktog_2023-11-17.json'
-{
-  "id": "ebed0479-38c5-4132-4cb7-aeeb5b0c",
-  "type": "InsertNode",
-  "followElement": {
-    "id": "d400b259-a401-0c8c-7f23-f6ff26a1",
-    "type": "FunctionNode",
-    "text": "ober",
-    "parameters": [],
-    "followElement": {
-      "id": "b0ac5dc5-9083-406b-4029-cc498e5b",
-      "type": "InsertNode",
-      "followElement": {
-        "id": "fbce4c1a-afa2-b523-5c9c-8d471e7e",
-        "type": "FunctionNode",
-        "text": "vol",
-        "parameters": [{ "pos": "6", "parName": "r1" }],
-        "followElement": {
-          "id": "883783f6-dd3f-fe69-fc79-777ee5fa",
-          "type": "InsertNode",
-          "followElement": {
-            "id": "0ab48886-dbdb-714c-71c7-08c5f2eb",
-            "type": "TaskNode",
-            "text": "double s=0.0, v=0.0, r=0.0",
-            "followElement": {
-              "id": "41714dc3-f2d2-2bb8-206e-0043f14f",
-              "type": "InsertNode",
-              "followElement": {
-                "id": "d5716910-81aa-edb2-c2e8-df750a4f",
-                "type": "OutputNode",
-                "text": "Radius eingeben",
-                "followElement": {
-                  "id": "db6bf4cc-e125-332c-fa4a-1fcc58ae",
-                  "type": "InsertNode",
-                  "followElement": {
-                    "id": "15c65cac-630b-3dc8-b938-3d97f775",
-                    "type": "InputNode",
-                    "text": "r",
-                    "followElement": {
-                      "id": "a6f5f0cd-c8c5-2136-418b-e20a1f3f",
-                      "type": "InsertNode",
-                      "followElement": {
-                        "id": "a054f178-e978-6e54-9d0b-114a99eb",
-                        "type": "TaskNode",
-                        "text": "s = ober(r)",
-                        "followElement": {
-                          "id": "001649cc-ec77-d8e9-3810-1d0a4bd9",
-                          "type": "InsertNode",
-                          "followElement": {
-                            "id": "5976eb8b-5a86-06a7-fe1f-5a63084d",
-                            "type": "TaskNode",
-                            "text": "v = vol(r)",
-                            "followElement": {
-                              "id": "791bbc34-94e9-5436-c1c2-8a1a8c21",
-                              "type": "InsertNode",
-                              "followElement": {
-                                "id": "3fdfab37-2f6a-fe5d-36d7-759462b9",
-                                "type": "OutputNode",
-                                "text": "Oberfläche, s",
-                                "followElement": {
-                                  "id": "31902ba2-fdfa-4be5-b92c-aa80c180",
-                                  "type": "InsertNode",
-                                  "followElement": {
-                                    "id": "20930810-c609-9e57-cec1-bb279901",
-                                    "type": "OutputNode",
-                                    "text": "Volumen, v",
-                                    "followElement": {
-                                      "id": "7ca6e26e-5264-cbc9-a280-fe4a3443",
-                                      "type": "InsertNode",
-                                      "followElement": null
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "child": {
-          "id": "2fbc8fc2-bf93-981b-000d-c0d95ac5",
-          "type": "InsertNode",
-          "followElement": {
-            "id": "4a74007c-cb1f-f340-ec94-3fbadcdc",
-            "type": "TaskNode",
-            "text": "v1=0.0",
-            "followElement": {
-              "id": "51acf144-dba7-756e-12dd-0c6e0613",
-              "type": "InsertNode",
-              "followElement": {
-                "id": "5aecb52e-d968-db67-ee48-681f2ab1",
-                "type": "TaskNode",
-                "text": "v1=4.0/3.0 * Pi * r³",
-                "followElement": {
-                  "id": "3d53d71e-6aaf-fd82-17b3-0db51ccf",
-                  "type": "InsertNode",
-                  "followElement": null
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "child": {
-      "id": "764f966a-3ff2-9de6-2e57-8b55e273",
-      "type": "InsertNode",
-      "followElement": {
-        "id": "867389c5-225d-17b5-75b6-f41997cc",
-        "type": "TaskNode",
-        "text": "s =0.0",
-        "followElement": {
-          "id": "37ac0eb3-7b57-f9f4-23ce-e6a690fc",
-          "type": "InsertNode",
-          "followElement": {
-            "id": "6705c765-743d-130f-31b1-919726e8",
-            "type": "TaskNode",
-            "text": "s= 4 * Pi*r²",
-            "followElement": { "id": "e488955f-a734-efd8-1995-0ed1efda", "type": "InsertNode", "followElement": null }
-          }
-        }
-      }
-    }
-  }
-}
-```
+---
 
 Fassen Sie in C++ die beiden Funktionen "ober()" und "vol()" zu einer Funktion zusammen, die Oberfläche und Volumen der Kugel gleichzeitig berechnet und schreiben Sie das Programm entsprechend um
 
@@ -4476,39 +4345,24 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-  int eingabe = 0, betrag = 0;
-  string arr[10] = {"null", "ein", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun"};
+  int eingabeInt = 10, stelle = 0;
+  string eingabeString = " ";
+  string arr[10] = {"null", "ein", "zwei", "drei", "vier", 
+                    "fuenf", "sechs", "sieben", "acht", "neun"};
 
   do
   {
-    cout << "Bitte Betrag eingeben: ";
-    cin >> eingabe;
-  } while (eingabe < 1 || eingabe > 999);
+    cout << "Bitte Betrag eingeben:";
+    cin >> eingabeString;
+    eingabeInt = stoi(eingabeString);
+  } while (eingabeInt < 1 || eingabeInt > 999);
 
-  printf("%i : ", eingabe);
-
-  do
+  for (int i = 0; i < 3; i++)
   {
-    if (eingabe > 99)
-    {
-      betrag = eingabe / 100;
-      eingabe = eingabe % 100;
-      printf("%s-", arr[betrag].c_str());
-    }
-    else if (eingabe > 9)
-    {
-      betrag = eingabe / 10;
-      eingabe = eingabe % 10;
-      printf("%s-", arr[betrag].c_str());
-    }
-    else
-    {
-      betrag = eingabe;
-      printf("%s", arr[betrag].c_str());
-      eingabe = 0;
-    }
-
-  } while (eingabe != 0);
+    stelle = int(eingabeString[i]) - 48;
+    cout << arr[stelle] << "-";
+  }
+  cout << "EUR";
 
   return 0;
 }
@@ -4517,7 +4371,402 @@ int main(int argc, char const *argv[])
 </CardChapter>
 <br/>
 
+<CardHeading>
 
+  ## 20.11
+</CardHeading>
+
+<CardChapter>
+
+  ### 1
+
+[Arbeiten Sie bitte die Aufgaben zum zweidimensionalen Umsatz-Array der "We know IT"noch einmal komplett durch.](#array-systemhaus)
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### 2
+
+Erinnern Sie sich an die Altersstatistik aus dem Skript? ([Kapitel 13.3, Aufgabe 5](./13.3#5)) Testen Sie, ob das nachfolgende Struktogramm die Aufgabe auch erfüllt und erstellen Sie das C++-Programm.
+
+![alt](../../../static/cpp/20.11-2.png)
+
+```cpp title='2.cpp'
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int m[5] = {0}, w[5] = {0}, stufe = 0, ein = 0;
+  char gesch = 'x';
+
+  do
+  {
+    cout << "Alter bitte (-1 fuer Abbruch)";
+    cin >> ein;
+
+    if (ein != -1)
+    {
+      cout << "Geschlecht (m/w):";
+      cin >> gesch;
+
+      if (ein > 65)
+      {
+        stufe = 4;
+      }
+      else if (ein > 50)
+      {
+        stufe = 3;
+      }
+      else if (ein > 30)
+      {
+        stufe = 2;
+      }
+      else if (ein > 17)
+      {
+        stufe = 1;
+      }
+      else
+      {
+        stufe = 0;
+      }
+
+      if (gesch == 'm')
+      {
+        m[stufe]++;
+      }
+      else if (gesch == 'w')
+      {
+        w[stufe]++;
+      }
+    }
+
+  } while (ein != -1);
+
+  // Arrays anzeigen
+  for (int i = 0; i < 5; i++)
+  {
+    cout << "m[" << i + 1 << "]: " << m[i] << endl;
+  }
+
+  cout << endl;
+
+  for (int i = 0; i < 5; i++)
+  {
+    cout << "w[" << i + 1 << "]: " << w[i] << endl;
+  }
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### 3
+
+Über die Besucherzahlen folgender Museen ist bezogen auf die Wochentage (1 - 7) der letzten Woche eine Statistik geführt worden:
+
+- Museum 1: Automuseum 
+- Museum 2: Brauereimuseum 
+- Museum 3: Kunst-Galerie
+- Museum 4: geologisches Museum
+- Museum 5: antike Tonträger
+
+Die Besucherzahlen sind durch ein Erfassungs-Programm in einem zweidimensionalen 5 x 7-Array aufsummiert worden, wobei jede Zeile zu einem Museum gehört und jede Spalte zu einem Wochentag. 
+
+Schreiben Sie das Struktogramm eines Programms, das aus den Daten des Arrays folgende Informationen ermittelt und ausgibt: 
+- Wie viele Besucher hat es an den einzelnen Wochentagen in allen Museen gegeben? 
+- Wie viele Besucher hatte jedes Museum in der erfassten Woche?
+
+Ausgabe-Schema: 
+
+- Tag 1: xxx Besucher in allen Museen 
+- Tag 2: xxx Besucher in allen Museen 
+  
+  (usw.) 
+- Museum 1: xxx Besucher während der Woche 
+- Museum 2: xxx Besucher während der Woche (usw.) 
+
+  (xxx steht für den jeweils errechneten Wert).
+
+![alt](../../../static/cpp/20.11-3.png)
+
+```cpp title='3.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+  int arr[5][7], i, k, museum, tage, su = 0;
+
+  srand(time(NULL));
+  for (i = 0; i < 5; i++)
+  {
+    for (k = 0; k < 7; k++)
+    {
+      arr[i][k] = rand() % 11;
+    }
+  }
+
+  for (i = 0; i < 5; i++)
+  {
+    museum = 0;
+    for (k = 0; k < 7; k++)
+    {
+      museum = museum + arr[i][k];
+      su += arr[i][k];
+    }
+    cout << "Museum " << i + 1 << " hatte " << museum << " Besucher\n";
+  }
+  cout << "Es waren insgesamt " << su << " Besucher.\n\n";
+
+  su = 0;
+  for (k = 0; k < 7; k++)
+  {
+    tage = 0;
+    for (i = 0; i < 5; i++)
+    {
+      tage = tage + arr[i][k];
+      su += arr[i][k];
+    }
+    cout << "Tag " << k + 1 << " hatte " << tage << " Besucher\n";
+  }
+  cout << "Es waren insgesamt " << su << " Besucher.\n";
+  return 0;
+}
+```
+
+<CardHeading>
+
+## 21.11
+</CardHeading>
+
+--- 
+
+Erweiterung: Besucherliste in das Array `ja` kopieren und per Bubblesort absteigend sortieren
+
+```cpp title='museum3.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+  int arr[5][7], i, k, museum;
+  int ja[5][2], hilf, anzahl = 5;
+  bool tausch;
+
+  srand(time(NULL));
+  for (i = 0; i < 5; i++)
+  {
+    for (k = 0; k < 7; k++)
+    {
+      arr[i][k] = rand() % 101;
+    }
+  }
+
+  for (i = 0; i < 5; i++)
+  {
+    museum = 0;
+    for (k = 0; k < 7; k++)
+    {
+      museum += arr[i][k];
+    }
+    ja[i][0] = i;
+    ja[i][1] = museum;
+  }
+
+  for (i = 0; i < 5; i++)
+  {
+    cout << "Museum " << (ja[i][0] + 1) << " hatte " << ja[i][1] << " Besucher\n";
+  }
+
+  do
+  {
+    anzahl--;
+    tausch = false;
+    for (i = 0; i < anzahl; i++)
+    {
+      if (ja[i][1] < ja[i + 1][1])
+      {
+        hilf = ja[i][1];
+        ja[i][1] = ja[i + 1][1];
+        ja[i + 1][1] = hilf;
+
+        hilf = ja[i][0];
+        ja[i][0] = ja[i + 1][0];
+        ja[i + 1][0] = hilf;
+
+        tausch = true;
+      }
+    }
+  } while (tausch == true);
+
+  cout << endl;
+  for (i = 0; i < 5; i++)
+  {
+    cout << "Museum " << ja[i][0] + 1 << " hatte " << ja[i][1] << " Besucher\n";
+  }
+  return 0;
+}
+```
+
+---
+
+Erweiterung: Minimalste und Maximalste Besucheranzahl angeben
+
+```cpp title='museumMinMax.cpp'
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+  int arr[5][7], i, k, museum, tage, su = 0, max = 0, g = 0;
+
+  srand(time(NULL));
+  for (i = 0; i < 5; i++)
+  {
+    for (k = 0; k < 7; k++)
+    {
+      arr[i][k] = rand() % 11;
+    }
+  }
+
+  for (i = 0; i < 5; i++)
+  {
+    museum = 0;
+    for (k = 0; k < 7; k++)
+    {
+      museum = museum + arr[i][k];
+      su += arr[i][k];
+    }
+    cout << "Museum " << i + 1 << " hatte " << museum << " Besucher\n";
+  }
+  cout << "Es waren insgesamt " << su << " Besucher.\n\n";
+
+  su = 0;
+  for (k = 0; k < 7; k++)
+  {
+    tage = 0;
+    for (i = 0; i < 5; i++)
+    {
+      tage = tage + arr[i][k];
+      su += arr[i][k];
+    }
+    cout << "Tag " << k + 1 << " hatte " << tage << " Besucher\n";
+  }
+  cout << "Es waren insgesamt " << su << " Besucher.\n";
+
+  for (i = 0; i < 5; i++)
+  {
+    museum = 0;
+    for (k = 0; k < 7; k++)
+    {
+      museum += arr[i][k];
+    }
+
+    if (i == 0)
+    {
+      max = museum;
+      g = i;
+    }
+    else if (museum > max)
+    {
+      max = museum;
+      g = i;
+    }
+  }
+  cout << "Museum " << g + 1 << " hatte die meisten Besucher:" << max << endl;
+
+  return 0;
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Baugrundstück
+
+In einer zweidimensionalen Tabelle sind die durchschnittlichen Grundstückspreise von 1981 bis 1997
+für ein 1400 m2 großes Baugrundstück gespeichert, (Gehen Sie davon aus, das die Tabelle gefüllt ist !)
+
+ 
+- Zeichen Sie ein Teilstruktogramm, welches das Jahr mit dem niedrigsten Grundstückspreis ausgibt.
+  - Ausgabe Jahr und Preis
+- Zeichen Sie ein Teilstruktogramm, daß den Durchschnittspreis von 1981 bis 1997 ausgibt.
+  - Nur der Durchschnittspreis !
+
+![alt](../../../static/cpp/20.11-grundstueck2.png)
+- In der 1. Zeile sind die Grundstückspréise in TDM gespeichert. 
+- In der 2. Zeile befindet sich das dazugehörige Jahr !
+
+![alt](../../../static/cpp/20.11-grundstueck.png)
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Spaß mit Arrays
+
+```cpp title='werte.cpp'
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int werte[8] = {0}, k = 1, z = 3;
+
+  // Welche Inhalte hat das Array "werte[]" nach dieser Schleife?
+  while (k <= 7)
+  {
+    werte[k] = (k + 2) * (z + 1);
+    z++;
+    k++;
+  }
+
+  for (int x : werte)
+  {
+    cout << x << " ";
+  }
+
+  // Welche Inhalte hat das Array "werte[]" nach dieser Schleife?
+  k = 7;
+  while (k >= 1)
+  {
+    werte[k] = werte[8 - k] - k;
+    k--;
+  }
+
+  cout << endl;
+
+  for (int x : werte)
+  {
+    cout << x << " ";
+  }
+
+  return 0;
+}
+```
+- 0 12 20 30 42 56 72 90 
+- 0 4 12 22 38 25 14 5
+
+</CardChapter>
+<br/>
 
 
 
