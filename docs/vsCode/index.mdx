@@ -87,6 +87,231 @@ tags: [ide, vsCode, Visual Studio Code]
 </CardChapter>
 <br/>
 
+<CardChapter>
+
+  ## User Settings
+
+```json title='\User\settings.json'
+{
+  "colorize.languages": [
+    "typescript",
+    "javascript",
+    "css",
+    "scss",
+    "php"
+  ],
+  // css linting beheben für tailwindcss
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "emmet.variables": {
+    "lang": "de"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "editor.suggest.showStatusBar": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Postgres Local",
+      "database": "test",
+      "username": "postgres",
+      "password": "0815"
+    }
+  ],
+  "workbench.editor.splitInGroupLayout": "vertical",
+  "sqltools.results.reuseTabs": "connection",
+  "database-client.showFilter": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "ShortcutMenuBar.navigateBack": false,
+  "ShortcutMenuBar.openFilesList": false,
+  "ShortcutMenuBar.navigateForward": false,
+  "vscode-edge-devtools.webhint": false,
+  "pieces.display": "Name",
+  "git.suggestSmartCommit": false,
+  "pieces.autoSave": false,
+  "files.autoSaveDelay": 500,
+  "gitlens.graph.experimental.minimap.enabled": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu-20.04 (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-20.04"
+      ]
+    }
+  },
+  "vscode-edge-devtools.port": 8081,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.cursorBlinking": true,
+  "commentAnchors.tags.displayInRuler": false,
+  "commentAnchors.tags.anchors": {
+    "ANCHOR": {
+      "iconColor": "default",
+      "highlightColor": "#A8C023",
+      "scope": "file"
+    },
+    "TODO": {
+      "iconColor": "blue",
+      "highlightColor": "#3ea8ff",
+      "scope": "workspace"
+    },
+    "FIXME": {
+      "iconColor": "red",
+      "highlightColor": "#F44336",
+      "scope": "workspace"
+    },
+    "STUB": {
+      "iconColor": "purple",
+      "highlightColor": "#BA68C8",
+      "scope": "file"
+    },
+    "NOTE": {
+      "iconColor": "orange",
+      "highlightColor": "#FFB300",
+      "scope": "file"
+    },
+    "REVIEW": {
+      "iconColor": "green",
+      "highlightColor": "#64DD17",
+      "scope": "workspace"
+    },
+    "SECTION": {
+      "iconColor": "purple",
+      "highlightColor": "#896afc",
+      "scope": "workspace",
+      "behavior": "region"
+    },
+    "LINK": {
+      "iconColor": "#2ecc71",
+      "highlightColor": "#2ecc71",
+      "scope": "workspace",
+      "behavior": "link"
+    },
+    "HTML": {
+      "iconColor": "#fd26b9",
+      "highlightColor": "#fd26b9",
+      "scope": "file",
+    },
+    "PATH": {
+      "iconColor": "#ff0000",
+      "highlightColor": "#ff0000",
+      "scope": "workspace"
+    },
+  },
+  "svelte.enable-ts-plugin": true,
+  "git.confirmSync": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "astro": "html",
+    "markdown": "html",
+    "php": "html"
+  },
+  "cSpell.language": "en, de, lorem",
+  "terminal.integrated.tabs.title": "${process} ${cwdFolder}",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.associations": {
+    "*.mdx": "markdown"
+  },
+  "tabout.disableByDefault": false,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": true,
+      "strings": true
+    },
+  },
+  "[global]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": true,
+      "strings": true
+    }
+  },
+  "svg.preview.mode": "svg",
+  "editor.accessibilitySupport": "off",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 120,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "pieces.setCopilotLocation": true,
+  "C_Cpp.default.compilerPath": "",
+  "cmake.configureOnOpen": true,
+  "code-runner.runInTerminal": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "open-php-html-js-in-browser.selectedBrowser": "Chrome",
+  "php.executablePath": "C:\\downloads\\php-8.3.0-Win32-vs16-x64",
+}
+```
+
+
+</CardChapter>
+<br/>
+
+
+
 
 
 

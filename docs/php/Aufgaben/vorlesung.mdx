@@ -1,0 +1,825 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: Vorlesung
+tags: [linguae, php, PHP, aufgaben]
+---
+
+<CardHeading>
+
+  ## 29.11
+</CardHeading>
+
+<CardChapter>
+
+  ### Variablen
+
+```php title='variablen.php'
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="form">
+
+    <h3>Variablen</h3>
+
+    <p>
+
+      <?php
+      $user = "Hans";
+      echo "Hallo $user! <hr>";
+
+      $user = false;
+      echo "boolean false $user! <hr>";
+
+      $user = 5;
+      echo "Integer $user! <hr>";
+
+      $user *= $user;
+      echo "Integer * 5 = $user <hr>";
+
+      $user = "Peter";
+      for ($i = 0; $i < 3; $i++) {
+        echo "Loop $user! <hr>";
+      }
+
+      $user = "setting css";
+      for ($i = 1; $i < 5; $i++) {
+        echo "<div style=font-size:" . pow($i, 3) . "pt>";
+        echo "Loop $user! <hr>";
+        echo "</div>";
+      }
+      ?>
+
+    </p>
+  </div>
+
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## 30.11
+</CardHeading>
+
+<CardChapter>
+
+  ### Quadratzahlen
+
+```php title='quadratzahlen.php'
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <?php
+
+  for ($a = 1; $a <= 20; $a++) {
+    $b = $a * $a;
+    echo "$a x $a  = $b <br>";
+  }
+
+  ?>
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Kubikzahlen
+
+```php title='kubikzahlen.php'
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+  <style type="text/css">
+    td {
+      width: 150px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: yellow;
+    }
+
+    tr,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <?php
+
+    for ($a = 1; $a <= 20; $a++) {
+      echo "<tr >";
+      $b = $a * $a;
+      echo "<td>$a x $a  = $b</td>";
+      $b *= $a; // $b=$b*$a
+      echo "<td>$a x $a x $a = $b</td>";
+      echo "</tr>";
+    }
+
+    ?>
+  </table>
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### 1x1
+
+```php title='1x1.php'
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+  <style type="text/css">
+    td {
+      width: 150px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: yellow;
+    }
+
+    tr:nth-child(odd) {
+      background-color: lime;
+    }
+  </style>
+</head>
+
+<body>
+
+  <?php
+  $b = 1;
+  echo "<table><tr>";
+  for ($a = 1; $b <= 10; $a++) {
+    $c = $b * $a;
+    echo "<td>$a x $b = $c</td>";
+    if ($a == 10) {
+      $a = 0;
+      $b++;
+      echo "</tr><tr>";
+    }
+  }
+  echo "</tr></table>";
+  ?>
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Formular
+
+```php title='formulartest.php'
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <form action="" method="get">
+    <input type="radio" name="gesch" value="m">M<br>
+    <input type="radio" name="gesch" value="w">W<br>
+    <input type="radio" name="gesch" value="d" checked>D<br>
+    <br>
+    <select name="box">
+      <option>Salat</option>
+      <option>Pasta</option>
+      <option>Pizza</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit">
+
+  </form>
+  <?php
+
+  if (isset($_GET["gesch"])) {
+    $gesch = $_GET["gesch"];
+
+
+    if ($gesch == 'm') {
+      echo "Sie sind männlich";
+    } else if ($gesch == 'w') {
+      echo "Sie sind weiblich";
+    } else if ($gesch == 'd') {
+      echo "Sie sind divers";
+    }
+    echo " und haben " . $_GET['box'] . " bestellt";
+  }
+
+
+  ?>
+</body>
+
+</html>
+```
+
+alternativ
+```php title='formulartest.php' 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <form action="" method="get">
+    <input type="radio" name="gesch" value="m">M<br>
+    <input type="radio" name="gesch" value="w">W<br>
+    <input type="radio" name="gesch" value="d" checked>D<br>
+    <br>
+    <select name="box">
+      <option>Salat</option>
+      <option>Pasta</option>
+      <option>Pizza</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit">
+
+  </form>
+  <?php
+
+  if (isset($_GET["gesch"])) {
+    $gesch = $_GET["gesch"];
+
+    // Alternative1
+    if ($gesch == 'm') {
+      echo "Sie sind männlich";
+    } else if ($gesch == 'w') {
+      echo "Sie sind weiblich";
+    } else if ($gesch == 'd') {
+      echo "Sie sind divers";
+    }
+    echo " und haben " . $_GET['box'] . " bestellt";
+  }
+
+  // Alternative2
+  echo "Sie sind  " . $_GET["gesch"] . " und haben " . $_GET['box'] . " bestellt";
+
+  ?>
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## 01.12
+</CardHeading>
+
+<CardChapter>
+
+  ### Array
+
+```php title='arr01.php'
+<?php
+// Array mit unterschiedlichen Datentypen
+$array01 = array(1, 14, 25, 59, "Freitag", 6, 1.28, 4, true);
+
+var_dump($array01);
+echo "<hr>";
+
+// Array mit Zufallszahlen
+for ($i = 0; $i < 10; $i++) {
+  $array01[$i] = rand(0, 100);
+  echo $array01[$i] . " ";
+}
+
+// Array sortieren
+sort($array01,);
+echo "<hr>";
+
+for ($i = 0; $i < count($array01); $i++) {
+  echo $array01[$i] . " ";
+}
+
+echo "<br>";
+var_dump($array01);
+echo "<hr>";
+
+// Array Minimum, Maximum und Durchschnitt
+echo "Minimum: " . min($array01) . "<br>";
+echo "Maximum: " . max($array01) . "<br>";
+echo "Durchschnitt: " . array_sum($array01) / count($array01) . "<br>";
+
+```
+
+```php title='arr02.php'
+<?php
+// Array automatisch erzeugen 
+$arr2 = range("a", "z");
+print_r($arr2);
+echo "<hr><br>";
+
+// String Zeichenkete zerlegen
+$arr2 = explode(" ", "a b c d e f g h k A B C D E F G H 2 3 5 60");
+
+print_r($arr2);
+echo "<hr><br>";
+
+// Array zufällig durchmischen
+shuffle($arr2);
+print_r($arr2);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Array Lotto
+
+```php title='arrLotto.php'
+<?php
+$arr2 = range(1, 49);
+shuffle($arr2);
+
+for ($i = 0; $i < 6; $i++) {
+  $arrHilf[$i] = $arr2[$i];
+}
+
+sort($arrHilf);
+
+for ($i = 0; $i < 6; $i++) {
+  echo "$arrHilf[$i]<br>";
+}
+```
+
+alternativ
+```php title='arrLotto2.php'
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  <div class="form">
+    <h3>Lottoziehung 2</h3>
+
+    <?php
+
+    $ziehung = range(1, 49);
+    print_r($ziehung);
+    echo "<br><br><hr>";
+
+    Shuffle($ziehung);
+    print_r($ziehung);
+    echo "<br><br><hr>";
+
+    $ziehung  = array_slice($ziehung, 0, 6);
+
+    print_r($ziehung);
+    echo "<br><br><hr>";
+
+    sort($ziehung);
+
+    print_r($ziehung);
+    echo "<br><br><hr>";
+
+    echo "Die Ziehung zum Sonntag:<br>";
+
+    for ($i = 0; $i < count($ziehung); $i++) {
+      echo "$ziehung[$i] ";
+    }
+    ?>
+
+  </div>
+</body>
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Schaltjahr
+
+```php title='schaltjahr.php'
+<!DOCTYPE HTML>
+<html>
+<?php
+header("content-type:text/html; charset=utf8_unicode_ci");
+?>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+
+  <form action="" method="get">
+    Gesuchtes Jahr<br>
+    <input type="number" required name="jahr">
+
+    <br><br>
+    <input type="submit" value="Check it!">
+  </form>
+
+  <?php
+  if (isset($_GET["jahr"])) {
+    $wert = mktime(0, 0, 0, 12, 32, $_GET["jahr"]);
+
+    // echo date("d.m.Y", $wert);
+    echo "<br>Versatz zur GMT: " . date("Z", $wert) / 3600 . " Stunden.";
+
+    if (date("L", $wert) == 1)
+      echo "<br>wir haben ein Schaltjahr.";
+    else
+      echo "<br>wir haben kein Schaltjahr.";
+  }
+  ?>
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## 04.12
+</CardHeading>
+
+<CardChapter>
+
+  ### Assoziative Arrays
+
+```php title='arr03.php'
+<pre>
+<?php
+// Assoziatives Array
+$kennzeichen["de"] = "Deutschland";
+$kennzeichen["it"] = "Italien";
+$kennzeichen["no"] = "Norwegen";
+$kennzeichen["nl"] = "Niederlande";
+$kennzeichen["pl"] = "Polen";
+$kennzeichen["ch"] = "Schweiz";
+
+$arrUser["hans"] = "ganz-geheim";
+$arrUser["hilde"] = "NochGeheimeR";
+
+echo "Vorher:<br>";
+foreach ($kennzeichen as $index => $x) {
+   echo "Index:$index, Wert $x<br>";
+}
+
+sort($kennzeichen);
+
+echo "Nachher:<br>";
+foreach ($kennzeichen as $a => $b) {
+   echo "Index:$a, Wert $b<br>";
+}
+?>
+</pre>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Array Key Value `foreach()`
+
+Aufgabe: Eine Länderkennung wird eingegeben Ausgabe z.B. "Deutschland gefunden" oder
+"dk ist nicht in der Liste
+
+```php title='arr03b.php'
+<pre>
+<?php
+// Assoziatives Array
+$datum["de"] = "Deutschland";
+$datum["it"] = "Italien";
+$datum["no"] = "Norwegen";
+$datum["nl"] = "Niederlande";
+$datum["pl"] = "Polen";
+$datum["ch"] = "Schweiz";
+
+$tage = "de";
+$schalter = false;
+
+// Array ausgeben mit foreach()
+echo "Array:";
+foreach ($datum as $index => $x) {
+  echo "Index:$index, Wert $x<br>";
+}
+echo "<br><hr>";
+
+//Version 1
+echo "<h3> Version 1 <h3> ";
+if (isset($datum[$tage]))
+  echo "$datum[$tage] gefunden<br><hr>";
+else {
+  echo "$tage ist nicht in der Liste<br><hr>";
+}
+
+
+// Version 2
+echo "<h3> Version 2 <h3> ";
+foreach ($datum as $i => $wert) {
+  if ($i == $tage) {
+    $schalter = true;
+  }
+}
+
+if ($schalter == true)
+  echo "$datum[$tage] gefunden<br><hr>";
+else
+  echo "$tage ist nicht in der Liste<br><hr>";
+
+
+// Version 3
+echo "<h3> Version 3 <h3> ";
+if (array_key_exists($tage, $datum)) {
+  echo $datum[$tage] . " gefunden";
+} else
+  echo "$tage ist nicht in der Liste";
+
+?>
+</pre>
+```
+
+alternativ mit Formular
+```php title='arro3p.php'
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  <div class="form">
+
+    <h3>Land im Array suchen</h3>
+
+    <form action="#" method="get">
+      <input type="text" name="land" placeholder="Land eingeben:">
+      <button>Ländersuche</button>
+    </form>
+    <br>
+    <p>
+
+      <?php
+      if (isset($_GET["land"])) {
+
+        $datum["de"] = "Deutschland";
+        $datum["it"] = "Italien";
+        $datum["no"] = "Norwegen";
+        $datum["nl"] = "Niederlande";
+        $datum["pl"] = "Polen";
+        $datum["ch"] = "Schweiz";
+
+        $gefunden = " ";
+        foreach ($datum as $index => $val) {
+          if ($_GET["land"] == $index) {
+            $gefunden = $index;
+          }
+        }
+
+        if ($gefunden == " ") {
+          echo $_GET["land"] . " - Das Land ist nicht im Array vorhanden: ";
+        } else {
+          echo $_GET["land"] . " - Das Land ist im Array vorhanden: " . $datum[$gefunden];
+        }
+      }
+      ?>
+
+    </p>
+  </div>
+
+</body>
+
+</html>
+```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ## 05.12
+</CardHeading>
+
+<CardChapter>
+
+  ### Deutsches Datumformat
+
+Array für Deutsches Datumsformat
+
+```php title='arrDatumRohdaten.php'
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <?php
+  $monate = explode(" ", "nix Januar Februar M�rz April Mai Juni Juli August September Oktober November Dezember");
+
+  $tage = array(
+    "Mon" => "Montag", "Tue" => "Dienstag",
+    "Wed" => "Mittwoch", "Thu" => "Donnerstag",
+    "Fri" => "Freitag", "Sat" => "Samstag",
+    "Sun" => "Sonntag"
+  );
+
+  //   $b = implode("<br>", $tage);
+  //   echo $b;
+
+  foreach ($tage as $x => $y) {
+    echo substr($y, 0, 2) . " : ";
+    echo strtolower(str_shuffle($y)) . "<br>";
+  }
+
+  ?>
+</body>
+
+</html>
+```
+
+statisches Deutsches Datum ausgeben
+```php title='datumP.php'
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  <div class="form">
+
+    <h3>deutsches Datumsformat</h3>
+
+    <?php
+    setlocale(LC_TIME, 'de_DE', 'de_DE.UTF-8');
+
+    $datum = date("d.m.Y");
+
+    $monate = explode(" ", "nix Januar Februar M�rz April Mai Juni Juli August September Oktober November Dezember");
+
+    $tage = array(
+      "Mon" => "Montag", "Tue" => "Dienstag",
+      "Wed" => "Mittwoch", "Thu" => "Donnerstag",
+      "Fri" => "Freitag", "Sat" => "Samstag",
+      "Sun" => "Sonntag"
+    );
+
+    // $b = implode("<br>", $tage);
+    // echo $b;
+
+    foreach ($tage as $x => $y) {
+      echo substr($y, 0, 2) . " : ";
+      echo strtolower($y) . "<br>";
+    }
+    // Tag ausgeben
+    echo "<hr><br>";
+    echo $tage[date("D")];
+
+    // Monat ausgeben
+    echo "<hr><br>";
+    echo $monate[date("m")];
+
+    // Deutsches Datumsformat
+    echo "<hr><br>";
+    echo $tage[date("D")] . " ,der " . date("d") . " " . $monate[date("m")] . " " . date("Y") . "";
+
+    ?>
+  </div>
+
+</body>
+
+</html>
+```
+
+alternativ statisches Datum  mit Formular
+```php title='datumFormular.php'
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  </Table>
+  <div class="form">
+
+    <h3>deutsches Datumsformat</h3>
+    <p>
+    <form action="#" method="get">
+      <input type="number" name="tag" placeholder="Tag:" min="1" max="31" value="13">
+      <input type="number" name="monat" placeholder="Monat:" min="1" max="12" value="4">
+      <input type="number" name="jahr" placeholder="Jahr:" min="1800" max="2200" value="2013">
+      <button>absenden</button>
+    </form>
+    <br>
+
+    <?php
+    if (isset($_GET["tag"]) && isset($_GET["monat"]) && isset($_GET["jahr"])) {
+      setlocale(LC_TIME, 'de_DE', 'de_DE.UTF-8');
+
+      $datum = date("d.m.Y");
+
+      $monate = explode(" ", "nix Januar Februar März April Mai Juni Juli August September Oktober November Dezember");
+
+      $tage = array(
+        "Mon" => "Montag", "Tue" => "Dienstag",
+        "Wed" => "Mittwoch", "Thu" => "Donnerstag",
+        "Fri" => "Freitag", "Sat" => "Samstag",
+        "Sun" => "Sonntag"
+      );
+
+      $datum = mktime(0, 0, 0, $_GET["monat"], $_GET["tag"], $_GET["jahr"]);
+      echo $tage[date("D", $datum)] . " ,der " . date("d", $datum) . " " . $monate[date("n", $datum)] . " " . date("Y", $datum) . "";
+    }
+    ?>
+
+    </p>
+  </div>
+
+</body>
+
+</html>
+```
+
+alternativ beliebiges Datum mit externem PhP-Dokument
+</CardChapter>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
