@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[6547],{65868:n=>{n.exports=JSON.parse('{"label":"Umrechnung","permalink":"/php/tags/umrechnung","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/umrechnung","title":"umrechnung","description":"# Umrechnung","permalink":"/php/Grundbefehle/Funktionen/umrechnung"}]}')}}]);

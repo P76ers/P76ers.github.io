@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[646],{88798:a=>{a.exports=JSON.parse('{"label":"Array","permalink":"/php/tags/array","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/array","title":"array","description":"# Array","permalink":"/php/Grundbefehle/Funktionen/array"}]}')}}]);

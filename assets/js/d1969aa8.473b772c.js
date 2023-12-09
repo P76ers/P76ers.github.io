@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[9419],{1698:e=>{e.exports=JSON.parse('{"label":"Datum","permalink":"/php/tags/datum","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/datum","title":"datum","description":"# Datum & Uhrzeit","permalink":"/php/Grundbefehle/Funktionen/datum"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[266],{87483:s=>{s.exports=JSON.parse('{"label":"Sessions","permalink":"/php/tags/sessions","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/session","title":"session","description":"# Sessions","permalink":"/php/Grundbefehle/Funktionen/session"}]}')}}]);

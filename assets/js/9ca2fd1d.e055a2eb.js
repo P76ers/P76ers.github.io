@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[555],{20821:e=>{e.exports=JSON.parse('{"label":"Variablen","permalink":"/php/tags/variablen","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/variablen","title":"variablen","description":"# Variablen","permalink":"/php/Grundbefehle/Funktionen/variablen"}]}')}}]);

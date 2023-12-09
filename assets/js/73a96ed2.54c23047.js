@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[2412],{69410:e=>{e.exports=JSON.parse('{"label":"tags","permalink":"/php/tags/tags","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/html","title":"html","description":"# html","permalink":"/php/Grundbefehle/html"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcodingdocs=self.webpackChunkcodingdocs||[]).push([[7438],{43820:n=>{n.exports=JSON.parse('{"label":"Konstanten","permalink":"/php/tags/konstanten","allTagsPath":"/php/tags","count":1,"items":[{"id":"Grundbefehle/Funktionen/konstanten","title":"konstanten","description":"# Konstanten","permalink":"/php/Grundbefehle/Funktionen/konstanten"}]}')}}]);
