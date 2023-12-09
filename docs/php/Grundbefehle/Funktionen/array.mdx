@@ -1,0 +1,446 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: Array
+tags: [linguae, php, PHP, Funktionen, Array]
+---
+
+<CardHeading>
+
+  # Array
+</CardHeading>
+
+---
+
+<CardHeading>
+
+  ## Sortieren
+</CardHeading>
+
+
+<CardChapter>
+
+  ### `sort()` `rsort()`
+
+Sortiert ein Array nach den Werten. Zuordnung von Schlüssel und Wert bleibt nicht erhalten, 
+
+<CardDanger>
+
+Danger:
+- Ein assoziatives Array wird in numerisch indiziertes Array umgewandelt.
+- `key-value` Zuordnung bleibt nicht erhalten!
+
+</CardDanger>
+
+- `sort()` 
+  - sortiert aufsteigend 
+- `rsort()`
+  - sortiert absteigend
+
+```php 
+$var = array("c", "b", "a");
+sort($var);
+print_r($var);
+```
+
+```php 
+$var = array("a", "b", "c");
+rsort($var);
+print_r($var);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### `asort()` `arsort()`
+
+  - Sortierung nach den Werten (`value`) des Array
+
+<CardInfo>
+
+Info:
+
+- `key-value` Zuordnung bleibt erhalten, auch bei assoziativen Arrays
+  
+</CardInfo>
+
+- Aufsteigende Sortierung
+  ```php 
+  // highlight-next-line
+  $age = array("Peter" => "43", "Joe" => "35");
+
+  echo "Vor Sortierung: ";
+  echo print_r($age);
+
+  echo "<hr> Nach Sortierung: ";
+  // highlight-next-line
+  asort($age);
+  print_r($age);
+  ```
+- Absteigende Sortierung
+  ```php 
+  // highlight-next-line
+  $age = array("Joe" => "35", "Peter" => "43");
+
+  echo "Vor Sortierung: ";
+  echo print_r($age);
+
+  echo "<hr> Nach Sortierung: ";
+  // highlight-next-line
+  arsort($age);
+  print_r($age);
+  ```
+  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### `ksort()` `krsort()`
+
+  - Sortierung nach den Schlüsseln (`key`) des Array
+
+<CardInfo>
+
+Info:
+
+- `key-value` Zuordnung bleibt erhalten, auch bei assoziativen Arrays
+  
+</CardInfo>
+
+- Aufsteigende Sortierung
+  ```php 
+  // highlight-next-line
+  $age = array("Peter" => "43", "Joe" => "35");
+
+  echo "Vor Sortierung: ";
+  echo print_r($age);
+
+  echo "<hr> Nach Sortierung: ";
+  // highlight-next-line
+  ksort($age);
+  print_r($age);
+  ```
+- Absteigende Sortierung
+  ```php 
+  // highlight-next-line
+  $age = array("Joe" => "35", "Peter" => "43");
+
+  echo "Vor Sortierung: ";
+  echo print_r($age);
+
+  echo "<hr> Nach Sortierung: ";
+  // highlight-next-line
+  krsort($age);
+  print_r($age);
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_pop()`
+
+Löscht das letzte Element des Array
+- Liefert `NULL` wenn kein Array vorliegt oder Array leer ist
+
+```php 
+  $a = array("red", "green", "blue");
+  array_pop($a);
+  print_r($a);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_push()`
+
+- Erweitert Array um Element(e), fügt diese ans Ende an
+
+```php 
+$a = array("red", "green");
+array_push($a, "blue", "yellow");
+print_r($a);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_reverse()`
+
+Gibt die Elemente des Arrays absteigend aus, das Array wird nicht verändert
+
+```php 
+$a = array("a" => "Volvo", "b" => "BMW", "c" => "Toyota");
+print_r(array_reverse($a));
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_search()`
+
+Sucht nach einem Wert im Array, gibt den Index zurück
+```php 
+$a=array("a"=>"red","b"=>"green","c"=>"blue");
+echo array_search("red",$a)
+```
+- optional mit (strict) `true` 
+  
+  (default ist `false`)
+
+  liefert nur `key` deren Werte dem gesuchten Wert des Datentyps entsprechen
+  ```php 
+    $a = array("a" => "10", "b" => 10);
+  echo array_search(
+    // highlight-next-line
+                    "10",
+                    $a,
+                    true
+  );
+
+ // highlight-next-line
+  // -> a
+  ```
+  ```php 
+    $a = array("a" => "10", "b" => 10);
+    echo array_search(
+      // highlight-next-line
+                      10,
+                      $a,
+                      true
+    );
+
+  // highlight-next-line
+    // -> b
+  ```
+
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_shift()`
+
+Entfernt das erste Element, Arraygröße wird verkleinert.
+
+- Bei numerischen Index werden die `key` neu vergeben
+  ```php 
+  $a = array(0 => "red", 1 => "green", 2 => "blue");
+  echo "Vorher: ";
+  print_r($a);
+  echo array_shift($a);
+  echo "<hr>Nachher: ";
+  print_r($a);
+
+  // highlight-next-line
+  // Array ( [0] => green [1] => blue )
+  ```
+- bei assoziativen Index werden die `key` beibehalten
+  ```php 
+  $a = array("a" => "red", "b" => "green", "c" => "blue");
+  echo "Vorher: ";
+  print_r($a);
+  echo array_shift($a);
+  echo "<hr>Nachher: ";
+  print_r($a);
+
+  // highlight-next-line
+  // $a=array("a"=>"red","b"=>"green","c"=>"blue");
+  ```
+  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `array_slice()`
+
+Ausgabe eines Teilbereichs des Array, Array wird nicht geändert
+
+Syntax: `array_slice(array, start, length, preserve) `
+
+- Zeige alle Elemente ab Index 2
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, 2));
+
+  // Array ( [0] => blue [1] => yellow [2] => brown )
+  ```
+- Zeige nur Elemente 1 und 2 an
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, 1, 2));
+
+  // Array ( [0] => green [1] => blue )
+  ```
+- Zeige vom vorletzten Element alle an
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, -2,));
+  
+  // Array ( [0] => yellow [1] => brown )
+  ```
+- Zeige nur das vorletzte Element an
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, -2, 1));
+  
+  // Array ( [0] => yellow )
+  ```
+- preserve `true` indexiert nicht neu, sondern zeigt den Index des Arrays an
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, 1, 2, true));
+  // highlight-next-line
+  // Array ( [1] => green [2] => blue )
+  ```
+  default ist `false`
+  ```php 
+  $a = array("red", "green", "blue", "yellow", "brown");
+  print_r(array_slice($a, 1, 2, false));
+  // highlight-next-line
+  // Array ( [0] => green [1] => blue )
+  ```
+  bei assoziativen array werden die Index nicht verändert, unabhängig von `preserve`
+  ```php 
+  $a = array("a" => "red", "b" => "green", 
+             "c" => "blue", "d" => "yellow", "e" => "brown");
+  
+  // Preserve parameter set to true:
+  print_r(array_slice($a, 1, 2, true));
+  // highlight-next-line
+  // Array ( [b] => green [c] => blue )
+
+  // Preserve parameter set to false (default):
+  print_r(array_slice($a, 1, 2, false));
+  // highlight-next-line
+  // Array ( [b] => green [c] => blue )
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_sum()`
+
+Summiert die Werte des Array. Rückgabe als `int` oder `float`
+
+```php 
+$a = array(5, 15, 25);
+echo array_sum($a);
+
+// -> 45
+```
+
+```php 
+$a = array("a" => 52.2, "b" => 13.7, "c" => 0.9);
+echo array_sum($a);
+
+// -> 66.8
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `array_unique()`
+
+Entfernt doppelte Einträge, Array wird nicht modifiziert
+```php 
+$a = array("a" => "red", "b" => "green", "c" => "red");
+print_r(array_unique($a));
+
+// Array ( [a] => red [b] => green )
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `count()` `sizeof()`
+
+Gibt die Anzahl der Elemente des Array an
+```php 
+$cars = array("Volvo", "BMW", "Toyota");
+echo count($cars);
+```
+alternativ
+```php 
+$cars = array("Volvo", "BMW", "Toyota");
+echo sizeof($cars);
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `min()` / `max()`
+
+Gibt das Minimum / Maximum der Werte eines Array aus
+```php 
+  echo (min(array(44, 16, 81, 12)));
+  // -> 12
+  echo (max(array(44, 16, 81, 12)));
+  // -> 81
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `shuffle()`
+
+Werte des Array werden zufällig durchmischt
+
+<CardDanger>
+
+Danger:
+
+Assoziative Arrays werden in numerische Index gewandelt
+```php 
+$my_array = array("a" => "red", "b" => "green", "c" => "blue");
+
+shuffle($my_array);
+print_r($my_array);
+
+// highlight-next-line
+// zufällige Sortierung!
+// highlight-next-line-error
+// Array ( [0] => blue [1] => green [2] => red ) 
+```
+
+</CardDanger>
+
+```php 
+  $my_array = array("red", "green", "blue");
+
+  shuffle($my_array);
+  print_r($my_array);
+  // highlight-next-line
+  // zufällige Sortierung!
+  // Array ( [0] => red [1] => green [2] => blue )
+```
+
+</CardChapter>
+<br/>

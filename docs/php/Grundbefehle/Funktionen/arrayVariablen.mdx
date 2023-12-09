@@ -1,0 +1,120 @@
+---
+hide_title: true
+sidebar_position: 2
+sidebar_label: Array und Variablen
+tags: [linguae, php, PHP, Funktionen, Array und Variablen]
+---
+
+<CardHeading>
+
+  # Array und Variablen
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## `empty()`
+
+- liefert `true`, wenn Variable nicht definiert, leer oder 0 ist.
+
+```php 
+$var = 10;
+
+if (empty($var)) {
+  echo "empty";
+} else {
+  echo "not empty";
+}
+```
+
+```php 
+$var = array(rand(0, 10));
+
+if (empty($var)) {
+  echo "empty";
+} else {
+  echo "not empty";
+}
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `isset()`
+
+- Prüfung, ob Variable oder Array vorhanden
+- liefert `true`/`false`
+
+```php 
+if (isset($_GET["zahl"])) {
+
+  echo ($_GET["zahl"]);
+}
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `unset()`
+
+- Variable oder Array löschen / zurücksetzen
+
+```php 
+$var = 10;
+
+echo $var;
+unset($var);
+// highlight-next-line-error
+echo $var;
+```
+
+```php 
+$arr = array(rand(0, 10));
+
+print_r($arr);
+unset($arr);
+// highlight-next-line-error
+print_r($arr);
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `print_r()`
+- Ausgabe von Werten
+  - Variablen
+    ```php 
+    $var1 = 11;
+
+    print_r($var1);
+    ```
+  - Array
+    ```php 
+      $arr1 = array(rand(0, 10));
+
+      print_r($arr1);
+    ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `var_dump()`
+
+- Ausgabe Datentyp und Wert
+  ```php 
+  var_dump($var1);
+  var_dump($var2, $var3);
+  ```
+
+</CardChapter>
+<br/>

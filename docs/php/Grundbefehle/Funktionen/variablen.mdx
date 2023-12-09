@@ -1,0 +1,72 @@
+---
+hide_title: true
+sidebar_position: 13
+sidebar_label: Variablen
+tags: [linguae, php, PHP, Funktionen, Datentyp, Variablen]
+---
+
+<CardHeading>
+
+  # Variablen
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## `echo()` `print` 
+
+
+- Ausgabe von String
+- `echo()` `print` haben gleiche Syntax
+  ```php 
+  echo "Hello World!";
+  ```
+
+- Ausgabe von Variablen
+  ```php 
+  $var = "Hello World!";
+
+  echo $var;
+  ```
+
+- Verketten von String und Variablen
+  ```php 
+  $var = "World!";
+
+  echo "Hello $var";
+  ```
+  alternativ
+  ```php 
+  $var = "World!";
+
+  echo "Hello " . $var;
+  ```
+  alternativ
+  ```php 
+  $var = "World";
+
+  echo "Hello " . $var . "!";
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `printf()`
+
+
+- `printf()` ist eine Funktion, String und Variablen müssen als Parameter übergeben werden
+  ```php 
+  $var = "World";
+
+  printf("Hello " . $var . "!");
+  ```
+  
+</CardChapter>
+<br/>
+
+
+
+

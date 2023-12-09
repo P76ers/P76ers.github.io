@@ -1,0 +1,333 @@
+---
+hide_title: true
+sidebar_position: 6
+sidebar_label: Datum & Uhrzeit
+tags: [linguae, php, PHP, Funktionen, Datentyp, Datum, Uhrzeit]
+---
+
+<CardHeading>
+
+  # Datum & Uhrzeit
+</CardHeading>
+
+---
+
+
+<CardChapter>
+
+  ## `checkdate()`
+
+Syntax `checkdate(month, day, year)`
+
+Datumsüberprüfung
+
+```php 
+var_dump(checkdate(2, 29, 2003));
+// -> bool(false)
+echo "<br>";
+var_dump(checkdate(2, 29, 2004));
+// -> bool(true)
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `date()`
+
+Syntax `date(format,timestamp)`
+
+optional(`timestamp`)
+
+- Trennzeichen für Date definieren
+  ```php 
+  echo date('d.M.Y') . "<br>";
+  // -> 09.Dec.2023
+  echo date('d/M/Y') . "<br>";
+  // -> 09/Dec/2023
+  echo date('d M Y') . "<br>";
+  // -> 09 Dec 2023
+  ```
+- Datum mit `mktime()` formatieren
+  ```php 
+  echo date('d.M.Y', mktime(0, 0, 0, 12, 32, 2019));
+  // -> 01.Jan.2020
+  ```
+- Datum mit `strtotime()` formatieren
+  ```php 
+  echo date('d.m.Y', strtotime("22 December 2001"));
+  // -> 22.12.2001
+  ```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ### Datum
+</CardHeading>
+
+<CardChapter>
+
+  #### Tag
+
+- Als Zahl 
+  - mit führender Nummer
+    ```php 
+    echo date("d");
+    // z.B. -> 01
+    ```
+  - ohne führende Nummer
+    ```php 
+    echo date("j");
+    // z.B. -> 1
+    ```
+    
+- Als Text
+  - abgekürzt 3 Buchstaben in Englisch
+    ```php 
+    echo date("D");
+    // z.B. -> Sat 
+    // Saturday
+    ```
+  - ausgeschriebener Wochentag in Englisch 
+    ```php 
+    // kleines L
+    echo date("l");
+    // -> Saturday
+    ```
+ - Wochentag, als Zahl von 0 (So.) bis 6 (Sa.)
+  ```php
+    echo date("w");
+    // z.B. Samstag
+    // -> 6
+  ```
+    
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### Monat
+
+- Als Zahl
+  - mit führender Null
+    ```php 
+      echo date("m");
+      // z.B. -> 01
+    ```
+  - ohne führende Nummer
+    ```php 
+    echo date("n");
+    // z.B. -> 1
+    ```
+- Als Text 
+  - abgekürzt 3 Buchstaben in Englisch
+    ```php 
+    echo date("M");
+    // z.B. -> Dec
+    // December
+    ```
+  - ausgeschriebener Monat in Englisch 
+    ```php 
+      echo date("F");
+      // -> December
+    ```
+- Anzahl der Tage des Monats
+  ```php 
+  echo date("t");
+  // z.B. December
+  // -> 31
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### Jahr
+
+- Jahr als zweistellige Zahl
+  ```php 
+  echo date("y");
+  // z.B. -> 23
+  ```
+
+- Jahr als vierstellige Zahl
+  ```php 
+  echo date("Y");
+  // z.B. -> 2023
+  ```
+  
+- Tag des Jahres
+  ```php 
+  echo date("z");
+  // z.B. 09.12.2023
+  // -> 342
+  ```
+- Wochennummer des Jahres
+  ```php 
+  echo date("W");
+  // z.B. Kalenderwoche
+  // -> 49
+  ```
+- Schaltjahr
+  ```php  
+  echo date("L");
+  // 1 = Schaltjahr 
+  // 0 = kein Schaltjahr
+  ```
+  
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ### Uhrzeit
+
+- Sommerzeit (großes i)
+  ```php 
+  echo date("I");
+  // 0 = Winterzeit
+  // 1 = Sommerzeit
+  ```
+
+- Offset der Zeitzone gegenüber GMT (London) in Sekunden
+  ```php 
+    echo date("Z");
+    // -> 3600
+  ```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  #### Stunde
+
+- Im 12h Format
+  - mit führender 0
+    ```php 
+    echo date("h");
+    // z.B.
+    // -> 04
+    ```
+  - ohne führende 0
+    ```php 
+    echo date("g");
+    // z.B.
+    // -> 4
+    ```
+
+- Im 24h Format
+  - mit führender 0
+    ```php 
+    echo date("H");
+    // z.B.
+    // -> 16
+    ```
+  
+  - ohne führende 0
+    ```php 
+      echo date("G");
+      // z.B. 9 Uhr 
+      // -> 9
+    ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### Minuten
+
+- mit führender 0
+  ```php 
+  echo date("i");
+  // z.B. 9 
+  // -> 09
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### Sekunden
+
+- mit führender Null
+  ```php 
+    echo date("s");
+    // z.B. 9 
+    // -> 09
+  ```
+- Sekunden seit Beginn der UNIX-Epoche (1.1.1970)
+  ```php 
+  echo date("U");
+  // z.B. 09.12.2003 16:49
+  // -> 1702136936
+  ```
+
+</CardChapter>
+<br/>
+
+<CardHeading>
+
+  ### Timestamp
+
+</CardHeading>
+
+<CardChapter>
+
+  #### `mktime()`
+
+Syntax `mktime(hour, minute, second, month, day, year, is_dst)`
+
+- `is_dst` Angabe, ob Werte in Sommerzeitformat vorliegen
+
+```php 
+echo mktime(0, 0, 0, 12, 32, 2019);
+// 1577833200
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  #### `strtotime()`
+
+- Umwandlung Datum / Uhrzeit zu UNIX-Timestamp 
+- Ausgabe in Sekunden
+  ```php 
+  echo (strtotime("now") . "<br>");
+  echo (strtotime("3 October 2005") . "<br>");
+  echo (strtotime("+5 hours") . "<br>");
+  echo (strtotime("+1 week") . "<br>");
+  echo (strtotime("+1 week 3 days 7 hours 5 seconds") . "<br>");
+  echo (strtotime("next Monday") . "<br>");
+  echo (strtotime("last Sunday") . "<br>");
+  echo strtotime("22 December 2001");
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### `time()`
+
+  Aktueller Zeitstempel in Sekunden (01.01.1970 um 00:00:00 Uhr)
+
+```php 
+echo time();
+// z.B. 09.12.2003 16:49
+// -> 1702136936
+```
+</CardChapter>
+<br/>

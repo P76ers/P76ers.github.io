@@ -1,0 +1,165 @@
+---
+hide_title: true
+sidebar_position: 1
+sidebar_label: html
+tags: [linguae, php, PHP, html, tags, GET, POST, API]
+---
+
+<CardHeading>
+
+  # html
+</CardHeading>
+
+---
+
+<CardChapter>
+
+  ## Tags
+
+`HTML-Tags` müssen in einem String angegeben werden, dabei können sie direkt neben auszugebendem Text geschrieben werden. Aufgrund der `HTML-Tags` kann PHP diese vom Text unterscheiden
+```php 
+  <?php
+  echo "Hello World!<br><hr>";
+  ?>
+```
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ## Formular 
+</CardHeading>
+
+
+<CardChapter>
+
+  ### Fehler abfangen
+
+Es kommt zu einer Fehlermeldung, wenn PHP-Code <b><u>und</u></b> das Formular in einer Datei vorliegen.
+
+PHP will Werte aus dem Formular direkt nach dem Laden der Seite verarbeiten,diese liegen aber nicht vor, 
+da das Formular nicht abgesendet wurde.
+
+```cpp 
+  <form action="#" method="get">
+    <input type="number" name="zahl">
+    <input type="submit">
+  </form>
+
+  <?php
+
+// highlight-next-line-error
+  echo ($_GET["zahl"]);
+
+  ?>
+```
+  
+Dies kann durch `isset()` abgefangen werden, da der Code nur ausgeführt wird, wenn 
+das Formular abgesendet wurde und die Werte der Eingabefelder vorliegen.
+
+```php 
+  <form action="#" method="get">
+    <input type="number" name="zahl">
+    <input type="submit">
+  </form>
+  <?php
+
+// highlight-next-line
+  if (isset($_GET["zahl"])) {
+
+  echo ($_GET["zahl"]);
+  // highlight-next-line
+  }
+
+  ?>
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### Daten senden
+
+- `action="#"` PHP-Dokument für die Bearbeitung befindet sich im aktuellen Dokument
+```php 
+  <form action="#" method="get">
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### `GET`
+
+- Bei Methode `method="get"` sind die übergebenen Werte in der Browser-URL einsehbar
+```php 
+  <form action="#" method="get">
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### `POST`
+
+- Bei Methode `method="post"` sind die übergebenen Werte `nicht` in der Browser-URL einsehbar
+- Passwortschutz ist gewährleistet!
+```php 
+  <form action="#" method="post">
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### API
+
+Je nach Übergabemethode können die Werte der Formulare an PHP zwecks Weiterverarbeitung übergeben werden.
+Über den Namen des Eingabefeldes kann dies erfolgen `name="zahl"` 
+- `method="get"`
+  
+  ```php 
+  // highlight-next-line
+  <form action="#" method="get">
+  // highlight-next-line
+    <input type="number" name="zahl">
+    <input type="submit">
+  </form>
+
+  <?php
+  if (isset($_GET["zahl"])) {
+
+    // highlight-next-line
+    $betrag = $_GET["zahl"];
+    echo $betrag;
+  }
+  ?>
+  ```
+  
+- `method="post"`
+  ```php
+  // highlight-next-line
+    <form action="#" method="post">
+    // highlight-next-line
+      <input type="number" name="zahl">
+      <input type="submit">
+    </form>
+
+    <?php
+    if (isset($_POST["zahl"])) {
+
+  // highlight-next-line
+      $betrag = $_POST["zahl"];
+      echo $betrag;
+    }
+    ?>
+  ```
+
+</CardChapter>
+<br/>
