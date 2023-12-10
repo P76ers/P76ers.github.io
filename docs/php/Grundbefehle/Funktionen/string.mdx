@@ -12,3 +12,294 @@ tags: [linguae, php, PHP, Funktionen, Datentyp, Function, String]
 
 ---
 
+<CardHeading>
+
+  ## Array
+</CardHeading>
+
+<CardChapter>
+
+  ### `explode()`
+
+> Syntax: `explode(separator,string,limit)`
+
+Konvertiert `string` zu `array`
+- `separator` als trennzeichen zwischen den Elementen angeben
+  ```php 
+  $str = "Hello World.";
+  print_r(explode(" ", $str));
+  // -> Array ( [0] => Hello [1] => World. )
+
+  $num = 'one,two,three';
+
+  print_r(explode(',', $num));
+    // -> Array ( [0] => one [1] => two [2] => three )
+  ```
+- Anzahl der Elemente begrenzen mit `limit`
+  ```php 
+  print_r(explode(',', $str, 0));
+  print "<br>";
+  // -> Array ( [0] => one,two,three,four )
+
+  print_r(explode(',', $str, 2));
+  print "<br>";
+  // -> Array ( [0] => one [1] => two,three,four )
+
+  print_r(explode(',', $str, -1));
+  // -> Array ( [0] => one [1] => two [2] => three )
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### `str_split()`
+
+string in chars zerlegen und in ein array umwandeln
+
+```php 
+print_r(str_split("Hello"));
+// -> Array ( [0] => H [1] => e [2] => l [3] => l [4] => o )
+```
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardHeading>
+
+  ## ASCII
+</CardHeading>
+
+<CardChapter>
+
+  ### `chr()`
+
+ASCII zu Zeichen
+```php 
+echo chr(66);
+// -> B
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ### `ord()`
+
+Zeichen zu ASCII
+
+```php 
+echo ord("A");
+// -> 65
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `strlen()` 
+
+Zeichenlänge eines `String` bestimmen
+
+```php 
+echo strlen("Hello");
+// -> 5
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `str_replace()`
+
+Alle Wort / Zeichen in einem `string` ersetzen
+```php 
+echo str_replace("world", "Peter", "Hello world!") . "<br>";
+// -> Hello Peter!
+
+echo str_replace("o", "💩", "Hello world!");
+// -> Hell💩 w💩rld!
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `strrev()`
+
+`string` rückwärts ausgeben
+```php 
+echo strrev("!dlroW olleH");
+// ->  Hello World!
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `str_shuffle()`
+
+`chars` im `string` zufällig mischen
+```php 
+echo str_shuffle("Hello World");
+// z.B. -> l lrloHWode
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `strtolower()` / `strtoupper()`
+
+`String` in Klein- / Großbuchstaben umwandeln
+```php 
+  echo strtolower("HELLO WORLD");
+  // -> hello world!
+  echo strtoupper("hello world!");
+  // -> HELLO WORLD!
+```
+<CardDanger>
+
+Danger:
+
+Umlaute funktionieren nicht!
+</CardDanger>
+<CardInfo>
+
+Info:
+
+funzt...
+- toUpper
+  ```php 
+  function strtoupper_utf8($str)
+  {
+    $from = array('ä', 'ö', 'ü');
+    $to = array('Ä', 'Ö', 'Ü');
+
+    return strtoupper(str_replace($from, $to, $str));
+  }
+
+  $str = 'äöü';
+
+  echo strtoupper_utf8($str);
+  // Ausgabe ÄÖÜ
+  ```
+- toLower
+  ```php 
+  function strtolower_utf8($str)
+  {
+    $from = array('Ä', 'Ö', 'Ü');
+    $to = array('ä', 'ö', 'ü');
+
+    return strtoupper(str_replace($from, $to, $str));
+  }
+
+  $str = 'ÄÖÜ';
+
+  echo strtolower_utf8($str);
+  // Ausgabe äöü
+  ```
+  
+</CardInfo>
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `substr()`
+
+> Syntax: `substr(string,start,length)`
+
+Teile eines string ausschneiden
+
+- nur mit `start`
+  ```php 
+  echo substr("Hello world", 6) . "<br>";
+  // -> world
+  echo substr("Hello world", -3) . "<br>";
+  // -> rld
+  ```
+- mit `start` und `lenght`
+  ```php 
+  echo substr("Hello world", 3, 5) . "<br>";
+  // -> lo wo
+  echo substr("Hello world", -10, -2) . "<br>";
+  // -> ello wor
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardChapter>
+
+  ## `trim()`
+
+Zeichen am Anfang und Ende (keine mittigen) entfernen
+
+```php 
+$str = "_._Hello World!_._";
+
+echo trim($str, "_._");
+// -> Hello World!
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `ucfirst()`
+
+Ersten Buchstaben eines `string` groß schreiben
+```php 
+echo ucfirst("hello world!");
+// -> Hello world!
+```
+
+<CardDanger>
+
+Danger:
+
+Funktioniert nicht bei Sonderzeichen wie Umlauten, abhängig von 
+
+</CardDanger>
+
+<CardInfo>
+
+Info:
+
+funzt..
+```php
+$str = "ähre";
+
+function myucfirst($str)
+{
+  $fc = mb_strtoupper(mb_substr($str, 0, 1));
+  return $fc . mb_substr($str, 1);
+}
+
+// -> Ähre
+```
+
+</CardInfo>
+
+</CardChapter>
+<br/>
+
+

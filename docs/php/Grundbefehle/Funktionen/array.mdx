@@ -143,6 +143,59 @@ Info:
 
 <CardChapter>
 
+  ## `array_merge()`
+
+  Verbindet mehrere Arrays zu einem Array.
+
+<CardDanger>
+
+Danger:
+
+- Assoziative Arrays: Bei gleichnamigen Indexnamen wird der Wert des ersten Array überschrieben
+
+  ```php 
+    $a1 = array("a" => 
+                        "red", 
+                        // highlight-next-line
+                                "b" => "green");
+    $a2 = array("c" => "blue", 
+    // highlight-next-line
+                                "b" => "yellow");
+    print_r(array_merge($a1, $a2));
+
+    // -> Array ( [a] => red 
+    // highlight-next-line
+    //                        [b] => yellow 
+    //                                       [c] => blue )
+  ```
+
+- Numerische Arrays: Index wird neu vergeben und hochgezählt
+  ```php 
+  $a = array(3 => "red", 4 => "green");
+  print_r(array_merge($a));
+
+  // -> Array ( [0] => red [1] => green )
+  ```
+
+</CardDanger>
+
+
+```php 
+  $a1 = array("red", "green");
+  $a2 = array("blue", "yellow");
+  print_r(array_merge($a1, $a2));
+
+  // -> Array ( [0] => red [1] => green [2] => blue [3] => yellow )
+```
+
+</CardChapter>
+<br/>
+
+
+
+
+<CardChapter>
+
   ## `array_pop()`
 
 Löscht das letzte Element des Array
@@ -171,6 +224,33 @@ print_r($a);
 
 </CardChapter>
 <br/>
+
+<CardChapter>
+
+  ## `array_rand()`
+
+> Syntax: `array_rand(array, number) `
+
+- zufällige Ausgabe von Arrayelementen 
+- `number` bestimmt die Anzahl der Rückgabe (default = 1 Element)
+
+```php 
+  $a = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  print_r(array_rand($a));
+// random -> 1 Element
+```
+```php 
+  $a = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  print_r(array_rand($a, 2));
+  // random -> 2 Elemente
+```
+
+
+</CardChapter>
+<br/>
+
 
 <CardChapter>
 
@@ -270,7 +350,7 @@ Entfernt das erste Element, Arraygröße wird verkleinert.
 
 Ausgabe eines Teilbereichs des Array, Array wird nicht geändert
 
-Syntax: `array_slice(array, start, length, preserve) `
+> Syntax: `array_slice(array, start, length, preserve) `
 
 - Zeige alle Elemente ab Index 2
   ```php 
@@ -371,6 +451,114 @@ print_r(array_unique($a));
 </CardChapter>
 <br/>
 
+<CardChapter>
+
+  ## `array_unshift()`
+
+Fügt neue Elemente am Anfang ein, vorhandene Elemente werden nach hinten geschoben.
+
+<CardDanger>
+
+Danger:
+
+Es wird neu indexiert!
+
+```php 
+  $a = array("a" => "red", "b" => "green");
+  array_unshift($a, "blue");
+  print_r($a);
+
+  // -> Array ( [0] => blue [a] => red [b] => green )
+```
+
+</CardDanger>
+
+Rückgabe ist Anzahl der neuen Elemente
+```php 
+$a=array("a"=>"red","b"=>"green");
+echo array_unshift($a,"blue");
+
+// -> 3
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `compact()`
+
+- Erstellt aus den Werten von Variablen (ohne `$`!) ein assoziatives Array.
+  ```php 
+    $firstname = "Peter";
+    $lastname = "Griffin";
+    $age = "41";
+
+    print_r(compact("firstname", "lastname", "age"));
+    // -> Array ( [firstname] => Peter [lastname] => Griffin [age] => 41 )
+  ```
+- Es können auch nummerierte Arrays mit Variablennamen übergeben werden
+  ```php 
+  // highlight-next-line
+  $name = array("firstname", "lastname");
+  print_r($name);
+  // -> Array ( [0] => firstname [1] => lastname )
+
+  $firstname = "Peter";
+  $lastname = "Griffin";
+  $age = "41";
+
+  echo "<br>";
+  print_r(compact(
+    // highlight-start
+                  $name, 
+                  "age"));
+    // highlight-end
+  // -> Array ( [firstname] => Peter [lastname] => Griffin [age] => 41 )
+  ```
+- Reihenfolge der assoziativen Indexe kann in den Parametern der Funktion angegeben werden
+  ```php 
+  // highlight-next-line
+  $name = array("firstname", "lastname");
+  print_r($name);
+  // -> Array ( [0] => firstname [1] => lastname )
+
+  $firstname = "Peter";
+  $lastname = "Griffin";
+  $age = "41";
+
+  echo "<br>";
+  print_r(compact(
+  // highlight-start
+                  "age", 
+                  $name));
+  // highlight-end
+  // -> Array ( [age] => 41 [firstname] => Peter [lastname] => Griffin )
+  ```
+
+- Wird der Name des Array als `string` übergeben wird ein verschachteltes Array erzeugt
+  ```php 
+  // highlight-next-line
+  $name = array("firstname", "lastname");
+  print_r($name);
+  // -> Array ( [0] => firstname [1] => lastname )
+
+  $firstname = "Peter";
+  $lastname = "Griffin";
+  $age = "41";
+
+  echo "<br>";
+  print_r(compact(
+                  "age", 
+  // highlight-next-line
+                  "name"));
+  // -> Array ( [age] => 41 [name] => Array ( [0] => firstname [1] => lastname ) )
+
+  ```
+
+</CardChapter>
+<br/>
+
 
 <CardChapter>
 
@@ -390,6 +578,40 @@ echo sizeof($cars);
 </CardChapter>
 <br/>
 
+<CardChapter>
+
+  ## `in_array()`
+
+> Syntax: `in_array(search, array, type) `
+
+- Suche nach einem Schlüsselwort
+  ```php 
+    $arr = array("Peter", 23);
+
+    echo var_dump(in_array("23", $arr));
+    // -> true
+  ```
+- Mit der Option `type` = `true` muss auch der Datentyp übereinstimmen
+  ```php 
+  $arr = array("Peter", 23);
+
+  echo var_dump(in_array(
+    // highlight-next-line
+                          "23", 
+                                $arr, true)) . "<br>";
+  // -> false
+
+  echo var_dump(in_array(
+    // highlight-next-line
+                           23, 
+                                $arr, true));
+  // -> bool(true)
+  ```
+  
+
+</CardChapter>
+<br/>
+
 
 <CardChapter>
 
@@ -403,6 +625,30 @@ Gibt das Minimum / Maximum der Werte eines Array aus
   // -> 81
 ```
 
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `range()`
+
+> Syntax: `range(low, high, step) `
+
+- Erzeugt ein Array vom Startwert bis Endwert
+```php 
+  $number = range(0, 5);
+  print_r($number);
+
+  // -> Array ( [0] => 0 [1] => 1 [2] => 2 [3] => 3 [4] => 4 [5] => 5 )
+```
+- Mit `step` kann optional die Schrittweite angegeben werden
+  ```php 
+  $number = range(0, 50, 10);
+  print_r($number);
+
+  // -> Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
+  ```
+  
 </CardChapter>
 <br/>
 
@@ -444,3 +690,215 @@ print_r($my_array);
 
 </CardChapter>
 <br/>
+
+<CardHeading>
+
+  ## Schleifen
+</CardHeading>
+
+<CardChapter>
+
+  ### `foreach()`
+
+- indexiertes Array aufsteigend sortieren
+  ```php 
+  $colors = array("red", "green", "blue");
+
+  foreach ($colors as $key => $value) {
+    echo "$key = $value <br>";
+  }
+
+  /* 
+  0 = red
+  1 = green
+  2 = blue
+  */
+  ```
+- indexiertes Array absteigend sortieren
+  <CardInfo>
+  
+  Info:
+  
+  Option `preserve_key` muss auf `true` gesetzt werden, ansonsten werden 
+  die Index nicht beibehalten!
+  </CardInfo>
+  
+  ```php 
+  $colors = array("red", "green", "blue");
+
+  foreach (array_reverse($colors, 
+  // highlight-next-line
+                                  true) 
+                                        as $key => $value) {
+    echo "$key = $value <br>";
+  }
+
+  /* 
+  0 = red
+  1 = green
+  2 = blue
+  */
+  ```
+  
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ### assoziative Array
+</CardHeading>
+
+<CardChapter>
+
+  #### `foreach()`
+
+- assoziatives Array aufsteigend sortieren
+  ```php 
+  $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  foreach ($age as $key => $value) {
+    echo "$key = $value<br>";
+  }
+
+  /* 
+  Peter = 35
+  Ben = 37
+  Joe = 43
+  */
+  ```
+- assoziatives Array absteigend sortieren
+  ```php 
+  $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  foreach (array_reverse($age) as $key => $value) {
+    echo "$key = $value<br>";
+  }
+
+  /* 
+  Joe = 43
+  Ben = 37
+  Peter = 35
+  */
+  ```
+  
+</CardChapter>
+<br/>
+
+
+
+<CardChapter>
+
+  #### `while()`
+
+- assoziatives Array aufsteigend iterieren 
+  ```php 
+    $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+    $keys = array_keys($age);
+    $values = array_values($age);
+
+    $i = 0;
+    while ($i < count($age)) {
+      echo $keys[$i] . ": " . $values[$i] . "<br>";
+      $i++;
+    }
+  ```
+- assoziatives Array absteigend iterieren
+  ```php 
+  $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  $keys = array_keys($age);
+  $values = array_values($age);
+
+  $i = count($age) - 1;
+  while ($i >= 0) {
+    echo $keys[$i] . ": " . $values[$i] . "<br>";
+    $i--;
+  }
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  #### `for()` 
+
+- `array_keys()`
+  
+> Syntax : `array_keys(array, search_value, strict)`
+
+  Gibt Schlüssel des Arrays zurück. 
+  
+  `search_value` liefert nur die gesuchten `key`
+
+- assoziatives Array aufsteigend iterieren 
+  ```php 
+  $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  $keys = array_keys($age);
+  for ($i = 0; $i < count($keys); $i++) {
+    $key = $keys[$i];
+    $value = $age[$key];
+    echo "$key: $value <br>";
+  }
+  ```
+- assoziatives Array absteigend iterieren
+  ```php 
+  $age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+  $keys = array_keys($age);
+  for ($i = count($keys) - 1; $i >= 0; $i--) {
+    $key = $keys[$i];
+    $value = $age[$key];
+    echo "$key: $value <br>";
+  }
+  ```
+  
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+### iterieren ohne Index
+
+- `next()`
+- `prev()`
+- `end()` 
+- `reset()`
+- `current()`
+
+</CardChapter>
+<br/>
+
+
+<CardHeading>
+
+  ## String
+</CardHeading>
+
+<CardChapter>
+
+  ### `implode()`
+
+> Syntax: `implode(separator,array)`
+
+Konvertiert `array` zu `string`
+- `separator` als trennzeichen zwischen den Elementen angeben
+  ```php 
+  $arr = array('Hello', 'World!', 'Beautiful', 'Day!');
+  echo implode(" ", $arr) . "<br>";
+  // -> Hello World! Beautiful Day!
+
+  echo implode("_x_", $arr);
+  // -> Hello_x_World!_x_Beautiful_x_Day!
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+
+

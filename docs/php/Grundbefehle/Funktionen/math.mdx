@@ -12,3 +12,253 @@ tags: [linguae, php, PHP, Funktionen, Datentyp, Function, Mathematische]
 
 ---
 
+<CardChapter>
+
+  ## `round()`
+
+> Syntax: `round(number,precision,mode);`
+
+Zahlen auf oder abrunden
+- Fehlt die `precision` wird auf ganze Zahlen gerundet
+
+<ul> 
+  <CardDanger>
+
+  Danger:
+
+  ```php 
+  echo (round(0.60));
+
+  // -> 1
+  ```
+
+  </CardDanger>
+
+  ```php 
+  echo (round(4.96754, 2));
+
+  // -> 4.97
+  ```
+  </ul>
+
+- Auf oder abrunden mit `mode`
+  ```php 
+  echo (round(1.5, 0, PHP_ROUND_HALF_UP) . "<br>");
+  // ->  2
+  echo (round(-1.5, 0, PHP_ROUND_HALF_UP) . "<br>");
+  // -> -2
+
+  echo (round(1.5, 0, PHP_ROUND_HALF_DOWN) . "<br>");
+  // ->  1
+  echo (round(-1.5, 0, PHP_ROUND_HALF_DOWN) . "<br>");
+  // -> -1
+
+  echo (round(1.5, 0, PHP_ROUND_HALF_EVEN) . "<br>");
+  // ->  2
+  echo (round(-1.5, 0, PHP_ROUND_HALF_EVEN) . "<br>");
+  // -> -2
+
+  echo (round(1.5, 0, PHP_ROUND_HALF_ODD) . "<br>");
+  // ->  1
+  echo (round(-1.5, 0, PHP_ROUND_HALF_ODD));
+  // -> -1
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `ceil()` / `floor()`
+
+- abrunden auf ganze Zahlen
+  ```php 
+  echo (floor(0.60) . "<br>");
+  echo (floor(0.40) . "<br>");
+  // -> 0
+  ```
+
+- aufrunden auf ganze Zahlen
+  ```php 
+  echo (ceil(0.60) . "<br>");
+  echo (ceil(0.40) . "<br>");
+  // -> 1
+  ```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `floatval` () / `doubleval()`
+
+```php 
+  $a = "12.34";
+  echo floatval($a) . "<br>";
+  // -> 12.34
+
+  $a = "12,34";
+  echo floatval($a) . "<br>";
+  // -> 12
+
+  $b = "12.34Hello";
+  echo floatval($b) . "<br>";
+  // -> 12.34
+
+  $c = "Hello1234.56789";
+  echo floatval($c) . "<br>";
+  // -> 0
+```
+
+</CardChapter>
+<br/>
+
+<CardChapter>
+
+  ## `decbin()` / `bindec()`
+
+<CardHeading>
+
+  ## `dechex()` / `hexdec()`
+</CardHeading>
+
+<CardHeading>
+
+## `decoct()` / `octdec()`
+</CardHeading>
+
+
+```php 
+echo decbin("3") . "<br>";
+// -> 11
+
+echo bindec("11") . "<br>";
+// -> 3
+
+echo dechex("15") . "<br>";
+// -> F
+
+echo hexdec("f") . "<br>";
+// -> 15
+
+echo decoct("10") . "<br>";
+// -> 12
+
+echo octdec("12") . "<br>";
+// -> 12
+```
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `intval()`
+
+> Syntax: intval(variable, base);
+
+Variable in Integer konvertieren
+```php 
+$b = 3.2;
+echo intval($b) . "<br>";
+// -> 3
+
+  $b = "1,4";
+  echo intval($b) . "<br>";
+  // -> 1
+
+  $b = "1 paar";
+  echo intval($b, 16) . "<br>";
+  // -> 1
+```
+- `base` gibt an zu welcher Basis (default dezimal)
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `min()` `max()`
+
+Minimum und Maximum bestimmen
+
+<CardDanger>
+
+Danger:
+
+Mindestens 2 Parameter müssen übergeben werden
+```php 
+  echo min(44, 16, 81, 12). "<br>";
+  // -> 12
+  echo max(44, 16, 81, 12);
+  // -> 81
+```
+
+</CardDanger>
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## number_format()
+
+> Syntax: `number_format(number,decimals,decimalpoint,separator)` 
+
+<CardDanger>
+
+Danger:
+
+Akzeptiert ein, zwei oder vier Parameter (nicht drei)!!
+</CardDanger>
+
+
+Ausgabe von Zahlen formatieren
+- Default: Anzeige englische Tausender und Nachkommastellen
+  ```php 
+  echo number_format("1000000") . "<br>";
+  // -> 1,000,000
+  ```
+- Anzahl der Nachkommastellen bestimmen
+  ```php 
+    echo number_format("1000000", 2) . "<br>";
+    // -> 1,000,000.00
+  ```
+- Deutsches Format Tausender- und Nachkommatrenner
+  ```php 
+  echo number_format("1000000", 2, ",", ".");
+  // -> 1.000.000,00
+  ```
+
+
+</CardChapter>
+<br/>
+
+
+<CardChapter>
+
+  ## `rand()` `rand()` 
+
+erzeugt Zufallszahl
+
+- eine beliebige 
+  ```php 
+  echo rand();
+
+  // z.B. -> 1698367382
+  ```
+
+- innerhalb Werten von 10-100
+  ```php 
+  echo(rand(10,100));
+  ```
+
+</CardChapter>
+<br/>
+
+
+
+
