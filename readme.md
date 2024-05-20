@@ -1,16 +1,12 @@
-<div Style="text-align: center">
 <h1><a href="https://p76ers.github.io/">codingDocs</a></h1>
-<hr>
-</div>
+
 
 `p76ers.github.io` aka `codingDocs` ist ein privates Webprojekt mit dem Ziel die Webtechnologien in einem praktischen Kontext umzusetzen und die Konzepte durch learning-by-doing zu vertiefen.
 
 `codingDocs` thematisiert das Erlernen der Anwendungsprogrammierung und Umsetzung der Dokumentation mit professionellen Werkzeugen.
 
-<div Style="text-align: center">
-<h2>Grundlage</h2>
-<hr>
-</div>
+## Grundlage
+
 
 Dieses Projekt basiert auf dem [docusaurus](https://docusaurus.io/)-Website-Generator ([react framework](https://react.dev/)) im speziellen auf der Grundlage des open-source Projekts von [Dyte](https://docs.dyte.io/) einem [docusaurus site showcase](https://docusaurus.io/showcase).
 
